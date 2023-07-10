@@ -1,5 +1,5 @@
 import { state } from "../context";
-/*
+/* this is only optional html template for use
 export function FallenHero(){
 return (
   <li>
@@ -18,6 +18,8 @@ return (
 */
 
 const FallenHero = () => {
+  // this component is for rendering individual fallen hero, eventually
+  // also with more data, such as scenarios played, image etc.
    // const {fallenHeroes} = React.useContext(GithubContext);
 
     return (
@@ -33,3 +35,4 @@ const FallenHero = () => {
     )}
 
 export default FallenHero;
+

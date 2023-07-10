@@ -1,4 +1,4 @@
-// here the first working version with local browser storage was only in javascript
+// Here the first working version with local browser storage was only in javascript
 // and will have to be adjusted to react and useState() hooks probably
 // This page should work as mainly as the data handling place
 

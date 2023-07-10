@@ -3,7 +3,13 @@ import { allHerosMock, state } from "../context";
 import { persistData } from "../context";
 
 function FallenHeroes(){
-       
+    // the FallenHero component should be rendered in this component in a loop or so
+    // to show all the fallen heroes, via forEach() or so
+      
+    // addFallenHero() - unfinished function for the send to coffin button
+    // to get the hero from the input text and if correct, that is
+    // matching hero from the set of totalHeroes,
+    // and is included in rest of heroes alive, update the state accordingly
     const addFallenHero = function(e){
         var value = e.target.value
         console.log(value)
