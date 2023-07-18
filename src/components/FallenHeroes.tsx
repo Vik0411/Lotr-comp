@@ -18,7 +18,7 @@ function FallenHeroes(){
         } 
         if(allHerosMock.includes(name) && state.restOfAliveHeroes.includes(name)){
             state.fallenHeroes.push(name);
-        //    delete state.restOfAliveHeroes[name]
+            delete state.restOfAliveHeroes[name]
             persistData();
             console.log(state)
         }
