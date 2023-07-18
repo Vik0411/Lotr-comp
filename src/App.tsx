@@ -1,6 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import FallenHeroes from './components/FallenHeroes';
 
 function App() {
@@ -24,7 +22,7 @@ function App() {
                     </ul>
                 </div>
             </header>  
-        <img src={logo} className="App-logo" alt="logo" />
+        <img/>
         <p>
           <code></code>
         </p>
