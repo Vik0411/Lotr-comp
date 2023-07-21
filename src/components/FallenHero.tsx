@@ -1,4 +1,4 @@
-import { state } from "../context";
+
 import React from 'react'
 /* this is only optional html template for use
 export function FallenHero(){

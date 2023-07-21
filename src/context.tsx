@@ -2,13 +2,7 @@
 // and will have to be adjusted to react and useState() hooks probably
 // This page should work as mainly as the data handling place
 
-export const allHerosMock = ['Aragorn', 'Eowyn', 'Beravor']
-export const state = {
-    fallenHeroes: ['Aragorn'],
-    restOfAliveHeroes: ['Eowyn', 'Beravor'],
-    allHeros: allHerosMock
-}
-
+/*
 export const persistData = function () {
     // I believe we could simply use this browser local storage for our purposes
     localStorage.setItem('fallenHeroes', JSON.stringify(state.fallenHeroes))
@@ -44,3 +38,7 @@ const init = function(){
 }
 init()
 console.log(state.fallenHeroes, state.restOfAliveHeroes)
+
+*/
+
+export {}
