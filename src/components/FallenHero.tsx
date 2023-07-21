@@ -1,4 +1,3 @@
-
 import React from 'react'
 /* this is only optional html template for use
 export function FallenHero(){
@@ -24,15 +23,7 @@ const FallenHero = () => {
    // const {fallenHeroes} = React.useContext(GithubContext);
 
     return (
-        <div className='fallen'>
-          {state.fallenHeroes.map((fallenHero, index) => {
-            return (
-              <article key ={index}>
-              <div>{fallenHero}</div>
-              </article>
-            );
-          })}
-        </div>
+        <div className='fallen'>        </div>
     )}
 
 export default FallenHero;
