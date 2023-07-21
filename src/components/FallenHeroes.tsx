@@ -22,26 +22,18 @@ function FallenHeroes(){
        
 
     const addFallenHero: React.FormEventHandler = (e) => {
-        console.log(campaign.fallenName)
         //add hero to the list if it isnt there yet
-        /*
         if(!campaign.restOfAliveHeroes.includes(campaign.fallenName)){
             throw Error
         } 
-        */
         if(campaign.allHeros.includes(campaign.fallenName) && campaign.restOfAliveHeroes.includes(campaign.fallenName)){
-            const updated = [...campaign.fallenHeroes, campaign.fallenName]
-            setCampaign({...campaign, fallenHeroes: updated})
-           // delete campaign.restOfAliveHeroes[campaign.fallenName]
-        
+            const updatedFallen = [...campaign.fallenHeroes, campaign.fallenName]
+            const updatedRestOfAlive = campaign.restOfAliveHeroes.filter(e => e !== campaign.fallenName);
+            setCampaign({...campaign, fallenHeroes: updatedFallen, restOfAliveHeroes: updatedRestOfAlive})
         }
-        /*
         if(!campaign.allHeros.includes(campaign.fallenName)){
             throw Error
         } 
-
-        */
-
     }
 
     console.log(campaign)
