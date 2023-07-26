@@ -1,35 +1,33 @@
-import React from 'react';
-import FallenHeroes from './components/FallenHeroes';
+import React, { useState } from "react";
+import FallenHeroes from "./components/FallenHeroes";
+import { LOTRProvider } from "./context";
 
 function App() {
   return (
-    <div className="App">
-     <header className="App-header">
-        <header className="header">
+    <LOTRProvider>
+      <div className="App">
+        <header className="App-header">
+          <header className="header">
             <button className="btn list_all">List all the mighty heroes</button>
-                <div className="all__heroes__panel">
-                    <ul className="all_heroes__list">  
-                  all heroes list
-                    </ul>
-                </div>
+            <div className="all__heroes__panel">
+              <ul className="all_heroes__list">all heroes list</ul>
+            </div>
+          </header>
+          <FallenHeroes />
+          <header className="header">
+            <button className="btn list_survivors">List survivors</button>
+            <div className="rest__panel">
+              <ul className="rest__heroes__list">{}</ul>
+            </div>
+          </header>
+          <img />
+          <p>
+            <code></code>
+          </p>
+          <a></a>
         </header>
-          <FallenHeroes/>
-            <header className="header">
-                <button className="btn list_survivors">List survivors</button>
-                <div className="rest__panel">
-                    <ul className="rest__heroes__list">  
-                       rest of heroes
-                    </ul>
-                </div>
-            </header>  
-        <img/>
-        <p>
-          <code></code>
-        </p>
-        <a>
-        </a>
-      </header>
-    </div>
+      </div>
+    </LOTRProvider>
   );
 }
 

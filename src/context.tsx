@@ -1,3 +1,5 @@
+import React, { SetStateAction, useState, Dispatch, ReactNode } from "react";
+import { Campaign } from "./types";
 // Here the first working version with local browser storage was only in javascript
 // and will have to be adjusted to react and useState() hooks probably
 // This page should work as mainly as the data handling place
@@ -41,4 +43,48 @@ console.log(state.fallenHeroes, state.restOfAliveHeroes)
 
 */
 
-export {}
+export interface CampaignContextInterface {
+  campaign: Campaign;
+  setCampaign: Dispatch<SetStateAction<Campaign>>;
+}
+
+const defaultState = {
+  campaign: {
+    fallenName: "",
+    fallenHeroes: [""],
+    restOfAliveHeroes: ["Aragorn", "Eowyn", "Beravor"],
+    allHeros: ["Aragorn", "Eowyn", "Beravor"],
+  },
+  setCampaign: (campaign: Campaign) => {},
+} as CampaignContextInterface;
+
+const LOTRContext = React.createContext(defaultState);
+
+type CampaignProvideProps = {
+  children: ReactNode;
+};
+const LOTRProvider = ({ children }: CampaignProvideProps) => {
+  const [campaign, setCampaign] = useState<Campaign>({
+    fallenName: "",
+    fallenHeroes: [""],
+    restOfAliveHeroes: ["Aragorn", "Eowyn", "Beravor"],
+    allHeros: ["Aragorn", "Eowyn", "Beravor"],
+  });
+
+  // error
+  const [error, setError] = useState({ show: false, msg: "" });
+  //check rate
+  // error
+  return (
+    <LOTRContext.Provider
+      value={{
+        campaign,
+        setCampaign,
+      }}
+    >
+      {children}
+    </LOTRContext.Provider>
+  );
+};
+
+export { LOTRContext, LOTRProvider };
