@@ -73,8 +73,6 @@ const LOTRProvider = ({ children }: CampaignProvideProps) => {
 
   // error
   const [error, setError] = useState({ show: false, msg: "" });
-  //check rate
-  // error
   return (
     <LOTRContext.Provider
       value={{
