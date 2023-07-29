@@ -1,6 +1,5 @@
 import { LOTRContext } from "../context";
-import FallenHero from "./FallenHero";
-import React, { useState } from "react";
+import React from "react";
 
 function FallenHeroes() {
   // the FallenHero component should be rendered in this component in a loop or so
@@ -16,7 +15,7 @@ function FallenHeroes() {
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) =>
     setCampaign({ ...campaign, fallenName: e.target.value });
 
-  const addFallenHero: React.FormEventHandler = (e) => {
+  function addFallenHero() {
     //add hero to the list if it isnt there yet
     if (!campaign.restOfAliveHeroes.includes(campaign.fallenName)) {
       throw Error;
@@ -38,7 +37,7 @@ function FallenHeroes() {
     if (!campaign.allHeros.includes(campaign.fallenName)) {
       throw Error;
     }
-  };
+  }
 
   console.log(campaign);
   return (

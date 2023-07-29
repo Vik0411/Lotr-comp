@@ -1,4 +1,3 @@
-import React from "react";
 /* this is only optional html template for use
 export function FallenHero(){
 return (
@@ -17,12 +16,12 @@ return (
 }
 */
 
-const FallenHero = () => {
+function FallenHero() {
   // this component is for rendering individual fallen hero, eventually
   // also with more data, such as scenarios played, image etc.
   // const {fallenHeroes} = React.useContext(GithubContext);
 
   return <div className="fallen"> </div>;
-};
+}
 
 export default FallenHero;
