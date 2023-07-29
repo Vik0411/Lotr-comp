@@ -20,13 +20,10 @@ function FallenHeroes() {
     if (!campaign.restOfAliveHeroes.includes(campaign.fallenName)) {
       throw Error;
     }
-    if (
-      campaign.allHeros.includes(campaign.fallenName) &&
-      campaign.restOfAliveHeroes.includes(campaign.fallenName)
-    ) {
+    if (campaign.restOfAliveHeroes.includes(campaign.fallenName)) {
       const updatedFallen = [...campaign.fallenHeroes, campaign.fallenName];
       const updatedRestOfAlive = campaign.restOfAliveHeroes.filter(
-        (e) => e !== campaign.fallenName
+        (hero) => hero !== campaign.fallenName
       );
       setCampaign({
         ...campaign,
@@ -34,7 +31,7 @@ function FallenHeroes() {
         restOfAliveHeroes: updatedRestOfAlive,
       });
     }
-    if (!campaign.allHeros.includes(campaign.fallenName)) {
+    if (!campaign.allHeroes.includes(campaign.fallenName)) {
       throw Error;
     }
   }
@@ -46,7 +43,7 @@ function FallenHeroes() {
         type="text"
         className="input_fallen"
         value={campaign.fallenName}
-        placeholder="Input your fallen heroes..."
+        placeholder="Input your fallen hero..."
         onChange={handleChange}
       />
       <button className="btn input_fallen" onClick={addFallenHero}>

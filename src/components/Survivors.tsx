@@ -7,11 +7,6 @@ function Survivors() {
           <ul className="rest__heroes__list">{}</ul>
         </div>
       </header>
-      <img />
-      <p>
-        <code></code>
-      </p>
-      <a></a>
     </div>
   );
 }

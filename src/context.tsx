@@ -51,9 +51,9 @@ export interface CampaignContextInterface {
 const defaultState = {
   campaign: {
     fallenName: "",
-    fallenHeroes: [""],
+    fallenHeroes: [],
     restOfAliveHeroes: ["Aragorn", "Eowyn", "Beravor"],
-    allHeros: ["Aragorn", "Eowyn", "Beravor"],
+    allHeroes: ["Aragorn", "Eowyn", "Beravor"],
   },
   setCampaign: (campaign: Campaign) => {},
 } as CampaignContextInterface;
@@ -66,9 +66,9 @@ type CampaignProvideProps = {
 const LOTRProvider = ({ children }: CampaignProvideProps) => {
   const [campaign, setCampaign] = useState<Campaign>({
     fallenName: "",
-    fallenHeroes: [""],
+    fallenHeroes: [],
     restOfAliveHeroes: ["Aragorn", "Eowyn", "Beravor"],
-    allHeros: ["Aragorn", "Eowyn", "Beravor"],
+    allHeroes: ["Aragorn", "Eowyn", "Beravor"],
   });
 
   // error
