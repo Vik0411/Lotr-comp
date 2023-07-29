@@ -1,6 +1,9 @@
 export interface Campaign {
-  fallenName: string;
   fallenHeroes: string[];
   restOfAliveHeroes: string[];
   allHeroes: string[];
 }
+
+export type FallenHero = {
+  fallenHero: string;
+};

@@ -1,5 +1,6 @@
 import { LOTRContext } from "../context";
-import React from "react";
+import React, { useState, Dispatch, SetStateAction } from "react";
+import { FallenHero } from "../types";
 
 function FallenHeroes() {
   // the FallenHero component should be rendered in this component in a loop or so
@@ -9,21 +10,27 @@ function FallenHeroes() {
   // to get the hero from the input text and if correct, that is
   // matching hero from the set of totalHeroes,
   // and is included in rest of heroes alive, update the state accordingly
+  interface FallenHeroContextInterface {
+    fallenHero: FallenHero;
+    setFallenHero: Dispatch<SetStateAction<FallenHero>>;
+  }
 
   const { campaign, setCampaign } = React.useContext(LOTRContext);
+  const [fallenHero, setFallenHero] = useState("");
 
-  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) =>
-    setCampaign({ ...campaign, fallenName: e.target.value });
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+    setFallenHero(e.target.value);
+  };
 
   function addFallenHero() {
     //add hero to the list if it isnt there yet
-    if (!campaign.restOfAliveHeroes.includes(campaign.fallenName)) {
+    if (!campaign.restOfAliveHeroes.includes(fallenHero)) {
       throw Error;
     }
-    if (campaign.restOfAliveHeroes.includes(campaign.fallenName)) {
-      const updatedFallen = [...campaign.fallenHeroes, campaign.fallenName];
+    if (campaign.restOfAliveHeroes.includes(fallenHero)) {
+      const updatedFallen = [...campaign.fallenHeroes, fallenHero];
       const updatedRestOfAlive = campaign.restOfAliveHeroes.filter(
-        (hero) => hero !== campaign.fallenName
+        (hero) => hero !== fallenHero
       );
       setCampaign({
         ...campaign,
@@ -31,7 +38,7 @@ function FallenHeroes() {
         restOfAliveHeroes: updatedRestOfAlive,
       });
     }
-    if (!campaign.allHeroes.includes(campaign.fallenName)) {
+    if (!campaign.allHeroes.includes(fallenHero)) {
       throw Error;
     }
   }
@@ -42,7 +49,7 @@ function FallenHeroes() {
       <input
         type="text"
         className="input_fallen"
-        value={campaign.fallenName}
+        value={fallenHero}
         placeholder="Input your fallen hero..."
         onChange={handleChange}
       />

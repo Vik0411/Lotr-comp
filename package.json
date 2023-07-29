@@ -27,13 +27,14 @@
       "react-app",
       "react-app/jest"
     ],
-    "react/function-component-definition": "warn",
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
         "args": "all",
         "argsIgnorePattern": "^_"
-      }]
+      }
+    ],
+    "react/function-component-definition": "warn"
   },
   "browserslist": {
     "production": [
