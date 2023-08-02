@@ -1,6 +1,5 @@
-import { LOTRContext } from "../context";
-import React, { useState, Dispatch, SetStateAction } from "react";
-import { FallenHero } from "../types";
+import { LotrContext } from "../context";
+import React, { useState } from "react";
 
 function FallenHeroes() {
   // the FallenHero component should be rendered in this component in a loop or so
@@ -10,12 +9,7 @@ function FallenHeroes() {
   // to get the hero from the input text and if correct, that is
   // matching hero from the set of totalHeroes,
   // and is included in rest of heroes alive, update the state accordingly
-  interface FallenHeroContextInterface {
-    fallenHero: FallenHero;
-    setFallenHero: Dispatch<SetStateAction<FallenHero>>;
-  }
-
-  const { campaign, setCampaign } = React.useContext(LOTRContext);
+  const { campaign, setCampaign } = React.useContext(LotrContext);
   const [fallenHero, setFallenHero] = useState("");
 
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {

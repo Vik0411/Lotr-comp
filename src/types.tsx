@@ -3,7 +3,3 @@ export interface Campaign {
   restOfAliveHeroes: string[];
   allHeroes: string[];
 }
-
-export type FallenHero = {
-  fallenHero: string;
-};
