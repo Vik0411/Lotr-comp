@@ -1,5 +1,6 @@
 import { LotrContext } from "../context";
 import React, { useState } from "react";
+import { FallenHero } from "./FallenHero";
 
 function FallenHeroes() {
   // the FallenHero component should be rendered in this component in a loop or so
@@ -49,12 +50,12 @@ function FallenHeroes() {
         <button type="submit" className="btn input_fallen">
           Send to the coffin
         </button>
-        <header className="header">
-          Fallen heroes:
-          <div className="fallen__heroes__panel">
-            <ul className="fallen_heroes__list">{campaign.fallenHeroes}</ul>
-          </div>
-        </header>
+        <h3>The Fallen:</h3>
+        <ul className="fallen_heroes__list">
+          {campaign.fallenHeroes.map((fallenHero: string): JSX.Element => {
+            return <FallenHero fallenHero={fallenHero} />;
+          })}
+        </ul>
       </form>
     </div>
   );
