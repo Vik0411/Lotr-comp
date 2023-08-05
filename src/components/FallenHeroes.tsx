@@ -13,12 +13,10 @@ function FallenHeroes() {
   const [fallenHero, setFallenHero] = useState("");
 
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
-    e.preventDefault();
     setFallenHero(e.target.value);
   };
 
-  function addFallenHero(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+  function addFallenHero() {
     //add hero to the list if it isnt there yet
     if (!campaign.restOfAliveHeroes.includes(fallenHero)) {
       throw Error;
@@ -42,24 +40,22 @@ function FallenHeroes() {
   console.log(campaign);
   return (
     <div>
-      <form onSubmit={addFallenHero}>
-        <input
-          type="text"
-          className="input_fallen"
-          value={fallenHero}
-          placeholder="Input your fallen hero..."
-          onChange={handleChange}
-        />
-        <button type="submit" className="btn input_fallen">
-          Send to the coffin
-        </button>
-        <header className="header">
-          <button className="btn list_fallen">List fallen heroes</button>
-          <div className="fallen__heroes__panel">
-            <ul className="fallen_heroes__list">{campaign.fallenHeroes}</ul>
-          </div>
-        </header>
-      </form>
+      <input
+        type="text"
+        className="input_fallen"
+        value={fallenHero}
+        placeholder="Input your fallen hero..."
+        onChange={handleChange}
+      />
+      <button className="btn input_fallen" onClick={addFallenHero}>
+        Send to the coffin
+      </button>
+      <header className="header">
+        <button className="btn list_fallen">List fallen heroes</button>
+        <div className="fallen__heroes__panel">
+          <ul className="fallen_heroes__list">{campaign.fallenHeroes}</ul>
+        </div>
+      </header>
     </div>
   );
 }
