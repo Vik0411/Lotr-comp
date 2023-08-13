@@ -20,7 +20,7 @@ function FallenHeroes() {
   function addFallenHero() {
     //add hero to the list if it isnt there yet
     if (!campaign.restOfAliveHeroes.includes(fallenHero)) {
-      throw Error;
+      throw Error("Sorry, your hero is not among the living!");
     }
     if (campaign.restOfAliveHeroes.includes(fallenHero)) {
       const updatedFallen = [...campaign.fallenHeroes, fallenHero];
@@ -32,9 +32,6 @@ function FallenHeroes() {
         fallenHeroes: updatedFallen,
         restOfAliveHeroes: updatedRestOfAlive,
       });
-    }
-    if (!campaign.allHeroes.includes(fallenHero)) {
-      throw Error;
     }
   }
 
