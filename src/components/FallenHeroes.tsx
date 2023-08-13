@@ -1,3 +1,4 @@
+import { EventType } from "@testing-library/react";
 import { LotrContext } from "../context";
 import React, { useState } from "react";
 
@@ -12,9 +13,9 @@ function FallenHeroes() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
   const [fallenHero, setFallenHero] = useState("");
 
-  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setFallenHero(e.target.value);
-  };
+  }
 
   function addFallenHero() {
     //add hero to the list if it isnt there yet
