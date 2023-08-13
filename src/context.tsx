@@ -54,16 +54,16 @@ const defaultState = {
     restOfAliveHeroes: ["Aragorn", "Eowyn", "Beravor"],
     allHeroes: ["Aragorn", "Eowyn", "Beravor"],
   },
-  setCampaign: (campaign: Campaign) => {},
+  setCampaign: () => {},
 } as CampaignContextInterface;
 
 const LotrContext = React.createContext(defaultState);
 
-type CampaignLotrProvider = {
+type LotrProviderProps = {
   children: ReactNode;
 };
 
-function LotrProvider({ children }: CampaignLotrProvider) {
+function LotrProvider({ children }: LotrProviderProps) {
   const [campaign, setCampaign] = useState<Campaign>({
     fallenHeroes: [],
     restOfAliveHeroes: ["Aragorn", "Eowyn", "Beravor"],
