@@ -48,7 +48,7 @@ export interface CampaignContextInterface {
   setCampaign: Dispatch<SetStateAction<Campaign>>;
 }
 
-const defaultState = {
+const defaultState: CampaignContextInterface = {
   campaign: {
     fallenHeroes: [],
     restOfAliveHeroes: ["Aragorn", "Eowyn", "Beravor"],
