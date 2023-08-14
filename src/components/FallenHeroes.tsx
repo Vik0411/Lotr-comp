@@ -54,7 +54,7 @@ function FallenHeroes() {
         <ul className="fallen_heroes__list">
           {campaign.fallenHeroes.map(
             (fallenHero): JSX.Element => (
-              <FallenHero fallenHero={fallenHero} />
+              <FallenHero fallenHero={fallenHero} key={fallenHero} />
             )
           )}
         </ul>
