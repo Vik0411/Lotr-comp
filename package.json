@@ -37,8 +37,7 @@
       ],
       "react/function-component-definition": "warn",
       "arrow-body-style": [
-        "error",
-        "as-needed"
+        "warn"
       ]
     }
   },
