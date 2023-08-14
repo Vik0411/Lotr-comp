@@ -1,4 +1,3 @@
-import { EventType } from "@testing-library/react";
 import { LotrContext } from "../context";
 import React, { useState } from "react";
 
