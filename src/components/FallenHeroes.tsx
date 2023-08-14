@@ -52,9 +52,11 @@ function FallenHeroes() {
         </button>
         <h3>The Fallen:</h3>
         <ul className="fallen_heroes__list">
-          {campaign.fallenHeroes.map((fallenHero: string): JSX.Element => {
-            return <FallenHero fallenHero={fallenHero} />;
-          })}
+          {campaign.fallenHeroes.map(
+            (fallenHero): JSX.Element => (
+              <FallenHero fallenHero={fallenHero} />
+            )
+          )}
         </ul>
       </form>
     </div>
