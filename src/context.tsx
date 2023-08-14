@@ -64,7 +64,7 @@ type LotrProviderProps = {
 };
 
 function LotrProvider({ children }: LotrProviderProps) {
-  const { campaign, setCampaign } = defaultState;
+  const [campaign, setCampaign] = useState(defaultState.campaign);
 
   return (
     <LotrContext.Provider
