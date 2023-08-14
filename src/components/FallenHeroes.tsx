@@ -13,7 +13,6 @@ function FallenHeroes() {
   const [fallenHero, setFallenHero] = useState("");
 
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
-    e.preventDefault();
     setFallenHero(e.target.value);
   };
 
