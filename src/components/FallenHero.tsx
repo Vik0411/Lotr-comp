@@ -16,10 +16,8 @@ return (
 }
 */
 
-function FallenHero() {
+export function FallenHero({ fallenHero }: { fallenHero: string }) {
   // this component is for rendering individual fallen hero, eventually
   // also with more data, such as scenarios played, image etc.
-  // const {fallenHeroes} = React.useContext(GithubContext);
-
-  return <div className="fallen"> </div>;
+  return <li>{fallenHero}</li>;
 }

@@ -35,7 +35,10 @@
           "argsIgnorePattern": "^_"
         }
       ],
-      "react/function-component-definition": "warn"
+      "react/function-component-definition": "warn",
+      "arrow-body-style": [
+        "warn"
+      ]
     }
   },
   "browserslist": {
