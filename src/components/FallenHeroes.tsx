@@ -50,7 +50,7 @@ function FallenHeroes() {
           Send to the coffin
         </button>
         <header className="header">
-          <button className="btn list_fallen">List fallen heroes</button>
+          Fallen heroes:
           <div className="fallen__heroes__panel">
             <ul className="fallen_heroes__list">{campaign.fallenHeroes}</ul>
           </div>
