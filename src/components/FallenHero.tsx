@@ -23,5 +23,3 @@ function FallenHero() {
 
   return <div className="fallen"> </div>;
 }
-
-export default FallenHero;
