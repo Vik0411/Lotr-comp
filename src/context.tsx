@@ -1,14 +1,10 @@
+import React, { SetStateAction, useState, Dispatch, ReactNode } from "react";
+import { Campaign } from "./types";
 // Here the first working version with local browser storage was only in javascript
 // and will have to be adjusted to react and useState() hooks probably
 // This page should work as mainly as the data handling place
 
-export const allHerosMock = ['Aragorn', 'Eowyn', 'Beravor']
-export const state = {
-    fallenHeroes: ['Aragorn'],
-    restOfAliveHeroes: ['Eowyn', 'Beravor'],
-    allHeros: allHerosMock
-}
-
+/*
 export const persistData = function () {
     // I believe we could simply use this browser local storage for our purposes
     localStorage.setItem('fallenHeroes', JSON.stringify(state.fallenHeroes))
@@ -44,3 +40,42 @@ const init = function(){
 }
 init()
 console.log(state.fallenHeroes, state.restOfAliveHeroes)
+
+*/
+
+export interface CampaignContextInterface {
+  campaign: Campaign;
+  setCampaign: Dispatch<SetStateAction<Campaign>>;
+}
+
+const defaultState: CampaignContextInterface = {
+  campaign: {
+    fallenHeroes: [],
+    restOfAliveHeroes: ["Aragorn", "Eowyn", "Beravor"],
+    allHeroes: ["Aragorn", "Eowyn", "Beravor"],
+  },
+  setCampaign: () => {},
+};
+
+const LotrContext = React.createContext(defaultState);
+
+type LotrProviderProps = {
+  children: ReactNode;
+};
+
+function LotrProvider({ children }: LotrProviderProps) {
+  const [campaign, setCampaign] = useState(defaultState.campaign);
+
+  return (
+    <LotrContext.Provider
+      value={{
+        campaign,
+        setCampaign,
+      }}
+    >
+      {children}
+    </LotrContext.Provider>
+  );
+}
+
+export { LotrContext, LotrProvider };
