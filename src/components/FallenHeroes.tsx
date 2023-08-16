@@ -43,13 +43,14 @@ function FallenHeroes() {
     }
 
     if (names.includes(fallenHero) && isAlive) {
-      campaign.allHeroes.map((hero) => {
+      campaign.allHeroes.map(function (hero) {
         if (hero.name === fallenHero) {
           hero.alive = false;
           setCampaign(campaign);
           const fallen = filterFallen();
           setFallenHeroes(fallen);
         }
+        return campaign;
       });
     }
   }
