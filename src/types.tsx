@@ -1,5 +1,8 @@
 export interface Campaign {
-  fallenHeroes: string[];
-  restOfAliveHeroes: string[];
-  allHeroes: string[];
+  allHeroes: Hero[];
 }
+
+type Hero = {
+  name: string;
+  alive: Boolean;
+};

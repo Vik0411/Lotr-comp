@@ -50,9 +50,11 @@ export interface CampaignContextInterface {
 
 const defaultState: CampaignContextInterface = {
   campaign: {
-    fallenHeroes: [],
-    restOfAliveHeroes: ["Aragorn", "Eowyn", "Beravor"],
-    allHeroes: ["Aragorn", "Eowyn", "Beravor"],
+    allHeroes: [
+      { name: "Aragorn", alive: true },
+      { name: "Beravor", alive: true },
+      { name: "Eowyn", alive: true },
+    ],
   },
   setCampaign: () => {},
 };
