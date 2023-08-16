@@ -4,5 +4,5 @@ export interface Campaign {
 
 type Hero = {
   name: string;
-  alive: Boolean;
+  alive: boolean;
 };
