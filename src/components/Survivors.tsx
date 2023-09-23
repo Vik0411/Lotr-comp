@@ -1,12 +1,10 @@
-import { Button } from "./styles/Button.styled";
-
 function Survivors() {
   return (
     <div>
-      <header>
-        <Button>List survivors</Button>
-        <div>
-          <ul>{}</ul>
+      <header className="header">
+        <button className="btn list_survivors">List survivors</button>
+        <div className="rest__panel">
+          <ul className="rest__heroes__list">{}</ul>
         </div>
       </header>
     </div>

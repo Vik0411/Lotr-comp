@@ -1,8 +1,6 @@
 import { LotrContext } from "../context";
 import React, { useState } from "react";
 import { FallenHero } from "./FallenHero";
-import { Button } from "./styles/Button.styled";
-import { StyledInput } from "./styles/Header.styled";
 
 function FallenHeroes() {
   // the FallenHero component should be rendered in this component in a loop or so
@@ -42,16 +40,18 @@ function FallenHeroes() {
   return (
     <div>
       <form onSubmit={addFallenHero}>
-        <StyledInput
+        <input
           type="text"
+          className="input_fallen"
           value={fallenHero}
           placeholder="Input your fallen hero..."
           onChange={handleChange}
         />
-        <br></br>
-        <Button type="submit">Send to the coffin</Button>
+        <button type="submit" className="btn input_fallen">
+          Send to the coffin
+        </button>
         <h3>The Fallen:</h3>
-        <ul>
+        <ul className="fallen_heroes__list">
           {campaign.fallenHeroes.map(
             (fallenHero): JSX.Element => (
               <FallenHero fallenHero={fallenHero} key={fallenHero} />
