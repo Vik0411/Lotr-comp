@@ -1,11 +1,12 @@
+import { StyledHeader, StyledSubeader } from "./styles/Header.styled";
+import { Button } from "./styles/Button.styled";
+
 function AllMightyHeroes() {
   return (
-    <header className="heading">
-      <button className="btn list_all">List all the mighty heroes</button>
-      <div className="all__heroes__panel">
-        <h2 className="all_heroes__list">all heroes list</h2>
-      </div>
-    </header>
+    <StyledHeader>
+      <Button>List all the mighty heroes</Button>
+      <StyledSubeader>all heroes list</StyledSubeader>
+    </StyledHeader>
   );
 }
 
