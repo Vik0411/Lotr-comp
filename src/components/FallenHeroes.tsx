@@ -18,7 +18,6 @@ function FallenHeroes() {
 
   const fallen = filterFallen();
   const [fallenHero, setFallenHero] = useState("");
-  const [fallenHeroes, setFallenHeroes] = useState(fallen);
 
   const names = campaign.allHeroes.map((hero) => {
     return hero.name;
@@ -43,14 +42,11 @@ function FallenHeroes() {
     }
 
     if (names.includes(fallenHero) && isAlive) {
-      campaign.allHeroes.map(function (hero) {
+      campaign.allHeroes.find((hero) => {
         if (hero.name === fallenHero) {
           hero.alive = false;
-          setCampaign(campaign);
-          const fallen = filterFallen();
-          setFallenHeroes(fallen);
+          setCampaign({ ...campaign });
         }
-        return campaign;
       });
     }
   }
@@ -70,7 +66,7 @@ function FallenHeroes() {
         </button>
         <h3>The Fallen:</h3>
         <ul className="fallen_heroes__list">
-          {fallenHeroes.map(
+          {fallen.map(
             (fallenHero): JSX.Element => (
               <FallenHero fallenHero={fallenHero.name} key={fallenHero.name} />
             )
