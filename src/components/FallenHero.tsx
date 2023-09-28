@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 /* this is only optional html template for use
 export function FallenHero(){
 return (
@@ -19,5 +21,27 @@ return (
 export function FallenHero({ fallenHero }: { fallenHero: string }) {
   // this component is for rendering individual fallen hero, eventually
   // also with more data, such as scenarios played, image etc.
-  return <li>{fallenHero}</li>;
+
+  return (
+    <Wrapper>
+      <li>{fallenHero}</li>;
+    </Wrapper>
+  );
 }
+
+const Wrapper = styled.li`
+  background: var(--clr-white);
+  border-top-right-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  position: relative;
+  li {
+    height: 6px;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(45px, 1fr));
+    gap: 1.25rem 1rem;
+    padding: 1rem 2rem;
+  }
+`;
+
+export default FallenHero;
