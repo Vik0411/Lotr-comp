@@ -51,7 +51,7 @@ export interface CampaignContextInterface {
 const defaultState: CampaignContextInterface = {
   campaign: {
     allHeroes: [
-      { name: "Aragorn", alive: true },
+      { name: "Fingolfin", alive: true },
       { name: "Beravor", alive: true },
       { name: "Arwen", alive: false },
       { name: "Elladan", alive: false },
@@ -71,7 +71,6 @@ const defaultState: CampaignContextInterface = {
       { name: "Cirdan", alive: false },
       { name: "Beorn", alive: false },
       { name: "Beregond", alive: false },
-      { name: "Gollum", alive: false },
     ],
   },
   setCampaign: () => {},

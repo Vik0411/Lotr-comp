@@ -9,6 +9,6 @@
       }
     ],
     "react/function-component-definition": "warn",
-    "eslint prefer-arrow-callback": ["error"]
+    "prefer-arrow-callback": "warn"
   }
 }

@@ -3,35 +3,24 @@ import React, { useState } from "react";
 import { FallenHero } from "./FallenHero";
 
 function FallenHeroes() {
-  // the FallenHero component should be rendered in this component in a loop or so
-  // to show all the fallen heroes, via forEach() or so
-
-  // addFallenHero() - unfinished function for the send to coffin button
-  // to get the hero from the input text and if correct, that is
-  // matching hero from the set of totalHeroes,
-  // and is included in rest of heroes alive, update the state accordingly
-  const { campaign, setCampaign } = React.useContext(LotrContext);
-
   function filterFallen() {
     return campaign.allHeroes.filter((hero) => hero.alive === false);
   }
-
-  const fallen = filterFallen();
-  const [fallenHero, setFallenHero] = useState("");
-
-  const names = campaign.allHeroes.map((hero) => {
-    return hero.name;
-  });
-
-  const isAlive =
-    campaign.allHeroes.find((hero) => hero.name === fallenHero)?.alive === true;
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setFallenHero(e.target.value);
   }
 
+  const { campaign, setCampaign } = React.useContext(LotrContext);
+  const [fallenHero, setFallenHero] = useState("");
+  const fallen = filterFallen();
+
   function addFallenHero(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const fall = campaign.allHeroes.find((hero) => hero.name === fallenHero);
+    const isAlive = fall?.alive === true;
+    const names = campaign.allHeroes.map((hero) => hero.name);
+
     //add hero to the list if it isnt there yet
     if (!names.includes(fallenHero)) {
       throw Error("Sorry, your hero is an unknown!");
@@ -42,12 +31,8 @@ function FallenHeroes() {
     }
 
     if (names.includes(fallenHero) && isAlive) {
-      campaign.allHeroes.find((hero) => {
-        if (hero.name === fallenHero) {
-          hero.alive = false;
-          setCampaign({ ...campaign });
-        }
-      });
+      fall.alive = false;
+      setCampaign({ ...campaign });
     }
   }
 
