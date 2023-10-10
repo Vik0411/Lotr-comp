@@ -17,8 +17,10 @@ function FallenHeroes() {
 
   function addFallenHero(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const fall = campaign.allHeroes.find((hero) => hero.name === fallenHero);
-    const isAlive = fall?.alive === true;
+    const fallenToBeAdded = campaign.allHeroes.find(
+      (hero) => hero.name === fallenHero
+    );
+    const isAlive = fallenToBeAdded?.alive === true;
     const names = campaign.allHeroes.map((hero) => hero.name);
 
     //add hero to the list if it isnt there yet
@@ -31,7 +33,7 @@ function FallenHeroes() {
     }
 
     if (names.includes(fallenHero) && isAlive) {
-      fall.alive = false;
+      fallenToBeAdded.alive = false;
       setCampaign({ ...campaign });
     }
   }

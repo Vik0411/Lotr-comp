@@ -9,6 +9,7 @@
       }
     ],
     "react/function-component-definition": "warn",
-    "prefer-arrow-callback": "warn"
+    "prefer-arrow-callback": "warn",
+    "arrow-body-style": ["error", "as-needed"]
   }
 }
