@@ -1,14 +1,14 @@
-import { StyledHeader, StyledSubeader, StyledSpan } from "./atoms/Header";
+import { Header, Subheader, Span } from "./atoms/Header";
 import { FirstButton } from "./atoms/Button";
 
 function AllMightyHeroes() {
   return (
-    <StyledHeader>
+    <Header>
       <FirstButton>List all the mighty heroes</FirstButton>
-      <StyledSubeader>
-        <StyledSpan>all heroes list</StyledSpan>
-      </StyledSubeader>
-    </StyledHeader>
+      <Subheader>
+        <Span>all heroes list</Span>
+      </Subheader>
+    </Header>
   );
 }
 
