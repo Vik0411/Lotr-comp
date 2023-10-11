@@ -49,7 +49,6 @@ function FallenHeroes() {
           placeholder="Input your fallen hero..."
           onChange={handleChange}
         />
-        <br></br>
         <Button type="submit">Send to the coffin</Button>
         <h3>The Fallen:</h3>
         <ul>

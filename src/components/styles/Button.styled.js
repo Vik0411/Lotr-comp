@@ -3,11 +3,35 @@ import styled from "styled-components";
 export const Button = styled.button`
   border-radius: 50px;
   border: none;
+  text-align: center;
+  width: 75%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 5px;
+  font-weight: 700;
+  padding: 15px 80px;
+  background-color: ${({ bg }) => bg || "#fff"};
+  color: ${({ color }) => color || "#333"};
+
+  &:hover {
+    opacity: 0.9;
+    transform: scale(0.98);
+    color: ${({ bg }) => bg || "#fff"};
+    background-color: ${({ color }) => color || "#000000"};
+  }
+`;
+
+export const FirstButton = styled.button`
+  border-radius: 50px;
+  border: none;
+  text-align: center;
+  width: 15vw;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-  padding: 15px 60px;
+  padding: 0px 80px;
   background-color: ${({ bg }) => bg || "#fff"};
   color: ${({ color }) => color || "#333"};
 
@@ -15,4 +39,5 @@ export const Button = styled.button`
     opacity: 0.9;
     transform: scale(0.98);
   }
+  position: absolute;
 `;
