@@ -1,4 +1,4 @@
-import { Button } from "./styles/Button.styled";
+import { Button } from "./atoms/Button";
 
 function Survivors() {
   return (

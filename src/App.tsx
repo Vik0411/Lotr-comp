@@ -2,9 +2,7 @@ import FallenHeroes from "./components/FallenHeroes";
 import { LotrProvider } from "./context";
 import AllMightyHeroes from "./components/AllMightyHeroes";
 import Survivors from "./components/Survivors";
-import { Container } from "./components/styles/Container.styled";
-import { Flex } from "./components/styles/Flex.styled";
-import { StyledHeader } from "./components/styles/Header.styled";
+import { Container } from "./components/atoms/Container";
 import { ThemeProvider } from "styled-components";
 
 const theme = {

@@ -1,9 +1,5 @@
-import {
-  StyledHeader,
-  StyledSubeader,
-  StyledSpan,
-} from "./styles/Header.styled";
-import { FirstButton } from "./styles/Button.styled";
+import { StyledHeader, StyledSubeader, StyledSpan } from "./atoms/Header";
+import { FirstButton } from "./atoms/Button";
 
 function AllMightyHeroes() {
   return (

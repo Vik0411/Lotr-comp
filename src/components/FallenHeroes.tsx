@@ -1,8 +1,8 @@
 import { LotrContext } from "../context";
 import React, { useState } from "react";
 import { FallenHero } from "./FallenHero";
-import { Button } from "./styles/Button.styled";
-import { StyledInput } from "./styles/Header.styled";
+import { Button } from "./atoms/Button";
+import { StyledInput } from "./atoms/Header";
 
 function FallenHeroes() {
   function filterFallen() {

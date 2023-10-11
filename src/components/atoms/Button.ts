@@ -11,13 +11,13 @@ export const Button = styled.button`
   margin-top: 5px;
   font-weight: 700;
   padding: 15px 80px;
-  background-color: ${({ bg }) => bg || "#fff"};
+  background-color: ${({ color }) => color || "#fff"};
   color: ${({ color }) => color || "#333"};
 
   &:hover {
     opacity: 0.9;
     transform: scale(0.98);
-    color: ${({ bg }) => bg || "#fff"};
+    color: ${({ color }) => color || "#fff"};
     background-color: ${({ color }) => color || "#000000"};
   }
 `;
@@ -32,7 +32,7 @@ export const FirstButton = styled.button`
   font-size: 16px;
   font-weight: 700;
   padding: 0px 80px;
-  background-color: ${({ bg }) => bg || "#fff"};
+  background-color: ${({ color }) => color || "#fff"};
   color: ${({ color }) => color || "#333"};
 
   &:hover {
