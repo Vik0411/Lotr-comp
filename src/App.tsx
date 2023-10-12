@@ -4,7 +4,7 @@ import AllMightyHeroes from "./components/AllMightyHeroes";
 import Survivors from "./components/Survivors";
 import { Container } from "./components/atoms/Container";
 import { ThemeProvider } from "styled-components";
-import { theme } from "./components/atoms/themes";
+import { theme } from "./themes";
 
 function App() {
   return (
