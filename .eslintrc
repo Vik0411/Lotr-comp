@@ -8,6 +8,8 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    "react/function-component-definition": "warn"
+    "react/function-component-definition": "warn",
+    "prefer-arrow-callback": "warn",
+    "arrow-body-style": ["warn"]
   }
 }

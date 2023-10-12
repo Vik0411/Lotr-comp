@@ -50,9 +50,28 @@ export interface CampaignContextInterface {
 
 const defaultState: CampaignContextInterface = {
   campaign: {
-    fallenHeroes: [],
-    restOfAliveHeroes: ["Aragorn", "Eowyn", "Beravor"],
-    allHeroes: ["Aragorn", "Eowyn", "Beravor"],
+    allHeroes: [
+      { name: "Fingolfin", alive: true },
+      { name: "Beravor", alive: true },
+      { name: "Arwen", alive: false },
+      { name: "Elladan", alive: false },
+      { name: "Elrohir", alive: false },
+      { name: "Rossiel", alive: false },
+      { name: "Gollum", alive: false },
+      { name: "Mirlonde", alive: false },
+      { name: "Prince Imrahil", alive: false },
+      { name: "Hirluin the Fair", alive: false },
+      { name: "Denethor", alive: false },
+      { name: "Eowyn", alive: false },
+      { name: "Aragorn", alive: false },
+      { name: "Elfhelm", alive: false },
+      { name: "Galadriel", alive: false },
+      { name: "Haldir", alive: false },
+      { name: "Celeborn", alive: false },
+      { name: "Cirdan", alive: false },
+      { name: "Beorn", alive: false },
+      { name: "Beregond", alive: false },
+    ],
   },
   setCampaign: () => {},
 };

@@ -3,40 +3,41 @@ import React, { useState } from "react";
 import { FallenHero } from "./FallenHero";
 
 function FallenHeroes() {
-  // the FallenHero component should be rendered in this component in a loop or so
-  // to show all the fallen heroes, via forEach() or so
-
-  // addFallenHero() - unfinished function for the send to coffin button
-  // to get the hero from the input text and if correct, that is
-  // matching hero from the set of totalHeroes,
-  // and is included in rest of heroes alive, update the state accordingly
-  const { campaign, setCampaign } = React.useContext(LotrContext);
-  const [fallenHero, setFallenHero] = useState("");
+  function filterFallen() {
+    return campaign.allHeroes.filter((hero) => hero.alive === false);
+  }
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setFallenHero(e.target.value);
   }
 
+  const { campaign, setCampaign } = React.useContext(LotrContext);
+  const [fallenHero, setFallenHero] = useState("");
+  const fallen = filterFallen();
+
   function addFallenHero(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const fallenToBeAdded = campaign.allHeroes.find(
+      (hero) => hero.name === fallenHero
+    );
+    const isAlive = fallenToBeAdded?.alive === true;
+    const names = campaign.allHeroes.map((hero) => hero.name);
+
     //add hero to the list if it isnt there yet
-    if (!campaign.restOfAliveHeroes.includes(fallenHero)) {
+    if (!names.includes(fallenHero)) {
+      throw Error("Sorry, your hero is an unknown!");
+    }
+
+    if (names.includes(fallenHero) && !isAlive) {
       throw Error("Sorry, your hero is not among the living!");
     }
-    if (campaign.restOfAliveHeroes.includes(fallenHero)) {
-      const updatedFallen = [...campaign.fallenHeroes, fallenHero];
-      const updatedRestOfAlive = campaign.restOfAliveHeroes.filter(
-        (hero) => hero !== fallenHero
-      );
-      setCampaign({
-        ...campaign,
-        fallenHeroes: updatedFallen,
-        restOfAliveHeroes: updatedRestOfAlive,
-      });
+
+    if (names.includes(fallenHero) && isAlive) {
+      fallenToBeAdded.alive = false;
+      setCampaign({ ...campaign });
     }
   }
 
-  console.log(campaign);
   return (
     <div>
       <form onSubmit={addFallenHero}>
@@ -52,9 +53,9 @@ function FallenHeroes() {
         </button>
         <h3>The Fallen:</h3>
         <ul className="fallen_heroes__list">
-          {campaign.fallenHeroes.map(
+          {fallen.map(
             (fallenHero): JSX.Element => (
-              <FallenHero fallenHero={fallenHero} key={fallenHero} />
+              <FallenHero fallenHero={fallenHero.name} key={fallenHero.name} />
             )
           )}
         </ul>
