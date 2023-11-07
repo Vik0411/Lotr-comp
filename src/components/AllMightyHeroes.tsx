@@ -1,4 +1,4 @@
-import { Header, Subheader, Span } from "./atoms/Typography";
+import { Header, Subheader, Span } from "./atoms/typography";
 import { FirstButton } from "./atoms/Button";
 
 function AllMightyHeroes() {
