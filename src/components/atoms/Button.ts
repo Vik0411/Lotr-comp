@@ -10,14 +10,14 @@ export const Button = styled.button`
   margin-top: 5px;
   font-weight: 700;
   padding: 15px 80px;
-  background-color: ${({ theme }) => theme.colors.subheader};
-  background-color: ${({ theme }) => theme.colors.subheader};
+  background-color: ${({ theme }) => theme.colors.vanSaarGrey};
+  background-color: ${({ theme }) => theme.colors.vanSaarGrey};
 
   &:hover {
     opacity: 0.9;
     transform: scale(0.98);
-    color: ${({ color, theme }) => color || theme.colors.firstButton};
-    background-color: ${({ theme }) => theme.colors.subheader};
+    color: ${({ color, theme }) => color || theme.colors.basicWhite};
+    background-color: ${({ theme }) => theme.colors.vanSaarGrey};
   }
 `;
 
@@ -31,8 +31,8 @@ export const FirstButton = styled.button`
   font-size: 16px;
   font-weight: 700;
   padding: 0px 80px;
-  color: ${({ color, theme }) => color || theme.colors.header};
-  background-color: ${({ theme }) => theme.colors.firstButton};
+  color: ${({ color, theme }) => color || theme.colors.basicBlack};
+  background-color: ${({ theme }) => theme.colors.basicWhite};
 
   &:hover {
     opacity: 0.9;

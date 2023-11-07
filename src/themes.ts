@@ -1,8 +1,8 @@
 export const theme = {
   colors: {
-    header: "#000000",
-    subheader: "#808080",
-    firstButton: "#FFFFFF",
+    basicBlack: "#000000",
+    vanSaarGrey: "#808080",
+    basicWhite: "#FFFFFF",
   },
   breakpoints: {
     mobile: "768px",
