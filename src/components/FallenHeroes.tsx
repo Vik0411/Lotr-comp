@@ -1,7 +1,7 @@
 import { LotrContext } from "../context";
 import React, { useState } from "react";
 import { FallenHero } from "./FallenHero";
-import { Button } from "./atoms/Button";
+import { SendToCoffinBtn } from "./atoms/Button";
 import { Input } from "./atoms/Input";
 
 function FallenHeroes() {
@@ -49,7 +49,7 @@ function FallenHeroes() {
           placeholder="Input your fallen hero..."
           onChange={handleChange}
         />
-        <Button type="submit">Send to the coffin</Button>
+        <SendToCoffinBtn type="submit">Send to the coffin</SendToCoffinBtn>
         <h3>The Fallen:</h3>
         <ul>
           {fallen.map(

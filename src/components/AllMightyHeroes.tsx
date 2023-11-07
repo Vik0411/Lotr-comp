@@ -1,10 +1,10 @@
 import { Header, Subheader, Span } from "./atoms/typography";
-import { FirstButton } from "./atoms/Button";
+import { ListAllBtn } from "./atoms/Button";
 
 function AllMightyHeroes() {
   return (
     <Header>
-      <FirstButton>List all the mighty heroes</FirstButton>
+      <ListAllBtn>List all the mighty heroes</ListAllBtn>
       <Subheader>
         <Span>all heroes list</Span>
       </Subheader>

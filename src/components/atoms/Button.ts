@@ -7,36 +7,31 @@ export const Button = styled.button`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   font-size: 16px;
-  margin-top: 5px;
   font-weight: 700;
   padding: 15px 80px;
-  background-color: ${({ theme }) => theme.colors.vanSaarGrey};
-  background-color: ${({ theme }) => theme.colors.vanSaarGrey};
 
   &:hover {
     opacity: 0.9;
     transform: scale(0.98);
+  }
+`;
+
+export const ListAllBtn = styled(Button)`
+  width: 15vw;
+  color: ${({ color, theme }) => color || theme.colors.basicBlack};
+  background-color: ${({ theme }) => theme.colors.basicWhite};
+  position: absolute;
+`;
+
+export const SendToCoffinBtn = styled(Button)`
+  margin-top: 5px;
+  background-color: ${({ theme }) => theme.colors.vanSaarGrey};
+  background-color: ${({ theme }) => theme.colors.vanSaarGrey};
+
+  &:hover {
     color: ${({ color, theme }) => color || theme.colors.basicWhite};
     background-color: ${({ theme }) => theme.colors.vanSaarGrey};
   }
 `;
 
-export const FirstButton = styled.button`
-  border-radius: 50px;
-  border: none;
-  text-align: center;
-  width: 15vw;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 0px 80px;
-  color: ${({ color, theme }) => color || theme.colors.basicBlack};
-  background-color: ${({ theme }) => theme.colors.basicWhite};
-
-  &:hover {
-    opacity: 0.9;
-    transform: scale(0.98);
-  }
-  position: absolute;
-`;
+export const ListSurvivorsBtn = SendToCoffinBtn;

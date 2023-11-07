@@ -1,10 +1,10 @@
-import { Button } from "./atoms/Button";
+import { ListSurvivorsBtn } from "./atoms/Button";
 
 function Survivors() {
   return (
     <div>
       <header>
-        <Button>List survivors</Button>
+        <ListSurvivorsBtn>List survivors</ListSurvivorsBtn>
         <div>
           <ul>{}</ul>
         </div>
