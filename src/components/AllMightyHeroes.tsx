@@ -1,14 +1,14 @@
-import { Header, Subheader, Span } from "./atoms/typography";
+import { HeaderListAll, Span, SubheaderListAll } from "./atoms/typography";
 import { ListAllBtn } from "./atoms/Button";
 
 function AllMightyHeroes() {
   return (
-    <Header>
+    <HeaderListAll>
       <ListAllBtn>List all the mighty heroes</ListAllBtn>
-      <Subheader>
+      <SubheaderListAll>
         <Span>all heroes list</Span>
-      </Subheader>
-    </Header>
+      </SubheaderListAll>
+    </HeaderListAll>
   );
 }
 

@@ -2,7 +2,7 @@ import { LotrContext } from "../context";
 import React, { useState } from "react";
 import { FallenHero } from "./FallenHero";
 import { SendToCoffinBtn } from "./atoms/Button";
-import { Input } from "./atoms/Input";
+import { InputFallen } from "./atoms/Input";
 
 function FallenHeroes() {
   function filterFallen() {
@@ -43,7 +43,7 @@ function FallenHeroes() {
   return (
     <div>
       <form onSubmit={addFallenHero}>
-        <Input
+        <InputFallen
           type="text"
           value={fallenHero}
           placeholder="Input your fallen hero..."

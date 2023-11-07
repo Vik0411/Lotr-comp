@@ -2,20 +2,20 @@ import FallenHeroes from "./components/FallenHeroes";
 import { LotrProvider } from "./context";
 import AllMightyHeroes from "./components/AllMightyHeroes";
 import Survivors from "./components/Survivors";
-import { Container } from "./components/atoms/Container";
+import { ContainerHeroManagement } from "./components/atoms/Container";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./themes";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Container>
+      <ContainerHeroManagement>
         <LotrProvider>
           <AllMightyHeroes />
           <FallenHeroes />
           <Survivors />
         </LotrProvider>
-      </Container>
+      </ContainerHeroManagement>
     </ThemeProvider>
   );
 }

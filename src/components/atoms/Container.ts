@@ -9,3 +9,7 @@ export const Container = styled.div`
   flex-direction: column;
   font-family: "Poppins", sans-serif;
 `;
+
+export const ContainerHeroManagement = styled(Container)`
+  margin: 0 auto;
+`;
