@@ -5,11 +5,6 @@ import { Campaign } from "./types";
 // This page should work as mainly as the data handling place
 
 /*
-export const persistData = function () {
-    // I believe we could simply use this browser local storage for our purposes
-    localStorage.setItem('fallenHeroes', JSON.stringify(state.fallenHeroes))
-}
-
 // unfinished function for potentianlly new feature of also keeping count
 // of individual deaths for the heroes
 export const addFallenHeroCount = function(hero:string){
@@ -34,6 +29,7 @@ export const resetRestOfHeroes = function(hero:string){
 }
 
 
+
 const init = function(){
     const storage = localStorage.getItem('fallenHeroes')
     if (storage) state.fallenHeroes= JSON.parse(storage)
@@ -41,6 +37,20 @@ const init = function(){
 init()
 console.log(state.fallenHeroes, state.restOfAliveHeroes)
 
+
+//from Forkify
+ persistData() {
+        localStorage.setItem('likes', JSON.stringify(this.likes));
+    }
+
+    readStorage() {
+        const storage = JSON.parse(localStorage.getItem('likes'));
+        
+        // Restoring likes from the localStorage
+        if (storage) this.likes = storage;
+    }
+
+//till here
 */
 
 export interface CampaignContextInterface {
@@ -48,10 +58,11 @@ export interface CampaignContextInterface {
   setCampaign: Dispatch<SetStateAction<Campaign>>;
 }
 
-const defaultState: CampaignContextInterface = {
+export const defaultState: CampaignContextInterface = {
   campaign: {
     allHeroes: [
       { name: "Fingolfin", alive: true },
+      { name: "Faenor", alive: true },
       { name: "Beravor", alive: true },
       { name: "Arwen", alive: false },
       { name: "Elladan", alive: false },
@@ -84,6 +95,11 @@ type LotrProviderProps = {
 
 function LotrProvider({ children }: LotrProviderProps) {
   const [campaign, setCampaign] = useState(defaultState.campaign);
+
+  window.addEventListener("load", () => {
+    const storage = window.localStorage.getItem("camp");
+    if (storage) setCampaign(JSON.parse(storage));
+  });
 
   return (
     <LotrContext.Provider
