@@ -39,6 +39,8 @@ export const defaultState: CampaignContextInterface = {
       { name: "Faenor", alive: true },
       { name: "Beravor", alive: true },
       { name: "Finarfin", alive: true },
+      { name: "Faenor", alive: true },
+      { name: "Finarfin", alive: true },
       { name: "Arwen", alive: false },
       { name: "Elladan", alive: false },
       { name: "Elrohir", alive: false },
