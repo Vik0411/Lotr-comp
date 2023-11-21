@@ -80,12 +80,11 @@ type LotrProviderProps = {
 };
 
 function LotrProvider({ children }: LotrProviderProps) {
-  const [campaign, setCampaign] = useState(defaultState.campaign);
-
-  window.addEventListener("load", () => {
-    const storage = window.localStorage.getItem("camp");
-    if (storage) setCampaign(JSON.parse(storage));
-  });
+  // @ts-ignore
+  const storageCampaign = JSON.parse(localStorage.getItem("campaign"));
+  const [campaign, setCampaign] = useState(
+    storageCampaign || defaultState.campaign
+  );
 
   return (
     <LotrContext.Provider

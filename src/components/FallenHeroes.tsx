@@ -35,7 +35,7 @@ function FallenHeroes() {
     if (names.includes(fallenHero) && isAlive) {
       fallenToBeAdded.alive = false;
       setCampaign({ ...campaign });
-      window.localStorage.setItem("camp", JSON.stringify(campaign));
+      localStorage.setItem("campaign", JSON.stringify(campaign));
     }
   }
 
