@@ -27,16 +27,6 @@ export const resetRestOfHeroes = function(hero:string){
         persistData();
     }   
 }
-
-
-
-const init = function(){
-    const storage = localStorage.getItem('fallenHeroes')
-    if (storage) state.fallenHeroes= JSON.parse(storage)
-}
-init()
-console.log(state.fallenHeroes, state.restOfAliveHeroes)
-
 */
 
 export interface CampaignContextInterface {
