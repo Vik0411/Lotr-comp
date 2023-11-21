@@ -3,10 +3,6 @@ import React, { useState } from "react";
 import { FallenHero } from "./FallenHero";
 
 function FallenHeroes() {
-  const { campaign, setCampaign } = React.useContext(LotrContext);
-  const [fallenHero, setFallenHero] = useState("");
-  const fallen = filterFallen();
-
   function filterFallen() {
     return campaign.allHeroes.filter((hero) => hero.alive === false);
   }
@@ -14,6 +10,10 @@ function FallenHeroes() {
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setFallenHero(e.target.value);
   }
+
+  const { campaign, setCampaign } = React.useContext(LotrContext);
+  const [fallenHero, setFallenHero] = useState("");
+  const fallen = filterFallen();
 
   function addFallenHero(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
