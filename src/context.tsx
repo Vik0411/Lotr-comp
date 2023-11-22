@@ -40,6 +40,7 @@ export const defaultState: CampaignContextInterface = {
       { name: "Fingolfin", alive: true },
       { name: "Faenor", alive: true },
       { name: "Beravor", alive: true },
+      { name: "Finarfin", alive: true },
       { name: "Arwen", alive: false },
       { name: "Elladan", alive: false },
       { name: "Elrohir", alive: false },
@@ -70,10 +71,12 @@ type LotrProviderProps = {
 };
 
 function LotrProvider({ children }: LotrProviderProps) {
-  // @ts-ignore
-  const storageCampaign = JSON.parse(localStorage.getItem("campaign"));
+  const local = localStorage.getItem("campaign");
+  function getStorageCampaign() {
+    if (local) return JSON.parse(local);
+  }
   const [campaign, setCampaign] = useState(
-    storageCampaign || defaultState.campaign
+    getStorageCampaign() || defaultState.campaign
   );
 
   return (
