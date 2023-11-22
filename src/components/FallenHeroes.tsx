@@ -27,6 +27,9 @@ function FallenHeroes() {
     e.preventDefault();
     const namesOfFallen = fallen.map((hero) => hero.name);
 
+    if (alive[1] === undefined) {
+      alert("Your heroes list is empty. Do you want to add new?");
+    }
     if (alive[0] !== undefined && namesOfFallen.includes(fallenHero)) {
       setFallenHero(alive[0].name);
       alive[0].alive = false;
