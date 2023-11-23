@@ -46,6 +46,7 @@ export const defaultState: CampaignContextInterface = {
       { name: "Fingolfin", alive: false, current: false },
       { name: "x", alive: false, current: false },
       { name: "Ecthelion", alive: false, current: false },
+      { name: "Thorin Oakenshield", alive: false, current: false },
     ],
   },
   setCampaign: () => {},
