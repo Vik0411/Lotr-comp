@@ -1,6 +1,5 @@
 import { LotrContext } from "../context";
-import React, { useState } from "react";
-import { FallenHero } from "./FallenHero";
+import React from "react";
 import { Input } from "./atoms/Input";
 import styled from "styled-components";
 import { Button } from "./atoms/Button";
@@ -29,54 +28,50 @@ function FallenHeroes() {
   function filterAlive() {
     return campaign.allHeroes.filter((hero) => hero.alive === true);
   }
+  function killHero(heroName) {
+    let allOtherHeroes = campaign.allHeroes.filter(
+      (hero) => hero.name !== heroName
+    );
+    console.log(allOtherHeroes);
+    setCampaign({
+      allHeroes: [
+        ...allOtherHeroes,
+        { name: heroName, alive: false, current: false },
+      ],
+    });
+
+    localStorage.setItem("campaign", JSON.stringify(campaign));
+  }
   let fallen = filterFallen();
   let alive = filterAlive();
 
-  const [fallenHero, setFallenHero] = useState(alive[0]?.name);
-
-  function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
-    setFallenHero(e.target.value);
-  }
-
-  function addFallenHero(e: React.FormEvent<HTMLFormElement>) {
-    const fallenToBeAdded = campaign.allHeroes.find(
-      (hero) => hero.name === fallenHero
-    );
-    e.preventDefault();
-    const namesOfFallen = fallen.map((hero) => hero.name);
-
-    if (alive[1] === undefined) {
-      alert("Your heroes list is empty. Do you want to add new?");
-    }
-    if (alive[0] !== undefined && namesOfFallen.includes(fallenHero)) {
-      setFallenHero(alive[0].name);
-      alive[0].alive = false;
-      setCampaign({ ...campaign });
-    } else {
-      fallenToBeAdded!.alive = false;
-      setCampaign({ ...campaign });
-      localStorage.setItem("campaign", JSON.stringify(campaign));
-    }
-  }
-
   return (
     <div>
-      <form onSubmit={addFallenHero}>
-        <select value={fallenHero} onChange={handleChange}>
-          {alive.map((aliveHero) => (
-            <option key={aliveHero.name}>{aliveHero.name}</option>
-          ))}
-        </select>
-        <button type="submit">Send to the coffin</button>
+      <div>
+        <h2>Current heroes</h2>
+        <div style={{ display: "flex", gap: "5px" }}>
+          {alive.map(
+            (aliveHero): JSX.Element => (
+              <div key={aliveHero.name} style={{ border: "2px black solid" }}>
+                <p>{aliveHero.name}</p>
+                <button onClick={() => killHero(aliveHero.name)}>
+                  Send to coffin
+                </button>
+              </div>
+            )
+          )}
+        </div>
         <h3>The Fallen:</h3>
         <ul>
           {fallen.map(
             (fallenHero): JSX.Element => (
-              <FallenHero fallenHero={fallenHero.name} key={fallenHero.name} />
+              <div key={fallenHero.name}>
+                <p>{fallenHero.name}</p>
+              </div>
             )
           )}
         </ul>
-      </form>
+      </div>
     </div>
   );
 }
