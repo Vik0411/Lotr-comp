@@ -21,16 +21,16 @@ const SendToCoffinBtn = styled(Button)`
 
 function FallenHeroes() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
+  let alive = filterAlive();
+  let fallen = filterFallen();
+  let current = filterCurrent();
+
   function filterFallen() {
     return campaign.allHeroes.filter((hero) => hero.alive === false);
   }
-  let alive = filterAlive();
-
   function filterCurrent() {
     return alive.filter((hero) => hero.current === true);
   }
-
-  const current = filterCurrent();
   function filterAlive() {
     return campaign.allHeroes.filter((hero) => hero.alive === true);
   }
@@ -48,7 +48,6 @@ function FallenHeroes() {
 
     localStorage.setItem("campaign", JSON.stringify(campaign));
   }
-  let fallen = filterFallen();
 
   return (
     <div>

@@ -23,6 +23,9 @@ const ListAllBtn = styled(Button)`
 function AllMightyHeroes() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
   let alive = filterAlive();
+  let notCurrentAndAlive = filterNotCurrentAlive();
+  let currentAndAlive = filterCurrentAlive();
+  const [preparedHero, setPreparedHero] = useState(alive[0]?.name);
 
   function filterAlive() {
     return campaign.allHeroes.filter((hero) => hero.alive === true);
@@ -33,27 +36,21 @@ function AllMightyHeroes() {
   function filterCurrentAlive() {
     return alive.filter((hero) => hero.current === true);
   }
-
-  const notCurrentAndAlive = filterNotCurrentAlive();
-  const currentAndAlive = filterCurrentAlive();
-
-  const [preparedHero, setPreparedHero] = useState(alive[0]?.name);
-
   function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
     setPreparedHero(e.target.value);
   }
-
   function prepareHero(e: React.FormEvent<HTMLFormElement>) {
-    const preparedToBeAdded = campaign.allHeroes.find(
+    e.preventDefault();
+    let preparedToBeAdded = campaign.allHeroes.find(
       (hero) => hero.name === preparedHero
     );
-    const namesOfCurrent = currentAndAlive.map((hero) => hero.name);
+    const namesOfCurrentAndAlive = currentAndAlive.map((hero) => hero.name);
     if (notCurrentAndAlive[1] === undefined) {
       alert("Your heroes list is empty. Do you want to add new?");
     }
     if (
       notCurrentAndAlive[0] !== undefined &&
-      namesOfCurrent.includes(preparedHero)
+      namesOfCurrentAndAlive.includes(preparedHero)
     ) {
       setPreparedHero(notCurrentAndAlive[0].name);
       notCurrentAndAlive[0].current = true;
