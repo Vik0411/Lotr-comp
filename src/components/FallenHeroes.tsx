@@ -24,7 +24,13 @@ function FallenHeroes() {
   function filterFallen() {
     return campaign.allHeroes.filter((hero) => hero.alive === false);
   }
+  let alive = filterAlive();
 
+  function filterCurrent() {
+    return alive.filter((hero) => hero.current === true);
+  }
+
+  const current = filterCurrent();
   function filterAlive() {
     return campaign.allHeroes.filter((hero) => hero.alive === true);
   }
@@ -43,18 +49,17 @@ function FallenHeroes() {
     localStorage.setItem("campaign", JSON.stringify(campaign));
   }
   let fallen = filterFallen();
-  let alive = filterAlive();
 
   return (
     <div>
       <div>
         <h2>Current heroes</h2>
         <div style={{ display: "flex", gap: "5px" }}>
-          {alive.map(
-            (aliveHero): JSX.Element => (
-              <div key={aliveHero.name} style={{ border: "2px black solid" }}>
-                <p>{aliveHero.name}</p>
-                <button onClick={() => killHero(aliveHero.name)}>
+          {current.map(
+            (current): JSX.Element => (
+              <div key={current.name} style={{ border: "2px black solid" }}>
+                <p>{current.name}</p>
+                <button onClick={() => killHero(current.name)}>
                   Send to coffin
                 </button>
               </div>
