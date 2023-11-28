@@ -5,11 +5,6 @@ import { Campaign } from "./types";
 // This page should work as mainly as the data handling place
 
 /*
-export const persistData = function () {
-    // I believe we could simply use this browser local storage for our purposes
-    localStorage.setItem('fallenHeroes', JSON.stringify(state.fallenHeroes))
-}
-
 // unfinished function for potentianlly new feature of also keeping count
 // of individual deaths for the heroes
 export const addFallenHeroCount = function(hero:string){
@@ -32,15 +27,6 @@ export const resetRestOfHeroes = function(hero:string){
         persistData();
     }   
 }
-
-
-const init = function(){
-    const storage = localStorage.getItem('fallenHeroes')
-    if (storage) state.fallenHeroes= JSON.parse(storage)
-}
-init()
-console.log(state.fallenHeroes, state.restOfAliveHeroes)
-
 */
 
 export interface CampaignContextInterface {
@@ -48,11 +34,13 @@ export interface CampaignContextInterface {
   setCampaign: Dispatch<SetStateAction<Campaign>>;
 }
 
-const defaultState: CampaignContextInterface = {
+export const defaultState: CampaignContextInterface = {
   campaign: {
     allHeroes: [
       { name: "Fingolfin", alive: true },
+      { name: "Faenor", alive: true },
       { name: "Beravor", alive: true },
+      { name: "Finarfin", alive: true },
       { name: "Arwen", alive: false },
       { name: "Elladan", alive: false },
       { name: "Elrohir", alive: false },
@@ -83,7 +71,13 @@ type LotrProviderProps = {
 };
 
 function LotrProvider({ children }: LotrProviderProps) {
-  const [campaign, setCampaign] = useState(defaultState.campaign);
+  const local = localStorage.getItem("campaign");
+  function getStorageCampaign() {
+    if (local) return JSON.parse(local);
+  }
+  const [campaign, setCampaign] = useState(
+    getStorageCampaign() || defaultState.campaign
+  );
 
   return (
     <LotrContext.Provider
