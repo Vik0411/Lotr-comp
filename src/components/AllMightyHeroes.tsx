@@ -1,4 +1,4 @@
-import { HeaderListAll, Span, SubheaderListAll } from "./atoms/typography";
+import { HeaderListAll, Span, SubheaderListAll } from "./typography";
 import { Button } from "./atoms/Button";
 import styled from "styled-components";
 
