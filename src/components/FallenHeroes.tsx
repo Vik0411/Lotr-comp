@@ -1,10 +1,26 @@
 import { LotrContext } from "../context";
 import React, { useState } from "react";
 import { FallenHero } from "./FallenHero";
-import { SendToCoffinBtn } from "./atoms/Button";
-import { InputFallen } from "./atoms/Input";
+import { Input } from "./atoms/Input";
+import styled from "styled-components";
+import { Button } from "./atoms/Button";
 
 function FallenHeroes() {
+  const InputFallen = styled(Input)`
+    background-color: ${({ theme }) => theme.colors.basicBlack};
+    color: white;
+  `;
+
+  const SendToCoffinBtn = styled(Button)`
+    margin-top: 5px;
+    background-color: ${({ theme }) => theme.colors.vanSaarGrey};
+
+    &:hover {
+      color: ${({ color, theme }) => color || theme.colors.basicWhite};
+      background-color: ${({ theme }) => theme.colors.vanSaarGrey};
+    }
+  `;
+
   function filterFallen() {
     return campaign.allHeroes.filter((hero) => hero.alive === false);
   }

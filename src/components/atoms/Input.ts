@@ -7,8 +7,3 @@ export const Input = styled.input`
   border-bottom: 2px solid red;
   left: 10px;
 `;
-
-export const InputFallen = styled(Input)`
-  background-color: ${({ theme }) => theme.colors.basicBlack};
-  color: white;
-`;
