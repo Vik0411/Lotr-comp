@@ -8,7 +8,7 @@ import { Button } from "./atoms/Button";
 function FallenHeroes() {
   const InputFallen = styled(Input)`
     background-color: ${({ theme }) => theme.colors.basicBlack};
-    color: white;
+    color: ${({ theme }) => theme.colors.basicWhite};
   `;
 
   const SendToCoffinBtn = styled(Button)`
@@ -16,7 +16,7 @@ function FallenHeroes() {
     background-color: ${({ theme }) => theme.colors.vanSaarGrey};
 
     &:hover {
-      color: ${({ color, theme }) => color || theme.colors.basicWhite};
+      color: ${({ theme }) => theme.colors.basicWhite};
       background-color: ${({ theme }) => theme.colors.vanSaarGrey};
     }
   `;

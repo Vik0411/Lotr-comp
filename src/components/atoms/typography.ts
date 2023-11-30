@@ -2,13 +2,7 @@ import styled from "styled-components";
 
 export const Header = styled.header`
   width: 50px;
-  border-bottom: 20px solid white;
-`;
-
-export const HeaderListAll = styled(Header)`
-  background-color: ${({ theme }) => theme.colors.basicBlack};
-  width: 50px;
-  border-bottom: 20px solid white;
+  border-bottom: 20px solid ${({ theme }) => theme.colors.basicWhite};
 `;
 
 export const Span = styled.span`
@@ -16,14 +10,8 @@ export const Span = styled.span`
 `;
 
 export const Subheader = styled.h2`
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid ${({ theme }) => theme.colors.vanSaarRed};
   width: 50px;
   height: 200px;
   display: flex;
-`;
-
-export const SubheaderListAll = styled(Subheader)`
-  background-color: ${({ theme }) => theme.colors.basicBlack};
-  color: ${({ theme }) => theme.colors.vanSaarGrey};
-  margin-top: 20px;
 `;
