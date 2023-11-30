@@ -6,11 +6,11 @@ import { Container } from "./components/atoms/Container";
 import styled, { ThemeProvider } from "styled-components";
 import { theme } from "./themes";
 
-function App() {
-  const ContainerHeroManagement = styled(Container)`
-    margin: 0 auto;
-  `;
+const ContainerHeroManagement = styled(Container)`
+  margin: 0 auto;
+`;
 
+function App() {
   return (
     <ThemeProvider theme={theme}>
       <ContainerHeroManagement>

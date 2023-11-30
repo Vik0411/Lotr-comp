@@ -5,22 +5,22 @@ import { Input } from "./atoms/Input";
 import styled from "styled-components";
 import { Button } from "./atoms/Button";
 
-function FallenHeroes() {
-  const InputFallen = styled(Input)`
-    background-color: ${({ theme }) => theme.colors.basicBlack};
+const InputFallen = styled(Input)`
+  background-color: ${({ theme }) => theme.colors.basicBlack};
+  color: ${({ theme }) => theme.colors.basicWhite};
+`;
+
+const SendToCoffinBtn = styled(Button)`
+  margin-top: 5px;
+  background-color: ${({ theme }) => theme.colors.vanSaarGrey};
+
+  &:hover {
     color: ${({ theme }) => theme.colors.basicWhite};
-  `;
-
-  const SendToCoffinBtn = styled(Button)`
-    margin-top: 5px;
     background-color: ${({ theme }) => theme.colors.vanSaarGrey};
+  }
+`;
 
-    &:hover {
-      color: ${({ theme }) => theme.colors.basicWhite};
-      background-color: ${({ theme }) => theme.colors.vanSaarGrey};
-    }
-  `;
-
+function FallenHeroes() {
   function filterFallen() {
     return campaign.allHeroes.filter((hero) => hero.alive === false);
   }
