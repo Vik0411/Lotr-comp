@@ -1,6 +1,6 @@
-import React, { SetStateAction, useState, Dispatch, ReactNode } from "react";
+import React, { useState, ReactNode, Dispatch, SetStateAction } from "react";
+import { defaultState } from "./data";
 import { Campaign } from "./types";
-import { defaultState } from "./dataSet";
 
 // Here the first working version with local browser storage was only in javascript
 // and will have to be adjusted to react and useState() hooks probably
