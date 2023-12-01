@@ -1,7 +1,8 @@
 import { Header, Subheader } from "./atoms/typography";
 import { Button } from "./atoms/Button";
 import { LotrContext } from "../context";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
 import styled from "styled-components";
 
 const SubheaderListAll = styled(Subheader)`
@@ -24,8 +25,7 @@ function AllMightyHeroes() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
   let alive = filterAlive();
   let notCurrentAndAlive = filterNotCurrentAlive();
-  let currentAndAlive = filterCurrentAlive();
-  const [preparedHero, setPreparedHero] = useState(alive[0]?.name);
+  const [preparedHero, setPreparedHero] = useState(notCurrentAndAlive[0]?.name);
 
   function filterAlive() {
     return campaign.allHeroes.filter((hero) => hero.alive === true);
@@ -33,33 +33,30 @@ function AllMightyHeroes() {
   function filterNotCurrentAlive() {
     return alive.filter((hero) => hero.current !== true);
   }
-  function filterCurrentAlive() {
-    return alive.filter((hero) => hero.current === true);
-  }
+
   function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
     setPreparedHero(e.target.value);
   }
   function prepareHero(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    let preparedToBeAdded = campaign.allHeroes.find(
-      (hero) => hero.name === preparedHero
+
+    let allOtherHeroes = campaign.allHeroes.filter(
+      (hero) => hero.name !== preparedHero
     );
-    const namesOfCurrentAndAlive = currentAndAlive.map((hero) => hero.name);
-    if (notCurrentAndAlive[1] === undefined) {
-      alert("Your heroes list is empty. Do you want to add new?");
-    }
-    if (
-      notCurrentAndAlive[0] !== undefined &&
-      namesOfCurrentAndAlive.includes(preparedHero)
-    ) {
-      setPreparedHero(notCurrentAndAlive[0].name);
-      notCurrentAndAlive[0].current = true;
-      setCampaign({ ...campaign });
-    } else {
-      preparedToBeAdded!.current = true;
-      setCampaign({ ...campaign });
-    }
+
+    setCampaign({
+      allHeroes: [
+        ...allOtherHeroes,
+        { name: preparedHero, alive: true, current: true },
+      ],
+    });
+    localStorage.setItem("campaign", JSON.stringify(campaign));
   }
+
+  useEffect(() => {
+    let notCurrentAndAlive = filterNotCurrentAlive();
+    setPreparedHero(notCurrentAndAlive[0].name);
+  }, [campaign]);
 
   return (
     <div>
