@@ -3,6 +3,7 @@ import React from "react";
 import { Input } from "./atoms/Input";
 import styled from "styled-components";
 import { Button } from "./atoms/Button";
+import { onlyHeroesFFG } from "../onlyHeroes";
 
 const InputFallen = styled(Input)`
   background-color: ${({ theme }) => theme.colors.basicBlack};
@@ -34,15 +35,23 @@ function FallenHeroes() {
   function filterAlive() {
     return campaign.allHeroes.filter((hero) => hero.alive === true);
   }
-  function killHero(heroName) {
+  function killHero(heroCode) {
     let allOtherHeroes = campaign.allHeroes.filter(
-      (hero) => hero.name !== heroName
+      (hero) => hero.code !== heroCode
     );
-    console.log(allOtherHeroes);
+
+    let killedHeroAsObject = onlyHeroesFFG.find(
+      (hero) => hero.code === heroCode
+    );
+
     setCampaign({
       allHeroes: [
         ...allOtherHeroes,
-        { name: heroName, alive: false, current: false },
+        {
+          ...killedHeroAsObject,
+          alive: false,
+          current: false,
+        },
       ],
     });
   }
@@ -55,9 +64,9 @@ function FallenHeroes() {
         <div style={{ display: "flex", gap: "5px" }}>
           {current.map(
             (current): JSX.Element => (
-              <div key={current.name} style={{ border: "2px black solid" }}>
+              <div key={current.code} style={{ border: "2px black solid" }}>
                 <p>{current.name}</p>
-                <button onClick={() => killHero(current.name)}>
+                <button onClick={() => killHero(current.code)}>
                   Send to coffin
                 </button>
               </div>
@@ -68,7 +77,7 @@ function FallenHeroes() {
         <ul>
           {fallen.map(
             (fallenHero): JSX.Element => (
-              <div key={fallenHero.name}>
+              <div key={fallenHero.code}>
                 <p>{fallenHero.name}</p>
               </div>
             )

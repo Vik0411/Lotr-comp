@@ -4,6 +4,7 @@ import { LotrContext } from "../context";
 import React, { useEffect, useState } from "react";
 
 import styled from "styled-components";
+import { onlyHeroesFFG } from "../onlyHeroes";
 
 const SubheaderListAll = styled(Subheader)`
   background-color: ${({ theme }) => theme.colors.basicBlack};
@@ -25,7 +26,10 @@ function AllMightyHeroes() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
   let alive = filterAlive();
   let notCurrentAndAlive = filterNotCurrentAlive();
-  const [preparedHero, setPreparedHero] = useState(notCurrentAndAlive[0]?.name);
+
+  const [preparedHeroCode, setPreparedHeroCode] = useState(
+    notCurrentAndAlive[0]?.code
+  );
 
   function filterAlive() {
     return campaign.allHeroes.filter((hero) => hero.alive === true);
@@ -35,36 +39,46 @@ function AllMightyHeroes() {
   }
 
   function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
-    setPreparedHero(e.target.value);
+    const desiredCode = onlyHeroesFFG.find(
+      (hero) => hero.name === e.target.value
+    ).code;
+    setPreparedHeroCode(desiredCode);
   }
 
   function prepareHero(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     let allOtherHeroes = campaign.allHeroes.filter(
-      (hero) => hero.name !== preparedHero
+      (hero) => hero.code !== preparedHeroCode
     );
 
+    let preparedHeroAsObject = onlyHeroesFFG.find(
+      (hero) => hero.code === preparedHeroCode
+    );
     setCampaign({
       allHeroes: [
         ...allOtherHeroes,
-        { name: preparedHero, alive: true, current: true },
+        {
+          ...preparedHeroAsObject,
+          alive: true,
+          current: true,
+        },
       ],
     });
   }
 
   useEffect(() => {
     let notCurrentAndAlive = filterNotCurrentAlive();
-    setPreparedHero(notCurrentAndAlive[0].name);
+    setPreparedHeroCode(notCurrentAndAlive[0].code);
     localStorage.setItem("campaign", JSON.stringify(campaign));
   }, [campaign]);
 
   return (
     <div>
       <form onSubmit={prepareHero}>
-        <select value={preparedHero} onChange={handleChange}>
+        <select value={preparedHeroCode} onChange={handleChange}>
           {notCurrentAndAlive.map((notCurrent) => (
-            <option key={notCurrent.name}>{notCurrent.name}</option>
+            <option key={notCurrent.code}>{notCurrent.name}</option>
           ))}
         </select>
         <button type="submit">Prepare</button>
