@@ -49,6 +49,7 @@ function FallenHeroes() {
     localStorage.setItem("campaign", JSON.stringify(campaign));
   }
 
+  // refactor return below into styled components as well
   return (
     <div>
       <div>
