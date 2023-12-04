@@ -37,6 +37,7 @@ function AllMightyHeroes() {
   function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
     setPreparedHero(e.target.value);
   }
+
   function prepareHero(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
@@ -50,12 +51,12 @@ function AllMightyHeroes() {
         { name: preparedHero, alive: true, current: true },
       ],
     });
-    localStorage.setItem("campaign", JSON.stringify(campaign));
   }
 
   useEffect(() => {
     let notCurrentAndAlive = filterNotCurrentAlive();
     setPreparedHero(notCurrentAndAlive[0].name);
+    localStorage.setItem("campaign", JSON.stringify(campaign));
   }, [campaign]);
 
   return (

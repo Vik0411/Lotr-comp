@@ -45,8 +45,6 @@ function FallenHeroes() {
         { name: heroName, alive: false, current: false },
       ],
     });
-
-    localStorage.setItem("campaign", JSON.stringify(campaign));
   }
 
   // refactor return below into styled components as well
