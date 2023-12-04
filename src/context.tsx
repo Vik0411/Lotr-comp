@@ -1,7 +1,5 @@
 import React, { SetStateAction, useState, Dispatch, ReactNode } from "react";
 import { Campaign } from "./types";
-// Here the first working version with local browser storage was only in javascript
-// and will have to be adjusted to react and useState() hooks probably
 // This page should work as mainly as the data handling place
 
 /*

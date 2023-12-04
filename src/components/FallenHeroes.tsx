@@ -1,6 +1,24 @@
 import { LotrContext } from "../context";
 import React, { useState } from "react";
 import { FallenHero } from "./FallenHero";
+import { Input } from "./atoms/Input";
+import styled from "styled-components";
+import { Button } from "./atoms/Button";
+
+const InputFallen = styled(Input)`
+  background-color: ${({ theme }) => theme.colors.basicBlack};
+  color: ${({ theme }) => theme.colors.basicWhite};
+`;
+
+const SendToCoffinBtn = styled(Button)`
+  margin-top: 5px;
+  background-color: ${({ theme }) => theme.colors.vanSaarGrey};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.basicWhite};
+    background-color: ${({ theme }) => theme.colors.vanSaarGrey};
+  }
+`;
 
 function FallenHeroes() {
   function filterFallen() {
@@ -42,18 +60,15 @@ function FallenHeroes() {
   return (
     <div>
       <form onSubmit={addFallenHero}>
-        <input
+        <InputFallen
           type="text"
-          className="input_fallen"
           value={fallenHero}
           placeholder="Input your fallen hero..."
           onChange={handleChange}
         />
-        <button type="submit" className="btn input_fallen">
-          Send to the coffin
-        </button>
+        <SendToCoffinBtn type="submit">Send to the coffin</SendToCoffinBtn>
         <h3>The Fallen:</h3>
-        <ul className="fallen_heroes__list">
+        <ul>
           {fallen.map(
             (fallenHero): JSX.Element => (
               <FallenHero fallenHero={fallenHero.name} key={fallenHero.name} />
