@@ -13,20 +13,25 @@ export const heroesNames = allCards
   .map((typeHero) => typeHero.name);
 
 function removeDuplicates(arr) {
-  let unique = [];
-  arr.forEach((element) => {
-    if (!unique.includes(element)) {
-      unique.push(element);
-    }
-  });
-  return unique;
-}
+  let state = { unique: [], rest: [] };
 
-const allUniqueHeroes = removeDuplicates(heroesNames).map((hero) => ({
-  name: hero,
-  alive: true,
-  current: false,
-}));
+  for (let i = 0; i < arr.length; i++) {
+    let dupls = state.unique.find((element) => element.name === arr[i].name);
+    if (dupls === undefined) {
+      state.unique.push(arr[i]);
+    } else {
+      state.rest.push(arr[i]);
+      state.unique = state.unique.filter(
+        (heroes) => heroes.name !== dupls.name
+      );
+      let multiple = state.unique.filter(
+        (heroes) => heroes.name === dupls.name
+      );
+      state.rest.push(multiple);
+    }
+  }
+  return state;
+}
 
 const onlyHeroesForCampaign = onlyHeroesFFG.map((hero) => ({
   ...hero,
@@ -34,16 +39,13 @@ const onlyHeroesForCampaign = onlyHeroesFFG.map((hero) => ({
   current: false,
 }));
 
+export const onlyUniqueHeroes = removeDuplicates(onlyHeroesForCampaign).unique;
+export const onlyMultiples = removeDuplicates(onlyHeroesForCampaign).rest;
+
 console.log("restr", onlyHeroesForCampaign);
 
-console.log(
-  "hero",
-  removeDuplicates(heroesNames).map((hero) => ({
-    name: hero,
-    alive: true,
-    current: false,
-  }))
-);
+console.log("hero", onlyUniqueHeroes);
+console.log("hero@", onlyMultiples);
 
 export const defaultState: CampaignContextInterface = {
   campaign: {
