@@ -35,14 +35,10 @@ function FallenHeroes() {
     campaign.allHeroes
   );
 
-  //temporary
-  console.log("dead", fallen);
-
   let current = filterHeroes(
     { alive: true, current: true },
     campaign.allHeroes
   );
-  console.log("current", current);
   function killHero(heroName) {
     let allOtherHeroes = campaign.allHeroes.filter(
       (hero) => hero.name !== heroName
@@ -62,7 +58,6 @@ function FallenHeroes() {
       (hero) => hero.name === nameOfDupl
     );
     let codes = mults.map((hero) => hero.code);
-    console.log("kod", codes);
 
     let names = changedNameMultiples.map((hero) => hero.name);
     if (names.includes(killedHeroAsObject.name)) {

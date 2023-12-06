@@ -4,8 +4,6 @@ import { LotrContext } from "../context";
 import React, { useEffect, useState } from "react";
 
 import styled from "styled-components";
-import { onlyHeroesFFG } from "../onlyHeroes";
-import { onlyMultiples } from "../dataHelpers";
 import { filterHeroes } from "../utils";
 
 const SubheaderListAll = styled(Subheader)`
@@ -31,67 +29,32 @@ function AllMightyHeroes() {
     campaign.allHeroes
   );
 
-  const [preparedHeroName, setPreparedHeroName] = useState(
-    notCurrentAndAlive[0]?.name
-  );
+  const [preparedHero, setPreparedHero] = useState(notCurrentAndAlive[0]);
 
   function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
     //all commented code below is for alt solution with non-unique names, and a workaroud therefore
 
-    /*
-    function myGeeks(string) {
-      // Using match with regEx
-      let matches = string.match(/(\d+)/);
-
-      // Display output if number extracted
-      if (matches) {
-        return matches[0];
-      }
-    }
-
-    let num = myGeeks(e.target.value);
-    setPreparedHeroCode(num);
-    console.log("preparedHero", preparedHeroCode);
-    */
-
-    /*
-    const desiredCode = onlyHeroesFFG.find(
-      (hero) => hero.name === e.target.value
-    ).code;
-    setPreparedHeroName(desiredCode);
-    */
-
-    setPreparedHeroName(e.target.value);
+    const selectedHero = campaign.allHeroes.find(
+      (hero) => hero.code === e.target.value
+    );
+    setPreparedHero(selectedHero);
   }
 
   function prepareHero(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    console.log(preparedHero.code, "lazar");
 
-    let allOtherHeroes = campaign.allHeroes.filter(
-      (hero) => hero.name !== preparedHeroName
-    );
+    // before preparing hero, alert user if there is already the same hero in current
 
-    let preparedHeroAsObject = campaign.allHeroes.find(
-      (hero) => hero.name === preparedHeroName
-    );
-
-    /* code for disabling possibility of "preparing" more than one "duplicate"
-    if (onlyMultiples.includes(preparedHeroAsObject.code)) {
-      let mltps = campaign.allHeroes.filter(
-        (hero) => hero.name === preparedHeroAsObject.name
-      );
-      mltps.forEach((hero) => (hero.current = true));
-    }
-*/
     setCampaign({
-      allHeroes: [
-        ...allOtherHeroes,
-        {
-          ...preparedHeroAsObject,
-          alive: true,
-          current: true,
-        },
-      ],
+      allHeroes: campaign.allHeroes.map((hero) => {
+        if (hero.code === preparedHero.code) {
+          hero.current = true;
+          return hero;
+        } else {
+          return hero;
+        }
+      }),
     });
   }
 
@@ -100,7 +63,7 @@ function AllMightyHeroes() {
       { alive: true, current: false },
       campaign.allHeroes
     );
-    setPreparedHeroName(notCurrentAndAlive[0].name);
+    setPreparedHero(notCurrentAndAlive[0]);
     localStorage.setItem("campaign", JSON.stringify(campaign));
   }, [campaign]);
 
@@ -113,11 +76,14 @@ function AllMightyHeroes() {
   return (
     <div>
       <form onSubmit={prepareHero}>
-        <select value={preparedHeroName} onChange={handleChange}>
+        <select value={preparedHero.code} onChange={handleChange}>
           {notCurrentAndAlive.map((notCurrent) => (
-            <option key={notCurrent.code}>{notCurrent.name}</option>
+            <option key={notCurrent.code} value={notCurrent.code}>
+              {notCurrent.name}
+            </option>
           ))}
         </select>
+        {/* <h1>hellooo</h1> */}
         <button type="submit">Prepare</button>
       </form>
     </div>
