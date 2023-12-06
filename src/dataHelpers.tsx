@@ -40,16 +40,40 @@ const onlyHeroesForCampaign = onlyHeroesFFG.map((hero) => ({
 }));
 
 export const onlyUniqueHeroes = removeDuplicates(onlyHeroesForCampaign).unique;
+
+//doesnt function properly (omits second object always)
 export const onlyMultiples = removeDuplicates(onlyHeroesForCampaign).rest;
 
-console.log("restr", onlyHeroesForCampaign);
+//functioning properly
+export const onlyMultiplesOtherwise = onlyHeroesForCampaign.filter(
+  (hero) => !onlyUniqueHeroes.includes(hero)
+);
 
+console.log("wise", onlyMultiplesOtherwise);
 console.log("hero", onlyUniqueHeroes);
 console.log("hero@", onlyMultiples);
 
+function rename(hero) {
+  let name = hero.name;
+  let sphere = hero.sphere_name;
+  hero.name = name.concat(" (", sphere, ")");
+}
+
+export const changedNameMultiples = onlyMultiplesOtherwise.map((hero) => {
+  let name = hero.name;
+  let sphere = hero.sphere_name;
+  let namewhole = name.concat(" (", sphere, ")");
+  return { ...hero, name: namewhole };
+});
+
+export const origoPrepared = changedNameMultiples.concat(onlyUniqueHeroes);
+
+console.log("restr", origoPrepared);
+console.log("last", changedNameMultiples);
+
 export const defaultState: CampaignContextInterface = {
   campaign: {
-    allHeroes: onlyHeroesForCampaign,
+    allHeroes: origoPrepared,
   },
   setCampaign: () => {},
 };

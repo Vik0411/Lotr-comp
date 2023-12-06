@@ -3,6 +3,7 @@ export interface Campaign {
 }
 
 type Hero = {
+  imagesrc: string;
   name: string;
   alive: boolean;
   current: boolean;

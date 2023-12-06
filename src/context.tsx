@@ -1,5 +1,5 @@
 import React, { useState, ReactNode, Dispatch, SetStateAction } from "react";
-import { defaultState } from "./data";
+import { defaultState } from "./dataHelpers";
 import { Campaign } from "./types";
 
 // Here the first working version with local browser storage was only in javascript
