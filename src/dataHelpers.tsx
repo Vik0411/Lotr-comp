@@ -1,5 +1,5 @@
 import { SetStateAction, Dispatch } from "react";
-import { Campaign } from "./types";
+import { Campaign, Hero } from "./types";
 import { allCards } from "./dataSet";
 import { onlyHeroesFFG } from "./onlyHeroes";
 
@@ -12,28 +12,31 @@ export const heroesNames = allCards
   .filter((typeHero) => typeHero.type_name === "Hero")
   .map((typeHero) => typeHero.name);
 
-function removeDuplicates(arr) {
-  let state = { unique: [], rest: [] };
+// state.rest not filtered properly - refactor
+function removeDuplicates(arr: Hero[]) {
+  let state: { unique: Hero[]; rest: Hero[] } = { unique: [], rest: [] };
 
   for (let i = 0; i < arr.length; i++) {
-    let dupls = state.unique.find((element) => element.name === arr[i].name);
+    let dupls = state.unique.find(
+      (element: Hero) => element.name === arr[i].name
+    );
     if (dupls === undefined) {
       state.unique.push(arr[i]);
     } else {
       state.rest.push(arr[i]);
       state.unique = state.unique.filter(
-        (heroes) => heroes.name !== dupls.name
+        (heroes) => heroes.name !== dupls?.name
       );
-      let multiple = state.unique.filter(
-        (heroes) => heroes.name === dupls.name
+      let multiple: Hero | undefined = state.unique.find(
+        (heroes) => heroes.name === dupls?.name
       );
-      state.rest.push(multiple);
+      if (multiple) state.rest.push(multiple);
     }
   }
   return state;
 }
 
-const onlyHeroesForCampaign = onlyHeroesFFG.map((hero) => ({
+const onlyHeroesForCampaign: Hero[] = onlyHeroesFFG.map((hero) => ({
   ...hero,
   alive: true,
   current: false,
@@ -49,11 +52,7 @@ export const onlyMultiplesOtherwise = onlyHeroesForCampaign.filter(
   (hero) => !onlyUniqueHeroes.includes(hero)
 );
 
-console.log("wise", onlyMultiplesOtherwise);
-console.log("hero", onlyUniqueHeroes);
-console.log("hero@", onlyMultiples);
-
-function rename(hero) {
+function rename(hero: Hero) {
   let name = hero.name;
   let sphere = hero.sphere_name;
   hero.name = name.concat(" (", sphere, ")");
@@ -68,6 +67,9 @@ export const changedNameMultiples = onlyMultiplesOtherwise.map((hero) => {
 
 export const origoPrepared = changedNameMultiples.concat(onlyUniqueHeroes);
 
+console.log("wise", onlyMultiplesOtherwise);
+console.log("hero", onlyUniqueHeroes);
+console.log("hero@", onlyMultiples);
 console.log("restr", origoPrepared);
 console.log("last", changedNameMultiples);
 

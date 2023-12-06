@@ -8,6 +8,7 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
+    "strict": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,

@@ -1,7 +1,5 @@
-export function FallenHero({ name }) {
-  // this component is for rendering individual fallen hero, eventually
-  // also with more data, such as scenarios played, image etc.
+import { Hero } from "../types";
 
-  console.log("x", name);
+export function FallenHero({ name }: Hero) {
   return <li>{name}</li>;
 }
