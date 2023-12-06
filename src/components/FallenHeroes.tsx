@@ -37,9 +37,6 @@ function FallenHeroes() {
 
   //temporary
   console.log("dead", fallen);
-  function filterFallen() {
-    return campaign.allHeroes.filter((hero) => hero.alive === false);
-  }
 
   let current = filterHeroes(
     { alive: true, current: true },
