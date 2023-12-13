@@ -1,10 +1,11 @@
 import FallenHeroes from "./components/FallenHeroes";
 import { LotrProvider } from "./context";
 import AllMightyHeroes from "./components/AllMightyHeroes";
-import Survivors from "./components/Survivors";
 import { Container } from "./components/atoms/Container";
 import styled, { ThemeProvider } from "styled-components";
 import { theme } from "./themes";
+import CurrentHeroes from "./components/CurrentHeroes";
+import BoonsAndBurdens from "./components/BoonsAndBurdens";
 
 const ContainerHeroManagement = styled(Container)`
   margin: 0 auto;
@@ -16,8 +17,9 @@ function App() {
       <ContainerHeroManagement>
         <LotrProvider>
           <AllMightyHeroes />
+          <BoonsAndBurdens />
+          <CurrentHeroes />
           <FallenHeroes />
-          <Survivors />
         </LotrProvider>
       </ContainerHeroManagement>
     </ThemeProvider>
