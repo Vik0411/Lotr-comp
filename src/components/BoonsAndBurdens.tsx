@@ -44,8 +44,6 @@ function BoonsAndBurdens() {
 
   return (
     <div>
-      <br />
-      <br />
       <form>
         <input
           type="text"
