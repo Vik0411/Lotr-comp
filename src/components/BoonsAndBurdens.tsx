@@ -44,6 +44,15 @@ function BoonsAndBurdens() {
 
   return (
     <div>
+      <h2>
+        <ul
+          style={{
+            color: "white",
+          }}
+        >
+          Boons & Burdens:
+        </ul>
+      </h2>
       <form>
         <input
           type="text"
@@ -65,17 +74,38 @@ function BoonsAndBurdens() {
         submit burdens
       </button>
       <p>
-        <h2>
-          <ul>Boons & Burdens:</ul>
-        </h2>
-        Boons:
+        <ul
+          style={{
+            color: "white",
+          }}
+        >
+          Boons:
+        </ul>
         {boonsAndBurdens.boons.map((boon) => (
-          <li>{boon}</li>
+          <li
+            style={{
+              color: "white",
+            }}
+          >
+            {boon}
+          </li>
         ))}
         <br />
-        Burdens:
+        <ul
+          style={{
+            color: "white",
+          }}
+        >
+          Burdens:
+        </ul>
         {boonsAndBurdens.burdens.map((burden) => (
-          <li>{burden}</li>
+          <li
+            style={{
+              color: "white",
+            }}
+          >
+            {burden}
+          </li>
         ))}
       </p>
     </div>

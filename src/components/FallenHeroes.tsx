@@ -13,8 +13,18 @@ function FallenHeroes() {
   );
 
   return (
-    <div>
-      <h3>The Fallen:</h3>
+    <div
+      style={{
+        border: "20px solid white",
+      }}
+    >
+      <h3
+        style={{
+          color: "white",
+        }}
+      >
+        The Fallen:
+      </h3>
       <ul>
         {fallen.map(
           (fallenHero: Hero): JSX.Element => (

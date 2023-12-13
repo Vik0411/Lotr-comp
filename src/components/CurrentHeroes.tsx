@@ -64,13 +64,34 @@ function CurrentHeroes() {
 
   // refactor return below into styled components as well
   return (
-    <div>
+    <div
+      style={{
+        color: "white",
+        border: "20px solid white",
+      }}
+    >
       <div>
-        <h2>Current heroes</h2>
+        <h2
+          style={{
+            color: "white",
+          }}
+        >
+          Current heroes:
+        </h2>
         <div style={{ display: "flex", gap: "5px" }}>
           {current.map(
             (current: Hero): JSX.Element => (
-              <div key={current.code} style={{ border: "2px black solid" }}>
+              <div
+                key={current.code}
+                style={{
+                  border: "5px black solid",
+                  backgroundSize: "cover",
+                  color: "white",
+                  width: "25%",
+                  minHeight: "400px",
+                  backgroundImage: `url(${require(`../images/${current.imagesrc}`)})`,
+                }}
+              >
                 <p>{current.name}</p>
                 <button onClick={() => killHero(current.code)}>
                   Send to coffin

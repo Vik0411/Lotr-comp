@@ -1,5 +1,5 @@
 export const onlyHeroesFFG = [
- {
+  {
     pack_code: "Core",
     pack_name: "Core Set",
     type_code: "hero",
@@ -25,7 +25,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9001",
     has_errata: false,
     url: "https://ringsdb.com/card/01001",
-    imagesrc: "/bundles/cards/01001.png",
+    imagesrc: "01001.png",
   },
   {
     pack_code: "Core",
@@ -53,7 +53,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9002",
     has_errata: false,
     url: "https://ringsdb.com/card/01002",
-    imagesrc: "/bundles/cards/01002.png",
+    imagesrc: "01002.png",
   },
   {
     pack_code: "Core",
@@ -81,7 +81,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9003",
     has_errata: false,
     url: "https://ringsdb.com/card/01003",
-    imagesrc: "/bundles/cards/01003.png",
+    imagesrc: "01003.png",
   },
   {
     pack_code: "Core",
@@ -109,7 +109,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9004",
     has_errata: false,
     url: "https://ringsdb.com/card/01004",
-    imagesrc: "/bundles/cards/01004.png",
+    imagesrc: "01004.png",
   },
   {
     pack_code: "Core",
@@ -137,7 +137,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9005",
     has_errata: false,
     url: "https://ringsdb.com/card/01005",
-    imagesrc: "/bundles/cards/01005.png",
+    imagesrc: "01005.png",
   },
   {
     pack_code: "Core",
@@ -165,7 +165,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9006",
     has_errata: false,
     url: "https://ringsdb.com/card/01006",
-    imagesrc: "/bundles/cards/01006.png",
+    imagesrc: "01006.png",
   },
   {
     pack_code: "Core",
@@ -193,7 +193,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9007",
     has_errata: false,
     url: "https://ringsdb.com/card/01007",
-    imagesrc: "/bundles/cards/01007.png",
+    imagesrc: "01007.png",
   },
   {
     pack_code: "Core",
@@ -221,7 +221,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9008",
     has_errata: false,
     url: "https://ringsdb.com/card/01008",
-    imagesrc: "/bundles/cards/01008.png",
+    imagesrc: "01008.png",
   },
   {
     pack_code: "Core",
@@ -249,7 +249,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9009",
     has_errata: false,
     url: "https://ringsdb.com/card/01009",
-    imagesrc: "/bundles/cards/01009.png",
+    imagesrc: "01009.png",
   },
   {
     pack_code: "Core",
@@ -277,7 +277,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9010",
     has_errata: false,
     url: "https://ringsdb.com/card/01010",
-    imagesrc: "/bundles/cards/01010.png",
+    imagesrc: "01010.png",
   },
   {
     pack_code: "Core",
@@ -305,7 +305,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9011",
     has_errata: false,
     url: "https://ringsdb.com/card/01011",
-    imagesrc: "/bundles/cards/01011.png",
+    imagesrc: "01011.png",
   },
   {
     pack_code: "Core",
@@ -333,7 +333,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9012",
     has_errata: true,
     url: "https://ringsdb.com/card/01012",
-    imagesrc: "/bundles/cards/01012.png",
+    imagesrc: "01012.png",
   },
   {
     pack_code: "HfG",
@@ -361,7 +361,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801201c9001",
     has_errata: false,
     url: "https://ringsdb.com/card/02001",
-    imagesrc: "/bundles/cards/02001.png",
+    imagesrc: "02001.png",
   },
   {
     pack_code: "CatC",
@@ -389,7 +389,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801202c9001",
     has_errata: false,
     url: "https://ringsdb.com/card/02025",
-    imagesrc: "/bundles/cards/02025.png",
+    imagesrc: "02025.png",
   },
   {
     pack_code: "JtR",
@@ -417,7 +417,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801203c9001",
     has_errata: false,
     url: "https://ringsdb.com/card/02050",
-    imagesrc: "/bundles/cards/02050.png",
+    imagesrc: "02050.png",
   },
   {
     pack_code: "HoEM",
@@ -445,7 +445,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801204c9003",
     has_errata: false,
     url: "https://ringsdb.com/card/02072",
-    imagesrc: "/bundles/cards/02072.png",
+    imagesrc: "02072.png",
   },
   {
     pack_code: "TDM",
@@ -473,7 +473,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801205c9002",
     has_errata: true,
     url: "https://ringsdb.com/card/02095",
-    imagesrc: "/bundles/cards/02095.png",
+    imagesrc: "02095.png",
   },
   {
     pack_code: "RtM",
@@ -501,7 +501,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801206c9005",
     has_errata: true,
     url: "https://ringsdb.com/card/02116",
-    imagesrc: "/bundles/cards/02116.png",
+    imagesrc: "02116.png",
   },
   {
     pack_code: "KD",
@@ -529,7 +529,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801207c9025",
     has_errata: false,
     url: "https://ringsdb.com/card/03001",
-    imagesrc: "/bundles/cards/03001.png",
+    imagesrc: "03001.png",
   },
   {
     pack_code: "KD",
@@ -556,7 +556,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801207c9008",
     has_errata: false,
     url: "https://ringsdb.com/card/03002",
-    imagesrc: "/bundles/cards/03002.png",
+    imagesrc: "03002.png",
   },
   {
     pack_code: "TRG",
@@ -583,7 +583,7 @@ export const onlyHeroesFFG = [
     octgnid: "cc7beee8-1f42-4926-8c45-8a50f3a87c57",
     has_errata: false,
     url: "https://ringsdb.com/card/04001",
-    imagesrc: "/bundles/cards/04001.png",
+    imagesrc: "04001.png",
   },
   {
     pack_code: "RtR",
@@ -610,7 +610,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801209c9010",
     has_errata: false,
     url: "https://ringsdb.com/card/04028",
-    imagesrc: "/bundles/cards/04028.png",
+    imagesrc: "04028.png",
   },
   {
     pack_code: "WitW",
@@ -638,7 +638,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801210c9001",
     has_errata: false,
     url: "https://ringsdb.com/card/04053",
-    imagesrc: "/bundles/cards/04053.png",
+    imagesrc: "04053.png",
   },
   {
     pack_code: "TLD",
@@ -666,7 +666,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801211c9016",
     has_errata: true,
     url: "https://ringsdb.com/card/04076",
-    imagesrc: "/bundles/cards/04076.png",
+    imagesrc: "04076.png",
   },
   {
     pack_code: "FoS",
@@ -694,7 +694,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801212c9016",
     has_errata: false,
     url: "https://ringsdb.com/card/04101",
-    imagesrc: "/bundles/cards/04101.png",
+    imagesrc: "04101.png",
   },
   {
     pack_code: "SaF",
@@ -722,7 +722,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801213c9004",
     has_errata: false,
     url: "https://ringsdb.com/card/04128",
-    imagesrc: "/bundles/cards/04128.png",
+    imagesrc: "04128.png",
   },
   {
     pack_code: "HoN",
@@ -750,7 +750,7 @@ export const onlyHeroesFFG = [
     octgnid: "4823aae3-46ef-4a75-89f9-cbd3aa1b9005",
     has_errata: false,
     url: "https://ringsdb.com/card/05001",
-    imagesrc: "/bundles/cards/05001.png",
+    imagesrc: "05001.png",
   },
   {
     pack_code: "HoN",
@@ -778,7 +778,7 @@ export const onlyHeroesFFG = [
     octgnid: "4823aae3-46ef-4a75-89f9-cbd3aa1b9008",
     has_errata: false,
     url: "https://ringsdb.com/card/05002",
-    imagesrc: "/bundles/cards/05002.png",
+    imagesrc: "05002.png",
   },
   {
     pack_code: "TSF",
@@ -806,7 +806,7 @@ export const onlyHeroesFFG = [
     octgnid: "85699571-9cc3-4ccc-98b0-0e1664893ef5",
     has_errata: false,
     url: "https://ringsdb.com/card/06001",
-    imagesrc: "/bundles/cards/06001.png",
+    imagesrc: "06001.png",
   },
   {
     pack_code: "TDF",
@@ -834,7 +834,7 @@ export const onlyHeroesFFG = [
     octgnid: "536c80ba-ad8b-447e-b378-1684508eb0f9",
     has_errata: false,
     url: "https://ringsdb.com/card/06032",
-    imagesrc: "/bundles/cards/06032.png",
+    imagesrc: "06032.png",
   },
   {
     pack_code: "EaAD",
@@ -862,7 +862,7 @@ export const onlyHeroesFFG = [
     octgnid: "fd89bdbf-7475-4f3e-96fc-8f5315a90021",
     has_errata: false,
     url: "https://ringsdb.com/card/06056",
-    imagesrc: "/bundles/cards/06056.png",
+    imagesrc: "06056.png",
   },
   {
     pack_code: "AoO",
@@ -890,7 +890,7 @@ export const onlyHeroesFFG = [
     octgnid: "323ebfa3-57e5-4394-9f55-284b2f7ee0be",
     has_errata: false,
     url: "https://ringsdb.com/card/06081",
-    imagesrc: "/bundles/cards/06081.png",
+    imagesrc: "06081.png",
   },
   {
     pack_code: "BoG",
@@ -918,7 +918,7 @@ export const onlyHeroesFFG = [
     octgnid: "60725069-031c-4251-9b2c-3f368545e9ac",
     has_errata: true,
     url: "https://ringsdb.com/card/06107",
-    imagesrc: "/bundles/cards/06107.png",
+    imagesrc: "06107.png",
   },
   {
     pack_code: "TMV",
@@ -946,7 +946,7 @@ export const onlyHeroesFFG = [
     octgnid: "29d5feef-6165-4077-bb80-692526a8a924",
     has_errata: false,
     url: "https://ringsdb.com/card/06134",
-    imagesrc: "/bundles/cards/06134.png",
+    imagesrc: "06134.png",
   },
   {
     pack_code: "VoI",
@@ -974,7 +974,7 @@ export const onlyHeroesFFG = [
     octgnid: "21cfb9e9-6777-4bc6-ace6-08fe68e949a4",
     has_errata: false,
     url: "https://ringsdb.com/card/07001",
-    imagesrc: "/bundles/cards/07001.png",
+    imagesrc: "07001.png",
   },
   {
     pack_code: "VoI",
@@ -1002,7 +1002,7 @@ export const onlyHeroesFFG = [
     octgnid: "b49c3563-b3cd-4f33-b706-c2a721028891",
     has_errata: false,
     url: "https://ringsdb.com/card/07002",
-    imagesrc: "/bundles/cards/07002.png",
+    imagesrc: "07002.png",
   },
   {
     pack_code: "TDT",
@@ -1030,7 +1030,7 @@ export const onlyHeroesFFG = [
     octgnid: "4c4cccd3-576a-41f1-8b6c-ba11b4cc3d4b",
     has_errata: false,
     url: "https://ringsdb.com/card/08001",
-    imagesrc: "/bundles/cards/08001.png",
+    imagesrc: "08001.png",
   },
   {
     pack_code: "TTT",
@@ -1058,7 +1058,7 @@ export const onlyHeroesFFG = [
     octgnid: "df9683da-d86f-46c9-9ef5-66001753dad5",
     has_errata: false,
     url: "https://ringsdb.com/card/08025",
-    imagesrc: "/bundles/cards/08025.png",
+    imagesrc: "08025.png",
   },
   {
     pack_code: "TiT",
@@ -1086,7 +1086,7 @@ export const onlyHeroesFFG = [
     octgnid: "9d548a43-0ef8-45e6-ab95-7356d218d203",
     has_errata: false,
     url: "https://ringsdb.com/card/08056",
-    imagesrc: "/bundles/cards/08056.png",
+    imagesrc: "08056.png",
   },
   {
     pack_code: "NiE",
@@ -1114,7 +1114,7 @@ export const onlyHeroesFFG = [
     octgnid: "9e3a4b3b-7bb7-4403-984c-411af5ec8467",
     has_errata: false,
     url: "https://ringsdb.com/card/08084",
-    imagesrc: "/bundles/cards/08084.png",
+    imagesrc: "08084.png",
   },
   {
     pack_code: "CS",
@@ -1141,7 +1141,7 @@ export const onlyHeroesFFG = [
     octgnid: "8d6a15a8-e363-46bb-8e49-0af45a1ea0d1",
     has_errata: false,
     url: "https://ringsdb.com/card/08112",
-    imagesrc: "/bundles/cards/08112.png",
+    imagesrc: "08112.png",
   },
   {
     pack_code: "TAC",
@@ -1169,7 +1169,7 @@ export const onlyHeroesFFG = [
     octgnid: "f2a282eb-eab1-472d-b7fb-71429a1a4855",
     has_errata: false,
     url: "https://ringsdb.com/card/08137",
-    imagesrc: "/bundles/cards/08137.png",
+    imagesrc: "08137.png",
   },
   {
     pack_code: "TLR",
@@ -1197,7 +1197,7 @@ export const onlyHeroesFFG = [
     octgnid: "09ebd71c-8286-4838-b661-36a8633c9f0c",
     has_errata: false,
     url: "https://ringsdb.com/card/09001",
-    imagesrc: "/bundles/cards/09001.png",
+    imagesrc: "09001.png",
   },
   {
     pack_code: "TLR",
@@ -1225,7 +1225,7 @@ export const onlyHeroesFFG = [
     octgnid: "52b151e9-f13b-4f85-961c-62838d25b97a",
     has_errata: false,
     url: "https://ringsdb.com/card/09002",
-    imagesrc: "/bundles/cards/09002.png",
+    imagesrc: "09002.png",
   },
   {
     pack_code: "WoE",
@@ -1253,7 +1253,7 @@ export const onlyHeroesFFG = [
     octgnid: "03a7152b-e6af-4aaf-a064-7e814fc181d5",
     has_errata: false,
     url: "https://ringsdb.com/card/10001",
-    imagesrc: "/bundles/cards/10001.png",
+    imagesrc: "10001.png",
   },
   {
     pack_code: "EfMG",
@@ -1281,7 +1281,7 @@ export const onlyHeroesFFG = [
     octgnid: "18fea279-cd38-4a5e-b271-b94d4f64eda1",
     has_errata: false,
     url: "https://ringsdb.com/card/10028",
-    imagesrc: "/bundles/cards/10028.png",
+    imagesrc: "10028.png",
   },
   {
     pack_code: "AtE",
@@ -1309,7 +1309,7 @@ export const onlyHeroesFFG = [
     octgnid: "a25c47a4-3a9c-4883-a7a7-c40df596650c",
     has_errata: false,
     url: "https://ringsdb.com/card/10054",
-    imagesrc: "/bundles/cards/10054.png",
+    imagesrc: "10054.png",
   },
   {
     pack_code: "ToR",
@@ -1337,7 +1337,7 @@ export const onlyHeroesFFG = [
     octgnid: "b188f729-0314-4664-95a0-7f93f4d44133",
     has_errata: false,
     url: "https://ringsdb.com/card/10084",
-    imagesrc: "/bundles/cards/10084.png",
+    imagesrc: "10084.png",
   },
   {
     pack_code: "BoCD",
@@ -1365,7 +1365,7 @@ export const onlyHeroesFFG = [
     octgnid: "94726dff-4b95-4c7c-9542-320b45652d7a",
     has_errata: false,
     url: "https://ringsdb.com/card/10115",
-    imagesrc: "/bundles/cards/10115.png",
+    imagesrc: "10115.png",
   },
   {
     pack_code: "TDR",
@@ -1393,7 +1393,7 @@ export const onlyHeroesFFG = [
     octgnid: "21f0ac18-21ea-44b7-b67b-4d1c5baaae0f",
     has_errata: false,
     url: "https://ringsdb.com/card/10140",
-    imagesrc: "/bundles/cards/10140.png",
+    imagesrc: "10140.png",
   },
   {
     pack_code: "TGH",
@@ -1421,7 +1421,7 @@ export const onlyHeroesFFG = [
     octgnid: "76ee3df4-3ebe-4d2d-9d7f-a0bbe759358a",
     has_errata: false,
     url: "https://ringsdb.com/card/11001",
-    imagesrc: "/bundles/cards/11001.png",
+    imagesrc: "11001.png",
   },
   {
     pack_code: "TGH",
@@ -1449,7 +1449,7 @@ export const onlyHeroesFFG = [
     octgnid: "52e217a6-ddc0-4082-9ec2-09d92e8c25c7",
     has_errata: false,
     url: "https://ringsdb.com/card/11002",
-    imagesrc: "/bundles/cards/11002.png",
+    imagesrc: "11002.png",
   },
   {
     pack_code: "FotS",
@@ -1477,7 +1477,7 @@ export const onlyHeroesFFG = [
     octgnid: "4a76ad60-35d1-4657-ab4a-2f7f15cc7ab7",
     has_errata: false,
     url: "https://ringsdb.com/card/12001",
-    imagesrc: "/bundles/cards/12001.png",
+    imagesrc: "12001.png",
   },
   {
     pack_code: "TitD",
@@ -1505,7 +1505,7 @@ export const onlyHeroesFFG = [
     octgnid: "47750277-6869-470c-9376-7eb7f0a706f5",
     has_errata: false,
     url: "https://ringsdb.com/card/12030",
-    imagesrc: "/bundles/cards/12030.png",
+    imagesrc: "12030.png",
   },
   {
     pack_code: "TotD",
@@ -1533,7 +1533,7 @@ export const onlyHeroesFFG = [
     octgnid: "14820d35-cb36-499b-80ec-da6442548f7b",
     has_errata: false,
     url: "https://ringsdb.com/card/12057",
-    imagesrc: "/bundles/cards/12057.png",
+    imagesrc: "12057.png",
   },
   {
     pack_code: "DR",
@@ -1559,7 +1559,7 @@ export const onlyHeroesFFG = [
     octgnid: "8aea2aaf-8320-4694-bc64-fc264b409bab",
     has_errata: false,
     url: "https://ringsdb.com/card/12082",
-    imagesrc: "/bundles/cards/12082.png",
+    imagesrc: "12082.png",
   },
   {
     pack_code: "SoCH",
@@ -1585,7 +1585,7 @@ export const onlyHeroesFFG = [
     octgnid: "5205f00e-c538-4b5e-976c-5db99d33bc4e",
     has_errata: false,
     url: "https://ringsdb.com/card/12109",
-    imagesrc: "/bundles/cards/12109.png",
+    imagesrc: "12109.png",
   },
   {
     pack_code: "CoC",
@@ -1611,7 +1611,7 @@ export const onlyHeroesFFG = [
     octgnid: "66cf39b5-015f-4bae-b304-4a61b5d1bedf",
     has_errata: false,
     url: "https://ringsdb.com/card/12138",
-    imagesrc: "/bundles/cards/12138.png",
+    imagesrc: "12138.png",
   },
   {
     pack_code: "OHaUH",
@@ -1637,7 +1637,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-1801204c9017",
     has_errata: false,
     url: "https://ringsdb.com/card/131001",
-    imagesrc: "/bundles/cards/131001.png",
+    imagesrc: "131001.png",
   },
   {
     pack_code: "OHaUH",
@@ -1665,7 +1665,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-1801204c9083",
     has_errata: false,
     url: "https://ringsdb.com/card/131002",
-    imagesrc: "/bundles/cards/131002.png",
+    imagesrc: "131002.png",
   },
   {
     pack_code: "OHaUH",
@@ -1692,7 +1692,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-1801204c9062",
     has_errata: true,
     url: "https://ringsdb.com/card/131003",
-    imagesrc: "/bundles/cards/131003.png",
+    imagesrc: "131003.png",
   },
   {
     pack_code: "OHaUH",
@@ -1720,7 +1720,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-1801204c9065",
     has_errata: false,
     url: "https://ringsdb.com/card/131004",
-    imagesrc: "/bundles/cards/131004.png",
+    imagesrc: "131004.png",
   },
   {
     pack_code: "OHaUH",
@@ -1748,7 +1748,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-1801204c9015",
     has_errata: false,
     url: "https://ringsdb.com/card/131005",
-    imagesrc: "/bundles/cards/131005.png",
+    imagesrc: "131005.png",
   },
   {
     pack_code: "OtD",
@@ -1774,7 +1774,7 @@ export const onlyHeroesFFG = [
     octgnid: "4e61b160-2104-497f-9977-4b353e54fbb7",
     has_errata: false,
     url: "https://ringsdb.com/card/132001",
-    imagesrc: "/bundles/cards/132001.png",
+    imagesrc: "132001.png",
   },
   {
     pack_code: "OtD",
@@ -1802,7 +1802,7 @@ export const onlyHeroesFFG = [
     octgnid: "bf2cb5a8-2ec6-4366-89f6-7e3010686a85",
     has_errata: false,
     url: "https://ringsdb.com/card/132002",
-    imagesrc: "/bundles/cards/132002.png",
+    imagesrc: "132002.png",
   },
   {
     pack_code: "OtD",
@@ -1830,7 +1830,7 @@ export const onlyHeroesFFG = [
     octgnid: "e2cf87be-ccdc-48e9-8127-57bee67d4a0c",
     has_errata: false,
     url: "https://ringsdb.com/card/132003",
-    imagesrc: "/bundles/cards/132003.png",
+    imagesrc: "132003.png",
   },
   {
     pack_code: "OtD",
@@ -1858,7 +1858,7 @@ export const onlyHeroesFFG = [
     octgnid: "b21a2af5-7443-4630-9503-1b334ae51c6e",
     has_errata: false,
     url: "https://ringsdb.com/card/132004",
-    imagesrc: "/bundles/cards/132004.png",
+    imagesrc: "132004.png",
   },
   {
     pack_code: "OtD",
@@ -1886,7 +1886,7 @@ export const onlyHeroesFFG = [
     octgnid: "66f66c2e-36e7-4d97-aebb-1ca413f9edeb",
     has_errata: false,
     url: "https://ringsdb.com/card/132005",
-    imagesrc: "/bundles/cards/132005.png",
+    imagesrc: "132005.png",
   },
   {
     pack_code: "TBR",
@@ -1914,7 +1914,7 @@ export const onlyHeroesFFG = [
     octgnid: "3217a119-6b86-47dd-b451-c5e45be3f874",
     has_errata: false,
     url: "https://ringsdb.com/card/141001",
-    imagesrc: "/bundles/cards/141001.png",
+    imagesrc: "141001.png",
   },
   {
     pack_code: "TBR",
@@ -1942,7 +1942,7 @@ export const onlyHeroesFFG = [
     octgnid: "4124136c-8c86-4f86-830c-94c8c76df161",
     has_errata: false,
     url: "https://ringsdb.com/card/141002",
-    imagesrc: "/bundles/cards/141002.png",
+    imagesrc: "141002.png",
   },
   {
     pack_code: "TBR",
@@ -1970,7 +1970,7 @@ export const onlyHeroesFFG = [
     octgnid: "052b1f85-8b9c-4bb0-a735-bdbd5ac1b2c4",
     has_errata: false,
     url: "https://ringsdb.com/card/141003",
-    imagesrc: "/bundles/cards/141003.png",
+    imagesrc: "141003.png",
   },
   {
     pack_code: "TBR",
@@ -1998,7 +1998,7 @@ export const onlyHeroesFFG = [
     octgnid: "ce96b767-c569-48b8-a998-d8009b0143c7",
     has_errata: false,
     url: "https://ringsdb.com/card/141004",
-    imagesrc: "/bundles/cards/141004.png",
+    imagesrc: "141004.png",
   },
   {
     pack_code: "TBR",
@@ -2026,7 +2026,7 @@ export const onlyHeroesFFG = [
     octgnid: "5d75d4dd-7300-43d7-87f2-963271c9c904",
     has_errata: false,
     url: "https://ringsdb.com/card/141005",
-    imagesrc: "/bundles/cards/141005.png",
+    imagesrc: "141005.png",
   },
   {
     pack_code: "TRD",
@@ -2054,7 +2054,7 @@ export const onlyHeroesFFG = [
     octgnid: "f9196cda-8f50-4cc5-9aad-1c56cb677bca",
     has_errata: false,
     url: "https://ringsdb.com/card/142001",
-    imagesrc: "/bundles/cards/142001.png",
+    imagesrc: "142001.png",
   },
   {
     pack_code: "TRD",
@@ -2082,7 +2082,7 @@ export const onlyHeroesFFG = [
     octgnid: "3e055edf-4540-4cf1-94ce-afbf5fc28f82",
     has_errata: false,
     url: "https://ringsdb.com/card/142002",
-    imagesrc: "/bundles/cards/142002.png",
+    imagesrc: "142002.png",
   },
   {
     pack_code: "ToS",
@@ -2110,7 +2110,7 @@ export const onlyHeroesFFG = [
     octgnid: "f5178135-1485-43c5-9660-99232a4cdca8",
     has_errata: false,
     url: "https://ringsdb.com/card/143001",
-    imagesrc: "/bundles/cards/143001.png",
+    imagesrc: "143001.png",
   },
   {
     pack_code: "ToS",
@@ -2138,7 +2138,7 @@ export const onlyHeroesFFG = [
     octgnid: "f3d88160-30f2-4b8b-9e83-c42e62851bbc",
     has_errata: false,
     url: "https://ringsdb.com/card/143002",
-    imagesrc: "/bundles/cards/143002.png",
+    imagesrc: "143002.png",
   },
   {
     pack_code: "ToS",
@@ -2166,7 +2166,7 @@ export const onlyHeroesFFG = [
     octgnid: "94f6738a-c946-4415-9b38-0ce3a443fa33",
     has_errata: false,
     url: "https://ringsdb.com/card/143003",
-    imagesrc: "/bundles/cards/143003.png",
+    imagesrc: "143003.png",
   },
   {
     pack_code: "LoS",
@@ -2194,7 +2194,7 @@ export const onlyHeroesFFG = [
     octgnid: "fe58a6d3-7028-41c1-ab00-5e33e7d77b5f",
     has_errata: false,
     url: "https://ringsdb.com/card/144001",
-    imagesrc: "/bundles/cards/144001.png",
+    imagesrc: "144001.png",
   },
   {
     pack_code: "LoS",
@@ -2222,7 +2222,7 @@ export const onlyHeroesFFG = [
     octgnid: "8f937f89-b248-4261-9b00-4e3cd9763299",
     has_errata: false,
     url: "https://ringsdb.com/card/144002",
-    imagesrc: "/bundles/cards/144002.png",
+    imagesrc: "144002.png",
   },
   {
     pack_code: "LoS",
@@ -2250,7 +2250,7 @@ export const onlyHeroesFFG = [
     octgnid: "3f482b9c-aa18-415e-ab9b-58f9c3b328a1",
     has_errata: false,
     url: "https://ringsdb.com/card/144003",
-    imagesrc: "/bundles/cards/144003.png",
+    imagesrc: "144003.png",
   },
   {
     pack_code: "FotW",
@@ -2278,7 +2278,7 @@ export const onlyHeroesFFG = [
     octgnid: "2e778689-9e3f-4da8-a473-781c777f6473",
     has_errata: false,
     url: "https://ringsdb.com/card/145001",
-    imagesrc: "/bundles/cards/145001.png",
+    imagesrc: "145001.png",
   },
   {
     pack_code: "FotW",
@@ -2306,7 +2306,7 @@ export const onlyHeroesFFG = [
     octgnid: "6dc19efc-af54-4eff-b9ee-ee45e9fd4072",
     has_errata: false,
     url: "https://ringsdb.com/card/145002",
-    imagesrc: "/bundles/cards/145002.png",
+    imagesrc: "145002.png",
   },
   {
     pack_code: "FotW",
@@ -2334,7 +2334,7 @@ export const onlyHeroesFFG = [
     octgnid: "da4c926c-7917-4b6d-a1be-cc90fbdce597",
     has_errata: false,
     url: "https://ringsdb.com/card/145003",
-    imagesrc: "/bundles/cards/145003.png",
+    imagesrc: "145003.png",
   },
   {
     pack_code: "MoF",
@@ -2362,7 +2362,7 @@ export const onlyHeroesFFG = [
     octgnid: "b937644c-ccbb-4a39-ae3c-24857d1d4d57",
     has_errata: false,
     url: "https://ringsdb.com/card/146001",
-    imagesrc: "/bundles/cards/146001.png",
+    imagesrc: "146001.png",
   },
   {
     pack_code: "MoF",
@@ -2390,7 +2390,7 @@ export const onlyHeroesFFG = [
     octgnid: "f1cc6057-ced3-4105-9172-869d26a54af5",
     has_errata: false,
     url: "https://ringsdb.com/card/146002",
-    imagesrc: "/bundles/cards/146002.png",
+    imagesrc: "146002.png",
   },
   {
     pack_code: "MoF",
@@ -2418,7 +2418,7 @@ export const onlyHeroesFFG = [
     octgnid: "7a1bc81a-c226-4589-a1cf-65668846c64b",
     has_errata: false,
     url: "https://ringsdb.com/card/146003",
-    imagesrc: "/bundles/cards/146003.png",
+    imagesrc: "146003.png",
   },
   {
     pack_code: "MoF",
@@ -2444,7 +2444,7 @@ export const onlyHeroesFFG = [
     octgnid: "bbab76d6-7554-40da-af74-fb502d08d9a8",
     has_errata: false,
     url: "https://ringsdb.com/card/146004",
-    imagesrc: "/bundles/cards/146004.png",
+    imagesrc: "146004.png",
   },
   {
     pack_code: "TSoH",
@@ -2472,7 +2472,7 @@ export const onlyHeroesFFG = [
     octgnid: "053357f5-4192-4a35-bf2c-7f48d584f292",
     has_errata: false,
     url: "https://ringsdb.com/card/16001",
-    imagesrc: "/bundles/cards/16001.png",
+    imagesrc: "16001.png",
   },
   {
     pack_code: "TSoH",
@@ -2499,7 +2499,7 @@ export const onlyHeroesFFG = [
     octgnid: "8124f5ac-6f03-4629-96f5-b8775ec8a7c4",
     has_errata: false,
     url: "https://ringsdb.com/card/16002",
-    imagesrc: "/bundles/cards/16002.png",
+    imagesrc: "16002.png",
   },
   {
     pack_code: "M",
@@ -2527,7 +2527,7 @@ export const onlyHeroesFFG = [
     octgnid: "ae49dd35-f2c7-4ab5-b34d-0cc8e5fb1f6e",
     has_errata: false,
     url: "https://ringsdb.com/card/17001",
-    imagesrc: "/bundles/cards/17001.png",
+    imagesrc: "17001.png",
   },
   {
     pack_code: "RAH",
@@ -2555,7 +2555,7 @@ export const onlyHeroesFFG = [
     octgnid: "12946b30-a231-4074-a524-960365081360",
     has_errata: false,
     url: "https://ringsdb.com/card/17028",
-    imagesrc: "/bundles/cards/17028.png",
+    imagesrc: "17028.png",
   },
   {
     pack_code: "BtS",
@@ -2583,7 +2583,7 @@ export const onlyHeroesFFG = [
     octgnid: "068e0590-6bb4-429e-8a2b-2ef0869c7c4f",
     has_errata: false,
     url: "https://ringsdb.com/card/17055",
-    imagesrc: "/bundles/cards/17055.png",
+    imagesrc: "17055.png",
   },
   {
     pack_code: "TBS",
@@ -2609,7 +2609,7 @@ export const onlyHeroesFFG = [
     octgnid: "d87344c3-d234-44c8-89b1-249f5c88bfab",
     has_errata: false,
     url: "https://ringsdb.com/card/17081",
-    imagesrc: "/bundles/cards/17081.png",
+    imagesrc: "17081.png",
   },
   {
     pack_code: "DoCG",
@@ -2637,7 +2637,7 @@ export const onlyHeroesFFG = [
     octgnid: "375d1e9d-7de9-4853-a99f-c15885256a6f",
     has_errata: false,
     url: "https://ringsdb.com/card/17109",
-    imagesrc: "/bundles/cards/17109.png",
+    imagesrc: "17109.png",
   },
   {
     pack_code: "CoP",
@@ -2665,7 +2665,7 @@ export const onlyHeroesFFG = [
     octgnid: "b62716d9-5e70-4ec1-bcb7-852f67299e82",
     has_errata: false,
     url: "https://ringsdb.com/card/17135",
-    imagesrc: "/bundles/cards/17135.png",
+    imagesrc: "17135.png",
   },
   {
     pack_code: "TWoR",
@@ -2693,7 +2693,7 @@ export const onlyHeroesFFG = [
     octgnid: "2b75792d-5873-4fc6-9272-d20dd517d36b",
     has_errata: false,
     url: "https://ringsdb.com/card/18001",
-    imagesrc: "/bundles/cards/18001.png",
+    imagesrc: "18001.png",
   },
   {
     pack_code: "TWoR",
@@ -2719,7 +2719,7 @@ export const onlyHeroesFFG = [
     octgnid: "7d5f1011-3c36-4454-9efb-bf09553011d9",
     has_errata: false,
     url: "https://ringsdb.com/card/18002",
-    imagesrc: "/bundles/cards/18002.png",
+    imagesrc: "18002.png",
   },
   {
     pack_code: "TWH",
@@ -2745,7 +2745,7 @@ export const onlyHeroesFFG = [
     octgnid: "a8709b3e-8ea0-45bd-9ccd-b48797c7012b",
     has_errata: false,
     url: "https://ringsdb.com/card/19001",
-    imagesrc: "/bundles/cards/19001.png",
+    imagesrc: "19001.png",
   },
   {
     pack_code: "RAR",
@@ -2771,7 +2771,7 @@ export const onlyHeroesFFG = [
     octgnid: "de2200a3-6b1e-4fea-b9f2-5f03aa3890f9",
     has_errata: false,
     url: "https://ringsdb.com/card/19026",
-    imagesrc: "/bundles/cards/19026.png",
+    imagesrc: "19026.png",
   },
   {
     pack_code: "FitN",
@@ -2799,7 +2799,7 @@ export const onlyHeroesFFG = [
     octgnid: "3dd1cdc1-8c87-4c8b-89fe-22e7e310bca9",
     has_errata: false,
     url: "https://ringsdb.com/card/19056",
-    imagesrc: "/bundles/cards/19056.png",
+    imagesrc: "19056.png",
   },
   {
     pack_code: "TGoF",
@@ -2826,7 +2826,7 @@ export const onlyHeroesFFG = [
     octgnid: "14638d50-b682-45f9-9ebf-da64467a16e0",
     has_errata: false,
     url: "https://ringsdb.com/card/19084",
-    imagesrc: "/bundles/cards/19084.png",
+    imagesrc: "19084.png",
   },
   {
     pack_code: "MG",
@@ -2852,7 +2852,7 @@ export const onlyHeroesFFG = [
     octgnid: "3844dc9e-8235-4eda-8799-e18fe2af44d4",
     has_errata: false,
     url: "https://ringsdb.com/card/19112",
-    imagesrc: "/bundles/cards/19112.png",
+    imagesrc: "19112.png",
   },
   {
     pack_code: "TFoW",
@@ -2880,7 +2880,7 @@ export const onlyHeroesFFG = [
     octgnid: "e94cf08b-30d1-433c-92ae-c5de5a049638",
     has_errata: false,
     url: "https://ringsdb.com/card/19145",
-    imagesrc: "/bundles/cards/19145.png",
+    imagesrc: "19145.png",
   },
   {
     pack_code: "Starter",
@@ -2908,7 +2908,7 @@ export const onlyHeroesFFG = [
     octgnid: "cf2f9186-27ff-4d04-95da-5dc6e96a009d",
     has_errata: false,
     url: "https://ringsdb.com/card/20001",
-    imagesrc: "/bundles/cards/20001.png",
+    imagesrc: "20001.png",
   },
   {
     pack_code: "Starter",
@@ -2936,7 +2936,7 @@ export const onlyHeroesFFG = [
     octgnid: "1eb86575-d94b-444a-8739-d47945b68956",
     has_errata: false,
     url: "https://ringsdb.com/card/20002",
-    imagesrc: "/bundles/cards/20002.png",
+    imagesrc: "20002.png",
   },
   {
     pack_code: "Starter",
@@ -2963,7 +2963,7 @@ export const onlyHeroesFFG = [
     octgnid: "d10872b6-6ae9-4253-b035-de3ec3806ebd",
     has_errata: false,
     url: "https://ringsdb.com/card/20003",
-    imagesrc: "/bundles/cards/20003.png",
+    imagesrc: "20003.png",
   },
   {
     pack_code: "Starter",
@@ -2991,7 +2991,7 @@ export const onlyHeroesFFG = [
     octgnid: "c3bda1bf-3f2e-4fb4-a36b-3e982123c9f9",
     has_errata: false,
     url: "https://ringsdb.com/card/20034",
-    imagesrc: "/bundles/cards/20034.png",
+    imagesrc: "20034.png",
   },
   {
     pack_code: "Starter",
@@ -3018,7 +3018,7 @@ export const onlyHeroesFFG = [
     octgnid: "a511ccaf-b2c6-4e25-86ba-accd5d67b51b",
     has_errata: false,
     url: "https://ringsdb.com/card/20035",
-    imagesrc: "/bundles/cards/20035.png",
+    imagesrc: "20035.png",
   },
   {
     pack_code: "Starter",
@@ -3046,7 +3046,7 @@ export const onlyHeroesFFG = [
     octgnid: "82a938fd-4975-4c18-ba65-7d9bea277e89",
     has_errata: false,
     url: "https://ringsdb.com/card/20036",
-    imagesrc: "/bundles/cards/20036.png",
+    imagesrc: "20036.png",
   },
   {
     pack_code: "ASitE",
@@ -3074,7 +3074,7 @@ export const onlyHeroesFFG = [
     octgnid: "f733522a-bcdd-466c-9565-0b4cba58701b",
     has_errata: false,
     url: "https://ringsdb.com/card/21002",
-    imagesrc: "/bundles/cards/21002.png",
+    imagesrc: "21002.png",
   },
   {
     pack_code: "ASitE",
@@ -3100,7 +3100,7 @@ export const onlyHeroesFFG = [
     octgnid: "aed43197-5067-4bfe-9a52-95ada03f3b2c",
     has_errata: false,
     url: "https://ringsdb.com/card/21072",
-    imagesrc: "/bundles/cards/21072.png",
+    imagesrc: "21072.png",
   },
   {
     pack_code: "WaR",
@@ -3128,7 +3128,7 @@ export const onlyHeroesFFG = [
     octgnid: "e6e32f1f-fca8-44cc-8e04-0eaf6361b929",
     has_errata: false,
     url: "https://ringsdb.com/card/22001",
-    imagesrc: "/bundles/cards/22001.png",
+    imagesrc: "22001.png",
   },
   {
     pack_code: "TCoU",
@@ -3154,7 +3154,7 @@ export const onlyHeroesFFG = [
     octgnid: "4cca8984-2e4e-4df2-ac96-86af18b2a961",
     has_errata: false,
     url: "https://ringsdb.com/card/22027",
-    imagesrc: "/bundles/cards/22027.png",
+    imagesrc: "22027.png",
   },
   {
     pack_code: "CotW",
@@ -3180,7 +3180,7 @@ export const onlyHeroesFFG = [
     octgnid: "28296152-f2b0-4ccc-9be9-423d08aa174f",
     has_errata: false,
     url: "https://ringsdb.com/card/22054",
-    imagesrc: "/bundles/cards/22054.png",
+    imagesrc: "22054.png",
   },
   {
     pack_code: "UtAM",
@@ -3208,7 +3208,7 @@ export const onlyHeroesFFG = [
     octgnid: "4eac6112-54ea-4a3e-851b-cd6456047dd2",
     has_errata: false,
     url: "https://ringsdb.com/card/22081",
-    imagesrc: "/bundles/cards/22081.png",
+    imagesrc: "22081.png",
   },
   {
     pack_code: "TLoS",
@@ -3234,7 +3234,7 @@ export const onlyHeroesFFG = [
     octgnid: "00d61652-9003-4278-af72-7d4fab3dfa7c",
     has_errata: false,
     url: "https://ringsdb.com/card/22108",
-    imagesrc: "/bundles/cards/22108.png",
+    imagesrc: "22108.png",
   },
   {
     pack_code: "TFoN",
@@ -3260,7 +3260,7 @@ export const onlyHeroesFFG = [
     octgnid: "950e710c-4b2f-4e65-9e5d-8f0f7390812c",
     has_errata: false,
     url: "https://ringsdb.com/card/22137",
-    imagesrc: "/bundles/cards/22137.png",
+    imagesrc: "22137.png",
   },
   {
     pack_code: "CoE",
@@ -3288,7 +3288,7 @@ export const onlyHeroesFFG = [
     octgnid: "c2411ac7-6958-4fa5-9713-02db5792c387",
     has_errata: false,
     url: "https://ringsdb.com/card/300001",
-    imagesrc: "/bundles/cards/300001.png",
+    imagesrc: "300001.png",
   },
   {
     pack_code: "CoE",
@@ -3316,7 +3316,7 @@ export const onlyHeroesFFG = [
     octgnid: "9800bf3a-0549-4346-9d87-213a298c1248",
     has_errata: false,
     url: "https://ringsdb.com/card/300002",
-    imagesrc: "/bundles/cards/300002.png",
+    imagesrc: "300002.png",
   },
   {
     pack_code: "CoE",
@@ -3344,7 +3344,7 @@ export const onlyHeroesFFG = [
     octgnid: "a9272f8e-e461-41cf-b77e-2ab510f13fd3",
     has_errata: false,
     url: "https://ringsdb.com/card/300003",
-    imagesrc: "/bundles/cards/300003.png",
+    imagesrc: "300003.png",
   },
   {
     pack_code: "CoE",
@@ -3372,7 +3372,7 @@ export const onlyHeroesFFG = [
     octgnid: "bc704692-5d75-4905-bf6a-91f94ce67c55",
     has_errata: false,
     url: "https://ringsdb.com/card/300004",
-    imagesrc: "/bundles/cards/300004.png",
+    imagesrc: "300004.png",
   },
   {
     pack_code: "TAP",
@@ -3400,7 +3400,7 @@ export const onlyHeroesFFG = [
     octgnid: "151ba48a-1efd-451e-bba0-b49fa0566596",
     has_errata: false,
     url: "https://ringsdb.com/card/301001",
-    imagesrc: "/bundles/cards/301001.png",
+    imagesrc: "301001.png",
   },
   {
     pack_code: "TAP",
@@ -3426,7 +3426,7 @@ export const onlyHeroesFFG = [
     octgnid: "eccb04b5-1b98-4e06-ad6d-0d86108d4621",
     has_errata: false,
     url: "https://ringsdb.com/card/301002",
-    imagesrc: "/bundles/cards/301002.png",
+    imagesrc: "301002.png",
   },
   {
     pack_code: "FotE",
@@ -3454,7 +3454,7 @@ export const onlyHeroesFFG = [
     octgnid: "d6ba9e2a-2ac6-4674-9f88-c9a094b55e3c",
     has_errata: false,
     url: "https://ringsdb.com/card/302038",
-    imagesrc: "/bundles/cards/302038.png",
+    imagesrc: "302038.png",
   },
   {
     pack_code: "FotE",
@@ -3482,7 +3482,7 @@ export const onlyHeroesFFG = [
     octgnid: "bae5628f-5f5e-426b-85c7-fa6db417f5c5",
     has_errata: false,
     url: "https://ringsdb.com/card/302039",
-    imagesrc: "/bundles/cards/302039.png",
+    imagesrc: "302039.png",
   },
   {
     pack_code: "TGoR",
@@ -3510,7 +3510,7 @@ export const onlyHeroesFFG = [
     octgnid: "7b3dd420-cecb-432c-abff-7ea6e8631133",
     has_errata: false,
     url: "https://ringsdb.com/card/303071",
-    imagesrc: "/bundles/cards/303071.png",
+    imagesrc: "303071.png",
   },
   {
     pack_code: "TGoR",
@@ -3538,7 +3538,7 @@ export const onlyHeroesFFG = [
     octgnid: "103d5cff-e43f-4aea-8f06-be40a6e669b8",
     has_errata: false,
     url: "https://ringsdb.com/card/303072",
-    imagesrc: "/bundles/cards/303072.png",
+    imagesrc: "303072.png",
   },
   {
     pack_code: "TGoR",
@@ -3566,7 +3566,7 @@ export const onlyHeroesFFG = [
     octgnid: "fd908f31-8625-4927-b154-2ef62fda6f4d",
     has_errata: false,
     url: "https://ringsdb.com/card/303073",
-    imagesrc: "/bundles/cards/303073.png",
+    imagesrc: "303073.png",
   },
   {
     pack_code: "TGC",
@@ -3594,7 +3594,7 @@ export const onlyHeroesFFG = [
     octgnid: "fe33a69d-e496-455c-849c-e7e35f67e507",
     has_errata: false,
     url: "https://ringsdb.com/card/304101",
-    imagesrc: "/bundles/cards/304101.png",
+    imagesrc: "304101.png",
   },
   {
     pack_code: "TGC",
@@ -3622,7 +3622,7 @@ export const onlyHeroesFFG = [
     octgnid: "9abb5216-a019-469b-95a5-ef4bec8601fe",
     has_errata: false,
     url: "https://ringsdb.com/card/304102",
-    imagesrc: "/bundles/cards/304102.png",
+    imagesrc: "304102.png",
   },
   {
     pack_code: "MotR",
@@ -3649,7 +3649,7 @@ export const onlyHeroesFFG = [
     octgnid: "a0caa805-fbaa-4554-b77b-4d90d6fa7f0f",
     has_errata: false,
     url: "https://ringsdb.com/card/305144",
-    imagesrc: "/bundles/cards/305144.png",
+    imagesrc: "305144.png",
   },
   {
     pack_code: "MotR",
@@ -3677,7 +3677,7 @@ export const onlyHeroesFFG = [
     octgnid: "70001234-a1a2-4168-8a60-fff20e565518",
     has_errata: false,
     url: "https://ringsdb.com/card/305145",
-    imagesrc: "/bundles/cards/305145.png",
+    imagesrc: "305145.png",
   },
   {
     pack_code: "BitI",
@@ -3705,7 +3705,7 @@ export const onlyHeroesFFG = [
     octgnid: "e25b0500-6186-4fc7-ab4e-d63482b43a7b",
     has_errata: false,
     url: "https://ringsdb.com/card/306182",
-    imagesrc: "/bundles/cards/306182.png",
+    imagesrc: "306182.png",
   },
   {
     pack_code: "BitI",
@@ -3732,7 +3732,7 @@ export const onlyHeroesFFG = [
     octgnid: "2fd5d9f4-81e2-4af9-b3bf-5b7552173857",
     has_errata: false,
     url: "https://ringsdb.com/card/306183",
-    imagesrc: "/bundles/cards/306183.png",
+    imagesrc: "306183.png",
   },
   {
     pack_code: "DoD",
@@ -3760,7 +3760,7 @@ export const onlyHeroesFFG = [
     octgnid: "347fa1ce-ec8d-43d9-a407-bc26d041b45e",
     has_errata: false,
     url: "https://ringsdb.com/card/31001",
-    imagesrc: "/bundles/cards/31001.png",
+    imagesrc: "31001.png",
   },
   {
     pack_code: "DoD",
@@ -3788,7 +3788,7 @@ export const onlyHeroesFFG = [
     octgnid: "3f1fe728-ecc6-4aff-a056-31e3731e39c2",
     has_errata: false,
     url: "https://ringsdb.com/card/31002",
-    imagesrc: "/bundles/cards/31002.png",
+    imagesrc: "31002.png",
   },
   {
     pack_code: "DoD",
@@ -3815,7 +3815,7 @@ export const onlyHeroesFFG = [
     octgnid: "6047ca12-04ce-40db-b919-ef97fadb0430",
     has_errata: false,
     url: "https://ringsdb.com/card/31003",
-    imagesrc: "/bundles/cards/31003.png",
+    imagesrc: "31003.png",
   },
   {
     pack_code: "DoD",
@@ -3842,7 +3842,7 @@ export const onlyHeroesFFG = [
     octgnid: "43aa19c5-4858-4217-8a16-826a52e8fb25",
     has_errata: false,
     url: "https://ringsdb.com/card/31025",
-    imagesrc: "/bundles/cards/31025.png",
+    imagesrc: "31025.png",
   },
   {
     pack_code: "EoL",
@@ -3870,7 +3870,7 @@ export const onlyHeroesFFG = [
     octgnid: "afec8b6f-6838-442e-b2a8-71537a25e05d",
     has_errata: false,
     url: "https://ringsdb.com/card/32001",
-    imagesrc: "/bundles/cards/32001.png",
+    imagesrc: "32001.png",
   },
   {
     pack_code: "EoL",
@@ -3897,7 +3897,7 @@ export const onlyHeroesFFG = [
     octgnid: "8ccfbcf2-676c-4e24-ab5e-fa479343ab39",
     has_errata: false,
     url: "https://ringsdb.com/card/32002",
-    imagesrc: "/bundles/cards/32002.png",
+    imagesrc: "32002.png",
   },
   {
     pack_code: "EoL",
@@ -3924,7 +3924,7 @@ export const onlyHeroesFFG = [
     octgnid: "46fa971f-b0d9-48b5-a584-1213739adb66",
     has_errata: false,
     url: "https://ringsdb.com/card/32003",
-    imagesrc: "/bundles/cards/32003.png",
+    imagesrc: "32003.png",
   },
   {
     pack_code: "EoL",
@@ -3951,7 +3951,7 @@ export const onlyHeroesFFG = [
     octgnid: "4fbd12f8-36b2-42c6-8df7-d507c1e87558",
     has_errata: false,
     url: "https://ringsdb.com/card/32031",
-    imagesrc: "/bundles/cards/32031.png",
+    imagesrc: "32031.png",
   },
   {
     pack_code: "DoG",
@@ -3979,7 +3979,7 @@ export const onlyHeroesFFG = [
     octgnid: "55a2193b-c458-4aa0-82ec-544a373a1dca",
     has_errata: false,
     url: "https://ringsdb.com/card/33001",
-    imagesrc: "/bundles/cards/33001.png",
+    imagesrc: "33001.png",
   },
   {
     pack_code: "DoG",
@@ -4007,7 +4007,7 @@ export const onlyHeroesFFG = [
     octgnid: "d61ab954-f8b8-4334-9d4a-297f58404b51",
     has_errata: false,
     url: "https://ringsdb.com/card/33002",
-    imagesrc: "/bundles/cards/33002.png",
+    imagesrc: "33002.png",
   },
   {
     pack_code: "DoG",
@@ -4035,7 +4035,7 @@ export const onlyHeroesFFG = [
     octgnid: "4930fbda-032d-4476-8b3a-e27ff28691f4",
     has_errata: false,
     url: "https://ringsdb.com/card/33003",
-    imagesrc: "/bundles/cards/33003.png",
+    imagesrc: "33003.png",
   },
   {
     pack_code: "DoG",
@@ -4063,7 +4063,7 @@ export const onlyHeroesFFG = [
     octgnid: "b6b8da1c-5269-440b-9015-b5748a91c358",
     has_errata: false,
     url: "https://ringsdb.com/card/33027",
-    imagesrc: "/bundles/cards/33027.png",
+    imagesrc: "33027.png",
   },
   {
     pack_code: "DoG",
@@ -4091,7 +4091,7 @@ export const onlyHeroesFFG = [
     octgnid: "8fcb55c3-2996-4c13-b120-2b0c31f62d21",
     has_errata: false,
     url: "https://ringsdb.com/card/33028",
-    imagesrc: "/bundles/cards/33028.png",
+    imagesrc: "33028.png",
   },
   {
     pack_code: "RoR",
@@ -4119,7 +4119,7 @@ export const onlyHeroesFFG = [
     octgnid: "e87c3473-e107-40dd-9af7-b01f35176ea0",
     has_errata: false,
     url: "https://ringsdb.com/card/34001",
-    imagesrc: "/bundles/cards/34001.png",
+    imagesrc: "34001.png",
   },
   {
     pack_code: "RoR",
@@ -4147,7 +4147,7 @@ export const onlyHeroesFFG = [
     octgnid: "974d6f07-6192-4275-a030-7d590426c286",
     has_errata: false,
     url: "https://ringsdb.com/card/34002",
-    imagesrc: "/bundles/cards/34002.png",
+    imagesrc: "34002.png",
   },
   {
     pack_code: "RoR",
@@ -4174,7 +4174,7 @@ export const onlyHeroesFFG = [
     octgnid: "2221ee74-436d-44fa-84bc-27b3653ef2ba",
     has_errata: false,
     url: "https://ringsdb.com/card/34003",
-    imagesrc: "/bundles/cards/34003.png",
+    imagesrc: "34003.png",
   },
   {
     pack_code: "RoR",
@@ -4202,7 +4202,7 @@ export const onlyHeroesFFG = [
     octgnid: "a8d9c225-1404-4a7e-9aa3-ea887510be63",
     has_errata: false,
     url: "https://ringsdb.com/card/34027",
-    imagesrc: "/bundles/cards/34027.png",
+    imagesrc: "34027.png",
   },
   {
     pack_code: "TSotS",
@@ -4229,7 +4229,7 @@ export const onlyHeroesFFG = [
     octgnid: "788cdbe8-2142-4216-a8e4-d4172d0aafe2",
     has_errata: false,
     url: "https://ringsdb.com/card/500006",
-    imagesrc: "/bundles/cards/500006.png",
+    imagesrc: "500006.png",
   },
   {
     pack_code: "TSotS",
@@ -4256,7 +4256,7 @@ export const onlyHeroesFFG = [
     octgnid: "247bb211-bf15-4627-99e8-914a8f1ca1bf",
     has_errata: false,
     url: "https://ringsdb.com/card/500987",
-    imagesrc: "/bundles/cards/500987.png",
+    imagesrc: "500987.png",
   },
   {
     pack_code: "TNaN",
@@ -4283,7 +4283,7 @@ export const onlyHeroesFFG = [
     octgnid: "76c3de5d-12c5-4190-99c8-16a6903a3851",
     has_errata: false,
     url: "https://ringsdb.com/card/501993",
-    imagesrc: "/bundles/cards/501993.png",
+    imagesrc: "501993.png",
   },
   {
     pack_code: "TSoEr",
@@ -4310,7 +4310,7 @@ export const onlyHeroesFFG = [
     octgnid: "d77fffd8-292e-47d6-99a3-05f50d26069b",
     has_errata: false,
     url: "https://ringsdb.com/card/502991",
-    imagesrc: "/bundles/cards/502991.png",
+    imagesrc: "502991.png",
   },
   {
     pack_code: "TSoEr",
@@ -4337,7 +4337,7 @@ export const onlyHeroesFFG = [
     octgnid: "937dd499-1edb-4e66-b0c0-db768e2b8b61",
     has_errata: false,
     url: "https://ringsdb.com/card/502992",
-    imagesrc: "/bundles/cards/502992.png",
+    imagesrc: "502992.png",
   },
   {
     pack_code: "TSoEr",
@@ -4363,7 +4363,7 @@ export const onlyHeroesFFG = [
     octgnid: "c709e7bf-1889-4b76-b7c8-4632c3509a88",
     has_errata: false,
     url: "https://ringsdb.com/card/502993",
-    imagesrc: "/bundles/cards/502993.png",
+    imagesrc: "502993.png",
   },
   {
     pack_code: "MotKA",
@@ -4391,7 +4391,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9014",
     has_errata: false,
     url: "https://ringsdb.com/card/9901014",
-    imagesrc: "/bundles/cards/9901014.png",
+    imagesrc: "9901014.png",
   },
   {
     pack_code: "MotKA",
@@ -4419,7 +4419,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9019",
     has_errata: false,
     url: "https://ringsdb.com/card/9901019",
-    imagesrc: "/bundles/cards/9901019.png",
+    imagesrc: "9901019.png",
   },
   {
     pack_code: "MotKA",
@@ -4447,7 +4447,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9031",
     has_errata: false,
     url: "https://ringsdb.com/card/9901031",
-    imagesrc: "/bundles/cards/9901031.png",
+    imagesrc: "9901031.png",
   },
   {
     pack_code: "MotKA",
@@ -4475,7 +4475,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9060",
     has_errata: false,
     url: "https://ringsdb.com/card/9901060",
-    imagesrc: "/bundles/cards/9901060.png",
+    imagesrc: "9901060.png",
   },
   {
     pack_code: "MotKA",
@@ -4503,7 +4503,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801200c9062",
     has_errata: false,
     url: "https://ringsdb.com/card/9901062",
-    imagesrc: "/bundles/cards/9901062.png",
+    imagesrc: "9901062.png",
   },
   {
     pack_code: "MotKA",
@@ -4531,7 +4531,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801202c9009",
     has_errata: false,
     url: "https://ringsdb.com/card/9902030",
-    imagesrc: "/bundles/cards/9902030.png",
+    imagesrc: "9902030.png",
   },
   {
     pack_code: "MotKA",
@@ -4557,7 +4557,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801203c9004",
     has_errata: false,
     url: "https://ringsdb.com/card/9902053",
-    imagesrc: "/bundles/cards/9902053.png",
+    imagesrc: "9902053.png",
   },
   {
     pack_code: "MotKA",
@@ -4585,7 +4585,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801203c9002",
     has_errata: false,
     url: "https://ringsdb.com/card/9902057",
-    imagesrc: "/bundles/cards/9902057.png",
+    imagesrc: "9902057.png",
   },
   {
     pack_code: "MotKA",
@@ -4613,7 +4613,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801204c9005",
     has_errata: false,
     url: "https://ringsdb.com/card/9902079",
-    imagesrc: "/bundles/cards/9902079.png",
+    imagesrc: "9902079.png",
   },
   {
     pack_code: "MotKA",
@@ -4641,7 +4641,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801205c9005",
     has_errata: false,
     url: "https://ringsdb.com/card/9902100",
-    imagesrc: "/bundles/cards/9902100.png",
+    imagesrc: "9902100.png",
   },
   {
     pack_code: "MotKA",
@@ -4668,7 +4668,7 @@ export const onlyHeroesFFG = [
     octgnid: "c00bdeff-c186-4d83-bf24-2142fdd39b19",
     has_errata: false,
     url: "https://ringsdb.com/card/9904006",
-    imagesrc: "/bundles/cards/9904006.png",
+    imagesrc: "9904006.png",
   },
   {
     pack_code: "MotKA",
@@ -4694,7 +4694,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801209c9007",
     has_errata: false,
     url: "https://ringsdb.com/card/9904035",
-    imagesrc: "/bundles/cards/9904035.png",
+    imagesrc: "9904035.png",
   },
   {
     pack_code: "MotKA",
@@ -4722,7 +4722,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801210c9002",
     has_errata: false,
     url: "https://ringsdb.com/card/9904058",
-    imagesrc: "/bundles/cards/9904058.png",
+    imagesrc: "9904058.png",
   },
   {
     pack_code: "MotKA",
@@ -4750,7 +4750,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-0801211c9008",
     has_errata: false,
     url: "https://ringsdb.com/card/9904077",
-    imagesrc: "/bundles/cards/9904077.png",
+    imagesrc: "9904077.png",
   },
   {
     pack_code: "MotKA",
@@ -4776,7 +4776,7 @@ export const onlyHeroesFFG = [
     octgnid: "4823aae3-46ef-4a75-89f9-cbd3aa1b9013",
     has_errata: false,
     url: "https://ringsdb.com/card/9905010",
-    imagesrc: "/bundles/cards/9905010.png",
+    imagesrc: "9905010.png",
   },
   {
     pack_code: "MotKA",
@@ -4804,7 +4804,7 @@ export const onlyHeroesFFG = [
     octgnid: "c6ae1840-dd7d-46ea-baf8-6d30614506de",
     has_errata: false,
     url: "https://ringsdb.com/card/9906033",
-    imagesrc: "/bundles/cards/9906033.png",
+    imagesrc: "9906033.png",
   },
   {
     pack_code: "MotKA",
@@ -4832,7 +4832,7 @@ export const onlyHeroesFFG = [
     octgnid: "fd89bdbf-7475-4f3e-96fc-8f5315a90022",
     has_errata: false,
     url: "https://ringsdb.com/card/9906057",
-    imagesrc: "/bundles/cards/9906057.png",
+    imagesrc: "9906057.png",
   },
   {
     pack_code: "MotKA",
@@ -4858,7 +4858,7 @@ export const onlyHeroesFFG = [
     octgnid: "06baca74-330a-4038-9387-32ce8657dd8f",
     has_errata: false,
     url: "https://ringsdb.com/card/9906110",
-    imagesrc: "/bundles/cards/9906110.png",
+    imagesrc: "9906110.png",
   },
   {
     pack_code: "MotKA",
@@ -4884,7 +4884,7 @@ export const onlyHeroesFFG = [
     octgnid: "314eaf40-1554-4c1a-b643-1f4353e25633",
     has_errata: false,
     url: "https://ringsdb.com/card/9906112",
-    imagesrc: "/bundles/cards/9906112.png",
+    imagesrc: "9906112.png",
   },
   {
     pack_code: "MotKA",
@@ -4912,7 +4912,7 @@ export const onlyHeroesFFG = [
     octgnid: "ef8aec20-e0c9-4d02-9dea-20b6e7c2278b",
     has_errata: false,
     url: "https://ringsdb.com/card/9906114",
-    imagesrc: "/bundles/cards/9906114.png",
+    imagesrc: "9906114.png",
   },
   {
     pack_code: "MotKA",
@@ -4940,7 +4940,7 @@ export const onlyHeroesFFG = [
     octgnid: "4b794779-c6b6-4ee0-b13f-196b721e28a7",
     has_errata: false,
     url: "https://ringsdb.com/card/9908028",
-    imagesrc: "/bundles/cards/9908028.png",
+    imagesrc: "9908028.png",
   },
   {
     pack_code: "MotKA",
@@ -4968,7 +4968,7 @@ export const onlyHeroesFFG = [
     octgnid: "2e7f22cc-218e-4dad-b4e4-00b2208713d9",
     has_errata: false,
     url: "https://ringsdb.com/card/9908059",
-    imagesrc: "/bundles/cards/9908059.png",
+    imagesrc: "9908059.png",
   },
   {
     pack_code: "MotKA",
@@ -4996,7 +4996,7 @@ export const onlyHeroesFFG = [
     octgnid: "9220dbae-e7fc-43fc-b772-043af7d4bda1",
     has_errata: false,
     url: "https://ringsdb.com/card/9908114",
-    imagesrc: "/bundles/cards/9908114.png",
+    imagesrc: "9908114.png",
   },
   {
     pack_code: "MotKA",
@@ -5024,7 +5024,7 @@ export const onlyHeroesFFG = [
     octgnid: "1e28318c-e82a-4d50-b6db-d08e6e9a6b53",
     has_errata: false,
     url: "https://ringsdb.com/card/9910002",
-    imagesrc: "/bundles/cards/9910002.png",
+    imagesrc: "9910002.png",
   },
   {
     pack_code: "MotKA",
@@ -5052,7 +5052,7 @@ export const onlyHeroesFFG = [
     octgnid: "608ac037-89dd-4aac-8b6d-057bd0fa7507",
     has_errata: false,
     url: "https://ringsdb.com/card/9910091",
-    imagesrc: "/bundles/cards/9910091.png",
+    imagesrc: "9910091.png",
   },
   {
     pack_code: "MotKA",
@@ -5078,7 +5078,7 @@ export const onlyHeroesFFG = [
     octgnid: "b1584166-c8b3-4984-bfdc-06c33f31e153",
     has_errata: false,
     url: "https://ringsdb.com/card/9910118",
-    imagesrc: "/bundles/cards/9910118.png",
+    imagesrc: "9910118.png",
   },
   {
     pack_code: "MotKA",
@@ -5106,7 +5106,7 @@ export const onlyHeroesFFG = [
     octgnid: "4bff71e7-f66c-4a2d-ba7d-633a6c77f765",
     has_errata: false,
     url: "https://ringsdb.com/card/9910120",
-    imagesrc: "/bundles/cards/9910120.png",
+    imagesrc: "9910120.png",
   },
   {
     pack_code: "MotKA",
@@ -5134,7 +5134,7 @@ export const onlyHeroesFFG = [
     octgnid: "fdabde61-0341-4dae-9a9b-de9f0b955078",
     has_errata: false,
     url: "https://ringsdb.com/card/9910141",
-    imagesrc: "/bundles/cards/9910141.png",
+    imagesrc: "9910141.png",
   },
   {
     pack_code: "MotKA",
@@ -5160,7 +5160,7 @@ export const onlyHeroesFFG = [
     octgnid: "27843323-c7d0-4f9e-a67e-4494f8926203",
     has_errata: false,
     url: "https://ringsdb.com/card/9912004",
-    imagesrc: "/bundles/cards/9912004.png",
+    imagesrc: "9912004.png",
   },
   {
     pack_code: "MotKA",
@@ -5188,7 +5188,7 @@ export const onlyHeroesFFG = [
     octgnid: "7309efbd-ea6a-45d5-bfec-2a4e0fc8d3b7",
     has_errata: false,
     url: "https://ringsdb.com/card/9912006",
-    imagesrc: "/bundles/cards/9912006.png",
+    imagesrc: "9912006.png",
   },
   {
     pack_code: "MotKA",
@@ -5214,7 +5214,7 @@ export const onlyHeroesFFG = [
     octgnid: "66a0dc1a-4913-425d-9d94-15b3e505bb40",
     has_errata: false,
     url: "https://ringsdb.com/card/9912031",
-    imagesrc: "/bundles/cards/9912031.png",
+    imagesrc: "9912031.png",
   },
   {
     pack_code: "MotKA",
@@ -5240,7 +5240,7 @@ export const onlyHeroesFFG = [
     octgnid: "785367f7-6475-4935-979f-abec23c596f2",
     has_errata: false,
     url: "https://ringsdb.com/card/9912035",
-    imagesrc: "/bundles/cards/9912035.png",
+    imagesrc: "9912035.png",
   },
   {
     pack_code: "MotKA",
@@ -5268,7 +5268,7 @@ export const onlyHeroesFFG = [
     octgnid: "7e1db97c-f6dc-43e1-a6f3-7ab600845e93",
     has_errata: false,
     url: "https://ringsdb.com/card/9912058",
-    imagesrc: "/bundles/cards/9912058.png",
+    imagesrc: "9912058.png",
   },
   {
     pack_code: "MotKA",
@@ -5294,7 +5294,7 @@ export const onlyHeroesFFG = [
     octgnid: "1987caf1-aedd-4fe0-bbe9-41539c2a7910",
     has_errata: false,
     url: "https://ringsdb.com/card/9912060",
-    imagesrc: "/bundles/cards/9912060.png",
+    imagesrc: "9912060.png",
   },
   {
     pack_code: "MotKA",
@@ -5322,7 +5322,7 @@ export const onlyHeroesFFG = [
     octgnid: "697e1c80-a218-4dc7-b0c3-06921e879b81",
     has_errata: false,
     url: "https://ringsdb.com/card/9912089",
-    imagesrc: "/bundles/cards/9912089.png",
+    imagesrc: "9912089.png",
   },
   {
     pack_code: "MotKA",
@@ -5350,7 +5350,7 @@ export const onlyHeroesFFG = [
     octgnid: "fc6e412d-eeca-432e-bd91-378c1ae72c9f",
     has_errata: false,
     url: "https://ringsdb.com/card/9912117",
-    imagesrc: "/bundles/cards/9912117.png",
+    imagesrc: "9912117.png",
   },
   {
     pack_code: "MotKA",
@@ -5376,7 +5376,7 @@ export const onlyHeroesFFG = [
     octgnid: "daf23298-67fa-41c5-aff6-a3b7fef2014e",
     has_errata: false,
     url: "https://ringsdb.com/card/9912142",
-    imagesrc: "/bundles/cards/9912142.png",
+    imagesrc: "9912142.png",
   },
   {
     pack_code: "MotKA",
@@ -5402,7 +5402,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-1801204c9032",
     has_errata: false,
     url: "https://ringsdb.com/card/99131006",
-    imagesrc: "/bundles/cards/99131006.png",
+    imagesrc: "99131006.png",
   },
   {
     pack_code: "MotKA",
@@ -5428,7 +5428,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-1801204c9055",
     has_errata: false,
     url: "https://ringsdb.com/card/99131007",
-    imagesrc: "/bundles/cards/99131007.png",
+    imagesrc: "99131007.png",
   },
   {
     pack_code: "MotKA",
@@ -5454,7 +5454,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-1801204c9019",
     has_errata: false,
     url: "https://ringsdb.com/card/99131008",
-    imagesrc: "/bundles/cards/99131008.png",
+    imagesrc: "99131008.png",
   },
   {
     pack_code: "MotKA",
@@ -5480,7 +5480,7 @@ export const onlyHeroesFFG = [
     octgnid: "51223bd0-ffd1-11df-a976-1801204c9027",
     has_errata: false,
     url: "https://ringsdb.com/card/99131009",
-    imagesrc: "/bundles/cards/99131009.png",
+    imagesrc: "99131009.png",
   },
   {
     pack_code: "MotKA",
@@ -5508,7 +5508,7 @@ export const onlyHeroesFFG = [
     octgnid: "6778eb01-6b07-4dbe-87f1-e854ab548813",
     has_errata: false,
     url: "https://ringsdb.com/card/99132006",
-    imagesrc: "/bundles/cards/99132006.png",
+    imagesrc: "99132006.png",
   },
   {
     pack_code: "MotKA",
@@ -5536,7 +5536,7 @@ export const onlyHeroesFFG = [
     octgnid: "c4b959f5-92a9-4f46-8656-f9da08a5cb86",
     has_errata: false,
     url: "https://ringsdb.com/card/99132007",
-    imagesrc: "/bundles/cards/99132007.png",
+    imagesrc: "99132007.png",
   },
   {
     pack_code: "MotKA",
@@ -5562,7 +5562,7 @@ export const onlyHeroesFFG = [
     octgnid: "c66638a7-95ae-4913-bf11-2e8dcf8d6104",
     has_errata: false,
     url: "https://ringsdb.com/card/99132008",
-    imagesrc: "/bundles/cards/99132008.png",
+    imagesrc: "99132008.png",
   },
   {
     pack_code: "MotKA",
@@ -5590,7 +5590,7 @@ export const onlyHeroesFFG = [
     octgnid: "1f7fc118-94a7-48a0-bd0c-9c15a36ddc23",
     has_errata: false,
     url: "https://ringsdb.com/card/99141006",
-    imagesrc: "/bundles/cards/99141006.png",
+    imagesrc: "99141006.png",
   },
   {
     pack_code: "MotKA",
@@ -5618,7 +5618,7 @@ export const onlyHeroesFFG = [
     octgnid: "77f58774-86e7-4449-b31e-3833700b3e60",
     has_errata: false,
     url: "https://ringsdb.com/card/99141007",
-    imagesrc: "/bundles/cards/99141007.png",
+    imagesrc: "99141007.png",
   },
   {
     pack_code: "MotKA",
@@ -5646,7 +5646,7 @@ export const onlyHeroesFFG = [
     octgnid: "9d8ccd1a-48d3-4123-bcca-3c0ab88347ec",
     has_errata: false,
     url: "https://ringsdb.com/card/99141008",
-    imagesrc: "/bundles/cards/99141008.png",
+    imagesrc: "99141008.png",
   },
   {
     pack_code: "MotKA",
@@ -5672,7 +5672,7 @@ export const onlyHeroesFFG = [
     octgnid: "3d09a998-9ad0-4b98-9c42-50c4226cc73b",
     has_errata: false,
     url: "https://ringsdb.com/card/99142003",
-    imagesrc: "/bundles/cards/99142003.png",
+    imagesrc: "99142003.png",
   },
   {
     pack_code: "MotKA",
@@ -5698,7 +5698,7 @@ export const onlyHeroesFFG = [
     octgnid: "36b26228-1c01-4064-a109-d110e00d8e4b",
     has_errata: false,
     url: "https://ringsdb.com/card/99142004",
-    imagesrc: "/bundles/cards/99142004.png",
+    imagesrc: "99142004.png",
   },
   {
     pack_code: "MotKA",
@@ -5724,7 +5724,7 @@ export const onlyHeroesFFG = [
     octgnid: "638638f0-8177-410a-bce8-9e2bbf5ad81f",
     has_errata: false,
     url: "https://ringsdb.com/card/99142005",
-    imagesrc: "/bundles/cards/99142005.png",
+    imagesrc: "99142005.png",
   },
   {
     pack_code: "MotKA",
@@ -5752,7 +5752,7 @@ export const onlyHeroesFFG = [
     octgnid: "e02cc17b-80e4-4a8f-ba55-1df74aac816d",
     has_errata: false,
     url: "https://ringsdb.com/card/99142006",
-    imagesrc: "/bundles/cards/99142006.png",
+    imagesrc: "99142006.png",
   },
   {
     pack_code: "MotKA",
@@ -5780,7 +5780,7 @@ export const onlyHeroesFFG = [
     octgnid: "6a9ff9c1-64d2-4ed5-a793-9e93e8d605b7",
     has_errata: false,
     url: "https://ringsdb.com/card/99143004",
-    imagesrc: "/bundles/cards/99143004.png",
+    imagesrc: "99143004.png",
   },
   {
     pack_code: "MotKA",
@@ -5808,7 +5808,7 @@ export const onlyHeroesFFG = [
     octgnid: "9825aa22-f197-4320-972d-e2487197d989",
     has_errata: false,
     url: "https://ringsdb.com/card/99143005",
-    imagesrc: "/bundles/cards/99143005.png",
+    imagesrc: "99143005.png",
   },
   {
     pack_code: "MotKA",
@@ -5836,7 +5836,7 @@ export const onlyHeroesFFG = [
     octgnid: "f37fc371-5a6e-4a24-85a1-2afef11c6841",
     has_errata: false,
     url: "https://ringsdb.com/card/99143006",
-    imagesrc: "/bundles/cards/99143006.png",
+    imagesrc: "99143006.png",
   },
   {
     pack_code: "MotKA",
@@ -5864,7 +5864,7 @@ export const onlyHeroesFFG = [
     octgnid: "adc3e6f6-da67-4cc1-9767-8e87dfc91b99",
     has_errata: false,
     url: "https://ringsdb.com/card/99143007",
-    imagesrc: "/bundles/cards/99143007.png",
+    imagesrc: "99143007.png",
   },
   {
     pack_code: "MotKA",
@@ -5891,7 +5891,7 @@ export const onlyHeroesFFG = [
     octgnid: "c8b5dd1c-82bc-4733-be1a-484a6e87c3c0",
     has_errata: false,
     url: "https://ringsdb.com/card/99144004",
-    imagesrc: "/bundles/cards/99144004.png",
+    imagesrc: "99144004.png",
   },
   {
     pack_code: "MotKA",
@@ -5919,7 +5919,7 @@ export const onlyHeroesFFG = [
     octgnid: "a870e2b3-4b9d-46ea-bc37-425fd682f114",
     has_errata: false,
     url: "https://ringsdb.com/card/99144005",
-    imagesrc: "/bundles/cards/99144005.png",
+    imagesrc: "99144005.png",
   },
   {
     pack_code: "MotKA",
@@ -5947,7 +5947,7 @@ export const onlyHeroesFFG = [
     octgnid: "df2b2070-240c-4b38-b4c8-29a0d2c789cf",
     has_errata: false,
     url: "https://ringsdb.com/card/99144006",
-    imagesrc: "/bundles/cards/99144006.png",
+    imagesrc: "99144006.png",
   },
   {
     pack_code: "MotKA",
@@ -5975,7 +5975,7 @@ export const onlyHeroesFFG = [
     octgnid: "9e944f47-14b0-4890-98d2-584e0abe0eda",
     has_errata: false,
     url: "https://ringsdb.com/card/99144007",
-    imagesrc: "/bundles/cards/99144007.png",
+    imagesrc: "99144007.png",
   },
   {
     pack_code: "MotKA",
@@ -6003,7 +6003,7 @@ export const onlyHeroesFFG = [
     octgnid: "825dfbbb-6ba7-44ad-8327-d06ff46830eb",
     has_errata: false,
     url: "https://ringsdb.com/card/99145004",
-    imagesrc: "/bundles/cards/99145004.png",
+    imagesrc: "99145004.png",
   },
   {
     pack_code: "MotKA",
@@ -6031,7 +6031,7 @@ export const onlyHeroesFFG = [
     octgnid: "6238c12d-b4c0-478f-bd7e-b59ef9b4e86f",
     has_errata: false,
     url: "https://ringsdb.com/card/99145005",
-    imagesrc: "/bundles/cards/99145005.png",
+    imagesrc: "99145005.png",
   },
   {
     pack_code: "MotKA",
@@ -6059,7 +6059,7 @@ export const onlyHeroesFFG = [
     octgnid: "66bcd2b8-fcc7-402b-94b2-a45a6c469981",
     has_errata: false,
     url: "https://ringsdb.com/card/99145006",
-    imagesrc: "/bundles/cards/99145006.png",
+    imagesrc: "99145006.png",
   },
   {
     pack_code: "MotKA",
@@ -6087,7 +6087,7 @@ export const onlyHeroesFFG = [
     octgnid: "76951dec-233c-41aa-83d2-36497e89e7be",
     has_errata: false,
     url: "https://ringsdb.com/card/99145007",
-    imagesrc: "/bundles/cards/99145007.png",
+    imagesrc: "99145007.png",
   },
   {
     pack_code: "MotKA",
@@ -6115,7 +6115,7 @@ export const onlyHeroesFFG = [
     octgnid: "0baaf661-4bfd-48ed-80d4-bfa98217da1c",
     has_errata: false,
     url: "https://ringsdb.com/card/99146005",
-    imagesrc: "/bundles/cards/99146005.png",
+    imagesrc: "99146005.png",
   },
   {
     pack_code: "MotKA",
@@ -6143,7 +6143,7 @@ export const onlyHeroesFFG = [
     octgnid: "0ff72c0f-a6d6-48d3-8781-1988a7e3ba11",
     has_errata: false,
     url: "https://ringsdb.com/card/99146006",
-    imagesrc: "/bundles/cards/99146006.png",
+    imagesrc: "99146006.png",
   },
   {
     pack_code: "MotKA",
@@ -6171,7 +6171,7 @@ export const onlyHeroesFFG = [
     octgnid: "51512531-0697-4005-9fb6-884da5b02f75",
     has_errata: false,
     url: "https://ringsdb.com/card/99146007",
-    imagesrc: "/bundles/cards/99146007.png",
+    imagesrc: "99146007.png",
   },
   {
     pack_code: "MotKA",
@@ -6199,7 +6199,7 @@ export const onlyHeroesFFG = [
     octgnid: "769dbf59-9e02-4750-9605-b1ad6c8783e2",
     has_errata: false,
     url: "https://ringsdb.com/card/99146008",
-    imagesrc: "/bundles/cards/99146008.png",
+    imagesrc: "99146008.png",
   },
   {
     pack_code: "MotKA",
@@ -6227,7 +6227,7 @@ export const onlyHeroesFFG = [
     octgnid: "1a71163f-eeb4-4992-bd9c-83349d93cd58",
     has_errata: false,
     url: "https://ringsdb.com/card/9917004",
-    imagesrc: "/bundles/cards/9917004.png",
+    imagesrc: "9917004.png",
   },
   {
     pack_code: "MotKA",
@@ -6253,7 +6253,7 @@ export const onlyHeroesFFG = [
     octgnid: "ba6d53fd-277c-4796-814b-ada9ff23cafd",
     has_errata: false,
     url: "https://ringsdb.com/card/9917006",
-    imagesrc: "/bundles/cards/9917006.png",
+    imagesrc: "9917006.png",
   },
   {
     pack_code: "MotKA",
@@ -6279,7 +6279,7 @@ export const onlyHeroesFFG = [
     octgnid: "43622914-dd7f-4990-89d3-7f1ce7a6525f",
     has_errata: false,
     url: "https://ringsdb.com/card/9917008",
-    imagesrc: "/bundles/cards/9917008.png",
+    imagesrc: "9917008.png",
   },
   {
     pack_code: "MotKA",
@@ -6307,7 +6307,7 @@ export const onlyHeroesFFG = [
     octgnid: "b6065fa3-ce09-4b16-a968-7dc86d72482c",
     has_errata: false,
     url: "https://ringsdb.com/card/9917116",
-    imagesrc: "/bundles/cards/9917116.png",
+    imagesrc: "9917116.png",
   },
   {
     pack_code: "MotKA",
@@ -6335,7 +6335,7 @@ export const onlyHeroesFFG = [
     octgnid: "4e72098a-9ddf-4426-a2df-110c3f4c32c4",
     has_errata: false,
     url: "https://ringsdb.com/card/9917136",
-    imagesrc: "/bundles/cards/9917136.png",
+    imagesrc: "9917136.png",
   },
   {
     pack_code: "MotKA",
@@ -6361,7 +6361,7 @@ export const onlyHeroesFFG = [
     octgnid: "fb097472-857b-4b73-9379-d962d7c606fe",
     has_errata: false,
     url: "https://ringsdb.com/card/9919027",
-    imagesrc: "/bundles/cards/9919027.png",
+    imagesrc: "9919027.png",
   },
   {
     pack_code: "MotKA",
@@ -6388,7 +6388,7 @@ export const onlyHeroesFFG = [
     octgnid: "b9926de4-af49-4852-a006-bcc235bf9266",
     has_errata: false,
     url: "https://ringsdb.com/card/9919031",
-    imagesrc: "/bundles/cards/9919031.png",
+    imagesrc: "9919031.png",
   },
   {
     pack_code: "MotKA",
@@ -6416,7 +6416,7 @@ export const onlyHeroesFFG = [
     octgnid: "1027fea5-a03b-4fce-beab-453ef75a2f74",
     has_errata: false,
     url: "https://ringsdb.com/card/9919063",
-    imagesrc: "/bundles/cards/9919063.png",
+    imagesrc: "9919063.png",
   },
   {
     pack_code: "MotKA",
@@ -6444,7 +6444,7 @@ export const onlyHeroesFFG = [
     octgnid: "3ea6d276-cdff-4520-a590-9c79f57e5791",
     has_errata: false,
     url: "https://ringsdb.com/card/9919115",
-    imagesrc: "/bundles/cards/9919115.png",
+    imagesrc: "9919115.png",
   },
   {
     pack_code: "MotKA",
@@ -6472,7 +6472,7 @@ export const onlyHeroesFFG = [
     octgnid: "e730d8cc-b97c-40b3-b16b-2efcba1f2e07",
     has_errata: false,
     url: "https://ringsdb.com/card/9921003",
-    imagesrc: "/bundles/cards/9921003.png",
+    imagesrc: "9921003.png",
   },
   {
     pack_code: "MotKA",
@@ -6500,7 +6500,7 @@ export const onlyHeroesFFG = [
     octgnid: "835ad72c-6da5-4ddf-9447-1d0fa3746096",
     has_errata: false,
     url: "https://ringsdb.com/card/9921004",
-    imagesrc: "/bundles/cards/9921004.png",
+    imagesrc: "9921004.png",
   },
   {
     pack_code: "MotKA",
@@ -6528,7 +6528,7 @@ export const onlyHeroesFFG = [
     octgnid: "f43d5b83-4136-4be8-af89-71f883f32563",
     has_errata: false,
     url: "https://ringsdb.com/card/9921005",
-    imagesrc: "/bundles/cards/9921005.png",
+    imagesrc: "9921005.png",
   },
   {
     pack_code: "MotKA",
@@ -6554,7 +6554,7 @@ export const onlyHeroesFFG = [
     octgnid: "dcdbd457-86bb-4481-8ce0-e30f04aa35f5",
     has_errata: false,
     url: "https://ringsdb.com/card/9921006",
-    imagesrc: "/bundles/cards/9921006.png",
+    imagesrc: "9921006.png",
   },
   {
     pack_code: "MotKA",
@@ -6582,7 +6582,7 @@ export const onlyHeroesFFG = [
     octgnid: "0c65af6a-7038-476b-9318-a024cc94c8b6",
     has_errata: false,
     url: "https://ringsdb.com/card/9922028",
-    imagesrc: "/bundles/cards/9922028.png",
+    imagesrc: "9922028.png",
   },
   {
     pack_code: "MotKA",
@@ -6609,7 +6609,7 @@ export const onlyHeroesFFG = [
     octgnid: "6854e071-f438-42b2-a43a-580aec184eeb",
     has_errata: false,
     url: "https://ringsdb.com/card/9922059",
-    imagesrc: "/bundles/cards/9922059.png",
+    imagesrc: "9922059.png",
   },
   {
     pack_code: "MotKA",
@@ -6636,7 +6636,7 @@ export const onlyHeroesFFG = [
     illustrator: "Torbjörn Källström",
     has_errata: false,
     url: "https://ringsdb.com/card/9922088",
-    imagesrc: "/bundles/cards/9922088.png",
+    imagesrc: "9922088.png",
   },
   {
     pack_code: "MotKA",
@@ -6662,7 +6662,7 @@ export const onlyHeroesFFG = [
     octgnid: "8cd14645-20ad-4316-94cd-2381e828c68d",
     has_errata: false,
     url: "https://ringsdb.com/card/9922140",
-    imagesrc: "/bundles/cards/9922140.png",
+    imagesrc: "9922140.png",
   },
   {
     pack_code: "ALePMotKA",
@@ -6688,7 +6688,7 @@ export const onlyHeroesFFG = [
     octgnid: "3566e771-0f10-4772-9114-100d8206bedd",
     has_errata: false,
     url: "https://ringsdb.com/card/99300010",
-    imagesrc: "/bundles/cards/99300010.png",
+    imagesrc: "99300010.png",
   },
   {
     pack_code: "ALePMotKA",
@@ -6716,7 +6716,7 @@ export const onlyHeroesFFG = [
     octgnid: "bbd4790d-c9fd-4604-add9-7928aa41bd10",
     has_errata: false,
     url: "https://ringsdb.com/card/99300015",
-    imagesrc: "/bundles/cards/99300015.png",
+    imagesrc: "99300015.png",
   },
   {
     pack_code: "ALePMotKA",
@@ -6744,7 +6744,7 @@ export const onlyHeroesFFG = [
     octgnid: "db0fd355-24e0-4f1d-93ce-de6bd8938448",
     has_errata: false,
     url: "https://ringsdb.com/card/99301003",
-    imagesrc: "/bundles/cards/99301003.png",
+    imagesrc: "99301003.png",
   },
   {
     pack_code: "ALePMotKA",
@@ -6772,7 +6772,7 @@ export const onlyHeroesFFG = [
     octgnid: "de1e0ba4-43a5-4cf4-a66e-0feb58b5d662",
     has_errata: false,
     url: "https://ringsdb.com/card/99301010",
-    imagesrc: "/bundles/cards/99301010.png",
+    imagesrc: "99301010.png",
   },
   {
     pack_code: "ALePMotKA",
@@ -6798,7 +6798,7 @@ export const onlyHeroesFFG = [
     octgnid: "a18ef169-31f3-4809-a0c7-3f12654b17ce",
     has_errata: false,
     url: "https://ringsdb.com/card/99301011",
-    imagesrc: "/bundles/cards/99301011.png",
+    imagesrc: "99301011.png",
   },
   {
     pack_code: "ALePMotKA",
@@ -6824,7 +6824,7 @@ export const onlyHeroesFFG = [
     octgnid: "80c51ea1-495e-40a0-8257-ff3e81aeb298",
     has_errata: false,
     url: "https://ringsdb.com/card/99302045",
-    imagesrc: "/bundles/cards/99302045.png",
+    imagesrc: "99302045.png",
   },
   {
     pack_code: "ALePMotKA",
@@ -6850,7 +6850,7 @@ export const onlyHeroesFFG = [
     octgnid: "bd50a02b-0827-44e2-9407-d1e3703d59e0",
     has_errata: false,
     url: "https://ringsdb.com/card/99302046",
-    imagesrc: "/bundles/cards/99302046.png",
+    imagesrc: "99302046.png",
   },
   {
     pack_code: "ALePMotKA",
@@ -6877,7 +6877,7 @@ export const onlyHeroesFFG = [
     octgnid: "55f4784e-2262-4961-a600-03de90e2ed11",
     has_errata: false,
     url: "https://ringsdb.com/card/99302047",
-    imagesrc: "/bundles/cards/99302047.png",
+    imagesrc: "99302047.png",
   },
   {
     pack_code: "ALePMotKA",
@@ -6905,7 +6905,7 @@ export const onlyHeroesFFG = [
     octgnid: "4fee0776-75e1-4c45-a662-17fdd3e061e4",
     has_errata: false,
     url: "https://ringsdb.com/card/99303074",
-    imagesrc: "/bundles/cards/99303074.png",
+    imagesrc: "99303074.png",
   },
   {
     pack_code: "ALePMotKA",
@@ -6933,7 +6933,7 @@ export const onlyHeroesFFG = [
     octgnid: "caef59d8-0c70-478c-9fcc-262caa55e66f",
     has_errata: false,
     url: "https://ringsdb.com/card/99304104",
-    imagesrc: "/bundles/cards/99304104.png",
+    imagesrc: "99304104.png",
   },
   {
     pack_code: "ALePMotKA",
@@ -6961,6 +6961,6 @@ export const onlyHeroesFFG = [
     octgnid: "2bc4548a-ef33-4b80-8a7c-54be7880e315",
     has_errata: false,
     url: "https://ringsdb.com/card/99305150",
-    imagesrc: "/bundles/cards/99305150.png",
+    imagesrc: "99305150.png",
   },
 ];

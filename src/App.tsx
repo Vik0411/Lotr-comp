@@ -19,7 +19,13 @@ function App() {
           <ContainerGrid>
             <AllMightyHeroes />
             <BoonsAndBurdens />
-            <div>LORE</div>
+            <div
+              style={{
+                color: "white",
+              }}
+            >
+              LORE
+            </div>
           </ContainerGrid>
           <CurrentHeroes />
           <FallenHeroes />
