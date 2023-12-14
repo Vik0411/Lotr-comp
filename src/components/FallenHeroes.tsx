@@ -15,12 +15,14 @@ function FallenHeroes() {
   return (
     <div
       style={{
-        border: "20px solid white",
+        columnWidth: "200px",
+        margin: "30px 30px",
       }}
     >
       <h3
         style={{
           color: "white",
+          margin: "0px 0px",
         }}
       >
         The Fallen:

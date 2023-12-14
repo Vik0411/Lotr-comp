@@ -68,6 +68,13 @@ function AllMightyHeroes() {
 
   return (
     <div>
+      <h2
+        style={{
+          color: "white",
+        }}
+      >
+        Add to Current Campaign
+      </h2>
       <form onSubmit={prepareHero}>
         <select value={preparedHero.code} onChange={handleChange}>
           {notCurrentAndAlive.map((notCurrent: Hero) => (

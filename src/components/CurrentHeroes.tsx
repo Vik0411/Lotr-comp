@@ -67,35 +67,45 @@ function CurrentHeroes() {
     <div
       style={{
         color: "white",
-        border: "20px solid white",
       }}
     >
       <div>
         <h2
           style={{
             color: "white",
+            margin: "30px 30px",
           }}
         >
           Current heroes:
         </h2>
-        <div style={{ display: "flex", gap: "5px" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: "15px",
+            margin: "30px 30px",
+            justifyContent: "center",
+          }}
+        >
           {current.map(
             (current: Hero): JSX.Element => (
               <div
                 key={current.code}
                 style={{
-                  border: "5px black solid",
                   backgroundSize: "cover",
+                  minWidth: "30px",
                   color: "white",
                   width: "25%",
-                  minHeight: "400px",
+                  height: "250px",
+                  minHeight: "50px",
                   backgroundImage: `url(${require(`../images/${current.imagesrc}`)})`,
                 }}
               >
-                <p>{current.name}</p>
-                <button onClick={() => killHero(current.code)}>
-                  Send to coffin
-                </button>
+                <div style={{}}>
+                  <p>{current.name}</p>
+                  <button onClick={() => killHero(current.code)}>
+                    Send to coffin
+                  </button>
+                </div>
               </div>
             )
           )}

@@ -43,44 +43,46 @@ function BoonsAndBurdens() {
   }
 
   return (
-    <div>
-      <h2>
-        <ul
+    <>
+      <div>
+        <h2
           style={{
             color: "white",
+            justifyItems: "left",
           }}
         >
-          Boons & Burdens:
-        </ul>
-      </h2>
-      <form>
-        <input
-          type="text"
-          value={boon}
-          onChange={handleChange}
-          placeholder="yr boons"
-        />
-        <input
-          type="text"
-          value={burden}
-          onChange={handleChange2}
-          placeholder="yr burdens"
-        />
-      </form>
-      <button value="sumbit boons" onClick={submitBB}>
-        submit boons
-      </button>
-      <button value="sumbit burdens" onClick={submitBB2}>
-        submit burdens
-      </button>
-      <p>
-        <ul
+          Add Boons & Burdens
+        </h2>
+        <form>
+          <input
+            type="text"
+            value={boon}
+            onChange={handleChange}
+            placeholder="yr boons"
+          />
+          <button value="sumbit boons" onClick={submitBB}>
+            submit boons
+          </button>
+          <br />
+          <input
+            type="text"
+            value={burden}
+            onChange={handleChange2}
+            placeholder="yr burdens"
+          />
+          <button value="sumbit burdens" onClick={submitBB2}>
+            submit burdens
+          </button>
+        </form>
+      </div>
+      <div>
+        <div
           style={{
             color: "white",
           }}
         >
           Boons:
-        </ul>
+        </div>
         {boonsAndBurdens.boons.map((boon) => (
           <li
             style={{
@@ -90,14 +92,13 @@ function BoonsAndBurdens() {
             {boon}
           </li>
         ))}
-        <br />
-        <ul
-          style={{
-            color: "white",
-          }}
-        >
-          Burdens:
-        </ul>
+      </div>
+      <div
+        style={{
+          color: "white",
+        }}
+      >
+        Burdens:
         {boonsAndBurdens.burdens.map((burden) => (
           <li
             style={{
@@ -107,8 +108,8 @@ function BoonsAndBurdens() {
             {burden}
           </li>
         ))}
-      </p>
-    </div>
+      </div>
+    </>
   );
 }
 
