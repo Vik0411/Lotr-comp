@@ -4,8 +4,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
-  background-image: url(${require("../../images/background.jpg")});
+  background-image: linear-gradient(to top, transparent, black),
+    url(${require("../../images/lighter-bg.jpg")});
   background-size: cover;
+  background-position: center;
+  text-shadow: 4px 4px 3px black;
   border-radius: 30px;
 `;
 

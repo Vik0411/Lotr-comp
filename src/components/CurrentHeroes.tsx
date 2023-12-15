@@ -2,7 +2,7 @@ import { LotrContext } from "../context";
 import React from "react";
 import { Input } from "./atoms/Input";
 import styled from "styled-components";
-import { Button } from "./atoms/Button";
+import { Button, Button6 } from "./atoms/Button";
 import { onlyMultiplesOtherwise } from "../dataHelpers";
 import { filterHeroes } from "../utils";
 import { Hero } from "../types";
@@ -91,20 +91,29 @@ function CurrentHeroes() {
               <div
                 key={current.code}
                 style={{
-                  backgroundSize: "cover",
-                  minWidth: "30px",
-                  color: "white",
                   width: "25%",
-                  height: "250px",
-                  minHeight: "50px",
-                  backgroundImage: `url(${require(`../images/${current.imagesrc}`)})`,
+                  display: "flex",
+                  flexFlow: "column",
+                  justifyContent: "flex-end",
+                  // backgroundSize: "cover",
+                  // backgroundImage: `url(${require(`../images/${current.imagesrc}`)})`,
                 }}
               >
-                <div style={{}}>
-                  <p>{current.name}</p>
-                  <button onClick={() => killHero(current.code)}>
+                <p>{current.name}</p>
+                <img
+                  alt=""
+                  src={require(`../images/${current.imagesrc}`)}
+                  style={{
+                    minWidth: "30px",
+                    width: "100%",
+                    height: "auto",
+                    minHeight: "50px",
+                  }}
+                />
+                <div>
+                  <Button6 onClick={() => killHero(current.code)}>
                     Send to coffin
-                  </button>
+                  </Button6>
                 </div>
               </div>
             )

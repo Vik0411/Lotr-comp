@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button } from "./atoms/Button";
+import { Button, Button6 } from "./atoms/Button";
 import { useState } from "react";
 
 const ListSurvivorsBtn = styled(Button)`
@@ -55,24 +55,34 @@ function BoonsAndBurdens() {
         </h2>
         <form>
           <input
+            style={{
+              color: "white",
+              backgroundColor: "transparent",
+              borderRadius: "7px",
+            }}
             type="text"
             value={boon}
             onChange={handleChange}
             placeholder="yr boons"
           />
-          <button value="sumbit boons" onClick={submitBB}>
+          <Button6 value="sumbit boons" onClick={submitBB}>
             submit boons
-          </button>
+          </Button6>
           <br />
           <input
+            style={{
+              color: "white",
+              backgroundColor: "transparent",
+              borderRadius: "7px",
+            }}
             type="text"
             value={burden}
             onChange={handleChange2}
             placeholder="yr burdens"
           />
-          <button value="sumbit burdens" onClick={submitBB2}>
+          <Button6 value="sumbit burdens" onClick={submitBB2}>
             submit burdens
-          </button>
+          </Button6>
         </form>
       </div>
       <div>

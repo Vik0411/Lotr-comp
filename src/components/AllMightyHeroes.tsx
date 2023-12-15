@@ -1,5 +1,5 @@
 import { Header, Subheader } from "./atoms/typography";
-import { Button } from "./atoms/Button";
+import { Button, Button6 } from "./atoms/Button";
 import { LotrContext } from "../context";
 import React, { useEffect, useState } from "react";
 
@@ -76,14 +76,23 @@ function AllMightyHeroes() {
         Add to Current Campaign
       </h2>
       <form onSubmit={prepareHero}>
-        <select value={preparedHero.code} onChange={handleChange}>
+        <select
+          style={{
+            color: "white",
+            backgroundColor: "black",
+            borderRadius: "7px",
+            justifyItems: "left",
+          }}
+          value={preparedHero.code}
+          onChange={handleChange}
+        >
           {notCurrentAndAlive.map((notCurrent: Hero) => (
             <option key={notCurrent.code} value={notCurrent.code}>
               {notCurrent.name}
             </option>
           ))}
         </select>
-        <button type="submit">Prepare</button>
+        <Button6 type="submit">Prepare</Button6>
       </form>
     </div>
   );
