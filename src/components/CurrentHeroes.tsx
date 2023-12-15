@@ -84,6 +84,8 @@ function CurrentHeroes() {
             gap: "15px",
             margin: "30px 30px",
             justifyContent: "center",
+            flexDirection: "row",
+            flexWrap: "wrap",
           }}
         >
           {current.map(
@@ -91,12 +93,8 @@ function CurrentHeroes() {
               <div
                 key={current.code}
                 style={{
-                  width: "25%",
-                  display: "flex",
-                  flexFlow: "column",
-                  justifyContent: "flex-end",
-                  // backgroundSize: "cover",
-                  // backgroundImage: `url(${require(`../images/${current.imagesrc}`)})`,
+                  width: "15%",
+                  display: "block",
                 }}
               >
                 <p>{current.name}</p>

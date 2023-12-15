@@ -12,10 +12,11 @@ export const Container = styled.div`
   border-radius: 30px;
 `;
 
-export const ContainerGrid = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(1fr, 3fr, 2fr);
-  font-family: "Poppins", sans-serif;
+export const ContainerFlex = styled.div`
+  display: flex;
+  gap: 15px;
+  margin: 30px 30px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   margin: 30px 30px;
 `;

@@ -29,10 +29,10 @@ export const Button6 = styled.button`
   font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 7px;
-  margin: 0 5px 10px 0;
+  line-height: 5px;
+  margin: 0 5px 3px 0;
   overflow: visible;
-  padding: 12px 40px;
+  padding: 12px 20px;
   text-align: center;
   text-transform: none;
   touch-action: manipulation;

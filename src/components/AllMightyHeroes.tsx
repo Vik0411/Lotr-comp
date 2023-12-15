@@ -81,7 +81,6 @@ function AllMightyHeroes() {
             color: "white",
             backgroundColor: "black",
             borderRadius: "7px",
-            justifyItems: "left",
           }}
           value={preparedHero.code}
           onChange={handleChange}
