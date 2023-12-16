@@ -1,14 +1,15 @@
-import styled from "styled-components";
-import { Button, Button6 } from "./atoms/Button";
+import { ButtonShadow } from "./atoms/Button";
 import { useState } from "react";
+import { Input } from "./atoms/Input";
+import { SectionHeader } from "./atoms/typography";
+import { ListItemWithWhiteText } from "./atoms/ListItemWithWhiteText";
+import { styled } from "styled-components";
+import { ContainerWithWhiteText } from "./atoms/Container";
 
-const ListSurvivorsBtn = styled(Button)`
-  margin-top: 5px;
-  background-color: ${({ theme }) => theme.colors.vanSaarGrey};
-
-  &:hover {
-    color: ${({ color, theme }) => color || theme.colors.basicWhite};
-    background-color: ${({ theme }) => theme.colors.vanSaarGrey};
+const ButtonShadowYellow = styled(ButtonShadow)`
+  &:not([disabled]):active {
+    box-shadow: yellow 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
   }
 `;
 
@@ -30,13 +31,13 @@ function BoonsAndBurdens() {
     setBurden(e.target.value);
   }
 
-  function submitBB(e) {
+  function submitBoons(e) {
     e.preventDefault();
     let newBoons = [boon, ...boonsAndBurdens.boons];
     setBoonsAndBurdens({ ...boonsAndBurdens, boons: newBoons });
   }
 
-  function submitBB2(e) {
+  function submitBurdens(e) {
     e.preventDefault();
     let newBurdens = [burden, ...boonsAndBurdens.burdens];
     setBoonsAndBurdens({ ...boonsAndBurdens, burdens: newBurdens });
@@ -45,80 +46,41 @@ function BoonsAndBurdens() {
   return (
     <>
       <div>
-        <h2
-          style={{
-            color: "white",
-            justifyItems: "left",
-          }}
-        >
-          Add Boons & Burdens
-        </h2>
+        <SectionHeader>Add Boons & Burdens</SectionHeader>
         <form>
-          <input
-            style={{
-              color: "white",
-              backgroundColor: "transparent",
-              borderRadius: "7px",
-            }}
+          <Input
             type="text"
             value={boon}
             onChange={handleChange}
-            placeholder="yr boons"
+            placeholder="your boons"
           />
-          <Button6 value="sumbit boons" onClick={submitBB}>
+          <ButtonShadowYellow value="sumbit boons" onClick={submitBoons}>
             submit boons
-          </Button6>
+          </ButtonShadowYellow>
           <br />
-          <input
-            style={{
-              color: "white",
-              backgroundColor: "transparent",
-              borderRadius: "7px",
-            }}
+          <Input
             type="text"
             value={burden}
             onChange={handleChange2}
-            placeholder="yr burdens"
+            placeholder="your burdens"
           />
-          <Button6 value="sumbit burdens" onClick={submitBB2}>
+          <ButtonShadow value="sumbit burdens" onClick={submitBurdens}>
             submit burdens
-          </Button6>
+          </ButtonShadow>
         </form>
       </div>
       <div>
-        <div
-          style={{
-            color: "white",
-          }}
-        >
-          Boons:
-        </div>
+        <ContainerWithWhiteText>Boons:</ContainerWithWhiteText>
         {boonsAndBurdens.boons.map((boon) => (
-          <li
-            style={{
-              color: "white",
-            }}
-          >
-            {boon}
-          </li>
+          <ListItemWithWhiteText>{boon}</ListItemWithWhiteText>
         ))}
       </div>
-      <div
-        style={{
-          color: "white",
-        }}
-      >
+      <ContainerWithWhiteText>
         Burdens:
         {boonsAndBurdens.burdens.map((burden) => (
-          <li
-            style={{
-              color: "white",
-            }}
-          >
-            {burden}
-          </li>
+          <ListItemWithWhiteText>{burden}</ListItemWithWhiteText>
         ))}
-      </div>
+      </ContainerWithWhiteText>
     </>
   );
 }

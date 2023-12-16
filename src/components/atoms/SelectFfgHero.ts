@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const Input = styled.input`
+export const SelectFfgHero = styled.select`
   color: white;
-  background-color: transparent;
+  background-color: black;
   border-radius: 7px;
 `;

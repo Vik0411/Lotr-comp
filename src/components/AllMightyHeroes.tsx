@@ -1,26 +1,18 @@
-import { Header, Subheader } from "./atoms/typography";
-import { Button, Button6 } from "./atoms/Button";
+import { SectionHeader } from "./atoms/typography";
+import { ButtonShadow } from "./atoms/Button";
 import { LotrContext } from "../context";
 import React, { useEffect, useState } from "react";
 
-import styled from "styled-components";
 import { filterHeroes } from "../utils";
 import { Hero } from "../types";
+import { SelectFfgHero } from "./atoms/SelectFfgHero";
+import { styled } from "styled-components";
 
-const SubheaderListAll = styled(Subheader)`
-  background-color: ${({ theme }) => theme.colors.basicBlack};
-  color: ${({ theme }) => theme.colors.vanSaarGrey};
-  margin-top: 20px;
-`;
-
-const HeaderListAll = styled(Header)`
-  background-color: ${({ theme }) => theme.colors.basicBlack};
-`;
-
-const ListAllBtn = styled(Button)`
-  background-color: ${({ theme }) => theme.colors.basicWhite};
-  // positioning because I want the button to be displayed on top and up
-  position: absolute;
+const ButtonShadowGreen = styled(ButtonShadow)`
+  &:not([disabled]):active {
+    box-shadow: #90ee90 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+  }
 `;
 
 function AllMightyHeroes() {
@@ -68,30 +60,16 @@ function AllMightyHeroes() {
 
   return (
     <div>
-      <h2
-        style={{
-          color: "white",
-        }}
-      >
-        Add to Current Campaign
-      </h2>
+      <SectionHeader>Add to Current Campaign</SectionHeader>
       <form onSubmit={prepareHero}>
-        <select
-          style={{
-            color: "white",
-            backgroundColor: "black",
-            borderRadius: "7px",
-          }}
-          value={preparedHero.code}
-          onChange={handleChange}
-        >
+        <SelectFfgHero value={preparedHero.code} onChange={handleChange}>
           {notCurrentAndAlive.map((notCurrent: Hero) => (
             <option key={notCurrent.code} value={notCurrent.code}>
               {notCurrent.name}
             </option>
           ))}
-        </select>
-        <Button6 type="submit">Prepare</Button6>
+        </SelectFfgHero>
+        <ButtonShadowGreen type="submit">Prepare</ButtonShadowGreen>
       </form>
     </div>
   );

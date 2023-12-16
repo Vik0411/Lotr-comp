@@ -1,13 +1,6 @@
 import { Hero } from "../types";
+import { ListItemWithWhiteText } from "./atoms/ListItemWithWhiteText";
 
 export function FallenHero({ name }: Hero) {
-  return (
-    <li
-      style={{
-        color: "white",
-      }}
-    >
-      {name}
-    </li>
-  );
+  return <ListItemWithWhiteText>{name}</ListItemWithWhiteText>;
 }

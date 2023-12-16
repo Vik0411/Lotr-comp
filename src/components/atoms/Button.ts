@@ -15,13 +15,13 @@ export const Button = styled.button`
   }
 `;
 
-export const Button6 = styled.button`
+export const ButtonShadow = styled.button`
   appearance: button;
   background-color: #000;
   background-image: none;
   border: 1px solid #000;
   border-radius: 15px;
-  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  box-shadow: #3e454b 6px 4px 0 0, #000 4px 4px 0 1px;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
@@ -55,7 +55,7 @@ export const Button6 = styled.button`
   }
 
   &:not([disabled]):active {
-    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    box-shadow: red 2px 2px 0 0, #000 2px 2px 0 1px;
     transform: translate(2px, 2px);
   }
 

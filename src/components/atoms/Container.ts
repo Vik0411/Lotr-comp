@@ -15,8 +15,22 @@ export const Container = styled.div`
 export const ContainerFlex = styled.div`
   display: flex;
   gap: 15px;
-  margin: 30px 30px;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 30px 30px;
+`;
+
+export const ContainerFallenHeroes = styled.div`
+  column-width: 200px;
+  margin: 30px 30px;
+`;
+
+export const ContainerCurrentCards = styled.div`
+  width: 15%;
+  display: block;
+  margin-bottom: 10px;
+`;
+
+export const ContainerWithWhiteText = styled.div`
+  color: white;
 `;

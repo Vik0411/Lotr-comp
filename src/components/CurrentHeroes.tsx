@@ -1,25 +1,23 @@
 import { LotrContext } from "../context";
 import React from "react";
-import { Input } from "./atoms/Input";
 import styled from "styled-components";
-import { Button, Button6 } from "./atoms/Button";
+import { ButtonShadow } from "./atoms/Button";
 import { onlyMultiplesOtherwise } from "../dataHelpers";
 import { filterHeroes } from "../utils";
 import { Hero } from "../types";
+import { SectionHeader } from "./atoms/typography";
+import { ContainerCurrentCards, ContainerFlex } from "./atoms/Container";
+import { HeroCard } from "./atoms/HeroCard";
 
-const InputFallen = styled(Input)`
-  background-color: ${({ theme }) => theme.colors.basicBlack};
-  color: ${({ theme }) => theme.colors.basicWhite};
+const TopHeader = styled(SectionHeader)`
+  margin: 30px 30px;
 `;
 
-const SendToCoffinBtn = styled(Button)`
-  margin-top: 5px;
-  background-color: ${({ theme }) => theme.colors.vanSaarGrey};
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.basicWhite};
-    background-color: ${({ theme }) => theme.colors.vanSaarGrey};
-  }
+const ContainerCurrentHeroes = styled(ContainerFlex)`
+  display: flex;
+  gap: 15px;
+  margin: 30px 30px;
+  flexdirection: "row";
 `;
 
 function CurrentHeroes() {
@@ -64,59 +62,33 @@ function CurrentHeroes() {
 
   // refactor return below into styled components as well
   return (
-    <div
-      style={{
-        color: "white",
-      }}
-    >
+    <div>
       <div>
-        <h2
-          style={{
-            color: "white",
-            margin: "30px 30px",
-          }}
-        >
-          Current heroes:
-        </h2>
-        <div
-          style={{
-            display: "flex",
-            gap: "15px",
-            margin: "30px 30px",
-            justifyContent: "center",
-            flexDirection: "row",
-            flexWrap: "wrap",
-          }}
-        >
+        <TopHeader>Current heroes:</TopHeader>
+        <ContainerCurrentHeroes>
           {current.map(
             (current: Hero): JSX.Element => (
-              <div
-                key={current.code}
-                style={{
-                  width: "15%",
-                  display: "block",
-                }}
-              >
-                <p>{current.name}</p>
-                <img
+              <ContainerCurrentCards key={current.code}>
+                <p
+                  style={{
+                    color: "white",
+                  }}
+                >
+                  {current.name}
+                </p>
+                <HeroCard
                   alt=""
                   src={require(`../images/${current.imagesrc}`)}
-                  style={{
-                    minWidth: "30px",
-                    width: "100%",
-                    height: "auto",
-                    minHeight: "50px",
-                  }}
                 />
                 <div>
-                  <Button6 onClick={() => killHero(current.code)}>
+                  <ButtonShadow onClick={() => killHero(current.code)}>
                     Send to coffin
-                  </Button6>
+                  </ButtonShadow>
                 </div>
-              </div>
+              </ContainerCurrentCards>
             )
           )}
-        </div>
+        </ContainerCurrentHeroes>
       </div>
     </div>
   );

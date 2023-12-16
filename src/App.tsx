@@ -1,7 +1,11 @@
 import FallenHeroes from "./components/FallenHeroes";
 import { LotrProvider } from "./context";
 import AllMightyHeroes from "./components/AllMightyHeroes";
-import { Container, ContainerFlex } from "./components/atoms/Container";
+import {
+  Container,
+  ContainerFlex,
+  ContainerWithWhiteText,
+} from "./components/atoms/Container";
 import styled, { ThemeProvider } from "styled-components";
 import { theme } from "./themes";
 import CurrentHeroes from "./components/CurrentHeroes";
@@ -19,13 +23,7 @@ function App() {
           <ContainerFlex>
             <AllMightyHeroes />
             <BoonsAndBurdens />
-            <div
-              style={{
-                color: "white",
-              }}
-            >
-              LORE
-            </div>
+            <ContainerWithWhiteText>LORE</ContainerWithWhiteText>
           </ContainerFlex>
           <CurrentHeroes />
           <FallenHeroes />

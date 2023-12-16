@@ -3,6 +3,14 @@ import { LotrContext } from "../context";
 import { Hero } from "../types";
 import { filterHeroes } from "../utils";
 import { FallenHero } from "./FallenHero";
+import { SectionHeader } from "./atoms/typography";
+import { styled } from "styled-components";
+import { ContainerFallenHeroes } from "./atoms/Container";
+
+const BottomSectionHeader = styled(SectionHeader)`
+  margin-top: -30px;
+  margin-bottom: 10px;
+`;
 
 function FallenHeroes() {
   const { campaign } = React.useContext(LotrContext);
@@ -13,20 +21,8 @@ function FallenHeroes() {
   );
 
   return (
-    <div
-      style={{
-        columnWidth: "200px",
-        margin: "30px 30px",
-      }}
-    >
-      <h3
-        style={{
-          color: "white",
-          margin: "0px 0px",
-        }}
-      >
-        The Fallen:
-      </h3>
+    <ContainerFallenHeroes>
+      <BottomSectionHeader>The Fallen:</BottomSectionHeader>
       <ul>
         {fallen.map(
           (fallenHero: Hero): JSX.Element => (
@@ -34,7 +30,7 @@ function FallenHeroes() {
           )
         )}
       </ul>
-    </div>
+    </ContainerFallenHeroes>
   );
 }
 
