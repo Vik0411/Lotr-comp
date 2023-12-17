@@ -76,6 +76,10 @@ console.log("last", changedNameMultiples);
 export const defaultState: CampaignContextInterface = {
   campaign: {
     allHeroes: origoPrepared,
+    boonsAndBurdens: {
+      boons: [],
+      burdens: [],
+    },
   },
   setCampaign: () => {},
 };

@@ -45,6 +45,7 @@ function CurrentHeroes() {
     );
 
     setCampaign({
+      ...campaign,
       allHeroes: campaign.allHeroes.map((hero) => {
         if (hero.code === heroCode) {
           if (codes.includes(heroCode) && isOneDuplicateDead) {

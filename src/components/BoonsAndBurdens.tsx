@@ -5,6 +5,8 @@ import { SectionHeader } from "./atoms/typography";
 import { ListItemWithWhiteText } from "./atoms/ListItemWithWhiteText";
 import { styled } from "styled-components";
 import { ContainerWithWhiteText } from "./atoms/Container";
+import { LotrContext } from "../context";
+import React from "react";
 
 const ButtonShadowYellow = styled(ButtonShadow)`
   &:not([disabled]):active {
@@ -13,13 +15,15 @@ const ButtonShadowYellow = styled(ButtonShadow)`
   }
 `;
 
-function BoonsAndBurdens() {
-  const defaultBB = {
-    boons: [],
-    burdens: [],
-  };
+const ButtonShadowBlood = styled(ButtonShadow)`
+  &:not([disabled]):active {
+    box-shadow: red 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+  }
+`;
 
-  const [boonsAndBurdens, setBoonsAndBurdens] = useState(defaultBB);
+function BoonsAndBurdens() {
+  const { campaign, setCampaign } = React.useContext(LotrContext);
   const [boon, setBoon] = useState("");
   const [burden, setBurden] = useState("");
 
@@ -33,14 +37,20 @@ function BoonsAndBurdens() {
 
   function submitBoons(e) {
     e.preventDefault();
-    let newBoons = [boon, ...boonsAndBurdens.boons];
-    setBoonsAndBurdens({ ...boonsAndBurdens, boons: newBoons });
+    let newBoons = [...campaign.boonsAndBurdens.boons, boon];
+    let newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
+
+    setCampaign({ ...campaign, boonsAndBurdens: newBB });
+    localStorage.setItem("campaign", JSON.stringify(campaign));
   }
 
   function submitBurdens(e) {
     e.preventDefault();
-    let newBurdens = [burden, ...boonsAndBurdens.burdens];
-    setBoonsAndBurdens({ ...boonsAndBurdens, burdens: newBurdens });
+    let newBurdens = [...campaign.boonsAndBurdens.burdens, boon];
+    let newBB = { ...campaign.boonsAndBurdens, burdens: newBurdens };
+
+    setCampaign({ ...campaign, boonsAndBurdens: newBB });
+    localStorage.setItem("campaign", JSON.stringify(campaign));
   }
 
   return (
@@ -64,20 +74,20 @@ function BoonsAndBurdens() {
             onChange={handleChange2}
             placeholder="your burdens"
           />
-          <ButtonShadow value="sumbit burdens" onClick={submitBurdens}>
+          <ButtonShadowBlood value="sumbit burdens" onClick={submitBurdens}>
             submit burdens
-          </ButtonShadow>
+          </ButtonShadowBlood>
         </form>
       </div>
       <div>
         <ContainerWithWhiteText>Boons:</ContainerWithWhiteText>
-        {boonsAndBurdens.boons.map((boon) => (
+        {campaign.boonsAndBurdens.boons.map((boon) => (
           <ListItemWithWhiteText>{boon}</ListItemWithWhiteText>
         ))}
       </div>
       <ContainerWithWhiteText>
         Burdens:
-        {boonsAndBurdens.burdens.map((burden) => (
+        {campaign.boonsAndBurdens.burdens.map((burden) => (
           <ListItemWithWhiteText>{burden}</ListItemWithWhiteText>
         ))}
       </ContainerWithWhiteText>

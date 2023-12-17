@@ -55,7 +55,7 @@ export const ButtonShadow = styled.button`
   }
 
   &:not([disabled]):active {
-    box-shadow: red 2px 2px 0 0, #000 2px 2px 0 1px;
+    box-shadow: black 2px 2px 0 0, #000 2px 2px 0 1px;
     transform: translate(2px, 2px);
   }
 

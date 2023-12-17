@@ -1,5 +1,8 @@
+export type Boon = string;
+export type Burden = string;
 export interface Campaign {
   allHeroes: Hero[];
+  boonsAndBurdens: { boons: Boon[]; burdens: Burden[] };
 }
 export type changedAttrs = { alive: boolean; current: boolean };
 

@@ -38,6 +38,7 @@ function AllMightyHeroes() {
     // before preparing hero, alert user if there is already the same hero in current
 
     setCampaign({
+      ...campaign,
       allHeroes: campaign.allHeroes.map((hero) => {
         if (hero.code === preparedHero.code) {
           hero.current = true;

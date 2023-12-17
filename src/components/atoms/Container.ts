@@ -33,4 +33,5 @@ export const ContainerCurrentCards = styled.div`
 
 export const ContainerWithWhiteText = styled.div`
   color: white;
+  margin: 30px 30px;
 `;
