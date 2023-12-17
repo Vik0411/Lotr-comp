@@ -27,15 +27,15 @@ function BoonsAndBurdens() {
   const [boon, setBoon] = useState("");
   const [burden, setBurden] = useState("");
 
-  function handleChange(e) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setBoon(e.target.value);
   }
 
-  function handleChange2(e) {
+  function handleChange2(e: React.ChangeEvent<HTMLInputElement>) {
     setBurden(e.target.value);
   }
 
-  function submitBoons(e) {
+  function submitBoons(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     let newBoons = [...campaign.boonsAndBurdens.boons, boon];
     let newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
@@ -44,9 +44,9 @@ function BoonsAndBurdens() {
     localStorage.setItem("campaign", JSON.stringify(campaign));
   }
 
-  function submitBurdens(e) {
+  function submitBurdens(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    let newBurdens = [...campaign.boonsAndBurdens.burdens, boon];
+    let newBurdens = [...campaign.boonsAndBurdens.burdens, burden];
     let newBB = { ...campaign.boonsAndBurdens, burdens: newBurdens };
 
     setCampaign({ ...campaign, boonsAndBurdens: newBB });
@@ -57,24 +57,25 @@ function BoonsAndBurdens() {
     <>
       <div>
         <SectionHeader>Add Boons & Burdens</SectionHeader>
-        <form>
+        <form onSubmit={submitBoons}>
           <Input
             type="text"
             value={boon}
             onChange={handleChange}
             placeholder="your boons"
           />
-          <ButtonShadowYellow value="sumbit boons" onClick={submitBoons}>
+          <ButtonShadowYellow value="sumbit boons" type="submit">
             submit boons
           </ButtonShadowYellow>
-          <br />
+        </form>
+        <form onSubmit={submitBurdens}>
           <Input
             type="text"
             value={burden}
             onChange={handleChange2}
             placeholder="your burdens"
           />
-          <ButtonShadowBlood value="sumbit burdens" onClick={submitBurdens}>
+          <ButtonShadowBlood value="sumbit burdens" type="submit">
             submit burdens
           </ButtonShadowBlood>
         </form>
