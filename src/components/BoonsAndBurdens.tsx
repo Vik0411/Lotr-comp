@@ -2,9 +2,7 @@ import { ButtonShadow } from "./atoms/Button";
 import { useState } from "react";
 import { Input } from "./atoms/Input";
 import { SectionHeader } from "./atoms/typography";
-import { ListItemWithWhiteText } from "./atoms/ListItemWithWhiteText";
 import { styled } from "styled-components";
-import { ContainerWithWhiteText } from "./atoms/Container";
 import { LotrContext } from "../context";
 import React from "react";
 
@@ -41,7 +39,6 @@ function BoonsAndBurdens() {
     let newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
 
     setCampaign({ ...campaign, boonsAndBurdens: newBB });
-    localStorage.setItem("campaign", JSON.stringify(campaign));
   }
 
   function submitBurdens(e: React.FormEvent<HTMLFormElement>) {
@@ -49,8 +46,10 @@ function BoonsAndBurdens() {
     let newBurdens = [...campaign.boonsAndBurdens.burdens, burden];
     let newBB = { ...campaign.boonsAndBurdens, burdens: newBurdens };
 
-    setCampaign({ ...campaign, boonsAndBurdens: newBB });
-    localStorage.setItem("campaign", JSON.stringify(campaign));
+    setCampaign((currentState) => {
+      let camp = currentState;
+      return { ...camp, boonsAndBurdens: newBB };
+    });
   }
 
   return (
@@ -80,18 +79,6 @@ function BoonsAndBurdens() {
           </ButtonShadowBlood>
         </form>
       </div>
-      <div>
-        <ContainerWithWhiteText>Boons:</ContainerWithWhiteText>
-        {campaign.boonsAndBurdens.boons.map((boon) => (
-          <ListItemWithWhiteText>{boon}</ListItemWithWhiteText>
-        ))}
-      </div>
-      <ContainerWithWhiteText>
-        Burdens:
-        {campaign.boonsAndBurdens.burdens.map((burden) => (
-          <ListItemWithWhiteText>{burden}</ListItemWithWhiteText>
-        ))}
-      </ContainerWithWhiteText>
     </>
   );
 }

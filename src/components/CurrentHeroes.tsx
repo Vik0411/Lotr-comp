@@ -73,6 +73,7 @@ function CurrentHeroes() {
                 <p
                   style={{
                     color: "white",
+                    height: "25px",
                   }}
                 >
                   {current.name}
