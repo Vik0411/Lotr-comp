@@ -8,7 +8,7 @@ import { Hero } from "../types";
 import { SelectFfgHero } from "./atoms/SelectFfgHero";
 import { styled } from "styled-components";
 
-const ButtonShadowGreen = styled(ButtonShadow)`
+export const ButtonShadowGreen = styled(ButtonShadow)`
   &:not([disabled]):active {
     box-shadow: #90ee90 2px 2px 0 0, #000 2px 2px 0 1px;
     transform: translate(2px, 2px);

@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import { ButtonShadow } from "./Button";
+import { ButtonShadowGreen } from "../AllMightyHeroes";
+import { ButtonShadowBlood, ButtonShadowYellow } from "../BoonsAndBurdens";
+import { SelectFfgHero } from "./SelectFfgHero";
 
 export const Container = styled.body`
   display: flex;
@@ -20,6 +24,21 @@ export const ContainerFlex = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 30px 30px;
+
+  &:hover ${ButtonShadowGreen} {
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  &:hover ${ButtonShadowBlood} {
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  &:hover ${ButtonShadowYellow} {
+    opacity: 1;
+    text-decoration: none;
+  }
 `;
 
 export const ContainerFallenHeroes = styled.div`
@@ -33,6 +52,11 @@ export const ContainerCurrentCards = styled.div`
   overflow: hidden;
   display: block;
   margin-bottom: 10px;
+
+  &:hover ${ButtonShadow} {
+    opacity: 1;
+    text-decoration: none;
+  }
 `;
 
 export const ContainerWithWhiteText = styled.div`

@@ -6,14 +6,14 @@ import { styled } from "styled-components";
 import { LotrContext } from "../context";
 import React from "react";
 
-const ButtonShadowYellow = styled(ButtonShadow)`
+export const ButtonShadowYellow = styled(ButtonShadow)`
   &:not([disabled]):active {
     box-shadow: yellow 2px 2px 0 0, #000 2px 2px 0 1px;
     transform: translate(2px, 2px);
   }
 `;
 
-const ButtonShadowBlood = styled(ButtonShadow)`
+export const ButtonShadowBlood = styled(ButtonShadow)`
   &:not([disabled]):active {
     box-shadow: red 2px 2px 0 0, #000 2px 2px 0 1px;
     transform: translate(2px, 2px);

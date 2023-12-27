@@ -16,6 +16,7 @@ export const Button = styled.button`
 `;
 
 export const ButtonShadow = styled.button`
+  opacity: 0;
   appearance: button;
   background-color: #000;
   background-image: none;
@@ -42,10 +43,6 @@ export const ButtonShadow = styled.button`
   white-space: nowrap;
 
   &:focus {
-    text-decoration: none;
-  }
-
-  &:hover {
     text-decoration: none;
   }
 
