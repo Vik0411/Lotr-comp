@@ -6,7 +6,7 @@ import { onlyMultiplesOtherwise } from "../dataHelpers";
 import { filterHeroes } from "../utils";
 import { Hero } from "../types";
 import { Paragraph, SectionHeader } from "./atoms/typography";
-import { ContainerCurrentCards, ContainerFlex } from "./atoms/Container";
+import { ContainerCurrentCard, ContainerFlex } from "./atoms/Container";
 import { HeroCard } from "./atoms/HeroCard";
 import { CancelImage } from "./atoms/CancelImage";
 
@@ -18,7 +18,14 @@ const ContainerCurrentHeroes = styled(ContainerFlex)`
   display: flex;
   gap: 15px;
   margin: 30px 30px;
-  flexdirection: "row";
+  flex-direction: row;
+`;
+
+export const ButtonShadowBlack = styled(ButtonShadow)`
+  position: absolute;
+  bottom: 7px;
+  left: 0px;
+  transition: all 0.15s;
 `;
 
 function CurrentHeroes() {
@@ -70,26 +77,26 @@ function CurrentHeroes() {
         <ContainerCurrentHeroes>
           {current.map(
             (current: Hero): JSX.Element => (
-              <ContainerCurrentCards key={current.code}>
-                <Paragraph>
-                  {current.name}
-                  <CancelBtn>
-                    <CancelImage
-                      alt=""
-                      src={require("../images/cancel-1.png")}
-                    ></CancelImage>
-                  </CancelBtn>
-                </Paragraph>
-                <HeroCard
-                  alt=""
-                  src={require(`../images/${current.imagesrc}`)}
-                />
-                <div>
-                  <ButtonShadow onClick={() => killHero(current.code)}>
+              <ContainerCurrentCard key={current.code}>
+                <div style={{ position: "relative" }}>
+                  <Paragraph>
+                    {current.name}
+                    <CancelBtn>
+                      <CancelImage
+                        alt=""
+                        src={require("../images/cancel-1.png")}
+                      ></CancelImage>
+                    </CancelBtn>
+                  </Paragraph>
+                  <HeroCard
+                    alt=""
+                    src={require(`../images/${current.imagesrc}`)}
+                  />
+                  <ButtonShadowBlack onClick={() => killHero(current.code)}>
                     Send to coffin
-                  </ButtonShadow>
+                  </ButtonShadowBlack>
                 </div>
-              </ContainerCurrentCards>
+              </ContainerCurrentCard>
             )
           )}
         </ContainerCurrentHeroes>

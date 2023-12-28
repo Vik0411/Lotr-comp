@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import { ButtonShadow } from "./Button";
-import { ButtonShadowGreen } from "../AllMightyHeroes";
-import { ButtonShadowBlood, ButtonShadowYellow } from "../BoonsAndBurdens";
 import { CancelImage } from "./CancelImage";
 
 // globalStyles.js
@@ -38,21 +36,6 @@ export const ContainerFlex = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 30px 30px;
-
-  &:hover ${ButtonShadowGreen} {
-    opacity: 1;
-    text-decoration: none;
-  }
-
-  &:hover ${ButtonShadowBlood} {
-    opacity: 1;
-    text-decoration: none;
-  }
-
-  &:hover ${ButtonShadowYellow} {
-    opacity: 1;
-    text-decoration: none;
-  }
 `;
 
 export const ContainerFallenHeroes = styled.div`
@@ -66,12 +49,25 @@ export const ContainerBBDisplay = styled.div`
   margin: 20px 20px;
 `;
 
-export const ContainerCurrentCards = styled.div`
-  width: 15%;
-  height: 480px;
-  overflow: hidden;
+export const ContainerCurrentCard = styled.div`
+  position: relative;
+  width: 250px;
   display: block;
-  margin-bottom: 10px;
+  padding: 20px;
+  overflow: hidden;
+  transition: all 0.3s;
+
+  @media (max-width: 1024px) {
+    width: 220px;
+  }
+
+  @media (max-width: 768px) {
+    width: 200px;
+  }
+
+  &:hover {
+    transform: scale(105%);
+  }
 
   &:hover ${ButtonShadow} {
     opacity: 1;
@@ -79,6 +75,7 @@ export const ContainerCurrentCards = styled.div`
   }
 
   &:hover ${CancelImage} {
+    transform: scale(90%);
     opacity: 1;
     text-decoration: none;
   }

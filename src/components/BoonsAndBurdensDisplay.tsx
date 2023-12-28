@@ -8,7 +8,7 @@ function BoonsAndBurdensDisplay() {
   const { campaign } = React.useContext(LotrContext);
 
   return (
-    <>
+    <div style={{ display: "flex" }}>
       <ul
         style={{
           columnWidth: "200px",
@@ -16,7 +16,6 @@ function BoonsAndBurdensDisplay() {
           maxHeight: "250px",
           maxWidth: "300px",
           overflow: "auto",
-          scrollbarColor: "red",
         }}
       >
         <SectionHeader>Boons</SectionHeader>
@@ -51,7 +50,7 @@ function BoonsAndBurdensDisplay() {
           </ListItemWithWhiteText>
         ))}
       </ul>
-    </>
+    </div>
   );
 }
 

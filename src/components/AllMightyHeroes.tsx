@@ -9,6 +9,7 @@ import { SelectFfgHero } from "./atoms/SelectFfgHero";
 import { styled } from "styled-components";
 
 export const ButtonShadowGreen = styled(ButtonShadow)`
+  opacity: 1;
   &:not([disabled]):active {
     box-shadow: #90ee90 2px 2px 0 0, #000 2px 2px 0 1px;
     transform: translate(2px, 2px);

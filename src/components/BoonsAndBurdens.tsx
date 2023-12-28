@@ -7,6 +7,7 @@ import { LotrContext } from "../context";
 import React from "react";
 
 export const ButtonShadowYellow = styled(ButtonShadow)`
+  opacity: 1;
   &:not([disabled]):active {
     box-shadow: yellow 2px 2px 0 0, #000 2px 2px 0 1px;
     transform: translate(2px, 2px);
@@ -14,6 +15,7 @@ export const ButtonShadowYellow = styled(ButtonShadow)`
 `;
 
 export const ButtonShadowBlood = styled(ButtonShadow)`
+  opacity: 1;
   &:not([disabled]):active {
     box-shadow: red 2px 2px 0 0, #000 2px 2px 0 1px;
     transform: translate(2px, 2px);
