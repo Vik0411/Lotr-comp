@@ -2,7 +2,22 @@ import styled from "styled-components";
 import { ButtonShadow } from "./Button";
 import { ButtonShadowGreen } from "../AllMightyHeroes";
 import { ButtonShadowBlood, ButtonShadowYellow } from "../BoonsAndBurdens";
-import { SelectFfgHero } from "./SelectFfgHero";
+import { CancelImage } from "./CancelImage";
+
+// globalStyles.js
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+  }
+`;
+
+// html{
+//   scrollbar-color: black green;
+//   scrollbar-width: thin;
+//   }
 
 export const Container = styled.body`
   display: flex;
@@ -13,7 +28,6 @@ export const Container = styled.body`
   background-size: cover;
   background-position: center;
   text-shadow: 4px 4px 3px black;
-  border-radius: 30px;
   margin-top: 0px;
   box-sizing: border-box;
 `;
@@ -42,8 +56,14 @@ export const ContainerFlex = styled.div`
 `;
 
 export const ContainerFallenHeroes = styled.div`
+  column-width: 230px;
+  min-height: 60px;
+  margin: 65px 20px;
+`;
+
+export const ContainerBBDisplay = styled.div`
   column-width: 200px;
-  margin: 30px 30px;
+  margin: 20px 20px;
 `;
 
 export const ContainerCurrentCards = styled.div`
@@ -54,6 +74,16 @@ export const ContainerCurrentCards = styled.div`
   margin-bottom: 10px;
 
   &:hover ${ButtonShadow} {
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  &:hover ${CancelImage} {
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  &:hover p {
     opacity: 1;
     text-decoration: none;
   }

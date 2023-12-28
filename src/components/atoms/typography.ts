@@ -7,3 +7,11 @@ export const Span = styled.span`
 export const SectionHeader = styled.h2`
   color: white;
 `;
+
+export const Paragraph = styled.p`
+  display: flex;
+  justify-content: right;
+  color: white;
+  opacity: 0;
+  height: 25px;
+`;

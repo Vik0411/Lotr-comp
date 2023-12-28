@@ -15,6 +15,12 @@ export const Button = styled.button`
   }
 `;
 
+export const CancelBtn = styled.button`
+  background-color: transparent;
+  appearance: none;
+  border: none;
+`;
+
 export const ButtonShadow = styled.button`
   opacity: 0;
   appearance: button;

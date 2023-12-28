@@ -1,13 +1,14 @@
 import { LotrContext } from "../context";
 import React from "react";
 import styled from "styled-components";
-import { ButtonShadow } from "./atoms/Button";
+import { ButtonShadow, CancelBtn } from "./atoms/Button";
 import { onlyMultiplesOtherwise } from "../dataHelpers";
 import { filterHeroes } from "../utils";
 import { Hero } from "../types";
-import { SectionHeader } from "./atoms/typography";
+import { Paragraph, SectionHeader } from "./atoms/typography";
 import { ContainerCurrentCards, ContainerFlex } from "./atoms/Container";
 import { HeroCard } from "./atoms/HeroCard";
+import { CancelImage } from "./atoms/CancelImage";
 
 const TopHeader = styled(SectionHeader)`
   margin: 30px 30px;
@@ -63,21 +64,22 @@ function CurrentHeroes() {
 
   // refactor return below into styled components as well
   return (
-    <div>
+    <div style={{ minHeight: "300px" }}>
       <div>
         <TopHeader>Current heroes:</TopHeader>
         <ContainerCurrentHeroes>
           {current.map(
             (current: Hero): JSX.Element => (
               <ContainerCurrentCards key={current.code}>
-                <p
-                  style={{
-                    color: "white",
-                    height: "25px",
-                  }}
-                >
+                <Paragraph>
                   {current.name}
-                </p>
+                  <CancelBtn>
+                    <CancelImage
+                      alt=""
+                      src={require("../images/cancel-1.png")}
+                    ></CancelImage>
+                  </CancelBtn>
+                </Paragraph>
                 <HeroCard
                   alt=""
                   src={require(`../images/${current.imagesrc}`)}
