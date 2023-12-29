@@ -21,10 +21,11 @@ const ContainerCurrentHeroes = styled(ContainerFlex)`
   flex-direction: row;
 `;
 
-export const ButtonShadowBlack = styled(ButtonShadow)`
+export const ButtonBlack = styled(ButtonShadow)`
+  box-shadow: none;
   position: absolute;
-  bottom: 7px;
-  left: 0px;
+  bottom: 10px;
+  left: 5px;
   transition: all 0.15s;
 `;
 
@@ -92,9 +93,9 @@ function CurrentHeroes() {
                     alt=""
                     src={require(`../images/${current.imagesrc}`)}
                   />
-                  <ButtonShadowBlack onClick={() => killHero(current.code)}>
-                    Send to coffin
-                  </ButtonShadowBlack>
+                  <ButtonBlack onClick={() => killHero(current.code)}>
+                    Kill Hero
+                  </ButtonBlack>
                 </div>
               </ContainerCurrentCard>
             )
