@@ -52,12 +52,6 @@ export const onlyMultiplesOtherwise = onlyHeroesForCampaign.filter(
   (hero) => !onlyUniqueHeroes.includes(hero)
 );
 
-function rename(hero: Hero) {
-  let name = hero.name;
-  let sphere = hero.sphere_name;
-  hero.name = name.concat(" (", sphere, ")");
-}
-
 export const changedNameMultiples = onlyMultiplesOtherwise.map((hero) => {
   let name = hero.name;
   let sphere = hero.sphere_name;
@@ -67,11 +61,11 @@ export const changedNameMultiples = onlyMultiplesOtherwise.map((hero) => {
 
 export const origoPrepared = changedNameMultiples.concat(onlyUniqueHeroes);
 
-console.log("wise", onlyMultiplesOtherwise);
-console.log("hero", onlyUniqueHeroes);
-console.log("hero@", onlyMultiples);
-console.log("restr", origoPrepared);
-console.log("last", changedNameMultiples);
+// console.log("wise", onlyMultiplesOtherwise);
+// console.log("hero", onlyUniqueHeroes);
+// console.log("hero@", onlyMultiples);
+// console.log("restr", origoPrepared);
+// console.log("last", changedNameMultiples);
 
 export const defaultState: CampaignContextInterface = {
   campaign: {
