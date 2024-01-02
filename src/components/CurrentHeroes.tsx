@@ -70,6 +70,22 @@ function CurrentHeroes() {
     });
   }
 
+  function returnHero(heroCode: string) {
+    // add alert when one "duplicate" is already killed
+    setCampaign({
+      ...campaign,
+      allHeroes: campaign.allHeroes.map((hero) => {
+        if (hero.code === heroCode) {
+          hero.alive = true;
+          hero.current = false;
+          return hero;
+        } else {
+          return hero;
+        }
+      }),
+    });
+  }
+
   // refactor return below into styled components as well
   return (
     <div style={{ minHeight: "300px" }}>
@@ -83,10 +99,20 @@ function CurrentHeroes() {
                   <Paragraph>
                     {current.name}
                     <CancelBtn>
-                      <CancelImage
-                        alt=""
-                        src={require("../images/cancel-1.png")}
-                      ></CancelImage>
+                      <button
+                        style={{
+                          backgroundColor: "transparent",
+                          paddingInline: "0px",
+                          paddingBlock: "0px",
+                          borderWidth: "0px",
+                        }}
+                        onClick={() => returnHero(current.code)}
+                      >
+                        <CancelImage
+                          alt=""
+                          src={require("../images/cancel-1.png")}
+                        ></CancelImage>
+                      </button>
                     </CancelBtn>
                   </Paragraph>
                   <HeroCard

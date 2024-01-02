@@ -50,11 +50,18 @@ function LotrProvider({ children }: LotrProviderProps) {
     getStorageCampaign() || defaultState.campaign
   );
 
+  const [boon, setBoon] = useState("");
+  const [burden, setBurden] = useState("");
+
   return (
     <LotrContext.Provider
       value={{
         campaign,
         setCampaign,
+        boon,
+        setBoon,
+        burden,
+        setBurden,
       }}
     >
       {children}

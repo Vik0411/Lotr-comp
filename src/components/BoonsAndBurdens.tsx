@@ -24,8 +24,8 @@ export const ButtonShadowBlood = styled(ButtonShadow)`
 
 function BoonsAndBurdens() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
-  const [boon, setBoon] = useState("");
-  const [burden, setBurden] = useState("");
+  const { boon, setBoon } = React.useContext(LotrContext);
+  const { burden, setBurden } = React.useContext(LotrContext);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setBoon(e.target.value);
@@ -37,7 +37,11 @@ function BoonsAndBurdens() {
 
   function submitBoons(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    let newBoons = [...campaign.boonsAndBurdens.boons, boon];
+
+    let newBoons = [
+      ...campaign.boonsAndBurdens.boons,
+      { name: boon, index: campaign.boonsAndBurdens.boons.length + 1 },
+    ];
     let newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
 
     setCampaign({ ...campaign, boonsAndBurdens: newBB });
@@ -45,7 +49,10 @@ function BoonsAndBurdens() {
 
   function submitBurdens(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    let newBurdens = [...campaign.boonsAndBurdens.burdens, burden];
+    let newBurdens = [
+      ...campaign.boonsAndBurdens.burdens,
+      { name: burden, index: campaign.boonsAndBurdens.burdens.length + 1 },
+    ];
     let newBB = { ...campaign.boonsAndBurdens, burdens: newBurdens };
 
     setCampaign((currentState) => {

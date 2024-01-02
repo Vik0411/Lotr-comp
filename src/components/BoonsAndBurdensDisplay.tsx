@@ -4,11 +4,35 @@ import { LotrContext } from "../context";
 import React from "react";
 import { CancelImage } from "./atoms/CancelImage";
 import { doesHaveImage } from "../utils";
-import { hover } from "@testing-library/user-event/dist/hover";
 import { BorBCard } from "./atoms/BorBCard";
 
 function BoonsAndBurdensDisplay() {
-  const { campaign } = React.useContext(LotrContext);
+  const { campaign, setCampaign } = React.useContext(LotrContext);
+  const { boon, setBoon } = React.useContext(LotrContext);
+  const { burden, setBurden } = React.useContext(LotrContext);
+
+  function cancelBoon(boon) {
+    let newBoons = campaign.boonsAndBurdens.boons.filter(
+      (bn) => bn.index !== boon.index
+    );
+    console.log("drr", newBoons);
+    let newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
+    setCampaign({ ...campaign, boonsAndBurdens: newBB });
+  }
+
+  function cancelBurden(burden) {
+    let newBurdens = campaign.boonsAndBurdens.burdens.filter(
+      (br) => br.index !== burden.index
+    );
+    console.log("br", newBurdens);
+    let newBB = { ...campaign.boonsAndBurdens, burdens: newBurdens };
+    setCampaign({ ...campaign, boonsAndBurdens: newBB });
+  }
+
+  function corrs(bn) {
+    let x = boon.slice(0, bn.length - 2);
+    return x;
+  }
 
   return (
     <div style={{ display: "flex" }}>
@@ -23,19 +47,52 @@ function BoonsAndBurdensDisplay() {
         }}
       >
         {campaign.boonsAndBurdens.boons.map((boon) => (
-          <ListItemWithWhiteText>
-            {doesHaveImage(boon) ? (
-              <BorBCard
-                alt=""
-                src={require(`../images/bb/${boon}.jpg`)}
-              ></BorBCard>
+          <ListItemWithWhiteText key={boon.index}>
+            {doesHaveImage(boon.name) ? (
+              <div style={{ display: "flex", flexFlow: "column" }}>
+                <div>{boon.name}</div>
+                <BorBCard
+                  alt=""
+                  src={require(`../images/bb/${boon.name}.jpg`)}
+                ></BorBCard>
+                <button
+                  style={{
+                    backgroundColor: "transparent",
+                    paddingInline: "0px",
+                    paddingBlock: "0px",
+                    borderWidth: "0px",
+                  }}
+                  onClick={() => cancelBoon(boon)}
+                >
+                  <CancelImage
+                    alt=""
+                    src={require("../images/cancel-1.png")}
+                  ></CancelImage>
+                </button>
+              </div>
             ) : (
-              <BorBCard alt="" src={require(`../images/nonffg.jpg`)}></BorBCard>
+              <div key={boon.index}>
+                <div>{boon.name}</div>
+                <BorBCard
+                  alt=""
+                  src={require(`../images/nonffg.jpg`)}
+                ></BorBCard>
+                <button
+                  style={{
+                    backgroundColor: "transparent",
+                    paddingInline: "0px",
+                    paddingBlock: "0px",
+                    borderWidth: "0px",
+                  }}
+                  onClick={() => cancelBoon(boon)}
+                >
+                  <CancelImage
+                    alt=""
+                    src={require("../images/cancel-1.png")}
+                  ></CancelImage>
+                </button>
+              </div>
             )}
-            <CancelImage
-              alt=""
-              src={require("../images/cancel-1.png")}
-            ></CancelImage>
           </ListItemWithWhiteText>
         ))}
       </ul>
@@ -51,19 +108,52 @@ function BoonsAndBurdensDisplay() {
         }}
       >
         {campaign.boonsAndBurdens.burdens.map((burden) => (
-          <ListItemWithWhiteText>
-            {doesHaveImage(burden) ? (
-              <BorBCard
-                alt=""
-                src={require(`../images/bb/${burden}.jpg`)}
-              ></BorBCard>
+          <ListItemWithWhiteText key={burden.index}>
+            {doesHaveImage(burden.name) ? (
+              <div style={{ display: "flex", flexFlow: "column" }}>
+                <div>{burden.name}</div>
+                <BorBCard
+                  alt=""
+                  src={require(`../images/bb/${burden.name}.jpg`)}
+                ></BorBCard>
+                <button
+                  style={{
+                    backgroundColor: "transparent",
+                    paddingInline: "0px",
+                    paddingBlock: "0px",
+                    borderWidth: "0px",
+                  }}
+                  onClick={() => cancelBurden(burden)}
+                >
+                  <CancelImage
+                    alt=""
+                    src={require("../images/cancel-1.png")}
+                  ></CancelImage>
+                </button>
+              </div>
             ) : (
-              <BorBCard alt="" src={require(`../images/nonffg.jpg`)}></BorBCard>
+              <div key={burden.index}>
+                <div>{burden.name}</div>
+                <BorBCard
+                  alt=""
+                  src={require(`../images/nonffg.jpg`)}
+                ></BorBCard>
+                <button
+                  style={{
+                    backgroundColor: "transparent",
+                    paddingInline: "0px",
+                    paddingBlock: "0px",
+                    borderWidth: "0px",
+                  }}
+                  onClick={() => cancelBurden(burden)}
+                >
+                  <CancelImage
+                    alt=""
+                    src={require("../images/cancel-1.png")}
+                  ></CancelImage>
+                </button>
+              </div>
             )}
-            <CancelImage
-              alt=""
-              src={require("../images/cancel-1.png")}
-            ></CancelImage>
           </ListItemWithWhiteText>
         ))}
       </ul>

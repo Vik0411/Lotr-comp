@@ -1,5 +1,5 @@
-export type Boon = string;
-export type Burden = string;
+export type Boon = { name: string; index: number };
+export type Burden = { name: string; index: number };
 export interface Campaign {
   allHeroes: Hero[];
   boonsAndBurdens: { boons: Boon[]; burdens: Burden[] };
