@@ -94,25 +94,18 @@ function CurrentHeroes() {
         <ContainerCurrentHeroes>
           {current.map(
             (current: Hero): JSX.Element => (
-              <ContainerCurrentCard key={current.code}>
+              <ContainerCurrentCard
+                key={current.code}
+                style={{ width: "250px" }}
+              >
                 <div style={{ position: "relative" }}>
                   <Paragraph>
                     {current.name}
-                    <CancelBtn>
-                      <button
-                        style={{
-                          backgroundColor: "transparent",
-                          paddingInline: "0px",
-                          paddingBlock: "0px",
-                          borderWidth: "0px",
-                        }}
-                        onClick={() => returnHero(current.code)}
-                      >
-                        <CancelImage
-                          alt=""
-                          src={require("../images/cancel-1.png")}
-                        ></CancelImage>
-                      </button>
+                    <CancelBtn onClick={() => returnHero(current.code)}>
+                      <CancelImage
+                        alt=""
+                        src={require("../images/cancel-1.png")}
+                      ></CancelImage>
                     </CancelBtn>
                   </Paragraph>
                   <HeroCard

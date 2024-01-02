@@ -35,7 +35,6 @@ export const ContainerFlex = styled.div`
   gap: 15px;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 30px 30px;
 `;
 
 export const ContainerFallenHeroes = styled.div`
@@ -51,7 +50,6 @@ export const ContainerBBDisplay = styled.div`
 
 export const ContainerCurrentCard = styled.div`
   position: relative;
-  width: 250px;
   display: block;
   padding: 20px;
   overflow: hidden;
@@ -91,4 +89,14 @@ export const ContainerWithWhiteText = styled.div`
   opacity: 75%;
   margin: 30px 30px;
   text-align: center;
+`;
+
+export const ContainerFlexColumn = styled.div`
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  margin: 50px 50px;
+  max-height: 400px;
+  max-width: 400px;
+  overflow: auto;
 `;

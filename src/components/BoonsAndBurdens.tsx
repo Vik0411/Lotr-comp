@@ -67,33 +67,31 @@ function BoonsAndBurdens() {
   }
 
   return (
-    <>
-      <div>
-        <SectionHeader>Add Boons & Burdens</SectionHeader>
-        <form onSubmit={submitBoons}>
-          <Input
-            type="text"
-            value={bBNameObject.boonName}
-            onChange={handleChange}
-            placeholder="your boons"
-          />
-          <ButtonShadowYellow value="sumbit boons" type="submit">
-            submit boons
-          </ButtonShadowYellow>
-        </form>
-        <form onSubmit={submitBurdens}>
-          <Input
-            type="text"
-            value={bBNameObject.burdenName}
-            onChange={handleChange2}
-            placeholder="your burdens"
-          />
-          <ButtonShadowBlood value="sumbit burdens" type="submit">
-            submit burdens
-          </ButtonShadowBlood>
-        </form>
-      </div>
-    </>
+    <div>
+      <SectionHeader>Add Boons & Burdens</SectionHeader>
+      <form onSubmit={submitBoons}>
+        <Input
+          type="text"
+          value={bBNameObject.boonName}
+          onChange={handleChange}
+          placeholder="your boons"
+        />
+        <ButtonShadowYellow value="sumbit boons" type="submit">
+          submit boons
+        </ButtonShadowYellow>
+      </form>
+      <form onSubmit={submitBurdens}>
+        <Input
+          type="text"
+          value={bBNameObject.burdenName}
+          onChange={handleChange2}
+          placeholder="your burdens"
+        />
+        <ButtonShadowBlood value="sumbit burdens" type="submit">
+          submit burdens
+        </ButtonShadowBlood>
+      </form>
+    </div>
   );
 }
 

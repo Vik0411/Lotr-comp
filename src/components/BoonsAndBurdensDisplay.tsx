@@ -1,10 +1,15 @@
-import { SectionHeader } from "./atoms/typography";
-import { ListItemWithWhiteText } from "./atoms/ListItemWithWhiteText";
+import { Paragraph, SectionHeader } from "./atoms/typography";
 import { LotrContext } from "../context";
 import React from "react";
 import { CancelImage } from "./atoms/CancelImage";
 import { doesHaveImage } from "../utils";
 import { BorBCard } from "./atoms/BorBCard";
+import {
+  ContainerCurrentCard,
+  ContainerFlex,
+  ContainerFlexColumn,
+} from "./atoms/Container";
+import { CancelBtn } from "./atoms/Button";
 
 function BoonsAndBurdensDisplay() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
@@ -25,129 +30,90 @@ function BoonsAndBurdensDisplay() {
   }
 
   return (
-    <div style={{ display: "flex" }}>
+    <ContainerFlex>
       <SectionHeader>Boons</SectionHeader>
-      <ul
-        style={{
-          columnWidth: "200px",
-          margin: "5px 5px",
-          maxHeight: "400px",
-          maxWidth: "400px",
-          overflow: "auto",
-        }}
-      >
+      <ContainerFlexColumn>
         {campaign.boonsAndBurdens.boons.map((boon) => (
-          <ListItemWithWhiteText key={boon.index}>
+          <div key={boon.index} style={{ margin: "15px 15px" }}>
             {doesHaveImage(boon.name) ? (
-              <div style={{ display: "flex", flexFlow: "column" }}>
-                <div>{boon.name}</div>
+              <ContainerCurrentCard style={{ width: "180px" }}>
+                <Paragraph>
+                  {boon.name}
+                  <CancelBtn onClick={() => cancelBoon(boon)}>
+                    <CancelImage
+                      alt=""
+                      src={require("../images/cancel-1.png")}
+                    ></CancelImage>
+                  </CancelBtn>
+                </Paragraph>
                 <BorBCard
                   alt=""
                   src={require(`../images/bb/${boon.name}.jpg`)}
                 ></BorBCard>
-                <button
-                  style={{
-                    backgroundColor: "transparent",
-                    paddingInline: "0px",
-                    paddingBlock: "0px",
-                    borderWidth: "0px",
-                  }}
-                  onClick={() => cancelBoon(boon)}
-                >
-                  <CancelImage
-                    alt=""
-                    src={require("../images/cancel-1.png")}
-                  ></CancelImage>
-                </button>
-              </div>
+              </ContainerCurrentCard>
             ) : (
-              <div key={boon.index}>
-                <div>{boon.name}</div>
+              <ContainerCurrentCard key={boon.index}>
+                <Paragraph>
+                  {boon.name}
+                  <CancelBtn onClick={() => cancelBoon(boon)}>
+                    <CancelImage
+                      alt=""
+                      src={require("../images/cancel-1.png")}
+                    ></CancelImage>
+                  </CancelBtn>
+                </Paragraph>
                 <BorBCard
                   alt=""
                   src={require(`../images/nonffg.jpg`)}
                 ></BorBCard>
-                <button
-                  style={{
-                    backgroundColor: "transparent",
-                    paddingInline: "0px",
-                    paddingBlock: "0px",
-                    borderWidth: "0px",
-                  }}
-                  onClick={() => cancelBoon(boon)}
-                >
-                  <CancelImage
-                    alt=""
-                    src={require("../images/cancel-1.png")}
-                  ></CancelImage>
-                </button>
-              </div>
+              </ContainerCurrentCard>
             )}
-          </ListItemWithWhiteText>
+          </div>
         ))}
-      </ul>
-      <SectionHeader>Burdens</SectionHeader>
-      <ul
-        style={{
-          columnWidth: "200px",
-          margin: "5px 5px",
-          maxHeight: "400px",
-          maxWidth: "400px",
-          overflow: "auto",
-          backgroundColor: "transparent",
-        }}
-      >
-        {campaign.boonsAndBurdens.burdens.map((burden) => (
-          <ListItemWithWhiteText key={burden.index}>
-            {doesHaveImage(burden.name) ? (
-              <div style={{ display: "flex", flexFlow: "column" }}>
-                <div>{burden.name}</div>
-                <BorBCard
-                  alt=""
-                  src={require(`../images/bb/${burden.name}.jpg`)}
-                ></BorBCard>
-                <button
-                  style={{
-                    backgroundColor: "transparent",
-                    paddingInline: "0px",
-                    paddingBlock: "0px",
-                    borderWidth: "0px",
-                  }}
-                  onClick={() => cancelBurden(burden)}
-                >
-                  <CancelImage
+      </ContainerFlexColumn>
+      <ContainerFlex>
+        <SectionHeader>Burdens</SectionHeader>
+        <ContainerFlexColumn>
+          {campaign.boonsAndBurdens.burdens.map((burden) => (
+            <div key={burden.index} style={{ margin: "15px 15px" }}>
+              {doesHaveImage(burden.name) ? (
+                <ContainerCurrentCard style={{ width: "180px" }}>
+                  <Paragraph>
+                    {burden.name}
+                    <CancelBtn onClick={() => cancelBurden(burden)}>
+                      <CancelImage
+                        alt=""
+                        src={require("../images/cancel-1.png")}
+                      ></CancelImage>
+                    </CancelBtn>
+                  </Paragraph>
+                  <BorBCard
                     alt=""
-                    src={require("../images/cancel-1.png")}
-                  ></CancelImage>
-                </button>
-              </div>
-            ) : (
-              <div key={burden.index}>
-                <div>{burden.name}</div>
-                <BorBCard
-                  alt=""
-                  src={require("../images/burden.jpg")}
-                ></BorBCard>
-                <button
-                  style={{
-                    backgroundColor: "transparent",
-                    paddingInline: "0px",
-                    paddingBlock: "0px",
-                    borderWidth: "0px",
-                  }}
-                  onClick={() => cancelBurden(burden)}
-                >
-                  <CancelImage
+                    src={require(`../images/bb/${burden.name}.jpg`)}
+                  ></BorBCard>
+                </ContainerCurrentCard>
+              ) : (
+                <ContainerCurrentCard key={burden.index}>
+                  <Paragraph>
+                    {burden.name}
+                    <CancelBtn onClick={() => cancelBurden(burden)}>
+                      <CancelImage
+                        alt=""
+                        src={require("../images/cancel-1.png")}
+                      ></CancelImage>
+                    </CancelBtn>
+                  </Paragraph>
+                  <BorBCard
                     alt=""
-                    src={require("../images/cancel-1.png")}
-                  ></CancelImage>
-                </button>
-              </div>
-            )}
-          </ListItemWithWhiteText>
-        ))}
-      </ul>
-    </div>
+                    src={require("../images/burden.jpg")}
+                  ></BorBCard>
+                </ContainerCurrentCard>
+              )}
+            </div>
+          ))}
+        </ContainerFlexColumn>
+      </ContainerFlex>
+    </ContainerFlex>
   );
 }
 
