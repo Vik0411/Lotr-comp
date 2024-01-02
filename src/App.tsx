@@ -12,6 +12,7 @@ import CurrentHeroes from "./components/CurrentHeroes";
 import BoonsAndBurdens from "./components/BoonsAndBurdens";
 import BoonsAndBurdensDisplay from "./components/BoonsAndBurdensDisplay";
 import { DynamicLore } from "./components/DynamicLore";
+import AddCustomHero from "./components/AddCustomHero";
 
 const ContainerHeroManagement = styled(Container)`
   margin: 0 auto;
@@ -23,7 +24,10 @@ function App() {
       <GlobalStyle />
       <LotrProvider>
         <ContainerFlex>
-          <AllMightyHeroes />
+          <div style={{ display: "flex", flexFlow: "column" }}>
+            <AllMightyHeroes />
+            <AddCustomHero />
+          </div>
           <BoonsAndBurdens />
           <BoonsAndBurdensDisplay />
         </ContainerFlex>
