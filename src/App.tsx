@@ -13,6 +13,7 @@ import BoonsAndBurdens from "./components/BoonsAndBurdens";
 import BoonsAndBurdensDisplay from "./components/BoonsAndBurdensDisplay";
 import { DynamicLore } from "./components/DynamicLore";
 import AddCustomHero from "./components/AddCustomHero";
+import { BBProvider } from "./contextBB";
 
 const ContainerHeroManagement = styled(Container)`
   margin: 0 auto;
@@ -28,8 +29,10 @@ function App() {
             <AllMightyHeroes />
             <AddCustomHero />
           </div>
-          <BoonsAndBurdens />
-          <BoonsAndBurdensDisplay />
+          <BBProvider>
+            <BoonsAndBurdens />
+            <BoonsAndBurdensDisplay />
+          </BBProvider>
         </ContainerFlex>
         <CurrentHeroes />
         <ContainerWithWhiteText>

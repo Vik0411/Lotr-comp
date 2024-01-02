@@ -1,10 +1,10 @@
 import { ButtonShadow } from "./atoms/Button";
-import { useState } from "react";
 import { Input } from "./atoms/Input";
 import { SectionHeader } from "./atoms/typography";
 import { styled } from "styled-components";
 import { LotrContext } from "../context";
 import React from "react";
+import { BBContext } from "../contextBB";
 
 export const ButtonShadowYellow = styled(ButtonShadow)`
   opacity: 1;
@@ -24,15 +24,14 @@ export const ButtonShadowBlood = styled(ButtonShadow)`
 
 function BoonsAndBurdens() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
-  const { boon, setBoon } = React.useContext(LotrContext);
-  const { burden, setBurden } = React.useContext(LotrContext);
+  const { bBNameObject, setBBNameObject } = React.useContext(BBContext);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setBoon(e.target.value);
+    setBBNameObject({ ...bBNameObject, boonName: e.target.value });
   }
 
   function handleChange2(e: React.ChangeEvent<HTMLInputElement>) {
-    setBurden(e.target.value);
+    setBBNameObject({ ...bBNameObject, burdenName: e.target.value });
   }
 
   function submitBoons(e: React.FormEvent<HTMLFormElement>) {
@@ -40,7 +39,10 @@ function BoonsAndBurdens() {
 
     let newBoons = [
       ...campaign.boonsAndBurdens.boons,
-      { name: boon, index: campaign.boonsAndBurdens.boons.length + 1 },
+      {
+        name: bBNameObject.boonName,
+        index: campaign.boonsAndBurdens.boons.length + 1,
+      },
     ];
     let newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
 
@@ -51,7 +53,10 @@ function BoonsAndBurdens() {
     e.preventDefault();
     let newBurdens = [
       ...campaign.boonsAndBurdens.burdens,
-      { name: burden, index: campaign.boonsAndBurdens.burdens.length + 1 },
+      {
+        name: bBNameObject.burdenName,
+        index: campaign.boonsAndBurdens.burdens.length + 1,
+      },
     ];
     let newBB = { ...campaign.boonsAndBurdens, burdens: newBurdens };
 
@@ -68,7 +73,7 @@ function BoonsAndBurdens() {
         <form onSubmit={submitBoons}>
           <Input
             type="text"
-            value={boon}
+            value={bBNameObject.boonName}
             onChange={handleChange}
             placeholder="your boons"
           />
@@ -79,7 +84,7 @@ function BoonsAndBurdens() {
         <form onSubmit={submitBurdens}>
           <Input
             type="text"
-            value={burden}
+            value={bBNameObject.burdenName}
             onChange={handleChange2}
             placeholder="your burdens"
           />

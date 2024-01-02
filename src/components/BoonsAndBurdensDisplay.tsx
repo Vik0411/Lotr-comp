@@ -8,14 +8,10 @@ import { BorBCard } from "./atoms/BorBCard";
 
 function BoonsAndBurdensDisplay() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
-  const { boon, setBoon } = React.useContext(LotrContext);
-  const { burden, setBurden } = React.useContext(LotrContext);
-
   function cancelBoon(boon) {
     let newBoons = campaign.boonsAndBurdens.boons.filter(
       (bn) => bn.index !== boon.index
     );
-    console.log("drr", newBoons);
     let newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
     setCampaign({ ...campaign, boonsAndBurdens: newBB });
   }
@@ -24,14 +20,8 @@ function BoonsAndBurdensDisplay() {
     let newBurdens = campaign.boonsAndBurdens.burdens.filter(
       (br) => br.index !== burden.index
     );
-    console.log("br", newBurdens);
     let newBB = { ...campaign.boonsAndBurdens, burdens: newBurdens };
     setCampaign({ ...campaign, boonsAndBurdens: newBB });
-  }
-
-  function corrs(bn) {
-    let x = boon.slice(0, bn.length - 2);
-    return x;
   }
 
   return (
@@ -136,7 +126,7 @@ function BoonsAndBurdensDisplay() {
                 <div>{burden.name}</div>
                 <BorBCard
                   alt=""
-                  src={require(`../images/nonffg.jpg`)}
+                  src={require("../images/burden.jpg")}
                 ></BorBCard>
                 <button
                   style={{
