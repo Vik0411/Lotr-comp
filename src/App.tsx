@@ -24,7 +24,7 @@ function App() {
     <ContainerHeroManagement>
       <GlobalStyle />
       <LotrProvider>
-        <ContainerFlex>
+        <ContainerFlex style={{ margin: "30px 30px" }}>
           <div style={{ display: "flex", flexFlow: "column" }}>
             <AllMightyHeroes />
             <AddCustomHero />
