@@ -91,6 +91,12 @@ function BoonsAndBurdens() {
           submit burdens
         </ButtonShadowBlood>
       </form>
+
+      <input type="text" name="city" list="cityname" />
+      <datalist id="cityname">
+        <option value="Boston" />
+        <option value="Cambridge" />
+      </datalist>
     </div>
   );
 }

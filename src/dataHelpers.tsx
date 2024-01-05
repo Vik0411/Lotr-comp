@@ -61,12 +61,6 @@ export const changedNameMultiples = onlyMultiplesOtherwise.map((hero) => {
 
 export const origoPrepared = changedNameMultiples.concat(onlyUniqueHeroes);
 
-// console.log("wise", onlyMultiplesOtherwise);
-// console.log("hero", onlyUniqueHeroes);
-// console.log("hero@", onlyMultiples);
-// console.log("restr", origoPrepared);
-// console.log("last", changedNameMultiples);
-
 export const defaultState: CampaignContextInterface = {
   campaign: {
     allHeroes: origoPrepared,

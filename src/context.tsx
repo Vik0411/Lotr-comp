@@ -2,24 +2,10 @@ import React, { useState, ReactNode, Dispatch, SetStateAction } from "react";
 import { defaultState } from "./dataHelpers";
 import { Campaign } from "./types";
 
-// Here the first working version with local browser storage was only in javascript
-// and will have to be adjusted to react and useState() hooks probably
-// This page should work as mainly as the data handling place
-
 /*
-// unfinished function for potentianlly new feature of also keeping count
-// of individual deaths for the heroes
-export const addFallenHeroCount = function(hero:string){
-    //add hero to the list if it isnt there yet
-    if(state.restOfAliveHeroes.includes(hero)){
-        throw Error
-    } else {
-        state.fallenHeroes.push(hero);
-        persistData();
-    }   
-}
+Here the first working version with local browser storage was only in javascript
 
-// function preparation for reseting those heroes remaining alive
+//function preparation for reseting those heroes remaining alive
 export const resetRestOfHeroes = function(hero:string){
     //add hero to the list if it isnt there yet
     if(state.restOfAliveHeroes.includes(hero)){
