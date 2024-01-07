@@ -5,6 +5,7 @@ import { styled } from "styled-components";
 import { LotrContext } from "../context";
 import React from "react";
 import { BBContext } from "../contextBB";
+import { boons } from "../utils";
 
 export const ButtonShadowYellow = styled(ButtonShadow)`
   opacity: 1;
@@ -34,6 +35,10 @@ function BoonsAndBurdens() {
     setBBNameObject({ ...bBNameObject, burdenName: e.target.value });
   }
 
+  function handleChangeBoon(e: React.ChangeEvent<HTMLInputElement>) {
+    setBBNameObject({ ...bBNameObject, boonName: e.target.value });
+  }
+
   function submitBoons(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
@@ -42,6 +47,26 @@ function BoonsAndBurdens() {
       {
         name: bBNameObject.boonName,
         index: campaign.boonsAndBurdens.boons.length + 1,
+        image: "xz",
+      },
+    ];
+    let newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
+
+    setCampaign((currentState) => {
+      let camp = currentState;
+      return { ...camp, boonsAndBurdens: newBB };
+    });
+  }
+
+  function submitBoon(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    let newBoons = [
+      ...campaign.boonsAndBurdens.boons,
+      {
+        name: bBNameObject.boonName,
+        index: campaign.boonsAndBurdens.boons.length + 1,
+        image: bBNameObject.boonName.replaceAll(" ", "-"),
       },
     ];
     let newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
@@ -91,12 +116,24 @@ function BoonsAndBurdens() {
           submit burdens
         </ButtonShadowBlood>
       </form>
-
-      <input type="text" name="city" list="cityname" />
-      <datalist id="cityname">
-        <option value="Boston" />
-        <option value="Cambridge" />
-      </datalist>
+      <form onSubmit={submitBoon}>
+        <input
+          type="text"
+          name="city"
+          value={bBNameObject.boonName}
+          onChange={handleChangeBoon}
+          list="cityname"
+        />
+        <datalist id="cityname">
+          {boons.map((boon, index) => (
+            <option
+              key={boon + index}
+              value={boon.slice(0, -4).replaceAll("-", " ")}
+            />
+          ))}
+        </datalist>
+        <ButtonShadowBlood type="submit">submit bs</ButtonShadowBlood>
+      </form>
     </div>
   );
 }

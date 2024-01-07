@@ -35,7 +35,7 @@ function BoonsAndBurdensDisplay() {
       <ContainerFlexColumn>
         {campaign.boonsAndBurdens.boons.map((boon) => (
           <div key={boon.index} style={{ margin: "15px 15px" }}>
-            {doesHaveImage(boon.name) ? (
+            {doesHaveImage(boon.image) ? (
               <ContainerCurrentCard style={{ width: "180px" }}>
                 <Paragraph>
                   {boon.name}
@@ -48,7 +48,7 @@ function BoonsAndBurdensDisplay() {
                 </Paragraph>
                 <BorBCard
                   alt=""
-                  src={require(`../images/bb/${boon.name}.jpg`)}
+                  src={require(`../images/bb/${boon.image}.jpg`)}
                 ></BorBCard>
               </ContainerCurrentCard>
             ) : (

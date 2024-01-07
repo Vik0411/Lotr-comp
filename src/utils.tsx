@@ -11,12 +11,12 @@ export function filterHeroes(obj: changedAttrs, allHeroes: Hero[]) {
 export function doesHaveImage(borb: string) {
   const imageNames =
     "src/images/bb/Amarthiúl's-Courage.jpg src/images/bb/Andúril.jpg src/images/bb/Appointed-by-Fate.jpg src/images/bb/Armor-Plating.jpg src/images/bb/Army-of-the-Dead-Objective-Ally.jpg src/images/bb/Ballista.jpg src/images/bb/Berelind.jpg src/images/bb/Beyond-All-Hope.jpg src/images/bb/Black-Key.jpg src/images/bb/Brace-of-Coneys.jpg src/images/bb/Chieftain's-Brooch.jpg src/images/bb/Coruhaer.jpg src/images/bb/Cunning.jpg src/images/bb/Daechanar's-Brand.jpg src/images/bb/Determination.jpg src/images/bb/Elrond's-Champion.jpg src/images/bb/Esquire-of-Gondor.jpg src/images/bb/Esquire-of-Rohan.jpg src/images/bb/Forewarned.jpg src/images/bb/Gildor-Inglorion.jpg src/images/bb/Glamdring.jpg src/images/bb/Gwaihir.jpg src/images/bb/Hands-of-a-Healer.jpg src/images/bb/Hardy.jpg src/images/bb/Heirloom-of-Iârchon.jpg src/images/bb/Ho-Tom-Bombadil.jpg src/images/bb/Iârion's-Pendant.jpg src/images/bb/Intimidation.jpg src/images/bb/Laermuin.jpg src/images/bb/Leader-of-Men.jpg src/images/bb/Leaf-wrapped-Lembas.jpg src/images/bb/Lore-of-Ancient-Arnor.jpg src/images/bb/Lórien-Rope.jpg src/images/bb/Mail-of-Eärnur.jpg src/images/bb/Mendor.jpg src/images/bb/Mendor's-Support.jpg src/images/bb/Mithril-Shirt.jpg src/images/bb/Mr-Underhill.jpg src/images/bb/No-Time-to-Waste.jpg src/images/bb/Noble-Hero.jpg src/images/bb/Old-Bogey-stories.jpg src/images/bb/Orders-from-Angmar.jpg src/images/bb/Palantír-of-Orthanc.jpg src/images/bb/Phial-of-Galadriel.jpg src/images/bb/Raiment-of-the-Second-Age - kopie.jpg src/images/bb/Raiment-of-the-Second-Age.jpg src/images/bb/Ranger-Sense.jpg src/images/bb/Resolute.jpg src/images/bb/Rivendell-Skirmishers.jpg src/images/bb/Ruthless.jpg src/images/bb/Silverthorn.jpg src/images/bb/Skilled-Healer.jpg src/images/bb/Spyglass.jpg src/images/bb/Stalwart.jpg src/images/bb/Sting.jpg src/images/bb/The-Fervor-of-Lore.jpg src/images/bb/The-Might-of-Tactics.jpg src/images/bb/The-Power-of-Spirit - kopie.jpg src/images/bb/The-Power-of-Spirit.jpg src/images/bb/The-Secret-of-Leadership - kopie.jpg src/images/bb/The-Secret-of-Leadership.jpg src/images/bb/Three-Golden-Hairs - kopie.jpg src/images/bb/Three-Golden-Hairs.jpg src/images/bb/Tireless-Ranger.jpg src/images/bb/Valiant-Warrior.jpg src/images/bb/Valor.jpg";
-  return imageNames.includes("/" + borb + ".");
+  return imageNames.includes("/" + borb);
 }
 
 export const boons = [
-  "AmarthiŁl's-Courage.jpg",
-  "AndŁril.jpg",
+  "Amarthiúl's-Courage.jpg",
+  "Andúril.jpg",
   "Appointed-by-Fate.jpg",
   "Armor-Plating.jpg",
   "Army-of-the-Dead-Objective-Ally.jpg",
@@ -39,16 +39,16 @@ export const boons = [
   "Gwaihir.jpg",
   "Hands-of-a-Healer.jpg",
   "Hardy.jpg",
-  "Heirloom-of-Irchon.jpg",
+  "Heirloom-of-Iârchon.jpg",
   "Ho-Tom-Bombadil.jpg",
   "Intimidation.jpg",
-  "Irion's-Pendant.jpg",
+  "Iârion's-Pendant.jpg",
   "Laermuin.jpg",
   "Leader-of-Men.jpg",
   "Leaf-wrapped-Lembas.jpg",
   "Lore-of-Ancient-Arnor.jpg",
-  "L˘rien-Rope.jpg",
-  "Mail-of-E„rnur.jpg",
+  "Lórien-Rope.jpg",
+  "Mail-of-Eärnur.jpg",
   "Mendor's-Support.jpg",
   "Mendor.jpg",
   "Mithril-Shirt.jpg",
@@ -57,9 +57,8 @@ export const boons = [
   "Noble-Hero.jpg",
   "Old-Bogey-stories.jpg",
   "Orders-from-Angmar.jpg",
-  "Palantˇr-of-Orthanc.jpg",
+  "Palantír-of-Orthanc.jpg",
   "Phial-of-Galadriel.jpg",
-  "Raiment-of-the-Second-Age - kopie.jpg",
   "Raiment-of-the-Second-Age.jpg",
   "Ranger-Sense.jpg",
   "Resolute.jpg",
@@ -72,14 +71,10 @@ export const boons = [
   "Sting.jpg",
   "The-Fervor-of-Lore.jpg",
   "The-Might-of-Tactics.jpg",
-  "The-Power-of-Spirit - kopie.jpg",
   "The-Power-of-Spirit.jpg",
-  "The-Secret-of-Leadership - kopie.jpg",
   "The-Secret-of-Leadership.jpg",
-  "Three-Golden-Hairs - kopie.jpg",
   "Three-Golden-Hairs.jpg",
   "Tireless-Ranger.jpg",
   "Valiant-Warrior.jpg",
-  "Valor - kopie.jpg",
   "Valor.jpg",
 ];
