@@ -7,7 +7,7 @@ import { filterHeroes } from "../utils";
 import { Hero } from "../types";
 import { SelectFfgHero } from "./atoms/SelectFfgHero";
 import { styled } from "styled-components";
-import { onlyMultiplesOtherwise } from "../dataHelpers";
+import { onlyMultiples } from "../dataHelpers";
 
 export const ButtonShadowGreen = styled(ButtonShadow)`
   opacity: 1;
@@ -39,10 +39,10 @@ function AllMightyHeroes() {
     e.preventDefault();
 
     // before preparing a hero with same name as already prepared, get a confirmation to do so
-    let selectedHeroAsObjectOldName = onlyMultiplesOtherwise.find(
+    let selectedHeroAsObjectOldName = onlyMultiples.find(
       (hero) => hero.code === preparedHero.code
     );
-    let multiplesWithUnchangedName = onlyMultiplesOtherwise.filter(
+    let multiplesWithUnchangedName = onlyMultiples.filter(
       (hero) => hero.name === selectedHeroAsObjectOldName?.name
     );
     let codes = multiplesWithUnchangedName.map((hero) => hero.code);

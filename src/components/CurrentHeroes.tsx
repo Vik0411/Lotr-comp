@@ -1,8 +1,8 @@
 import { LotrContext } from "../context";
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { ButtonShadow, CancelBtn } from "./atoms/Button";
-import { onlyMultiplesOtherwise } from "../dataHelpers";
+import { onlyMultiples } from "../dataHelpers";
 import { filterHeroes } from "../utils";
 import { Hero } from "../types";
 import { Paragraph, SectionHeader } from "./atoms/typography";
@@ -39,10 +39,10 @@ function CurrentHeroes() {
 
   function killHero(heroCode: string) {
     // confirmation when one "duplicate" is already killed
-    let killedHeroAsObjectOldName = onlyMultiplesOtherwise.find(
+    let killedHeroAsObjectOldName = onlyMultiples.find(
       (hero) => hero.code === heroCode
     );
-    let multiplesWithUnchangedName = onlyMultiplesOtherwise.filter(
+    let multiplesWithUnchangedName = onlyMultiples.filter(
       (hero) => hero.name === killedHeroAsObjectOldName?.name
     );
     let codes = multiplesWithUnchangedName.map((hero) => hero.code);
