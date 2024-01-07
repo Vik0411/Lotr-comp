@@ -17,25 +17,27 @@ function removeDuplicates(arr: Hero[]) {
   let state: { unique: Hero[]; rest: Hero[] } = { unique: [], rest: [] };
 
   for (let i = 0; i < arr.length; i++) {
-    let dupls = state.unique.find(
-      (element: Hero) => element.name === arr[i].name
-    );
-    if (dupls === undefined) {
+    let dupls = state.unique.find((element: Hero) => {
+      return element.name == arr[i].name;
+    });
+    console.log(dupls);
+    if (!dupls) {
       state.unique.push(arr[i]);
     } else {
       state.rest.push(arr[i]);
-      state.unique = state.unique.filter(
-        (heroes) => heroes.name !== dupls?.name
-      );
-      let multiple: Hero | undefined = state.unique.find(
-        (heroes) => heroes.name === dupls?.name
-      );
-      if (multiple) state.rest.push(multiple);
+      state.unique = state.unique.filter((hero) => hero.name !== dupls.name);
+      // let multiple: Hero | undefined = state.unique.find(
+      //   (hero) => hero.name === dupls?.name
+      // );
+      // if (multiple) state.rest.push(multiple);
     }
   }
+  console.log(state);
+
   return state;
 }
 
+console.log(onlyHeroesFFG);
 const onlyHeroesForCampaign: Hero[] = onlyHeroesFFG.map((hero) => ({
   ...hero,
   alive: true,
@@ -59,11 +61,29 @@ export const changedNameMultiples = onlyMultiplesOtherwise.map((hero) => {
   return { ...hero, name: namewhole };
 });
 
+export const changedNameMultipless = removeDuplicates(
+  onlyHeroesForCampaign
+).rest.map((hero) => {
+  let name = hero.name;
+  let sphere = hero.sphere_name;
+  let namewhole = name.concat(" (", sphere, ")");
+  return { ...hero, name: namewhole };
+});
+
+const changedNamesAll = onlyHeroesForCampaign.map((hero) => {
+  let name = hero.name;
+  let sphere = hero.sphere_name;
+  let namewhole = name.concat(" (", sphere, ")");
+  return { ...hero, name: namewhole };
+});
 export const origoPrepared = changedNameMultiples.concat(onlyUniqueHeroes);
+const all = changedNameMultipless.concat(
+  removeDuplicates(onlyHeroesForCampaign).unique
+);
 
 export const defaultState: CampaignContextInterface = {
   campaign: {
-    allHeroes: origoPrepared,
+    allHeroes: changedNamesAll,
     boonsAndBurdens: {
       boons: [],
       burdens: [],

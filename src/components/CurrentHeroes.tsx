@@ -1,5 +1,5 @@
 import { LotrContext } from "../context";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { ButtonShadow, CancelBtn } from "./atoms/Button";
 import { onlyMultiplesOtherwise } from "../dataHelpers";
@@ -38,7 +38,7 @@ function CurrentHeroes() {
   );
 
   function killHero(heroCode: string) {
-    // add alert when one "duplicate" is already killed
+    // confirmation when one "duplicate" is already killed
     let killedHeroAsObjectOldName = onlyMultiplesOtherwise.find(
       (hero) => hero.code === heroCode
     );
@@ -53,13 +53,27 @@ function CurrentHeroes() {
       (hero) => hero.alive === false
     );
 
+    function killClone() {
+      const text =
+        "At least one hero with the same name is already dead. Are you sure you want to procede?";
+      // eslint-disable-next-line no-restricted-globals
+      if (confirm(text) === true) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    if (codes.includes(heroCode) && isOneDuplicateDead) {
+      if (!killClone()) {
+        return;
+      }
+    }
+
     setCampaign({
       ...campaign,
       allHeroes: campaign.allHeroes.map((hero) => {
         if (hero.code === heroCode) {
-          if (codes.includes(heroCode) && isOneDuplicateDead) {
-            alert("The hero comes in clones. Do you want to procede?");
-          }
           hero.alive = false;
           hero.current = false;
           return hero;
@@ -71,7 +85,6 @@ function CurrentHeroes() {
   }
 
   function returnHero(heroCode: string) {
-    // add alert when one "duplicate" is already killed
     setCampaign({
       ...campaign,
       allHeroes: campaign.allHeroes.map((hero) => {

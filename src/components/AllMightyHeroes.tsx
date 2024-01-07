@@ -7,6 +7,7 @@ import { filterHeroes } from "../utils";
 import { Hero } from "../types";
 import { SelectFfgHero } from "./atoms/SelectFfgHero";
 import { styled } from "styled-components";
+import { onlyMultiplesOtherwise } from "../dataHelpers";
 
 export const ButtonShadowGreen = styled(ButtonShadow)`
   opacity: 1;
@@ -36,7 +37,38 @@ function AllMightyHeroes() {
 
   function prepareHero(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // before preparing hero, alert user if there is already the same hero in current
+
+    // before preparing a hero with same name as already prepared, get a confirmation to do so
+    let selectedHeroAsObjectOldName = onlyMultiplesOtherwise.find(
+      (hero) => hero.code === preparedHero.code
+    );
+    let multiplesWithUnchangedName = onlyMultiplesOtherwise.filter(
+      (hero) => hero.name === selectedHeroAsObjectOldName?.name
+    );
+    let codes = multiplesWithUnchangedName.map((hero) => hero.code);
+    let multiplesInCurrentState = campaign.allHeroes.filter((hero) =>
+      codes.includes(hero.code)
+    );
+    let isOneDuplicatePrepared = multiplesInCurrentState.find(
+      (hero) => hero.current === true
+    );
+
+    function prepareClone() {
+      const text =
+        "At least one hero with the same name is already prepared. Are you sure you want to procede?";
+      // eslint-disable-next-line no-restricted-globals
+      if (confirm(text) === true) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    if (codes.includes(preparedHero.code) && isOneDuplicatePrepared) {
+      if (!prepareClone()) {
+        return;
+      }
+    }
 
     setCampaign({
       ...campaign,
