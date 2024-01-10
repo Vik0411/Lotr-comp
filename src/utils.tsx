@@ -1,4 +1,4 @@
-import { Hero, changedAttrs } from "./types";
+import { Hero, Scenario, changedAttrs, changedAttrsScenario } from "./types";
 
 export function filterHeroes(obj: changedAttrs, allHeroes: Hero[]) {
   let { alive, current } = obj;
@@ -6,6 +6,17 @@ export function filterHeroes(obj: changedAttrs, allHeroes: Hero[]) {
     (hero) => hero.alive === alive && hero.current === current
   );
   return her;
+}
+
+export function filterScenarios(
+  obj: changedAttrsScenario,
+  scenarios: Scenario[]
+) {
+  let { won, current } = obj;
+  let scen = scenarios.filter(
+    (scenario) => scenario.won === won && scenario.current === current
+  );
+  return scen;
 }
 
 export function doesHaveImage(borb: string) {

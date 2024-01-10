@@ -70,6 +70,9 @@ export const defaultState: CampaignContextInterface = {
       boons: [],
       burdens: [],
     },
+    scenarios: [
+      { name: "Angmar Awakened", index: 0, current: false, won: false },
+    ],
   },
   setCampaign: () => {},
 };

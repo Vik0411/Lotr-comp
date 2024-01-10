@@ -18,9 +18,10 @@ export const GlobalStyle = createGlobalStyle`
 //   }
 
 export const Container = styled.body`
+  @import url("https://fonts.cdnfonts.com/css/tolkien");
   display: flex;
   flex-direction: column;
-  font-family: "Poppins", sans-serif;
+  font-family: "Tolkien", sans-serif;
   background-image: radial-gradient(transparent, black),
     url(${require("../../images/lighter-bg.jpg")});
   background-size: cover;

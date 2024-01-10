@@ -22,9 +22,12 @@ const ContainerHeroManagement = styled(Container)`
 function App() {
   return (
     <ContainerHeroManagement>
+      <head>
+        <link href="https://fonts.cdnfonts.com/css/tolkien" rel="stylesheet" />
+      </head>
       <GlobalStyle />
       <LotrProvider>
-        {/* <CampaignScenario></CampaignScenario> */}
+        <CampaignScenario></CampaignScenario>
         <ContainerFlex style={{ margin: "30px 30px" }}>
           <div style={{ display: "flex", flexFlow: "column" }}>
             <AllMightyHeroes />

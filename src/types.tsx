@@ -6,12 +6,22 @@ export type Boon = {
   image: string;
   extraInfo: string;
 };
+
+export type Scenario = {
+  name: string;
+  index: number;
+  current: boolean;
+  won: boolean;
+};
+
 export type Burden = { name: string; index: number };
 export interface Campaign {
   allHeroes: Hero[];
   boonsAndBurdens: { boons: Boon[]; burdens: Burden[] };
+  scenarios: Scenario[];
 }
 export type changedAttrs = { alive: boolean; current: boolean };
+export type changedAttrsScenario = { won: boolean; current: boolean };
 
 export type Hero = {
   pack_code: string;
