@@ -23,7 +23,7 @@ export const Container = styled.body`
   flex-direction: column;
   font-family: "Tolkien", sans-serif;
   background-image: radial-gradient(transparent, black),
-    url(${require("../../images/lighter-bg.jpg")});
+    url("images/lighter-bg.jpg");
   background-size: cover;
   background-position: center;
   text-shadow: 4px 4px 3px black;

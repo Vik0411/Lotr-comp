@@ -77,7 +77,7 @@ function CampaignScenario() {
       >
         <div
           style={{
-            margin: "50px 50px",
+            margin: "50px 20px",
             display: "flex",
             flexFlow: "column",
           }}
@@ -130,13 +130,13 @@ function CampaignScenario() {
           <li> Angmar Awakened </li>
         </ul>
       </div>
-      <div>
+      <div style={{ display: "inline" }}>
         <BorBCard
-          src={require("../images/dragon_symbol.jpg")}
+          src="images/burden.jpg"
           style={{
-            borderRadius: "80px",
-            marginLeft: "800px",
-            marginBottom: "80px",
+            marginLeft: "710px",
+            marginBottom: "25px",
+            opacity: "0.7",
           }}
         />
       </div>

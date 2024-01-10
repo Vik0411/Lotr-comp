@@ -43,7 +43,7 @@ function BoonsAndBurdensDisplay() {
                   <CancelBtn onClick={() => cancelBoon(boon)}>
                     <CancelImage
                       alt=""
-                      src={require("../images/cancel-1.png")}
+                      src={"images/cancel-1.png"}
                     ></CancelImage>
                   </CancelBtn>
                 </Paragraph>
@@ -60,26 +60,17 @@ function BoonsAndBurdensDisplay() {
                     }}
                   >{`extra info: ${boon.extraInfo}`}</Paragraph>
                 )}
-                <BorBCard
-                  alt=""
-                  src={require(`../images/bb/${boon.image}.jpg`)}
-                ></BorBCard>
+                <BorBCard alt="" src={`images/bb/${boon.image}.jpg`}></BorBCard>
               </ContainerCurrentCard>
             ) : (
               <ContainerCurrentCard key={boon.index}>
                 <Paragraph>
                   {boon.name}
                   <CancelBtn onClick={() => cancelBoon(boon)}>
-                    <CancelImage
-                      alt=""
-                      src={require("../images/cancel-1.png")}
-                    ></CancelImage>
+                    <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
                   </CancelBtn>
                 </Paragraph>
-                <BorBCard
-                  alt=""
-                  src={require(`../images/nonffg.jpg`)}
-                ></BorBCard>
+                <BorBCard alt="" src={`../images/nonffg.jpg`}></BorBCard>
               </ContainerCurrentCard>
             )}
           </div>
@@ -97,13 +88,13 @@ function BoonsAndBurdensDisplay() {
                     <CancelBtn onClick={() => cancelBurden(burden)}>
                       <CancelImage
                         alt=""
-                        src={require("../images/cancel-1.png")}
+                        src="images/cancel-1.png"
                       ></CancelImage>
                     </CancelBtn>
                   </Paragraph>
                   <BorBCard
                     alt=""
-                    src={require(`../images/bb/${burden.name}.jpg`)}
+                    src={`images/bb/${burden.name}.jpg`}
                   ></BorBCard>
                 </ContainerCurrentCard>
               ) : (
@@ -113,14 +104,11 @@ function BoonsAndBurdensDisplay() {
                     <CancelBtn onClick={() => cancelBurden(burden)}>
                       <CancelImage
                         alt=""
-                        src={require("../images/cancel-1.png")}
+                        src="images/cancel-1.png"
                       ></CancelImage>
                     </CancelBtn>
                   </Paragraph>
-                  <BorBCard
-                    alt=""
-                    src={require("../images/burden.jpg")}
-                  ></BorBCard>
+                  <BorBCard alt="" src="images/burden.jpg"></BorBCard>
                 </ContainerCurrentCard>
               )}
             </div>

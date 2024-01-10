@@ -117,14 +117,11 @@ function CurrentHeroes() {
                     <CancelBtn onClick={() => returnHero(current.code)}>
                       <CancelImage
                         alt=""
-                        src={require("../images/cancel-1.png")}
+                        src="images/cancel-1.png"
                       ></CancelImage>
                     </CancelBtn>
                   </Paragraph>
-                  <HeroCard
-                    alt=""
-                    src={require(`../images/${current.imagesrc}`)}
-                  />
+                  <HeroCard alt="" src={`images/${current.imagesrc}`} />
                   <ButtonBlack onClick={() => killHero(current.code)}>
                     Kill Hero
                   </ButtonBlack>

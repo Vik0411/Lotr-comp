@@ -27,10 +27,7 @@ export function FallenHero({ name, code }: Hero) {
     <ListItemWithWhiteText>
       {name}
       <CancelBtn onClick={() => resurrectHero(code)}>
-        <CancelImage
-          alt=""
-          src={require("../images/cancel-1.png")}
-        ></CancelImage>
+        <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
       </CancelBtn>
     </ListItemWithWhiteText>
   );
