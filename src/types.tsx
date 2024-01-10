@@ -1,4 +1,11 @@
-export type Boon = { name: string; index: number; image: string };
+import { Dispatch, SetStateAction } from "react";
+
+export type Boon = {
+  name: string;
+  index: number;
+  image: string;
+  extraInfo: string;
+};
 export type Burden = { name: string; index: number };
 export interface Campaign {
   allHeroes: Hero[];
@@ -34,3 +41,18 @@ export type Hero = {
   current: boolean;
   code: string;
 };
+
+interface BBNameObject {
+  boonName: string;
+  burdenName: string;
+}
+
+export interface BBContextInterface {
+  bBNameObject: BBNameObject;
+  setBBNameObject: Dispatch<SetStateAction<BBNameObject>>;
+}
+
+// export const defaultBB: BBContextInterface = {
+//   bBNameObject: { boonName: "", burdenName: "" },
+//   setBBNameObject: () => {},
+// };

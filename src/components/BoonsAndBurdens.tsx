@@ -3,8 +3,7 @@ import { Input } from "./atoms/Input";
 import { SectionHeader } from "./atoms/typography";
 import { styled } from "styled-components";
 import { LotrContext } from "../context";
-import React from "react";
-import { BBContext } from "../contextBB";
+import React, { useState } from "react";
 import { boons } from "../utils";
 
 export const ButtonShadowYellow = styled(ButtonShadow)`
@@ -25,11 +24,13 @@ export const ButtonShadowBlood = styled(ButtonShadow)`
 
 function BoonsAndBurdens() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
-  const { bBNameObject, setBBNameObject } = React.useContext(BBContext);
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setBBNameObject({ ...bBNameObject, boonName: e.target.value });
-  }
+  const [bBNameObject, setBBNameObject] = useState({
+    boonName: "",
+    burdenName: "",
+  });
+
+  const [extraBoonInfo, setExtraBoonInfo] = useState("");
 
   function handleChange2(e: React.ChangeEvent<HTMLInputElement>) {
     setBBNameObject({ ...bBNameObject, burdenName: e.target.value });
@@ -39,23 +40,8 @@ function BoonsAndBurdens() {
     setBBNameObject({ ...bBNameObject, boonName: e.target.value });
   }
 
-  function submitBoons(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-
-    let newBoons = [
-      ...campaign.boonsAndBurdens.boons,
-      {
-        name: bBNameObject.boonName,
-        index: campaign.boonsAndBurdens.boons.length + 1,
-        image: "xz",
-      },
-    ];
-    let newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
-
-    setCampaign((currentState) => {
-      let camp = currentState;
-      return { ...camp, boonsAndBurdens: newBB };
-    });
+  function handleChangeBoonInfo(e: React.ChangeEvent<HTMLInputElement>) {
+    setExtraBoonInfo(e.target.value);
   }
 
   function submitBoon(e: React.FormEvent<HTMLFormElement>) {
@@ -67,6 +53,7 @@ function BoonsAndBurdens() {
         name: bBNameObject.boonName,
         index: campaign.boonsAndBurdens.boons.length + 1,
         image: bBNameObject.boonName.replaceAll(" ", "-"),
+        extraInfo: extraBoonInfo,
       },
     ];
     let newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
@@ -94,16 +81,37 @@ function BoonsAndBurdens() {
   return (
     <div>
       <SectionHeader>Add Boons & Burdens</SectionHeader>
-      <form onSubmit={submitBoons}>
+      <form onSubmit={submitBoon}>
         <Input
           type="text"
+          name="boon"
           value={bBNameObject.boonName}
-          onChange={handleChange}
-          placeholder="your boons"
+          onChange={handleChangeBoon}
+          list="boons"
+          placeholder="Your boons"
         />
-        <ButtonShadowYellow value="sumbit boons" type="submit">
-          submit boons
-        </ButtonShadowYellow>
+        <datalist
+          id="boons"
+          style={{ backgroundColor: "black", color: "white" }}
+        >
+          {boons.map((boon, index) => (
+            <option
+              style={{ backgroundColor: "black", color: "white" }}
+              key={boon + index}
+              value={boon.slice(0, -4).replaceAll("-", " ")}
+            />
+          ))}
+        </datalist>
+        {bBNameObject.boonName !== "" && (
+          <div>
+            <Input
+              value={extraBoonInfo}
+              onChange={handleChangeBoonInfo}
+              placeholder="extra boon info (optional)"
+            />
+            <ButtonShadowYellow type="submit">Submit boon</ButtonShadowYellow>
+          </div>
+        )}
       </form>
       <form onSubmit={submitBurdens}>
         <Input
@@ -115,24 +123,6 @@ function BoonsAndBurdens() {
         <ButtonShadowBlood value="sumbit burdens" type="submit">
           submit burdens
         </ButtonShadowBlood>
-      </form>
-      <form onSubmit={submitBoon}>
-        <input
-          type="text"
-          name="city"
-          value={bBNameObject.boonName}
-          onChange={handleChangeBoon}
-          list="cityname"
-        />
-        <datalist id="cityname">
-          {boons.map((boon, index) => (
-            <option
-              key={boon + index}
-              value={boon.slice(0, -4).replaceAll("-", " ")}
-            />
-          ))}
-        </datalist>
-        <ButtonShadowBlood type="submit">submit bs</ButtonShadowBlood>
       </form>
     </div>
   );

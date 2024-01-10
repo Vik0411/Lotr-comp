@@ -13,7 +13,7 @@ import BoonsAndBurdens from "./components/BoonsAndBurdens";
 import BoonsAndBurdensDisplay from "./components/BoonsAndBurdensDisplay";
 import { DynamicLore } from "./components/DynamicLore";
 import AddCustomHero from "./components/AddCustomHero";
-import { BBProvider } from "./contextBB";
+import CampaignScenario from "./components/CampaignScenario";
 
 const ContainerHeroManagement = styled(Container)`
   margin: 0 auto;
@@ -24,15 +24,14 @@ function App() {
     <ContainerHeroManagement>
       <GlobalStyle />
       <LotrProvider>
+        {/* <CampaignScenario></CampaignScenario> */}
         <ContainerFlex style={{ margin: "30px 30px" }}>
           <div style={{ display: "flex", flexFlow: "column" }}>
             <AllMightyHeroes />
             <AddCustomHero />
           </div>
-          <BBProvider>
-            <BoonsAndBurdens />
-            <BoonsAndBurdensDisplay />
-          </BBProvider>
+          <BoonsAndBurdens />
+          <BoonsAndBurdensDisplay />
         </ContainerFlex>
         <CurrentHeroes />
         <ContainerWithWhiteText>

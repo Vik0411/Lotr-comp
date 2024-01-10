@@ -13,6 +13,7 @@ import { CancelBtn } from "./atoms/Button";
 
 function BoonsAndBurdensDisplay() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
+
   function cancelBoon(boon) {
     let newBoons = campaign.boonsAndBurdens.boons.filter(
       (bn) => bn.index !== boon.index
@@ -46,6 +47,19 @@ function BoonsAndBurdensDisplay() {
                     ></CancelImage>
                   </CancelBtn>
                 </Paragraph>
+                {boon.extraInfo !== "" && (
+                  <Paragraph
+                    style={{
+                      color: "white",
+                      position: "absolute",
+                      top: "60px",
+                      marginLeft: "14px",
+                      marginRight: "5px",
+                      backgroundColor: "rgba(1, 1, 1, 0.3)",
+                      borderRadius: "20px",
+                    }}
+                  >{`extra info: ${boon.extraInfo}`}</Paragraph>
+                )}
                 <BorBCard
                   alt=""
                   src={require(`../images/bb/${boon.image}.jpg`)}
