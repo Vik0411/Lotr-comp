@@ -14,6 +14,7 @@ import BoonsAndBurdensDisplay from "./components/BoonsAndBurdensDisplay";
 import { DynamicLore } from "./components/DynamicLore";
 import AddCustomHero from "./components/AddCustomHero";
 import CampaignScenario from "./components/CampaignScenario";
+import CurrentScenarioDisplay from "./components/CurrentScenarioDisplay";
 
 const ContainerHeroManagement = styled(Container)`
   margin: 0 auto;
@@ -27,7 +28,10 @@ function App() {
       </head>
       <GlobalStyle />
       <LotrProvider>
-        <CampaignScenario></CampaignScenario>
+        <div style={{ position: "relative" }}>
+          <CampaignScenario />
+          <CurrentScenarioDisplay />
+        </div>
         <ContainerFlex style={{ margin: "30px 30px" }}>
           <div style={{ display: "flex", flexFlow: "column" }}>
             <AllMightyHeroes />

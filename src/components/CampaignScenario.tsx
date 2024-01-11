@@ -7,7 +7,6 @@ import { filterScenarios } from "../utils";
 import { Scenario } from "../types";
 import { SelectFfgHero } from "./atoms/SelectFfgHero";
 import { styled } from "styled-components";
-import { BorBCard } from "./atoms/BorBCard";
 
 export const ButtonShadowGreen = styled(ButtonShadow)`
   opacity: 1;
@@ -22,6 +21,9 @@ function CampaignScenario() {
   let notCurrentAndNotWon = filterScenarios(
     { won: false, current: false },
     campaign.scenarios
+  );
+  let chosenCurrentScenario = campaign.scenarios.find(
+    (chosen) => chosen.current === true
   );
 
   const [currentScenario, setCurrentScenario] = useState(
@@ -39,7 +41,15 @@ function CampaignScenario() {
 
   function addScenarioToCurrent(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // add handling for when current scenario is already there, should on be allowed to add another? Probably not
+    // confirmation when one scneario is already current
+    if (chosenCurrentScenario) {
+      if (chosenCurrentScenario !== currentScenario) {
+        alert(
+          "There is already a scenario being played. Let us first battle that through!"
+        );
+        return;
+      }
+    }
 
     setCampaign({
       ...campaign,
@@ -54,19 +64,21 @@ function CampaignScenario() {
     });
   }
 
-  //rework
   useEffect(() => {
-    // let notCurrentAndAlive = filterHeroes(
-    //   { alive: true, current: false },
-    //   campaign.allHeroes
-    // );
-    // setPreparedHero(notCurrentAndAlive[0]);
-    // localStorage.setItem("campaign", JSON.stringify(campaign));
+    let notCurrentAndNotWon = filterScenarios(
+      { won: false, current: false },
+      campaign.scenarios
+    );
+    setCurrentScenario(notCurrentAndNotWon[0]);
   }, [campaign]);
 
   return (
     <div
-      style={{ marginLeft: "70px", marginRight: "70px", overflow: "hidden" }}
+      style={{
+        marginLeft: "70px",
+        marginRight: "70px",
+        overflow: "hidden",
+      }}
     >
       <div
         style={{
@@ -95,50 +107,7 @@ function CampaignScenario() {
             </SelectFfgHero>
             <ButtonShadowGreen type="submit">Add Scenario</ButtonShadowGreen>
           </form>
-          <SectionHeader
-            style={{
-              textAlign: "center",
-              marginTop: "30px",
-            }}
-          >
-            Current Scenario:
-            {" " + currentScenario?.name}
-          </SectionHeader>
         </div>
-        <ul
-          style={{
-            color: "white",
-            margin: "70px 70px",
-            listStyle: "none",
-            columnWidth: "100px",
-            height: "100px",
-            textAlign: "center",
-          }}
-        >
-          <h3
-            style={{
-              textDecoration: "bold",
-              marginTop: "-5px",
-              border: "0px 0px",
-            }}
-          >
-            Scenarios won:
-          </h3>
-          <li> Angmar Awakened </li>
-          <li> Angmar Awakened </li>
-          <li> Angmar Awakened </li>
-          <li> Angmar Awakened </li>
-        </ul>
-      </div>
-      <div style={{ display: "inline" }}>
-        <BorBCard
-          src="images/burden.jpg"
-          style={{
-            marginLeft: "710px",
-            marginBottom: "25px",
-            opacity: "0.7",
-          }}
-        />
       </div>
     </div>
   );

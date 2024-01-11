@@ -12,6 +12,7 @@ export type Scenario = {
   index: number;
   current: boolean;
   won: boolean;
+  campaign: string;
 };
 
 export type Burden = { name: string; index: number };

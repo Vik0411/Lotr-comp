@@ -2,6 +2,7 @@ import { SetStateAction, Dispatch } from "react";
 import { Campaign, Hero } from "./types";
 import { allCards } from "./dataSet";
 import { onlyHeroesFFG } from "./onlyHeroes";
+import { scenarios } from "./scenarios";
 
 export interface CampaignContextInterface {
   campaign: Campaign;
@@ -63,6 +64,10 @@ const all = changedNameMultiples.concat(
   removeDuplicates(onlyHeroesForCampaign).unique
 );
 
+const scenariosForCampaign = scenarios.map((scenario, indexing) => {
+  let scen = { ...scenario, index: indexing, current: false, won: false };
+  return scen;
+});
 export const defaultState: CampaignContextInterface = {
   campaign: {
     allHeroes: all,
@@ -70,9 +75,7 @@ export const defaultState: CampaignContextInterface = {
       boons: [],
       burdens: [],
     },
-    scenarios: [
-      { name: "Angmar Awakened", index: 0, current: false, won: false },
-    ],
+    scenarios: scenariosForCampaign,
   },
   setCampaign: () => {},
 };
