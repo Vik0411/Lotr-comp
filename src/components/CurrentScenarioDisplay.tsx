@@ -8,6 +8,7 @@ import { CancelImage } from "./atoms/CancelImage";
 import { BorBCard } from "./atoms/BorBCard";
 import { Scenario } from "../types";
 import { filterScenarios } from "../utils";
+import { WonScenario } from "./WonScenario";
 
 const TopHeader = styled(SectionHeader)`
   margin: 30px 30px;
@@ -33,6 +34,11 @@ function CurrentScenarioDisplay() {
   let chosenCurrentScenario = campaign.scenarios.find(
     (chosen) => chosen.current === true
   );
+
+  let pic;
+  if (chosenCurrentScenario) {
+    pic = chosenCurrentScenario.name.replaceAll(" ", "-");
+  }
 
   let notCurrentAndWon = filterScenarios(
     { won: true, current: false },
@@ -74,7 +80,7 @@ function CurrentScenarioDisplay() {
     <div style={{ minHeight: "300px" }}>
       <div>
         <SectionHeader style={{ textAlign: "center" }}>
-          Current scenarios:
+          Current Campaign Scenario:
         </SectionHeader>
         {chosenCurrentScenario && (
           <ContainerCurrentHeroes>
@@ -96,7 +102,11 @@ function CurrentScenarioDisplay() {
                     <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
                   </CancelBtn>
                 </Paragraph>
-                <BorBCard alt="" src="images/burden.jpg" />
+                <BorBCard
+                  style={{ borderRadius: "10px" }}
+                  alt=""
+                  src={`images/scenarios/${pic}.webp`}
+                />
                 <ButtonBlack
                   onClick={() => {
                     if (chosenCurrentScenario) {
@@ -125,12 +135,10 @@ function CurrentScenarioDisplay() {
         <ul>
           {notCurrentAndWon.map(
             (wonScenario: Scenario): JSX.Element => (
-              <li
-                style={{ color: "white", listStyle: "none" }}
+              <WonScenario
                 key={wonScenario.name}
-              >
-                {wonScenario.name}
-              </li>
+                {...wonScenario}
+              ></WonScenario>
             )
           )}
         </ul>
