@@ -27,7 +27,7 @@ export function doesHaveImage(borb: string, what: string) {
   }
   if (what === "burden") {
     const imageNames =
-      " A-Heavy-Burden.jpg, Fear-of-discovery.png, Gandalf's-Delay.jpeg, Graxar.webp, Guilty-Conscience.jpg, Ill-Fate.jpg, Losing-Time.jpg, Lust-for-the-Ring.jpeg, Overcome-by-Grief.jpeg, Overcome-by-Terror.png, Panicked.jpg, Persued-by-the-Enemy.jpeg, Scarred.jpg, Stalking-Goblin.jpg, Thaurdir's-Legacy.png, Weight-of-the-Ring.jpg";
+      " Thaurdir's-Spite.jpg, The-Searching-Eye.jpg, Protect-the-Innocent.jpg, Arnor-ravaged.jpg, A-Heavy-Burden.jpg, Fear-of-discovery.png, Gandalf's-Delay.jpeg, Graxar.webp, Guilty-Conscience.jpg, Ill-Fate.jpg, Losing-Time.jpg, Lust-for-the-Ring.jpeg, Overcome-by-Grief.jpeg, Overcome-by-Terror.png, Panicked.jpg, Persued-by-the-Enemy.jpeg, Scarred.jpg, Stalking-Goblin.jpg, Thaurdir's-Legacy.png, Weight-of-the-Ring.jpg";
     return imageNames.toLowerCase().includes(" " + borb + ".");
   }
 }
