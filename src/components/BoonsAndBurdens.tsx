@@ -1,5 +1,5 @@
 import { ButtonShadow } from "./atoms/Button";
-import { Input } from "./atoms/Input";
+import { BoonDiv, Input } from "./atoms/Input";
 import { SectionHeader } from "./atoms/typography";
 import { styled } from "styled-components";
 import { LotrContext } from "../context";
@@ -78,8 +78,12 @@ function BoonsAndBurdens() {
     });
   }
 
+  const filteredBoons = boons.filter((boon) =>
+    boon.toLowerCase().includes(bBNameObject.boonName.toLowerCase())
+  );
+
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <SectionHeader>Add Boons & Burdens</SectionHeader>
       <form onSubmit={submitBoon}>
         <Input
@@ -90,18 +94,16 @@ function BoonsAndBurdens() {
           list="boons"
           placeholder="Your boons"
         />
-        <datalist
-          id="boons"
-          style={{ backgroundColor: "black", color: "white" }}
-        >
-          {boons.map((boon, index) => (
-            <option
-              style={{ backgroundColor: "black", color: "white" }}
-              key={boon + index}
-              value={boon.slice(0, -4).replaceAll("-", " ")}
+        <BoonDiv>
+          {filteredBoons.map((boon, index) => (
+            <img
+              key={index}
+              alt={boon}
+              src={"images/bb/" + boon}
+              style={{ height: "70px" }}
             />
           ))}
-        </datalist>
+        </BoonDiv>
         {bBNameObject.boonName !== "" && (
           <div>
             <Input
