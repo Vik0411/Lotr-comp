@@ -68,6 +68,7 @@ function BoonsAndBurdens() {
       {
         name: bBNameObject.burdenName,
         index: campaign.boonsAndBurdens.burdens.length + 1,
+        image: bBNameObject.burdenName.toLowerCase().replaceAll(" ", "-"),
       },
     ];
     let newBB = { ...campaign.boonsAndBurdens, burdens: newBurdens };

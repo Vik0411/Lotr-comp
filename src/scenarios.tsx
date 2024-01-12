@@ -19,3 +19,6 @@ export const scenarios = [
   { name: "The Dread Realm", campaign: "Angmar Awakened" },
   { name: "Nightmare The Dread Realm", campaign: "Angmar Awakened" },
 ];
+
+// const FallenHeroesDefault =
+//   "Arwen Elladan Elrohir Rossiel Gollum Mirlonde Prince Imrahil Hirluin the Fair Denethor Eowyn Aragorn Elfhelm Galadriel Haldir Celeborn Cirdan Beorn Beregond";

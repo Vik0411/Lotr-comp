@@ -15,7 +15,7 @@ export type Scenario = {
   campaign: string;
 };
 
-export type Burden = { name: string; index: number };
+export type Burden = { name: string; index: number; image: string };
 export interface Campaign {
   allHeroes: Hero[];
   boonsAndBurdens: { boons: Boon[]; burdens: Burden[] };

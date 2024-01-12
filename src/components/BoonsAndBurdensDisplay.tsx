@@ -36,7 +36,7 @@ function BoonsAndBurdensDisplay() {
       <ContainerFlexColumn>
         {campaign.boonsAndBurdens.boons.map((boon) => (
           <div key={boon.index} style={{ margin: "15px 15px" }}>
-            {doesHaveImage(boon.image) ? (
+            {doesHaveImage(boon.image, "boon") ? (
               <ContainerCurrentCard style={{ width: "180px" }}>
                 <Paragraph>
                   {boon.name}
@@ -81,7 +81,7 @@ function BoonsAndBurdensDisplay() {
         <ContainerFlexColumn>
           {campaign.boonsAndBurdens.burdens.map((burden) => (
             <div key={burden.index} style={{ margin: "15px 15px" }}>
-              {doesHaveImage(burden.name) ? (
+              {doesHaveImage(burden.image, "burden") ? (
                 <ContainerCurrentCard style={{ width: "180px" }}>
                   <Paragraph>
                     {burden.name}
@@ -94,7 +94,10 @@ function BoonsAndBurdensDisplay() {
                   </Paragraph>
                   <BorBCard
                     alt=""
-                    src={`images/bb/${burden.name}.jpg`}
+                    src={`images/burdens/${burden.name.replaceAll(
+                      " ",
+                      "-"
+                    )}.jpg`}
                   ></BorBCard>
                 </ContainerCurrentCard>
               ) : (
