@@ -18,10 +18,10 @@ function removeDuplicates(arr: Hero[]) {
 
   for (let i = 0; i < arr.length; i++) {
     let dupls1 = state.unique.find((element: Hero) => {
-      return element.name == arr[i].name;
+      return element.name === arr[i].name;
     });
     let dupls2 = state.rest.find((element: Hero) => {
-      return element.name == arr[i].name;
+      return element.name === arr[i].name;
     });
     console.log(dupls1);
     if (!dupls1 && !dupls2) {
