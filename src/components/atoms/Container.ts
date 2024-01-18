@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 //   scrollbar-width: thin;
 //   }
 
-export const Container = styled.body`
+export const Container = styled.div`
   @import url("https://fonts.cdnfonts.com/css/tolkien");
   display: flex;
   flex-direction: column;

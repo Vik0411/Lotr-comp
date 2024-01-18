@@ -18,15 +18,12 @@ import CurrentScenarioDisplay from "./components/CurrentScenarioDisplay";
 
 const ContainerHeroManagement = styled(Container)`
   margin: 0 auto;
+  font-size: 20px;
 `;
 
 function App() {
   return (
     <ContainerHeroManagement>
-      <head>
-        <link href="https://fonts.cdnfonts.com/css/tolkien" rel="stylesheet" />
-      </head>
-      <GlobalStyle />
       <LotrProvider>
         <div style={{ position: "relative" }}>
           <CampaignScenario />

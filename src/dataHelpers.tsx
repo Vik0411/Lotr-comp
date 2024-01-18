@@ -23,7 +23,6 @@ function removeDuplicates(arr: Hero[]) {
     let dupls2 = state.rest.find((element: Hero) => {
       return element.name == arr[i].name;
     });
-    console.log(dupls1);
     if (!dupls1 && !dupls2) {
       state.unique.push(arr[i]);
     } else if (dupls1 && !dupls2) {
