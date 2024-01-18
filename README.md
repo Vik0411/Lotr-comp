@@ -48,3 +48,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## Current deployment on Netlify
 
 App was deployed currently [here:](https://lotrcomp.netlify.app/)
+latest deploy here: https://lotrfinale.netlify.app/
