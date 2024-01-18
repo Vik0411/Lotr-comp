@@ -18,7 +18,7 @@ function AddCustomHero() {
     let newHero = {
       ...campaign.allHeroes[0],
       name: `${heroName} (non-FFG custom hero)`,
-      code: `${heroName} (non-FFG custom hero)`,
+      code: `${heroName} (non-FFG custom hero) ${Date.now().toString()}`,
       imagesrc: "nonffg.jpg",
       alive: true,
       current: false,
