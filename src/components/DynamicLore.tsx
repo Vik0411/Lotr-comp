@@ -1,24 +1,37 @@
+import React, { useEffect, useState } from "react";
+import { LotrContext } from "../context";
+import { filterHeroes } from "../utils";
+
 export function DynamicLore() {
+  const { campaign } = React.useContext(LotrContext);
+  const currentHeroes = filterHeroes(
+    {
+      alive: true,
+      current: true,
+    },
+    campaign.allHeroes
+  );
+
+  const currentFlavors = currentHeroes.map((hero) => hero.flavor);
+  const [currIndex, setCurrIndex] = useState<number>(0);
+  const [currentFlavor, setCurrentFlavor] = useState(currentFlavors[0]);
+  const goal = currentFlavors.length;
+
+  useEffect(() => {
+    if (currIndex !== goal) {
+      const timer = setTimeout(() => {
+        setCurrIndex(currIndex + 1);
+        setCurrentFlavor(currentFlavors[currIndex]);
+      }, 15000);
+      return () => clearTimeout(timer);
+    } else {
+      setCurrIndex(0);
+    }
+  }, [currIndex, currentFlavor, currentFlavors]);
+
   return (
-    <>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum officia,
-        quas itaque labore sed distinctio a architecto. Recusandae, aliquid modi
-        impedit, maiores nemo a eius dignissimos odit numquam praesentium
-        repudiandae?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugiat
-        vel accusantium porro, ad id voluptates architecto consequatur natus
-        earum eum fugit minima deserunt dolorem excepturi necessitatibus modi
-        blanditiis amet?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione
-        tenetur distinctio in sed inventore harum maxime, vitae eligendi laborum
-        vel sunt hic voluptas ad aperiam pariatur, fugit, ipsa quaerat
-        similique!
-      </p>
-    </>
+    <div>
+      <p>{currentFlavor}</p>
+    </div>
   );
 }
