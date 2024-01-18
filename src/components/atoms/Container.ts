@@ -2,21 +2,6 @@ import styled from "styled-components";
 import { ButtonShadow } from "./Button";
 import { CancelImage } from "./CancelImage";
 
-// globalStyles.js
-import { createGlobalStyle } from "styled-components";
-
-export const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-  }
-`;
-
-// html{
-//   scrollbar-color: black green;
-//   scrollbar-width: thin;
-//   }
-
 export const Container = styled.div`
   @import url("https://fonts.cdnfonts.com/css/tolkien");
   display: flex;
