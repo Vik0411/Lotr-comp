@@ -17,10 +17,14 @@ function removeDuplicates(arr: Hero[]) {
   let state: { unique: Hero[]; rest: Hero[] } = { unique: [], rest: [] };
 
   for (let i = 0; i < arr.length; i++) {
+    // eslint-disable-next-line arrow-body-style
     let dupls1 = state.unique.find((element: Hero) => {
+      // eslint-disable-next-line eqeqeq
       return element.name == arr[i].name;
     });
+    // eslint-disable-next-line arrow-body-style
     let dupls2 = state.rest.find((element: Hero) => {
+      // eslint-disable-next-line eqeqeq
       return element.name == arr[i].name;
     });
     if (!dupls1 && !dupls2) {
