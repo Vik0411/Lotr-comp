@@ -31,6 +31,7 @@ function BoonsAndBurdens() {
   });
 
   const [extraBoonInfo, setExtraBoonInfo] = useState("");
+  const [showDataList, setShowDataList] = useState(false);
 
   function handleChange2(e: React.ChangeEvent<HTMLInputElement>) {
     setBBNameObject({ ...bBNameObject, burdenName: e.target.value });
@@ -82,28 +83,41 @@ function BoonsAndBurdens() {
     boon.toLowerCase().includes(bBNameObject.boonName.toLowerCase())
   );
 
+  // function changeBoonValue() {
+  //   console.log("oh zea");
+  //   setBBNameObject();
+  // }
+
   return (
     <div style={{ position: "relative" }}>
       <SectionHeader>Add Boons & Burdens</SectionHeader>
       <form onSubmit={submitBoon}>
         <Input
           type="text"
-          name="boon"
           value={bBNameObject.boonName}
           onChange={handleChangeBoon}
-          list="boons"
           placeholder="Your boons"
+          onFocus={() => setShowDataList(true)}
         />
-        <BoonDiv>
-          {filteredBoons.map((boon, index) => (
-            <img
-              key={index}
-              alt={boon}
-              src={"images/bb/" + boon}
-              style={{ height: "70px" }}
-            />
-          ))}
-        </BoonDiv>
+        {showDataList && (
+          <BoonDiv>
+            {filteredBoons.map((boon, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setBBNameObject({ ...bBNameObject, boonName: boon });
+                  setShowDataList(false);
+                }}
+              >
+                <img
+                  alt={boon}
+                  src={"images/bb/" + boon}
+                  style={{ height: "70px" }}
+                />
+              </button>
+            ))}
+          </BoonDiv>
+        )}
         {bBNameObject.boonName !== "" && (
           <div>
             <Input

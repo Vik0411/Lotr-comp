@@ -44,7 +44,6 @@ function CurrentScenarioDisplay() {
     { won: true, current: false },
     campaign.scenarios
   );
-  console.log("won", notCurrentAndWon);
 
   function winScenario(scenarioIndex: string) {
     setCampaign({
