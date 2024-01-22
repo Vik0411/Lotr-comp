@@ -13,16 +13,14 @@ const ContainerHeroManagement = styled(Container)`
 function HeroManagement() {
   return (
     <ContainerHeroManagement>
-      <LotrProvider>
-        <ContainerFlex style={{ margin: "30px 30px" }}>
-          <div style={{ display: "flex", flexFlow: "column" }}>
-            <AllMightyHeroes />
-            <AddCustomHero />
-          </div>
-        </ContainerFlex>
-        <CurrentHeroes />
-        <FallenHeroes />
-      </LotrProvider>
+      <ContainerFlex style={{ margin: "30px 30px" }}>
+        <div style={{ display: "flex", flexFlow: "column" }}>
+          <AllMightyHeroes />
+          <AddCustomHero />
+        </div>
+      </ContainerFlex>
+      <CurrentHeroes />
+      <FallenHeroes />
     </ContainerHeroManagement>
   );
 }

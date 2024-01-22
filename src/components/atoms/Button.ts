@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ListItemHeader } from "./ListItemWithWhiteText";
 
 export const Button = styled.button`
   border-radius: 50px;
@@ -66,5 +67,16 @@ export const ButtonShadow = styled.button`
     .button-50 {
       padding: 12px 50px;
     }
+  }
+`;
+
+export const ButtonTransparent = styled.button`
+  border: 0px;
+  padding: 0px 0px;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover ${ListItemHeader} {
+    opacity: 1;
   }
 `;

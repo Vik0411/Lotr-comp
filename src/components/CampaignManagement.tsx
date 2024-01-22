@@ -18,19 +18,17 @@ const ContainerHeroManagement = styled(Container)`
 function CampaignManagement() {
   return (
     <ContainerHeroManagement>
-      <LotrProvider>
-        <ContainerWithWhiteText>
-          <DynamicLore />
-        </ContainerWithWhiteText>
-        <div style={{ position: "relative" }}>
-          <CampaignScenario />
-          <CurrentScenarioDisplay />
-        </div>
-        <ContainerFlex style={{ margin: "30px 30px" }}>
-          <BoonsAndBurdens />
-          <BoonsAndBurdensDisplay />
-        </ContainerFlex>
-      </LotrProvider>
+      <ContainerWithWhiteText>
+        <DynamicLore />
+      </ContainerWithWhiteText>
+      <div style={{ position: "relative" }}>
+        <CampaignScenario />
+        <CurrentScenarioDisplay />
+      </div>
+      <ContainerFlex style={{ margin: "30px 30px" }}>
+        <BoonsAndBurdens />
+        <BoonsAndBurdensDisplay />
+      </ContainerFlex>
     </ContainerHeroManagement>
   );
 }

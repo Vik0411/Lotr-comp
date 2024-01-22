@@ -11,3 +11,7 @@ export const ListItemWithWhiteText = styled.li`
     text-decoration: none;
   }
 `;
+
+export const ListItemHeader = styled(ListItemWithWhiteText)`
+  opacity: 0;
+`;
