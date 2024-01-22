@@ -1,5 +1,5 @@
 import { SectionHeader } from "./atoms/typography";
-import { ButtonShadow } from "./atoms/Button";
+import { ButtonShadow } from "./atoms/ButtonShadow";
 import { LotrContext } from "../context";
 import React, { useEffect, useState } from "react";
 
@@ -94,9 +94,7 @@ function AllMightyHeroes() {
 
   return (
     <div>
-      <SectionHeader style={{ marginTop: "10px" }}>
-        Add to Current Campaign
-      </SectionHeader>
+      <SectionHeader>Add to Current Campaign</SectionHeader>
       <form onSubmit={prepareHero}>
         <SelectFfgHero value={preparedHero.code} onChange={handleChange}>
           {notCurrentAndAlive.map((notCurrent: Hero) => (

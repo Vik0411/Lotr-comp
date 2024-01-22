@@ -9,11 +9,4 @@ export const BoonDiv = styled.div`
   min-width: 50px;
   gap: 10px;
   background-color: rgba(0, 0, 0, 0.5);
-  /* Additional styles for your boonDiv */
-`;
-
-export const Input = styled.input`
-  color: white;
-  background-color: transparent;
-  border-radius: 7px;
 `;

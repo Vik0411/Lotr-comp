@@ -1,5 +1,6 @@
-import { ButtonShadow } from "./atoms/Button";
-import { BoonDiv, Input } from "./atoms/Input";
+import { ButtonShadow } from "./atoms/ButtonShadow";
+import { Input } from "./atoms/Input";
+import { BoonDiv } from "./atoms/BoonDiv";
 import { SectionHeader } from "./atoms/typography";
 import { styled } from "styled-components";
 import { LotrContext } from "../context";

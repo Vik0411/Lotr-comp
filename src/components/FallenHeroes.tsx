@@ -5,7 +5,7 @@ import { filterHeroes } from "../utils";
 import { FallenHero } from "./FallenHero";
 import { SectionHeader } from "./atoms/typography";
 import { styled } from "styled-components";
-import { ContainerFallenHeroes } from "./atoms/Container";
+import { ContainerFallenHeroes } from "./atoms/Containers";
 
 const BottomSectionHeader = styled(SectionHeader)`
   margin-top: -30px;

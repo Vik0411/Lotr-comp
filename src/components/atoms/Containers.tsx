@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ButtonShadow } from "./Button";
+import { ButtonShadow } from "./ButtonShadow";
 import { CancelImage } from "./CancelImage";
 
 export const Container = styled.div`
@@ -73,7 +73,6 @@ export const ContainerCurrentCard = styled.div`
 export const ContainerWithWhiteText = styled.div`
   color: white;
   opacity: 75%;
-  margin: 30px 30px;
   text-align: center;
 `;
 

@@ -8,8 +8,8 @@ import {
   ContainerCurrentCard,
   ContainerFlex,
   ContainerFlexColumn,
-} from "./atoms/Container";
-import { CancelBtn } from "./atoms/Button";
+} from "./atoms/Containers";
+import { CancelBtn } from "./atoms/CancelBtn";
 import { Boon, Burden } from "../types";
 
 function BoonsAndBurdensDisplay() {

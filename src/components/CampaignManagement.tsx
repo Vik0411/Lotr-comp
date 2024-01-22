@@ -1,11 +1,10 @@
-import { LotrProvider } from "../context";
 import CampaignScenario from "./CampaignScenario";
 import CurrentScenarioDisplay from "./CurrentScenarioDisplay";
 import {
   Container,
   ContainerFlex,
   ContainerWithWhiteText,
-} from "./atoms/Container";
+} from "./atoms/Containers";
 import BoonsAndBurdens from "./BoonsAndBurdens";
 import BoonsAndBurdensDisplay from "./BoonsAndBurdensDisplay";
 import { DynamicLore } from "./DynamicLore";
@@ -25,10 +24,10 @@ function CampaignManagement() {
       <ContainerFlex style={{ margin: "30px 30px" }}>
         <BoonsAndBurdens />
         <BoonsAndBurdensDisplay />
-        <ContainerWithWhiteText>
-          <DynamicLore />
-        </ContainerWithWhiteText>
       </ContainerFlex>
+      <ContainerWithWhiteText>
+        <DynamicLore />
+      </ContainerWithWhiteText>
     </ContainerHeroManagement>
   );
 }

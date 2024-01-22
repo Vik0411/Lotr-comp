@@ -1,14 +1,15 @@
 import { LotrContext } from "../context";
 import React from "react";
 import styled from "styled-components";
-import { ButtonShadow, CancelBtn } from "./atoms/Button";
+import { ButtonShadow } from "./atoms/ButtonShadow";
 import { onlyMultiples } from "../dataHelpers";
 import { filterHeroes } from "../utils";
 import { Hero } from "../types";
 import { Paragraph, SectionHeader } from "./atoms/typography";
-import { ContainerCurrentCard, ContainerFlex } from "./atoms/Container";
+import { ContainerCurrentCard, ContainerFlex } from "./atoms/Containers";
 import { HeroCard } from "./atoms/HeroCard";
 import { CancelImage } from "./atoms/CancelImage";
+import { CancelBtn } from "./atoms/CancelBtn";
 
 const TopHeader = styled(SectionHeader)`
   margin: 30px 30px;

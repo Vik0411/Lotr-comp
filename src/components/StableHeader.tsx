@@ -1,12 +1,23 @@
 import { Link } from "react-router-dom";
-import { ButtonTransparent } from "./atoms/Button";
+import { ButtonTransparent } from "./atoms/ButtonTransparent";
 import { SectionHeader } from "./atoms/typography";
-import { ListItemHeader } from "./atoms/ListItemWithWhiteText";
+
 import { filterHeroes } from "../utils";
 import React from "react";
 import { LotrContext } from "../context";
 import { Hero } from "../types";
-import { Container } from "./atoms/Container";
+import { Container } from "./atoms/Containers";
+import { styled } from "styled-components";
+import { ListItemHeader } from "./atoms/ListeItemHeader";
+
+const StyledLink = styled(Link)`
+  color: grey;
+  text-decoration: none;
+
+  &:hover {
+    color: #ba55d3;
+  }
+`;
 
 function StableHeader() {
   const { campaign } = React.useContext(LotrContext);
@@ -18,6 +29,7 @@ function StableHeader() {
   let chosenCurrentScenario = campaign.scenarios.find(
     (chosen) => chosen.current === true
   );
+
   return (
     <Container
       style={{
@@ -37,9 +49,9 @@ function StableHeader() {
             <SectionHeader
               style={{
                 marginBottom: "0px",
-                color: "purple",
+                color: "#B8B8B8",
                 outlineColor: "purple",
-                textDecorationColor: "purple",
+                textDecorationColor: "#FF00FF",
                 textDecoration: "underline",
               }}
             >
@@ -55,24 +67,16 @@ function StableHeader() {
               width: "auto",
             }}
           >
-            <Link to="/" style={{ marginRight: "100px" }}>
-              <SectionHeader
-                style={{
-                  color: "grey",
-                }}
-              >
+            <h2>
+              <StyledLink to="/" style={{ marginRight: "100px" }}>
                 Campaign management
-              </SectionHeader>
-            </Link>
-            <Link to="/hero" style={{ marginLeft: "100px" }}>
-              <SectionHeader
-                style={{
-                  color: "grey",
-                }}
-              >
+              </StyledLink>
+            </h2>
+            <h2>
+              <StyledLink to="/hero" style={{ marginLeft: "100px" }}>
                 Hero management
-              </SectionHeader>
-            </Link>
+              </StyledLink>
+            </h2>
           </div>
         </div>
         <div>

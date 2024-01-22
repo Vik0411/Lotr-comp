@@ -1,5 +1,4 @@
-import { LotrProvider } from "../context";
-import { Container, ContainerFlex } from "./atoms/Container";
+import { Container, ContainerFlex } from "./atoms/Containers";
 import AllMightyHeroes from "./AllMightyHeroes";
 import AddCustomHero from "./AddCustomHero";
 import CurrentHeroes from "./CurrentHeroes";

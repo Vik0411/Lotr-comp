@@ -1,5 +1,5 @@
 import { SectionHeader } from "./atoms/typography";
-import { ButtonShadow } from "./atoms/Button";
+import { ButtonShadow } from "./atoms/ButtonShadow";
 import { LotrContext } from "../context";
 import React, { useEffect, useState } from "react";
 
@@ -89,7 +89,7 @@ function CampaignScenario() {
       >
         <div
           style={{
-            margin: "5px 20px",
+            margin: "50px 20px",
             display: "flex",
             flexFlow: "column",
           }}

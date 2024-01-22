@@ -1,6 +1,6 @@
 import React from "react";
 import { Scenario } from "../types";
-import { CancelBtn } from "./atoms/Button";
+import { CancelBtn } from "./atoms/CancelBtn";
 import { CancelImage } from "./atoms/CancelImage";
 import { ListItemWithWhiteText } from "./atoms/ListItemWithWhiteText";
 import { LotrContext } from "../context";
