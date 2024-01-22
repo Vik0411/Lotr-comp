@@ -7,13 +7,7 @@ import { ContainerCurrentCard, ContainerFlex } from "./atoms/Containers";
 import { CancelImage } from "./atoms/CancelImage";
 import { BorBCard } from "./atoms/BorBCard";
 import { Scenario } from "../types";
-import { filterScenarios } from "../utils";
-import { WonScenario } from "./WonScenario";
 import { CancelBtn } from "./atoms/CancelBtn";
-
-const TopHeader = styled(SectionHeader)`
-  margin: 30px 30px;
-`;
 
 const ContainerCurrentHeroes = styled(ContainerFlex)`
   display: flex;
@@ -40,11 +34,6 @@ function CurrentScenarioDisplay() {
   if (chosenCurrentScenario) {
     pic = chosenCurrentScenario.name.replaceAll(" ", "-");
   }
-
-  let notCurrentAndWon = filterScenarios(
-    { won: true, current: false },
-    campaign.scenarios
-  );
 
   function winScenario(scenarioIndex: string) {
     setCampaign({
@@ -79,7 +68,7 @@ function CurrentScenarioDisplay() {
   return (
     <div style={{ minHeight: "300px" }}>
       <div>
-        <SectionHeader style={{ textAlign: "center", marginTop: "10px" }}>
+        <SectionHeader style={{ textAlign: "center" }}>
           Current Campaign Scenario:
         </SectionHeader>
         {chosenCurrentScenario && (
@@ -120,27 +109,6 @@ function CurrentScenarioDisplay() {
             </ContainerCurrentCard>
           </ContainerCurrentHeroes>
         )}
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          bottom: "0px",
-          top: "0px",
-          right: "250px",
-          marginTop: "30px",
-        }}
-      >
-        <TopHeader>Won Scenarios:</TopHeader>
-        <ul>
-          {notCurrentAndWon.map(
-            (wonScenario: Scenario): JSX.Element => (
-              <WonScenario
-                key={wonScenario.name}
-                {...wonScenario}
-              ></WonScenario>
-            )
-          )}
-        </ul>
       </div>
     </div>
   );

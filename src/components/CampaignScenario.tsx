@@ -75,8 +75,8 @@ function CampaignScenario() {
   return (
     <div
       style={{
-        marginLeft: "70px",
-        marginRight: "70px",
+        marginLeft: "30px",
+        marginRight: "30px",
         overflow: "hidden",
       }}
     >

@@ -9,6 +9,7 @@ import BoonsAndBurdens from "./BoonsAndBurdens";
 import BoonsAndBurdensDisplay from "./BoonsAndBurdensDisplay";
 import { DynamicLore } from "./DynamicLore";
 import { styled } from "styled-components";
+import WonScenarios from "./WonScenarios";
 
 const ContainerHeroManagement = styled(Container)`
   margin: 0 auto;
@@ -18,8 +19,11 @@ function CampaignManagement() {
   return (
     <ContainerHeroManagement>
       <div style={{ position: "relative" }}>
-        <CampaignScenario />
-        <CurrentScenarioDisplay />
+        <ContainerFlex>
+          <WonScenarios />
+          <CampaignScenario />
+          <CurrentScenarioDisplay />
+        </ContainerFlex>
       </div>
       <ContainerFlex style={{ margin: "30px 30px" }}>
         <BoonsAndBurdens />
