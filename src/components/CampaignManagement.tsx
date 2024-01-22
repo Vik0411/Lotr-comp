@@ -18,9 +18,6 @@ const ContainerHeroManagement = styled(Container)`
 function CampaignManagement() {
   return (
     <ContainerHeroManagement>
-      <ContainerWithWhiteText>
-        <DynamicLore />
-      </ContainerWithWhiteText>
       <div style={{ position: "relative" }}>
         <CampaignScenario />
         <CurrentScenarioDisplay />
@@ -28,6 +25,9 @@ function CampaignManagement() {
       <ContainerFlex style={{ margin: "30px 30px" }}>
         <BoonsAndBurdens />
         <BoonsAndBurdensDisplay />
+        <ContainerWithWhiteText>
+          <DynamicLore />
+        </ContainerWithWhiteText>
       </ContainerFlex>
     </ContainerHeroManagement>
   );

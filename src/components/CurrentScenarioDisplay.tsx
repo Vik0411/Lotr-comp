@@ -78,7 +78,7 @@ function CurrentScenarioDisplay() {
   return (
     <div style={{ minHeight: "300px" }}>
       <div>
-        <SectionHeader style={{ textAlign: "center" }}>
+        <SectionHeader style={{ textAlign: "center", marginTop: "10px" }}>
           Current Campaign Scenario:
         </SectionHeader>
         {chosenCurrentScenario && (
@@ -125,8 +125,7 @@ function CurrentScenarioDisplay() {
           position: "absolute",
           bottom: "0px",
           top: "0px",
-          right: "0px",
-          marginRight: "400px",
+          right: "250px",
           marginTop: "30px",
         }}
       >

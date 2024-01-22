@@ -36,8 +36,11 @@ function StableHeader() {
           {chosenCurrentScenario && (
             <SectionHeader
               style={{
-                marginBottom: "10px",
-                color: "red",
+                marginBottom: "0px",
+                color: "purple",
+                outlineColor: "purple",
+                textDecorationColor: "purple",
+                textDecoration: "underline",
               }}
             >
               Current Scenario: {chosenCurrentScenario.name}
@@ -48,14 +51,14 @@ function StableHeader() {
               color: "white",
               display: "flex",
               justifyContent: "center",
-              height: "80px",
+              height: "70px",
               width: "auto",
             }}
           >
             <Link to="/" style={{ marginRight: "100px" }}>
               <SectionHeader
                 style={{
-                  color: "red",
+                  color: "grey",
                 }}
               >
                 Campaign management
@@ -64,7 +67,7 @@ function StableHeader() {
             <Link to="/hero" style={{ marginLeft: "100px" }}>
               <SectionHeader
                 style={{
-                  color: "red",
+                  color: "grey",
                 }}
               >
                 Hero management

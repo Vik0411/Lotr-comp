@@ -89,7 +89,7 @@ function CampaignScenario() {
       >
         <div
           style={{
-            margin: "50px 20px",
+            margin: "5px 20px",
             display: "flex",
             flexFlow: "column",
           }}

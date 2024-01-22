@@ -94,7 +94,9 @@ function AllMightyHeroes() {
 
   return (
     <div>
-      <SectionHeader>Add to Current Campaign</SectionHeader>
+      <SectionHeader style={{ marginTop: "10px" }}>
+        Add to Current Campaign
+      </SectionHeader>
       <form onSubmit={prepareHero}>
         <SelectFfgHero value={preparedHero.code} onChange={handleChange}>
           {notCurrentAndAlive.map((notCurrent: Hero) => (

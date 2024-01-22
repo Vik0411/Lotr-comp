@@ -83,11 +83,6 @@ function BoonsAndBurdens() {
     boon.toLowerCase().includes(bBNameObject.boonName.toLowerCase())
   );
 
-  // function changeBoonValue() {
-  //   console.log("oh zea");
-  //   setBBNameObject();
-  // }
-
   return (
     <div style={{ position: "relative" }}>
       <SectionHeader>Add Boons & Burdens</SectionHeader>
