@@ -10,11 +10,12 @@ import {
   ContainerFlexColumn,
 } from "./atoms/Container";
 import { CancelBtn } from "./atoms/Button";
+import { Boon, Burden } from "../types";
 
 function BoonsAndBurdensDisplay() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
 
-  function cancelBoon(boon) {
+  function cancelBoon(boon: Boon) {
     let newBoons = campaign.boonsAndBurdens.boons.filter(
       (bn) => bn.index !== boon.index
     );
@@ -22,7 +23,7 @@ function BoonsAndBurdensDisplay() {
     setCampaign({ ...campaign, boonsAndBurdens: newBB });
   }
 
-  function cancelBurden(burden) {
+  function cancelBurden(burden: Burden) {
     let newBurdens = campaign.boonsAndBurdens.burdens.filter(
       (br) => br.index !== burden.index
     );

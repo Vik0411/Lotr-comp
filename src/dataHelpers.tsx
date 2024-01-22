@@ -32,7 +32,7 @@ function removeDuplicates(arr: Hero[]) {
     } else if (dupls1 && !dupls2) {
       state.rest.push(arr[i]);
       state.rest.push(dupls1);
-      state.unique = state.unique.filter((hero) => hero.name !== dupls1.name);
+      state.unique = state.unique.filter((hero) => hero.name !== dupls1?.name);
     } else {
       state.rest.push(arr[i]);
     }
