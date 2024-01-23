@@ -67,11 +67,11 @@ function CurrentScenarioDisplay() {
 
   return (
     <div style={{ minHeight: "300px" }}>
-      <div>
-        <SectionHeader style={{ textAlign: "center" }}>
-          Current Campaign Scenario:
-        </SectionHeader>
-        {chosenCurrentScenario && (
+      {chosenCurrentScenario && (
+        <div>
+          <SectionHeader style={{ textAlign: "center" }}>
+            Current Campaign Scenario:
+          </SectionHeader>
           <ContainerCurrentHeroes>
             <ContainerCurrentCard
               key={chosenCurrentScenario.index}
@@ -108,8 +108,8 @@ function CurrentScenarioDisplay() {
               </div>
             </ContainerCurrentCard>
           </ContainerCurrentHeroes>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
