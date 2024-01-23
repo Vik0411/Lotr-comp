@@ -19,12 +19,39 @@ const StyledLink = styled(Link)`
   }
 `;
 
-export const ContainerFlexHeader = styled(ContainerFlex)`
+const ContainerFlexHeader = styled(ContainerFlex)`
   width: 200px;
   position: absolute;
   left: 20px;
   top: 5px;
   flex-flow: row;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const ContainerFlexWholeHeader = styled(ContainerFlex)`
+  justify-content: center;
+  gap: 150px;
+
+  @media (max-width: 1200px) {
+    gap: 50px;
+    justify-content: right;
+    margin-right: 20px;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    gap: 10px;
+  }
+`;
+
+const BorBShorthand = styled.div`
+  width: 100px;
+  position: absolute;
+  left: 200px;
+  top: 5px;
 
   @media (max-width: 768px) {
     display: none;
@@ -63,7 +90,7 @@ function StableHeader() {
           Current Scenario: {chosenCurrentScenario.name}
         </SectionHeader>
       )}
-      <ContainerFlex style={{ height: "90px" }}>
+      <ContainerFlexWholeHeader style={{ height: "90px" }}>
         <ContainerFlexHeader>
           <div
             className="heroes"
@@ -80,48 +107,31 @@ function StableHeader() {
               ))}
             </ButtonTransparent>
           </div>
-          <div
-            className="bandb"
-            style={{
-              width: "100px",
-            }}
-          >
-            <ButtonTransparent style={{ color: "grey" }}>
-              <SectionHeader style={{ color: "grey" }}>
-                Boons & Burdens
-              </SectionHeader>
-              {campaign.boonsAndBurdens.boons.map((boon) => (
-                <ListItemHeader key={boon.name}>{boon.name}</ListItemHeader>
-              ))}
-              {campaign.boonsAndBurdens.burdens.map((burden) => (
-                <ListItemHeader key={burden.name}>{burden.name}</ListItemHeader>
-              ))}
-            </ButtonTransparent>
-          </div>
         </ContainerFlexHeader>
-        <div
-          style={{
-            color: "white",
-            display: "flex",
-            justifyContent: "space-between",
-            gap: "50px",
-            marginLeft: "10px",
-            marginRight: "10px",
-            height: "100px",
-          }}
-        >
-          <h2>
-            <StyledLink to="/" style={{ width: "100px" }}>
-              Campaign management
-            </StyledLink>
-          </h2>
-          <h2>
-            <StyledLink to="/hero" style={{ width: "100px" }}>
-              Hero management
-            </StyledLink>
-          </h2>
-        </div>
-      </ContainerFlex>
+        <BorBShorthand>
+          <ButtonTransparent style={{ color: "grey" }}>
+            <SectionHeader style={{ color: "grey" }}>
+              Boons & Burdens
+            </SectionHeader>
+            {campaign.boonsAndBurdens.boons.map((boon) => (
+              <ListItemHeader key={boon.name}>{boon.name}</ListItemHeader>
+            ))}
+            {campaign.boonsAndBurdens.burdens.map((burden) => (
+              <ListItemHeader key={burden.name}>{burden.name}</ListItemHeader>
+            ))}
+          </ButtonTransparent>
+        </BorBShorthand>
+        <h2>
+          <StyledLink to="/" style={{ width: "100px" }}>
+            Campaign management
+          </StyledLink>
+        </h2>
+        <h2>
+          <StyledLink to="/hero" style={{ width: "100px" }}>
+            Hero management
+          </StyledLink>
+        </h2>
+      </ContainerFlexWholeHeader>
     </Container>
   );
 }
