@@ -90,7 +90,7 @@ function StableHeader() {
           Current Scenario: {chosenCurrentScenario.name}
         </SectionHeader>
       )}
-      <ContainerFlexWholeHeader style={{ height: "90px" }}>
+      <ContainerFlexWholeHeader style={{ height: "80px" }}>
         <ContainerFlexHeader>
           <div
             className="heroes"
