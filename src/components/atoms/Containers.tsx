@@ -20,7 +20,7 @@ export const ContainerFlex = styled.div`
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 `;
 
 export const ContainerFallenHeroes = styled.div`

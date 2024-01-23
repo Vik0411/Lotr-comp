@@ -6,7 +6,7 @@ import { filterHeroes } from "../utils";
 import React from "react";
 import { LotrContext } from "../context";
 import { Hero } from "../types";
-import { Container } from "./atoms/Containers";
+import { Container, ContainerFlex } from "./atoms/Containers";
 import { styled } from "styled-components";
 import { ListItemHeader } from "./atoms/ListeItemHeader";
 
@@ -16,6 +16,18 @@ const StyledLink = styled(Link)`
 
   &:hover {
     color: #ba55d3;
+  }
+`;
+
+export const ContainerFlexHeader = styled(ContainerFlex)`
+  width: 200px;
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  flex-flow: row;
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -34,63 +46,33 @@ function StableHeader() {
     <Container
       style={{
         backgroundPosition: "bottom",
+        position: "relative",
       }}
     >
-      <div style={{ position: "relative" }}>
-        <div
+      {chosenCurrentScenario && (
+        <SectionHeader
           style={{
-            display: "flex",
-            flexFlow: "column",
-            color: "white",
+            marginBottom: "0px",
+            color: "#B8B8B8",
+            outlineColor: "purple",
+            textDecorationColor: "#FF00FF",
+            textDecoration: "underline",
             textAlign: "center",
           }}
         >
-          {chosenCurrentScenario && (
-            <SectionHeader
-              style={{
-                marginBottom: "0px",
-                color: "#B8B8B8",
-                outlineColor: "purple",
-                textDecorationColor: "#FF00FF",
-                textDecoration: "underline",
-              }}
-            >
-              Current Scenario: {chosenCurrentScenario.name}
-            </SectionHeader>
-          )}
+          Current Scenario: {chosenCurrentScenario.name}
+        </SectionHeader>
+      )}
+      <ContainerFlex style={{ height: "90px" }}>
+        <ContainerFlexHeader>
           <div
+            className="heroes"
             style={{
-              color: "white",
-              display: "flex",
-              justifyContent: "center",
-              height: "70px",
-              width: "auto",
-            }}
-          >
-            <h2>
-              <StyledLink to="/" style={{ marginRight: "100px" }}>
-                Campaign management
-              </StyledLink>
-            </h2>
-            <h2>
-              <StyledLink to="/hero" style={{ marginLeft: "100px" }}>
-                Hero management
-              </StyledLink>
-            </h2>
-          </div>
-        </div>
-        <div>
-          <div
-            style={{
-              position: "absolute",
               width: "100px",
-              marginLeft: "100px",
-              top: "0",
-              opacity: "0.5",
             }}
           >
-            <ButtonTransparent style={{ color: "white" }}>
-              <SectionHeader style={{ color: "white" }}>
+            <ButtonTransparent style={{ color: "grey", borderBottom: "10px" }}>
+              <SectionHeader style={{ color: "grey", borderBottom: "10px" }}>
                 Current Heroes
               </SectionHeader>
               {current.map((hero) => (
@@ -99,17 +81,13 @@ function StableHeader() {
             </ButtonTransparent>
           </div>
           <div
+            className="bandb"
             style={{
-              position: "absolute",
               width: "100px",
-              marginRight: "100px",
-              top: "0px",
-              left: "260px",
-              opacity: "0.5",
             }}
           >
-            <ButtonTransparent style={{ color: "white" }}>
-              <SectionHeader style={{ color: "white" }}>
+            <ButtonTransparent style={{ color: "grey" }}>
+              <SectionHeader style={{ color: "grey" }}>
                 Boons & Burdens
               </SectionHeader>
               {campaign.boonsAndBurdens.boons.map((boon) => (
@@ -120,8 +98,30 @@ function StableHeader() {
               ))}
             </ButtonTransparent>
           </div>
+        </ContainerFlexHeader>
+        <div
+          style={{
+            color: "white",
+            display: "flex",
+            justifyContent: "space-between",
+            gap: "50px",
+            marginLeft: "10px",
+            marginRight: "10px",
+            height: "100px",
+          }}
+        >
+          <h2>
+            <StyledLink to="/" style={{ width: "100px" }}>
+              Campaign management
+            </StyledLink>
+          </h2>
+          <h2>
+            <StyledLink to="/hero" style={{ width: "100px" }}>
+              Hero management
+            </StyledLink>
+          </h2>
         </div>
-      </div>
+      </ContainerFlex>
     </Container>
   );
 }
