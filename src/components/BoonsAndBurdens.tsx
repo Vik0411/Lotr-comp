@@ -6,6 +6,7 @@ import { styled } from "styled-components";
 import { LotrContext } from "../context";
 import React, { useState } from "react";
 import { boons } from "../utils";
+import { burdens } from "../burdens";
 
 export const ButtonShadowYellow = styled(ButtonShadow)`
   opacity: 1;
@@ -32,18 +33,24 @@ function BoonsAndBurdens() {
   });
 
   const [extraBoonInfo, setExtraBoonInfo] = useState("");
-  const [showDataList, setShowDataList] = useState(false);
+  const [extraBurdenInfo, setExtraBurdenInfo] = useState("");
 
-  function handleChange2(e: React.ChangeEvent<HTMLInputElement>) {
-    setBBNameObject({ ...bBNameObject, burdenName: e.target.value });
-  }
+  const [showDataList, setShowDataList] = useState(false);
+  const [showDataListBurden, setShowDataListBurden] = useState(false);
 
   function handleChangeBoon(e: React.ChangeEvent<HTMLInputElement>) {
     setBBNameObject({ ...bBNameObject, boonName: e.target.value });
   }
 
+  function handleChangeBurden(e: React.ChangeEvent<HTMLInputElement>) {
+    setBBNameObject({ ...bBNameObject, burdenName: e.target.value });
+  }
   function handleChangeBoonInfo(e: React.ChangeEvent<HTMLInputElement>) {
     setExtraBoonInfo(e.target.value);
+  }
+
+  function handleChangeBurdenInfo(e: React.ChangeEvent<HTMLInputElement>) {
+    setExtraBurdenInfo(e.target.value);
   }
 
   function submitBoon(e: React.FormEvent<HTMLFormElement>) {
@@ -63,13 +70,15 @@ function BoonsAndBurdens() {
     setCampaign({ ...campaign, boonsAndBurdens: newBB });
   }
 
-  function submitBurdens(e: React.FormEvent<HTMLFormElement>) {
+  function submitBurden(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     let newBurdens = [
       ...campaign.boonsAndBurdens.burdens,
       {
         name: bBNameObject.burdenName,
         index: campaign.boonsAndBurdens.burdens.length + 1,
+        image: bBNameObject.burdenName.replaceAll(" ", "-"),
+        extraInfo: extraBurdenInfo,
       },
     ];
     let newBB = { ...campaign.boonsAndBurdens, burdens: newBurdens };
@@ -82,6 +91,18 @@ function BoonsAndBurdens() {
 
   const filteredBoons = boons.filter((boon) =>
     boon.toLowerCase().includes(bBNameObject.boonName.toLowerCase())
+  );
+
+  const filteredBoonsFormatted = filteredBoons.map((boon) =>
+    Array.from(boon).slice(0, -4).join("").replaceAll("-", " ")
+  );
+
+  const filteredBurdens = burdens.filter((burden) =>
+    burden.toLowerCase().includes(bBNameObject.burdenName.toLowerCase())
+  );
+
+  const filteredBurdensFormatted = filteredBurdens.map((burden) =>
+    Array.from(burden).slice(0, -4).join("").replaceAll("-", " ")
   );
 
   return (
@@ -97,18 +118,31 @@ function BoonsAndBurdens() {
         />
         {showDataList && (
           <BoonDiv>
-            {filteredBoons.map((boon, index) => (
+            {filteredBoonsFormatted.map((boon, index) => (
               <button
+                style={{
+                  backgroundColor: "transparent",
+                  border: "0",
+                  height: "90px",
+                }}
                 key={index}
                 onClick={() => {
                   setBBNameObject({ ...bBNameObject, boonName: boon });
                   setShowDataList(false);
                 }}
               >
+                <div
+                  style={{
+                    height: "15px",
+                    backgroundColor: "black",
+                    opacity: "0.8",
+                    borderRadius: "5px",
+                  }}
+                ></div>
                 <img
                   alt={boon}
-                  src={"images/bb/" + boon}
-                  style={{ height: "70px" }}
+                  src={"images/bb/" + boon.replaceAll(" ", "-") + ".jpg"}
+                  style={{ height: "220px" }}
                 />
               </button>
             ))}
@@ -125,16 +159,58 @@ function BoonsAndBurdens() {
           </div>
         )}
       </form>
-      <form onSubmit={submitBurdens}>
+      <form onSubmit={submitBurden}>
         <Input
           type="text"
           value={bBNameObject.burdenName}
-          onChange={handleChange2}
-          placeholder="your burdens"
+          onChange={handleChangeBurden}
+          placeholder="Your burdens"
+          onFocus={() => setShowDataListBurden(true)}
         />
-        <ButtonShadowBlood value="sumbit burdens" type="submit">
-          submit burdens
-        </ButtonShadowBlood>
+        {showDataListBurden && (
+          <BoonDiv>
+            {filteredBurdensFormatted.map((burden, index) => (
+              <button
+                style={{
+                  backgroundColor: "transparent",
+                  border: "0",
+                  height: "90px",
+                }}
+                key={index}
+                onClick={() => {
+                  setBBNameObject({ ...bBNameObject, burdenName: burden });
+                  setShowDataListBurden(false);
+                }}
+              >
+                <div
+                  style={{
+                    height: "15px",
+                    backgroundColor: "black",
+                    opacity: "0.8",
+                    borderRadius: "5px",
+                  }}
+                ></div>
+                <img
+                  alt={burden}
+                  src={
+                    "images/bb/burdens/" + burden.replaceAll(" ", "-") + ".jpg"
+                  }
+                  style={{ height: "220px" }}
+                />
+              </button>
+            ))}
+          </BoonDiv>
+        )}
+        {bBNameObject.burdenName !== "" && (
+          <div>
+            <Input
+              value={extraBurdenInfo}
+              onChange={handleChangeBurdenInfo}
+              placeholder="extra burden info (optional)"
+            />
+            <ButtonShadowBlood type="submit">Submit burden</ButtonShadowBlood>
+          </div>
+        )}
       </form>
     </div>
   );

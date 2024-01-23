@@ -1,3 +1,4 @@
+import { burdens } from "./burdens";
 import { Hero, Scenario, changedAttrs, changedAttrsScenario } from "./types";
 
 export function filterHeroes(obj: changedAttrs, allHeroes: Hero[]) {
@@ -89,3 +90,6 @@ export const boons = [
   "Valiant-Warrior.jpg",
   "Valor.jpg",
 ];
+export function doesBurdenHaveImage(br: string) {
+  return burdens.includes(br);
+}
