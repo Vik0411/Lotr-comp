@@ -121,7 +121,7 @@ function CurrentHeroes() {
   return (
     <div
       style={{
-        minHeight: "300px",
+        minHeight: "400px",
         position: "relative",
       }}
     >

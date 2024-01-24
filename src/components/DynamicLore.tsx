@@ -31,7 +31,7 @@ export function DynamicLore() {
   }, [currIndex, currentFlavor, currentFlavors]);
 
   return (
-    <div>
+    <div style={{ minHeight: "220px" }}>
       <p>{currentFlavor}</p>
     </div>
   );

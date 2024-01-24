@@ -29,7 +29,7 @@ function CampaignManagement() {
         <BoonsAndBurdens />
         <BoonsAndBurdensDisplay />
       </ContainerFlex>
-      <ContainerWithWhiteText style={{ marginBottom: "30px" }}>
+      <ContainerWithWhiteText style={{ marginTop: "100px" }}>
         <DynamicLore />
       </ContainerWithWhiteText>
     </ContainerHeroManagement>

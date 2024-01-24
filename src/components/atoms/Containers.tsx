@@ -25,7 +25,7 @@ export const ContainerFlex = styled.div`
 
 export const ContainerFallenHeroes = styled.div`
   column-width: 230px;
-  min-height: 60px;
+  min-height: 230px;
   margin: 65px 20px;
 `;
 
