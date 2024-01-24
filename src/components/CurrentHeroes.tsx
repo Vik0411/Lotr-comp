@@ -145,8 +145,7 @@ function CurrentHeroes() {
             style={{
               color: "white",
               opacity: "1",
-              justifyContent: "space-around",
-              marginTop: "40px",
+              margin: "40px 20px",
             }}
           >
             {modalText}
