@@ -16,6 +16,8 @@ function WonScenarios() {
 
   const TopHeader = styled(SectionHeader)`
     margin: 30px 30px;
+    color: grey;
+    -webkit-text-stroke: 0.1px #ba55d3;
   `;
   return (
     <div>
@@ -23,7 +25,7 @@ function WonScenarios() {
       <ul>
         {notCurrentAndWon.map(
           (wonScenario: Scenario): JSX.Element => (
-            <WonScenario key={wonScenario.name} {...wonScenario}></WonScenario>
+            <WonScenario {...wonScenario}></WonScenario>
           )
         )}
       </ul>

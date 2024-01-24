@@ -74,6 +74,8 @@ function StableHeader() {
       style={{
         backgroundPosition: "bottom",
         position: "relative",
+        backgroundImage: `url("images/background.jpg")`,
+        borderBottom: "3px solid #452c63",
       }}
     >
       {chosenCurrentScenario && (

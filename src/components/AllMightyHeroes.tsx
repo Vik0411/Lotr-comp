@@ -123,8 +123,7 @@ function AllMightyHeroes() {
             style={{
               color: "white",
               opacity: "1",
-              justifyContent: "space-around",
-              marginTop: "40px",
+              margin: "40px 20px",
             }}
           >
             {modalText}
@@ -132,8 +131,8 @@ function AllMightyHeroes() {
           <div
             style={{
               position: "absolute",
-              bottom: "5px",
-              justifyContent: "space-around",
+              bottom: "20px",
+              left: "130px",
             }}
           >
             <ButtonShadow

@@ -6,6 +6,7 @@ export const Span = styled.span`
 
 export const SectionHeader = styled.h2`
   color: white;
+  -webkit-text-stroke: 0.2px #ba55d3;
 `;
 
 export const Paragraph = styled.p`

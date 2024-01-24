@@ -119,62 +119,60 @@ function CurrentHeroes() {
   }
 
   return (
-    <div>
+    <div
+      style={{
+        minHeight: "300px",
+        position: "relative",
+      }}
+    >
       {cloneModal && (
-        <div
+        <Container
           style={{
-            minHeight: "300px",
-            position: "relative",
+            boxShadow: "10px 5px 5px  #452c63",
+            backgroundImage: `url("images/background.jpg")`,
+            height: "200px",
+            width: "400px",
+            position: "absolute",
+            left: "765px",
+            zIndex: "50",
             display: "flex",
-            justifyContent: "center",
+            top: "20px",
+            border: "1px solid #ba55d3",
+            borderRadius: "10px",
           }}
         >
-          <Container
+          <p
             style={{
-              boxShadow: "10px 5px 5px  #452c63",
-              backgroundImage: `url("images/background.jpg")`,
-              height: "200px",
-              width: "400px",
-              position: "absolute",
-              display: "flex",
-              top: "20px",
-              border: "1px solid #ba55d3",
-              borderRadius: "10px",
+              color: "white",
+              opacity: "1",
+              justifyContent: "space-around",
+              marginTop: "40px",
             }}
           >
-            <p
-              style={{
-                color: "white",
-                opacity: "1",
-                justifyContent: "space-around",
-                marginTop: "40px",
-              }}
+            {modalText}
+          </p>
+          <div
+            style={{
+              position: "absolute",
+              bottom: "20px",
+              left: "130px",
+              justifyItems: "center",
+            }}
+          >
+            <ButtonShadow
+              style={{ opacity: 1, height: "10px" }}
+              onClick={() => procede()}
             >
-              {modalText}
-            </p>
-            <div
-              style={{
-                position: "absolute",
-                bottom: "20px",
-                left: "130px",
-                justifyItems: "center",
-              }}
+              Yes
+            </ButtonShadow>
+            <ButtonShadow
+              style={{ opacity: 1, height: "10px" }}
+              onClick={() => doNotProceed()}
             >
-              <ButtonShadow
-                style={{ opacity: 1, height: "10px" }}
-                onClick={() => procede()}
-              >
-                Yes
-              </ButtonShadow>
-              <ButtonShadow
-                style={{ opacity: 1, height: "10px" }}
-                onClick={() => doNotProceed()}
-              >
-                No
-              </ButtonShadow>
-            </div>
-          </Container>
-        </div>
+              No
+            </ButtonShadow>
+          </div>
+        </Container>
       )}
       <TopHeader>Current heroes:</TopHeader>
       <ContainerCurrentHeroes>
