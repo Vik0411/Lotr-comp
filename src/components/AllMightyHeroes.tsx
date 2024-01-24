@@ -1,9 +1,9 @@
-import { Paragraph, SectionHeader } from "./atoms/typography";
+import { SectionHeader } from "./atoms/typography";
 import { ButtonShadow } from "./atoms/ButtonShadow";
 import { LotrContext } from "../context";
 import React, { useEffect, useState } from "react";
 
-import { filterHeroes } from "../utils";
+import { filterHeroes, modalText } from "../utils";
 import { Hero } from "../types";
 import { SelectFfgHero } from "./atoms/SelectFfgHero";
 import { styled } from "styled-components";
@@ -26,7 +26,6 @@ function AllMightyHeroes() {
   );
 
   const [cloneModal, setCloneModal] = useState(false);
-  const [cloneModalAnswer, setCloneModalAnswer] = useState(0);
   const [cloneModalAction, setCloneModalAction] = useState(null);
 
   const [preparedHero, setPreparedHero] = useState(notCurrentAndAlive[0]);
@@ -41,8 +40,6 @@ function AllMightyHeroes() {
   }
 
   function procede() {
-    // setCloneModalAnswer(1);
-
     setCampaign({
       ...campaign,
       allHeroes: campaign.allHeroes.map((hero) => {
@@ -58,7 +55,6 @@ function AllMightyHeroes() {
   }
 
   function doNotProceed() {
-    // setCloneModalAnswer(2);
     setCloneModal(false);
   }
 
@@ -79,25 +75,6 @@ function AllMightyHeroes() {
     let isOneDuplicatePrepared = multiplesInCurrentState.find(
       (hero) => hero.current === true
     );
-
-    // function openModal() {
-    //   const text =
-    //     "At least one hero with the same name is already prepared. Are you sure you want to procede?";
-    //   setCloneModal(true);
-    // }
-
-    // console.log("before", option);
-
-    // let option = 0;
-    // const buttonYes = document.querySelector(".yes-btn");
-    // const buttonNo = document.querySelector(".no-btn");
-    // buttonYes?.addEventListener("click", () => {
-    //   console.log("dsf");
-    //   option = 1;
-    // });
-    // buttonNo?.addEventListener("click", () => {
-    //   option = 2;
-    // });
 
     if (codes.includes(preparedHero.code) && isOneDuplicatePrepared) {
       setCloneModal(true);
@@ -126,42 +103,17 @@ function AllMightyHeroes() {
     localStorage.setItem("campaign", JSON.stringify(campaign));
   }, [campaign]);
 
-  // useEffect(() => {
-  //   if (option === 2) {
-  //     setCloneModalAnswer(0);
-  //     setCloneModal(false);
-  //   }
-  //   if (option === 1) {
-  //     setCloneModal(false);
-  //     setCampaign({
-  //       ...campaign,
-  //       allHeroes: campaign.allHeroes.map((hero) => {
-  //         if (hero.code === preparedHero.code) {
-  //           hero.current = true;
-  //           return hero;
-  //         } else {
-  //           return hero;
-  //         }
-  //       }),
-  //     });
-  //     setCloneModalAnswer(0);
-  //   }
-  // }, [cloneModalAnswer]);
-
-  const modalText =
-    "At least one hero with the same name is already prepared. Are you sure you want to procede?";
-
   return (
     <div style={{ position: "relative" }}>
       {cloneModal && (
         <Container
           style={{
-            height: "300px",
-            width: "700px",
-            backgroundColor: "yellow",
+            boxShadow: "10px 5px 5px #452c63",
+            height: "200px",
+            backgroundImage: `url("images/background.jpg")`,
+            width: "400px",
             position: "absolute",
             display: "flex",
-            justifyContent: "space-around",
             top: "20px",
             border: "1px solid #ba55d3",
             borderRadius: "10px",

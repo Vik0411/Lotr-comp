@@ -93,3 +93,6 @@ export const boons = [
 export function doesBurdenHaveImage(br: string) {
   return burdens.includes(br);
 }
+
+export const modalText =
+  "At least one hero with the same name is already prepared. Are you sure you want to procede?";
