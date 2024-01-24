@@ -103,7 +103,7 @@ function StableHeader() {
                 Current Heroes
               </SectionHeader>
               {current.map((hero) => (
-                <ListItemHeader key={hero.name}>{hero.name}</ListItemHeader>
+                <ListItemHeader key={hero.code}>{hero.name}</ListItemHeader>
               ))}
             </ButtonTransparent>
           </div>

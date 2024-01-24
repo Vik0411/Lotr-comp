@@ -1,4 +1,4 @@
-import { SectionHeader } from "./atoms/typography";
+import { Paragraph, SectionHeader } from "./atoms/typography";
 import { ButtonShadow } from "./atoms/ButtonShadow";
 import { LotrContext } from "../context";
 import React, { useEffect, useState } from "react";
@@ -8,6 +8,7 @@ import { Hero } from "../types";
 import { SelectFfgHero } from "./atoms/SelectFfgHero";
 import { styled } from "styled-components";
 import { onlyMultiples } from "../dataHelpers";
+import { Container } from "./atoms/Containers";
 
 export const ButtonShadowGreen = styled(ButtonShadow)`
   opacity: 1;
@@ -24,6 +25,10 @@ function AllMightyHeroes() {
     campaign.allHeroes
   );
 
+  const [cloneModal, setCloneModal] = useState(false);
+  const [cloneModalAnswer, setCloneModalAnswer] = useState(0);
+  const [cloneModalAction, setCloneModalAction] = useState(null);
+
   const [preparedHero, setPreparedHero] = useState(notCurrentAndAlive[0]);
 
   function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
@@ -33,6 +38,28 @@ function AllMightyHeroes() {
     if (selectedHero) {
       setPreparedHero(selectedHero);
     }
+  }
+
+  function procede() {
+    // setCloneModalAnswer(1);
+
+    setCampaign({
+      ...campaign,
+      allHeroes: campaign.allHeroes.map((hero) => {
+        if (hero.code === cloneModalAction.hero.code) {
+          hero.current = true;
+          return hero;
+        } else {
+          return hero;
+        }
+      }),
+    });
+    setCloneModal(false);
+  }
+
+  function doNotProceed() {
+    // setCloneModalAnswer(2);
+    setCloneModal(false);
   }
 
   function prepareHero(e: React.FormEvent<HTMLFormElement>) {
@@ -53,34 +80,41 @@ function AllMightyHeroes() {
       (hero) => hero.current === true
     );
 
-    function prepareClone() {
-      const text =
-        "At least one hero with the same name is already prepared. Are you sure you want to procede?";
-      // eslint-disable-next-line no-restricted-globals
-      if (confirm(text) === true) {
-        return true;
-      } else {
-        return false;
-      }
-    }
+    // function openModal() {
+    //   const text =
+    //     "At least one hero with the same name is already prepared. Are you sure you want to procede?";
+    //   setCloneModal(true);
+    // }
+
+    // console.log("before", option);
+
+    // let option = 0;
+    // const buttonYes = document.querySelector(".yes-btn");
+    // const buttonNo = document.querySelector(".no-btn");
+    // buttonYes?.addEventListener("click", () => {
+    //   console.log("dsf");
+    //   option = 1;
+    // });
+    // buttonNo?.addEventListener("click", () => {
+    //   option = 2;
+    // });
 
     if (codes.includes(preparedHero.code) && isOneDuplicatePrepared) {
-      if (!prepareClone()) {
-        return;
-      }
+      setCloneModal(true);
+      setCloneModalAction({ activity: "prepare", hero: preparedHero });
+    } else {
+      setCampaign({
+        ...campaign,
+        allHeroes: campaign.allHeroes.map((hero) => {
+          if (hero.code === preparedHero.code) {
+            hero.current = true;
+            return hero;
+          } else {
+            return hero;
+          }
+        }),
+      });
     }
-
-    setCampaign({
-      ...campaign,
-      allHeroes: campaign.allHeroes.map((hero) => {
-        if (hero.code === preparedHero.code) {
-          hero.current = true;
-          return hero;
-        } else {
-          return hero;
-        }
-      }),
-    });
   }
 
   useEffect(() => {
@@ -92,8 +126,81 @@ function AllMightyHeroes() {
     localStorage.setItem("campaign", JSON.stringify(campaign));
   }, [campaign]);
 
+  // useEffect(() => {
+  //   if (option === 2) {
+  //     setCloneModalAnswer(0);
+  //     setCloneModal(false);
+  //   }
+  //   if (option === 1) {
+  //     setCloneModal(false);
+  //     setCampaign({
+  //       ...campaign,
+  //       allHeroes: campaign.allHeroes.map((hero) => {
+  //         if (hero.code === preparedHero.code) {
+  //           hero.current = true;
+  //           return hero;
+  //         } else {
+  //           return hero;
+  //         }
+  //       }),
+  //     });
+  //     setCloneModalAnswer(0);
+  //   }
+  // }, [cloneModalAnswer]);
+
+  const modalText =
+    "At least one hero with the same name is already prepared. Are you sure you want to procede?";
+
   return (
-    <div>
+    <div style={{ position: "relative" }}>
+      {cloneModal && (
+        <Container
+          style={{
+            height: "300px",
+            width: "700px",
+            backgroundColor: "yellow",
+            position: "absolute",
+            display: "flex",
+            justifyContent: "space-around",
+            top: "20px",
+            border: "1px solid #ba55d3",
+            borderRadius: "10px",
+          }}
+        >
+          <p
+            style={{
+              color: "white",
+              opacity: "1",
+              justifyContent: "space-around",
+              marginTop: "40px",
+            }}
+          >
+            {modalText}
+          </p>
+          <div
+            style={{
+              position: "absolute",
+              bottom: "5px",
+              justifyContent: "space-around",
+            }}
+          >
+            <ButtonShadow
+              className="yes-btn"
+              style={{ opacity: 1, height: "10px" }}
+              onClick={() => procede()}
+            >
+              Yes
+            </ButtonShadow>
+            <ButtonShadow
+              className="no-btn"
+              style={{ opacity: 1, height: "10px" }}
+              onClick={() => doNotProceed()}
+            >
+              No
+            </ButtonShadow>
+          </div>
+        </Container>
+      )}
       <SectionHeader>Add to Current Campaign</SectionHeader>
       <form onSubmit={prepareHero}>
         <SelectFfgHero value={preparedHero.code} onChange={handleChange}>

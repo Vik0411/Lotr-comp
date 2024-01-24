@@ -100,7 +100,6 @@ function CurrentHeroes() {
     });
   }
 
-  // refactor return below into styled components as well
   return (
     <div style={{ minHeight: "300px" }}>
       <div>
