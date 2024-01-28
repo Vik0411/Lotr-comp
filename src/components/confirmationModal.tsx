@@ -1,4 +1,3 @@
-import React from "react";
 import { ButtonShadow } from "./atoms/ButtonShadow";
 import { modalText } from "../utils";
 import { ContainerModal } from "./atoms/Containers";
