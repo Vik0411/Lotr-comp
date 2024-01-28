@@ -10,7 +10,7 @@ import { ContainerCurrentCard, ContainerFlex } from "./atoms/Containers";
 import { HeroCard } from "./atoms/HeroCard";
 import { CancelImage } from "./atoms/CancelImage";
 import { CancelBtn } from "./atoms/CancelBtn";
-import ConfirmationModal from "./confirmationModal";
+import ConfirmationModal from "./ConfirmationModal";
 
 const TopHeader = styled(SectionHeader)`
   margin: 30px 30px;
