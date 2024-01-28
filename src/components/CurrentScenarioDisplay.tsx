@@ -8,6 +8,7 @@ import { CancelImage } from "./atoms/CancelImage";
 import { BorBCard } from "./atoms/BorBCard";
 import { Scenario } from "../types";
 import { CancelBtn } from "./atoms/CancelBtn";
+import { doesScenarioHaveImage } from "../utils";
 
 const ContainerCurrentHeroes = styled(ContainerFlex)`
   display: flex;
@@ -91,11 +92,21 @@ function CurrentScenarioDisplay() {
                     <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
                   </CancelBtn>
                 </Paragraph>
-                <BorBCard
-                  style={{ borderRadius: "10px" }}
-                  alt=""
-                  src={`images/scenarios/${pic}.webp`}
-                />
+                {doesScenarioHaveImage(
+                  chosenCurrentScenario.name.toLowerCase()
+                ) ? (
+                  <BorBCard
+                    style={{ borderRadius: "10px" }}
+                    alt=""
+                    src={`images/scenarios/${pic}.webp`}
+                  />
+                ) : (
+                  <BorBCard
+                    style={{ borderRadius: "10px" }}
+                    alt=""
+                    src="images/burden.jpg"
+                  />
+                )}
                 <ButtonBlack
                   onClick={() => {
                     if (chosenCurrentScenario) {

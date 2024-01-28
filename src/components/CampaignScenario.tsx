@@ -70,6 +70,7 @@ function CampaignScenario() {
       campaign.scenarios
     );
     setCurrentScenario(notCurrentAndNotWon[0]);
+    localStorage.setItem("campaign", JSON.stringify(campaign));
   }, [campaign]);
 
   return (

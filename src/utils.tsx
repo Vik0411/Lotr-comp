@@ -1,4 +1,5 @@
 import { burdens } from "./burdens";
+import { scenarios } from "./scenarios";
 import { Hero, Scenario, changedAttrs, changedAttrsScenario } from "./types";
 
 export function filterHeroes(obj: changedAttrs, allHeroes: Hero[]) {
@@ -92,6 +93,11 @@ export const boons = [
 ];
 export function doesBurdenHaveImage(br: string) {
   return burdens.includes(br);
+}
+
+const scenarioNames = scenarios.map((scens) => scens.name.toLowerCase());
+export function doesScenarioHaveImage(sc: string) {
+  return scenarioNames.includes(sc);
 }
 
 export const modalText =
