@@ -11,14 +11,14 @@ export const scenarios = [
   { name: "Nightmare The Dread Realm", campaign: "Angmar Awakened" },
 ];
 
-const nonNightAngmar = [
-  { name: "Intruders in Chettwood", campaign: "Angmar Awakened" },
-  { name: "The Weather Hills", campaign: "Angmar Awakened" },
-  { name: "Deadmen’s Dike", campaign: "Angmar Awakened" },
-  { name: "Wastes of Eriador", campaign: "Angmar Awakened" },
-  { name: "Escape from Mount Gram", campaign: "Angmar Awakened" },
-  { name: "Across the Ettenmoors", campaign: "Angmar Awakened" },
-  { name: "The Treachery of Rhudaur", campaign: "Angmar Awakened" },
-  { name: "The Battle of Carn Dûm", campaign: "Angmar Awakened" },
-  { name: "The Dread Realm", campaign: "Angmar Awakened" },
-];
+// const nonNightAngmar = [
+// { name: "Intruders in Chettwood", campaign: "Angmar Awakened" },
+// { name: "The Weather Hills", campaign: "Angmar Awakened" },
+// { name: "Deadmen’s Dike", campaign: "Angmar Awakened" },
+// { name: "Wastes of Eriador", campaign: "Angmar Awakened" },
+// { name: "Escape from Mount Gram", campaign: "Angmar Awakened" },
+// { name: "Across the Ettenmoors", campaign: "Angmar Awakened" },
+// { name: "The Treachery of Rhudaur", campaign: "Angmar Awakened" },
+// { name: "The Battle of Carn Dûm", campaign: "Angmar Awakened" },
+// { name: "The Dread Realm", campaign: "Angmar Awakened" },
+// ];
