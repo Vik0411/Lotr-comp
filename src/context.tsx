@@ -1,21 +1,6 @@
 import React, { useState, ReactNode, Dispatch, SetStateAction } from "react";
-import { defaultState } from "./dataHelpers";
+import { defaultState } from "./data/dataAdjustments";
 import { Campaign } from "./types";
-
-/*
-Here the first working version with local browser storage was only in javascript
-
-//function preparation for reseting those heroes remaining alive
-export const resetRestOfHeroes = function(hero:string){
-    //add hero to the list if it isnt there yet
-    if(state.restOfAliveHeroes.includes(hero)){
-        throw Error
-    } else {
-        state.fallenHeroes.push(hero);
-        persistData();
-    }   
-}
-*/
 
 export interface CampaignContextInterface {
   campaign: Campaign;

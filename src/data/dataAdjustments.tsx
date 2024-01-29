@@ -1,5 +1,5 @@
 import { SetStateAction, Dispatch } from "react";
-import { Campaign, Hero } from "./types";
+import { Campaign, Hero } from "../types";
 import { allCards } from "./dataSet";
 import { onlyHeroesFFG } from "./onlyHeroes";
 import { scenarios } from "./scenarios";
@@ -56,24 +56,17 @@ export const changedNameMultiples = onlyMultiples.map((hero) => {
   return { ...hero, name: namewhole };
 });
 
-// const changedNamesAll = onlyHeroesForCampaign.map((hero) => {
-//   let name = hero.name;
-//   let sphere = hero.sphere_name;
-//   let namewhole = name.concat(" (", sphere, ")");
-//   return { ...hero, name: namewhole };
-// });
-
-const all = changedNameMultiples.concat(
+const allHeroesWithChangedName = changedNameMultiples.concat(
   removeDuplicates(onlyHeroesForCampaign).unique
 );
 
 const scenariosForCampaign = scenarios.map((scenario, indexing) => {
-  let scen = { ...scenario, index: indexing, current: false, won: false };
-  return scen;
+  let scens = { ...scenario, index: indexing, current: false, won: false };
+  return scens;
 });
 export const defaultState: CampaignContextInterface = {
   campaign: {
-    allHeroes: all,
+    allHeroes: allHeroesWithChangedName,
     boonsAndBurdens: {
       boons: [],
       burdens: [],

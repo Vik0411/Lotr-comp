@@ -7,7 +7,7 @@ import { filterHeroes } from "../utils";
 import { Hero } from "../types";
 import { SelectFfgHero } from "./atoms/SelectFfgHero";
 import { styled } from "styled-components";
-import { onlyMultiples } from "../dataHelpers";
+import { onlyMultiples } from "../data/dataAdjustments";
 import ConfirmationModal from "./ConfirmationModal";
 
 export const ButtonShadowGreen = styled(ButtonShadow)`

@@ -1,5 +1,5 @@
-import { burdens } from "./burdens";
-import { scenarios } from "./scenarios";
+import { burdens } from "./data/burdens";
+import { scenarios } from "./data/scenarios";
 import { Hero, Scenario, changedAttrs, changedAttrsScenario } from "./types";
 
 export function filterHeroes(obj: changedAttrs, allHeroes: Hero[]) {
@@ -27,70 +27,6 @@ export function doesHaveImage(borb: string) {
   return imageNames.includes("/" + borb);
 }
 
-export const boons = [
-  "Amarthiúl's-Courage.jpg",
-  "Andúril.jpg",
-  "Appointed-by-Fate.jpg",
-  "Armor-Plating.jpg",
-  "Army-of-the-Dead-Objective-Ally.jpg",
-  "Ballista.jpg",
-  "Berelind.jpg",
-  "Beyond-All-Hope.jpg",
-  "Black-Key.jpg",
-  "Brace-of-Coneys.jpg",
-  "Chieftain's-Brooch.jpg",
-  "Coruhaer.jpg",
-  "Cunning.jpg",
-  "Daechanar's-Brand.jpg",
-  "Determination.jpg",
-  "Elrond's-Champion.jpg",
-  "Esquire-of-Gondor.jpg",
-  "Esquire-of-Rohan.jpg",
-  "Forewarned.jpg",
-  "Gildor-Inglorion.jpg",
-  "Glamdring.jpg",
-  "Gwaihir.jpg",
-  "Hands-of-a-Healer.jpg",
-  "Hardy.jpg",
-  "Heirloom-of-Iârchon.jpg",
-  "Ho-Tom-Bombadil.jpg",
-  "Intimidation.jpg",
-  "Iârion's-Pendant.jpg",
-  "Laermuin.jpg",
-  "Leader-of-Men.jpg",
-  "Leaf-wrapped-Lembas.jpg",
-  "Lore-of-Ancient-Arnor.jpg",
-  "Lórien-Rope.jpg",
-  "Mail-of-Eärnur.jpg",
-  "Mendor's-Support.jpg",
-  "Mendor.jpg",
-  "Mithril-Shirt.jpg",
-  "Mr-Underhill.jpg",
-  "No-Time-to-Waste.jpg",
-  "Noble-Hero.jpg",
-  "Old-Bogey-stories.jpg",
-  "Orders-from-Angmar.jpg",
-  "Palantír-of-Orthanc.jpg",
-  "Phial-of-Galadriel.jpg",
-  "Raiment-of-the-Second-Age.jpg",
-  "Ranger-Sense.jpg",
-  "Resolute.jpg",
-  "Rivendell-Skirmishers.jpg",
-  "Ruthless.jpg",
-  "Silverthorn.jpg",
-  "Skilled-Healer.jpg",
-  "Spyglass.jpg",
-  "Stalwart.jpg",
-  "Sting.jpg",
-  "The-Fervor-of-Lore.jpg",
-  "The-Might-of-Tactics.jpg",
-  "The-Power-of-Spirit.jpg",
-  "The-Secret-of-Leadership.jpg",
-  "Three-Golden-Hairs.jpg",
-  "Tireless-Ranger.jpg",
-  "Valiant-Warrior.jpg",
-  "Valor.jpg",
-];
 export function doesBurdenHaveImage(br: string) {
   return burdens.includes(br);
 }

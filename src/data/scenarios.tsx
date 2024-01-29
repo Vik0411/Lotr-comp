@@ -1,5 +1,5 @@
 export const scenarios = [
-  // Angmar Awakened"
+  // Angmar Awakened
   { name: "Nightmare Intruders in Chettwood", campaign: "Angmar Awakened" },
   { name: "Nightmare The Weather Hills", campaign: "Angmar Awakened" },
   { name: "Nightmare Deadmen's Dike", campaign: "Angmar Awakened" },

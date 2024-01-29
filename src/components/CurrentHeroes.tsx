@@ -2,7 +2,7 @@ import { LotrContext } from "../context";
 import React, { useState } from "react";
 import styled from "styled-components";
 import { ButtonShadow } from "./atoms/ButtonShadow";
-import { onlyMultiples } from "../dataHelpers";
+import { onlyMultiples } from "../data/dataAdjustments";
 import { filterHeroes } from "../utils";
 import { Hero } from "../types";
 import { Paragraph, SectionHeader } from "./atoms/typography";

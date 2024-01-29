@@ -5,8 +5,8 @@ import { SectionHeader } from "./atoms/typography";
 import { styled } from "styled-components";
 import { LotrContext } from "../context";
 import React, { useState } from "react";
-import { boons } from "../utils";
-import { burdens } from "../burdens";
+import { boons } from "../data/boons";
+import { burdens } from "../data/burdens";
 
 export const ButtonShadowYellow = styled(ButtonShadow)`
   opacity: 1;
