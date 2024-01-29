@@ -9,7 +9,6 @@ export function FallenHero({ name, code }: Hero) {
   const { campaign, setCampaign } = React.useContext(LotrContext);
 
   function resurrectHero(heroCode: string) {
-    // add alert when one "duplicate" is already killed
     setCampaign({
       ...campaign,
       allHeroes: campaign.allHeroes.map((hero) => {

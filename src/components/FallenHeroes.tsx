@@ -15,7 +15,7 @@ const BottomSectionHeader = styled(SectionHeader)`
 function FallenHeroes() {
   const { campaign } = React.useContext(LotrContext);
 
-  let fallen: Hero[] = filterHeroes(
+  let fallen = filterHeroes(
     { alive: false, current: false },
     campaign.allHeroes
   );

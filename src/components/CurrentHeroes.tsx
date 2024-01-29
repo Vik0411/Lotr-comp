@@ -37,7 +37,7 @@ function CurrentHeroes() {
   const [cloneModal, setCloneModal] = useState(false);
   const [cloneModalAction, setCloneModalAction] = useState(null);
 
-  let current: Hero[] = filterHeroes(
+  let current = filterHeroes(
     { alive: true, current: true },
     campaign.allHeroes
   );
@@ -81,7 +81,6 @@ function CurrentHeroes() {
     if (codes.includes(heroCode) && isOneDuplicateDead) {
       setCloneModal(true);
       setCloneModalAction({
-        activity: "kill",
         hero: campaign.allHeroes.find((hero) => hero.code === heroCode),
       });
     } else {

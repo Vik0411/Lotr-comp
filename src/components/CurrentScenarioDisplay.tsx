@@ -31,7 +31,7 @@ function CurrentScenarioDisplay() {
     (chosen) => chosen.current === true
   );
 
-  let pic;
+  let pic: string;
   if (chosenCurrentScenario) {
     pic = chosenCurrentScenario.name.replaceAll(" ", "-");
   }

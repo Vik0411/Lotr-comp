@@ -78,7 +78,7 @@ function AllMightyHeroes() {
 
     if (codes.includes(preparedHero.code) && isOneDuplicatePrepared) {
       setCloneModal(true);
-      setCloneModalAction({ activity: "prepare", hero: preparedHero });
+      setCloneModalAction({ hero: preparedHero });
     } else {
       setCampaign({
         ...campaign,

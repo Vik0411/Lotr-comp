@@ -14,9 +14,10 @@ function AddCustomScenario() {
   }
 
   function submitCustomScenario(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
     let lastIndex;
     campaign.scenarios.lastIndexOf = lastIndex;
-    e.preventDefault();
     let newScenario = {
       ...campaign.scenarios[0],
       name: `${scenarioName} (custom addition)`,
@@ -25,9 +26,8 @@ function AddCustomScenario() {
       current: false,
       campaign: "",
     };
-    console.log(newScenario);
+
     let newScenarios = [...campaign.scenarios, newScenario];
-    console.log(newScenarios);
     setCampaign({ ...campaign, scenarios: newScenarios });
   }
 
