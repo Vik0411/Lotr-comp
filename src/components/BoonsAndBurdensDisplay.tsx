@@ -38,7 +38,7 @@ function BoonsAndBurdensDisplay() {
         {campaign.boonsAndBurdens.boons.map((boon) => (
           <div key={boon.index} style={{ margin: "15px 15px" }}>
             {doesHaveImage(boon.image) ? (
-              <ContainerCurrentCard style={{ width: "180px" }}>
+              <ContainerCurrentCard key={boon.index} style={{ width: "180px" }}>
                 <Paragraph>
                   {boon.name}
                   <CancelBtn onClick={() => cancelBoon(boon)}>

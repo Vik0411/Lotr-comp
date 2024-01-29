@@ -16,12 +16,10 @@ function AddCustomScenario() {
   function submitCustomScenario(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    let lastIndex;
-    campaign.scenarios.lastIndexOf = lastIndex;
     let newScenario = {
       ...campaign.scenarios[0],
       name: `${scenarioName} (custom addition)`,
-      index: lastIndex + 1,
+      index: Number(Date.now().toFixed()),
       won: false,
       current: false,
       campaign: "",

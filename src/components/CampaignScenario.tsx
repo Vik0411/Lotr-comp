@@ -101,7 +101,7 @@ function CampaignScenario() {
           <form onSubmit={addScenarioToCurrent} style={{ textAlign: "center" }}>
             <SelectFfgHero value={currentScenario.name} onChange={handleChange}>
               {notCurrentAndNotWon.map((notCurrent) => (
-                <option key={notCurrent.name} value={notCurrent.name}>
+                <option key={notCurrent.index} value={notCurrent.name}>
                   {notCurrent.name}
                 </option>
               ))}

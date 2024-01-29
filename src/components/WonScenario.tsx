@@ -5,14 +5,14 @@ import { CancelImage } from "./atoms/CancelImage";
 import { ListItemWithWhiteText } from "./atoms/ListItemWithWhiteText";
 import { LotrContext } from "../context";
 
-export function WonScenario({ name }: Scenario) {
+export function WonScenario({ name, index }: Scenario) {
   const { campaign, setCampaign } = React.useContext(LotrContext);
 
-  function returnScenario(scenarioName: string) {
+  function returnScenario(scenarioIndex) {
     setCampaign({
       ...campaign,
       scenarios: campaign.scenarios.map((scenario) => {
-        if (scenario.name === scenarioName) {
+        if (scenario.index === scenarioIndex) {
           scenario.won = false;
           return scenario;
         } else {
@@ -24,7 +24,7 @@ export function WonScenario({ name }: Scenario) {
   return (
     <ListItemWithWhiteText>
       {name}
-      <CancelBtn onClick={() => returnScenario(name)}>
+      <CancelBtn onClick={() => returnScenario(index)}>
         <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
       </CancelBtn>
     </ListItemWithWhiteText>
