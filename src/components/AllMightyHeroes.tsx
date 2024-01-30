@@ -110,7 +110,11 @@ function AllMightyHeroes() {
       )}
       <SectionHeader>Add to Current Campaign</SectionHeader>
       <form onSubmit={prepareHero}>
-        <SelectFfgHero value={preparedHero.code} onChange={handleChange}>
+        <SelectFfgHero
+          value={preparedHero.code}
+          onChange={handleChange}
+          name="hero"
+        >
           {notCurrentAndAlive.map((notCurrent: Hero) => (
             <option key={notCurrent.code} value={notCurrent.code}>
               {notCurrent.name}

@@ -37,6 +37,7 @@ function AddCustomScenario() {
       <form onSubmit={submitCustomScenario}>
         <Input
           type="text"
+          name="custom scenario"
           value={scenarioName}
           onChange={handleChange}
           placeholder="custom scenario name"

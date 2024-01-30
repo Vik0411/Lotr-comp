@@ -37,6 +37,7 @@ function AddCustomHero() {
       </SectionHeader>
       <form onSubmit={submitCustomHero}>
         <Input
+          name="custom hero"
           type="text"
           value={heroName}
           onChange={handleChange}

@@ -99,7 +99,11 @@ function CampaignScenario() {
             Specify Current Campaign Scennario
           </SectionHeader>
           <form onSubmit={addScenarioToCurrent} style={{ textAlign: "center" }}>
-            <SelectFfgHero value={currentScenario.name} onChange={handleChange}>
+            <SelectFfgHero
+              value={currentScenario.name}
+              onChange={handleChange}
+              name="scenario"
+            >
               {notCurrentAndNotWon.map((notCurrent) => (
                 <option key={notCurrent.index} value={notCurrent.name}>
                   {notCurrent.name}

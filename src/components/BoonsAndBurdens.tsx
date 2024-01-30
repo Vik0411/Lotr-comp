@@ -110,6 +110,7 @@ function BoonsAndBurdens() {
       <SectionHeader>Add Boons & Burdens</SectionHeader>
       <form onSubmit={submitBoon}>
         <Input
+          name="boon"
           type="text"
           value={bBNameObject.boonName}
           onChange={handleChangeBoon}
@@ -151,6 +152,7 @@ function BoonsAndBurdens() {
         {bBNameObject.boonName !== "" && (
           <div>
             <Input
+              name="boon extra"
               value={extraBoonInfo}
               onChange={handleChangeBoonInfo}
               placeholder="extra boon info (optional)"
@@ -159,7 +161,7 @@ function BoonsAndBurdens() {
           </div>
         )}
       </form>
-      <form onSubmit={submitBurden}>
+      <form onSubmit={submitBurden} name="burden">
         <Input
           type="text"
           value={bBNameObject.burdenName}
@@ -204,6 +206,7 @@ function BoonsAndBurdens() {
         {bBNameObject.burdenName !== "" && (
           <div>
             <Input
+              name="burden extra"
               value={extraBurdenInfo}
               onChange={handleChangeBurdenInfo}
               placeholder="extra burden info (optional)"
