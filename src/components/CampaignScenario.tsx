@@ -98,7 +98,11 @@ function CampaignScenario() {
           <SectionHeader style={{ textAlign: "center" }}>
             Specify Current Campaign Scennario
           </SectionHeader>
-          <form onSubmit={addScenarioToCurrent} style={{ textAlign: "center" }}>
+          <form
+            name="addscen"
+            onSubmit={addScenarioToCurrent}
+            style={{ textAlign: "center" }}
+          >
             <SelectFfgHero
               value={currentScenario.name}
               onChange={handleChange}

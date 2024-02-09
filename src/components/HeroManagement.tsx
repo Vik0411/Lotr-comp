@@ -20,7 +20,7 @@ function HeroManagement() {
       <div style={{ display: "flex", flexFlow: "column", marginLeft: "40px" }}>
         <CurrentHeroes />
       </div>
-      <FallenHeroes style={{ margin: "30px 30px" }} />
+      <FallenHeroes />
     </ContainerHeroManagement>
   );
 }

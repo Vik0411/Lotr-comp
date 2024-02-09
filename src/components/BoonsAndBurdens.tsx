@@ -108,7 +108,7 @@ function BoonsAndBurdens() {
   return (
     <div style={{ position: "relative" }}>
       <SectionHeader>Add Boons & Burdens</SectionHeader>
-      <form onSubmit={submitBoon}>
+      <form name="boon" onSubmit={submitBoon}>
         <Input
           name="boon"
           type="text"

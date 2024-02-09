@@ -109,7 +109,7 @@ function AllMightyHeroes() {
         <ConfirmationModal procede={procede} doNotProceed={doNotProceed} />
       )}
       <SectionHeader>Add to Current Campaign</SectionHeader>
-      <form onSubmit={prepareHero}>
+      <form name="heroprep" onSubmit={prepareHero}>
         <SelectFfgHero
           value={preparedHero.code}
           onChange={handleChange}
