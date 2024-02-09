@@ -6,7 +6,6 @@ import FallenHeroes from "./FallenHeroes";
 import { styled } from "styled-components";
 
 const ContainerHeroManagement = styled(Container)`
-  margin: 0 auto;
   font-size: 20px;
 `;
 function HeroManagement() {
@@ -18,10 +17,10 @@ function HeroManagement() {
           <AddCustomHero />
         </div>
       </ContainerFlex>
-      <div style={{ display: "flex", flexFlow: "column" }}>
+      <div style={{ display: "flex", flexFlow: "column", marginLeft: "40px" }}>
         <CurrentHeroes />
       </div>
-      <FallenHeroes />
+      <FallenHeroes style={{ margin: "30px 30px" }} />
     </ContainerHeroManagement>
   );
 }

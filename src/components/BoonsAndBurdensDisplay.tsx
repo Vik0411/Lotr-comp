@@ -38,7 +38,7 @@ function BoonsAndBurdensDisplay() {
         {campaign.boonsAndBurdens.boons.map((boon) => (
           <div key={boon.index} style={{ margin: "15px 15px" }}>
             {doesHaveImage(boon.image) ? (
-              <ContainerCurrentCard key={boon.index} style={{ width: "180px" }}>
+              <ContainerCurrentCard key={boon.index} style={{ width: "230px" }}>
                 <Paragraph>
                   {boon.name}
                   <CancelBtn onClick={() => cancelBoon(boon)}>
@@ -96,7 +96,7 @@ function BoonsAndBurdensDisplay() {
           {campaign.boonsAndBurdens.burdens.map((burden) => (
             <div key={burden.index} style={{ margin: "15px 15px" }}>
               {doesBurdenHaveImage(burden.image + ".jpg") ? (
-                <ContainerCurrentCard style={{ width: "180px" }}>
+                <ContainerCurrentCard style={{ width: "230px" }}>
                   <Paragraph>
                     {burden.name}
                     <CancelBtn onClick={() => cancelBurden(burden)}>
