@@ -33,6 +33,10 @@ const ContainerFlexHeader = styled(ContainerFlex)`
   @media (max-width: 768px) {
     display: none;
   }
+
+  @media (max-width: 1100px) {
+    top: 42px;
+  }
 `;
 
 const ContainerFlexWholeHeader = styled(ContainerFlex)`
@@ -54,11 +58,15 @@ const ContainerFlexWholeHeader = styled(ContainerFlex)`
 const BorBShorthand = styled.div`
   width: 100px;
   position: absolute;
-  left: 200px;
+  left: 180px;
   top: 5px;
 
   @media (max-width: 768px) {
     display: none;
+  }
+
+  @media (max-width: 1100px) {
+    top: 42px;
   }
 `;
 
