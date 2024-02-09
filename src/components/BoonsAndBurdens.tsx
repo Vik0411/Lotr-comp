@@ -125,6 +125,7 @@ function BoonsAndBurdens() {
                   backgroundColor: "transparent",
                   border: "0",
                   height: "90px",
+                  cursor: "pointer",
                 }}
                 key={index}
                 onClick={() => {
@@ -177,6 +178,7 @@ function BoonsAndBurdens() {
                   backgroundColor: "transparent",
                   border: "0",
                   height: "90px",
+                  cursor: "pointer",
                 }}
                 key={index}
                 onClick={() => {

@@ -17,6 +17,10 @@ const StyledLink = styled(Link)`
   &:hover {
     color: #ba55d3;
   }
+
+  @media (max-width: 768px) {
+    font-size: medium;
+  }
 `;
 
 const ContainerFlexHeader = styled(ContainerFlex)`

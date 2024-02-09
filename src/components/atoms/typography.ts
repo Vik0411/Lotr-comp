@@ -7,6 +7,10 @@ export const Span = styled.span`
 export const SectionHeader = styled.h2`
   color: white;
   -webkit-text-stroke: 0.2px #ba55d3;
+
+  @media (max-width: 768px) {
+    font-size: medium;
+  }
 `;
 
 export const Paragraph = styled.p`
