@@ -64,7 +64,7 @@ function BoonsAndBurdensDisplay() {
                 <BorBCard alt="" src={`images/bb/${boon.image}.jpg`}></BorBCard>
               </ContainerCurrentCard>
             ) : (
-              <ContainerCurrentCard key={boon.index}>
+              <ContainerCurrentCard key={boon.index} style={{ width: "230px" }}>
                 <Paragraph>
                   {boon.name}
                   <CancelBtn onClick={() => cancelBoon(boon)}>
@@ -125,7 +125,10 @@ function BoonsAndBurdensDisplay() {
                   ></BorBCard>
                 </ContainerCurrentCard>
               ) : (
-                <ContainerCurrentCard key={burden.index}>
+                <ContainerCurrentCard
+                  key={burden.index}
+                  style={{ width: "230px" }}
+                >
                   <Paragraph>
                     {burden.name}
                     <CancelBtn onClick={() => cancelBurden(burden)}>
