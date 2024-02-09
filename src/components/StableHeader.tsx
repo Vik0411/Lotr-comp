@@ -128,10 +128,10 @@ function StableHeader() {
               Boons & Burdens
             </SectionHeader>
             {campaign.boonsAndBurdens.boons.map((boon) => (
-              <ListItemHeader key={boon.name}>{boon.name}</ListItemHeader>
+              <ListItemHeader key={boon.index}>{boon.name}</ListItemHeader>
             ))}
             {campaign.boonsAndBurdens.burdens.map((burden) => (
-              <ListItemHeader key={burden.name}>{burden.name}</ListItemHeader>
+              <ListItemHeader key={burden.index}>{burden.name}</ListItemHeader>
             ))}
           </ButtonTransparent>
         </BorBShorthand>
