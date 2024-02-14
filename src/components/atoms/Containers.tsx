@@ -37,7 +37,6 @@ export const ContainerBBDisplay = styled.div`
 export const ContainerCurrentCard = styled.div`
   position: relative;
   display: block;
-  padding: 20px;
   overflow: hidden;
   transition: all 0.3s;
 

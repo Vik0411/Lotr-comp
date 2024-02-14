@@ -38,30 +38,38 @@ function BoonsAndBurdensDisplay() {
         {campaign.boonsAndBurdens.boons.map((boon) => (
           <div key={boon.index} style={{ margin: "15px 15px" }}>
             {doesHaveImage(boon.image) ? (
-              <ContainerCurrentCard key={boon.index} style={{ width: "230px" }}>
-                <Paragraph>
-                  {boon.name}
-                  <CancelBtn onClick={() => cancelBoon(boon)}>
-                    <CancelImage
-                      alt=""
-                      src={"images/cancel-1.png"}
-                    ></CancelImage>
-                  </CancelBtn>
-                </Paragraph>
-                {boon.extraInfo !== "" && (
-                  <Paragraph
-                    style={{
-                      color: "white",
-                      position: "absolute",
-                      top: "60px",
-                      marginLeft: "14px",
-                      marginRight: "5px",
-                      backgroundColor: "rgba(1, 1, 1, 0.3)",
-                      borderRadius: "20px",
-                    }}
-                  >{`extra info: ${boon.extraInfo}`}</Paragraph>
-                )}
-                <BorBCard alt="" src={`images/bb/${boon.image}.jpg`}></BorBCard>
+              <ContainerCurrentCard
+                key={boon.index}
+                style={{ width: "240px", position: "relative" }}
+              >
+                <div style={{ position: "relative" }}>
+                  <Paragraph>
+                    {boon.name}
+                    <CancelBtn onClick={() => cancelBoon(boon)}>
+                      <CancelImage
+                        alt=""
+                        src={"images/cancel-1.png"}
+                      ></CancelImage>
+                    </CancelBtn>
+                  </Paragraph>
+                  {boon.extraInfo !== "" && (
+                    <Paragraph
+                      style={{
+                        color: "white",
+                        position: "absolute",
+                        top: "60px",
+                        marginLeft: "14px",
+                        marginRight: "5px",
+                        backgroundColor: "rgba(1, 1, 1, 0.3)",
+                        borderRadius: "20px",
+                      }}
+                    >{`extra info: ${boon.extraInfo}`}</Paragraph>
+                  )}
+                  <BorBCard
+                    alt=""
+                    src={`images/bb/${boon.image}.jpg`}
+                  ></BorBCard>
+                </div>
               </ContainerCurrentCard>
             ) : (
               <ContainerCurrentCard key={boon.index} style={{ width: "230px" }}>
