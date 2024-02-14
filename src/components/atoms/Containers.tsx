@@ -18,9 +18,8 @@ export const Container = styled.div`
 
 export const ContainerFlex = styled.div`
   display: flex;
-  gap: 15px;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 `;
 
 export const ContainerFallenHeroes = styled.div`

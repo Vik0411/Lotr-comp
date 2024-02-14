@@ -17,25 +17,21 @@ const StyledLink = styled(Link)`
   &:hover {
     color: #ba55d3;
   }
-
-  @media (max-width: 768px) {
-    font-size: medium;
-  }
 `;
 
 const ContainerFlexHeader = styled(ContainerFlex)`
   width: 200px;
   position: absolute;
-  left: 20px;
+  left: 0px;
   top: 5px;
   flex-flow: row;
 
-  @media (max-width: 768px) {
+  @media (max-width: 880px) {
     display: none;
   }
 
-  @media (max-width: 1100px) {
-    top: 42px;
+  @media (max-width: 1470px) {
+    top: 60px;
   }
 `;
 
@@ -43,7 +39,7 @@ const ContainerFlexWholeHeader = styled(ContainerFlex)`
   justify-content: center;
   gap: 150px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1300px) {
     gap: 50px;
     justify-content: right;
     margin-right: 20px;
@@ -58,15 +54,16 @@ const ContainerFlexWholeHeader = styled(ContainerFlex)`
 const BorBShorthand = styled.div`
   width: 100px;
   position: absolute;
-  left: 180px;
+  left: 160px;
   top: 5px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 880px) {
     display: none;
   }
 
-  @media (max-width: 1100px) {
-    top: 42px;
+  @media (max-width: 1470px) {
+    top: 60px;
+    font-size: 15px;
   }
 `;
 
@@ -104,7 +101,7 @@ function StableHeader() {
           Current Scenario: {chosenCurrentScenario.name}
         </SectionHeader>
       )}
-      <ContainerFlexWholeHeader style={{ height: "80px" }}>
+      <ContainerFlexWholeHeader style={{ height: "120px" }}>
         <ContainerFlexHeader>
           <div
             className="heroes"
@@ -112,8 +109,19 @@ function StableHeader() {
               width: "100px",
             }}
           >
-            <ButtonTransparent style={{ color: "grey", borderBottom: "10px" }}>
-              <SectionHeader style={{ color: "grey", borderBottom: "10px" }}>
+            <ButtonTransparent
+              style={{
+                color: "grey",
+                borderBottom: "10px",
+              }}
+            >
+              <SectionHeader
+                style={{
+                  color: "grey",
+                  borderBottom: "10px",
+                  fontSize: "30px",
+                }}
+              >
                 Current Heroes
               </SectionHeader>
               {current.map((hero) => (
@@ -123,8 +131,14 @@ function StableHeader() {
           </div>
         </ContainerFlexHeader>
         <BorBShorthand>
-          <ButtonTransparent style={{ color: "grey" }}>
-            <SectionHeader style={{ color: "grey" }}>
+          <ButtonTransparent style={{ color: "grey", marginLeft: "30px" }}>
+            <SectionHeader
+              style={{
+                color: "grey",
+                fontSize: "30px",
+                borderRight: "15px",
+              }}
+            >
               Boons & Burdens
             </SectionHeader>
             {campaign.boonsAndBurdens.boons.map((boon) => (
@@ -136,9 +150,7 @@ function StableHeader() {
           </ButtonTransparent>
         </BorBShorthand>
         <h2>
-          <StyledLink to="/" style={{ width: "100px" }}>
-            Campaign management
-          </StyledLink>
+          <StyledLink to="/">Campaign management</StyledLink>
         </h2>
         <h2>
           <StyledLink to="/hero" style={{ width: "100px" }}>

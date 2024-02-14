@@ -6,10 +6,15 @@ export const Span = styled.span`
 
 export const SectionHeader = styled.h2`
   color: white;
+  font-size: 40px;
   -webkit-text-stroke: 0.2px #ba55d3;
 
   @media (max-width: 768px) {
-    font-size: medium;
+    font-size: 25px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 30px;
   }
 `;
 

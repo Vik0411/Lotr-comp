@@ -7,7 +7,7 @@ export const ButtonTransparent = styled.button`
   padding: 0px 0px;
   cursor: pointer;
   background-color: transparent;
-  width: 100px;
+  font-family: inherit;
 
   &:hover ${ListItemHeader} {
     opacity: 1;

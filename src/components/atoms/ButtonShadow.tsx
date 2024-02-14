@@ -12,10 +12,9 @@ export const ButtonShadow = styled.button`
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
-  font-size: 14px;
   font-weight: 400;
-  line-height: 5px;
+  font-family: inherit;
+  line-height: 10px;
   margin: 0 5px 3px 0;
   overflow: visible;
   padding: 12px 20px;
