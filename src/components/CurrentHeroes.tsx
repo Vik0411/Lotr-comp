@@ -124,7 +124,6 @@ function CurrentHeroes() {
       {cloneModal && (
         <ConfirmationModal procede={procede} doNotProceed={doNotProceed} />
       )}
-      <TopHeader>Current heroes:</TopHeader>
       <ContainerCurrentHeroes>
         {current.map(
           (current: Hero): JSX.Element => (

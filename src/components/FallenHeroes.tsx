@@ -21,16 +21,16 @@ function FallenHeroes() {
   );
 
   return (
-    <ContainerFallenHeroes>
-      <BottomSectionHeader>The Fallen:</BottomSectionHeader>
-      <ul>
-        {fallen.map(
-          (fallenHero: Hero): JSX.Element => (
-            <FallenHero key={fallenHero.code} {...fallenHero} />
-          )
-        )}
-      </ul>
-    </ContainerFallenHeroes>
+    // <ContainerFallenHeroes>
+    // variant for more columns
+    <ul style={{ textAlign: "center" }}>
+      {fallen.map(
+        (fallenHero: Hero): JSX.Element => (
+          <FallenHero key={fallenHero.code} {...fallenHero} />
+        )
+      )}
+    </ul>
+    // </ContainerFallenHeroes>
   );
 }
 

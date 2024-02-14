@@ -32,10 +32,19 @@ function AddCustomHero() {
 
   return (
     <div>
-      <SectionHeader style={{ fontSize: "15px", fontWeight: "450" }}>
+      <SectionHeader
+        style={{ fontSize: "30px", fontWeight: "450", textAlign: "center" }}
+      >
         Create Custom Hero
       </SectionHeader>
-      <form onSubmit={submitCustomHero}>
+      <form
+        onSubmit={submitCustomHero}
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          flexFlow: "row",
+        }}
+      >
         <Input
           name="custom hero"
           type="text"

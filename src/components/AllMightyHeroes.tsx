@@ -108,7 +108,6 @@ function AllMightyHeroes() {
       {cloneModal && (
         <ConfirmationModal procede={procede} doNotProceed={doNotProceed} />
       )}
-      <SectionHeader>Add to Current Campaign</SectionHeader>
       <form name="heroprep" onSubmit={prepareHero}>
         <SelectFfgHero
           value={preparedHero.code}
