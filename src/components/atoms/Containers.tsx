@@ -79,9 +79,6 @@ export const ContainerFlexColumn = styled.div`
   flex-flow: column;
   flex-wrap: wrap;
   margin: 15px 15px;
-  max-height: 400px;
-  max-width: 400px;
-  overflow: auto;
 `;
 
 export const ContainerModal = styled.div`

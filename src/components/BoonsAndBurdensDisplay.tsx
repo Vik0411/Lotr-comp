@@ -33,7 +33,7 @@ function BoonsAndBurdensDisplay() {
 
   return (
     <ContainerFlex>
-      <ContainerFlex>
+      <ContainerFlex style={{ marginLeft: "20px" }}>
         <SectionHeader>Boons:</SectionHeader>
         <ContainerFlexColumn>
           {campaign.boonsAndBurdens.boons.map((boon) => (
@@ -106,7 +106,7 @@ function BoonsAndBurdensDisplay() {
           ))}
         </ContainerFlexColumn>
       </ContainerFlex>
-      <ContainerFlex>
+      <ContainerFlex style={{ marginLeft: "20px" }}>
         <SectionHeader>Burdens:</SectionHeader>
         <ContainerFlexColumn>
           {campaign.boonsAndBurdens.burdens.map((burden) => (

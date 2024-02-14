@@ -5,5 +5,5 @@ export const Input = styled.input`
   background-color: transparent;
   border-radius: 15px;
   font-family: inherit;
-  margin-right: 20px;
+  margin: 0px 30px;
 `;

@@ -1,12 +1,12 @@
 import { ButtonShadow } from "./atoms/ButtonShadow";
 import { Input } from "./atoms/Input";
 import { BoonDiv } from "./atoms/BoonDiv";
-import { SectionHeader } from "./atoms/typography";
 import { styled } from "styled-components";
 import { LotrContext } from "../context";
 import React, { useState } from "react";
 import { boons } from "../data/boons";
 import { burdens } from "../data/burdens";
+import { ContainerFlex } from "./atoms/Containers";
 
 export const ButtonShadowYellow = styled(ButtonShadow)`
   opacity: 1;
@@ -106,7 +106,7 @@ function BoonsAndBurdens() {
   );
 
   return (
-    <div style={{ position: "relative" }}>
+    <ContainerFlex style={{ position: "relative" }}>
       <form name="boon" onSubmit={submitBoon}>
         <Input
           name="boon"
@@ -150,7 +150,7 @@ function BoonsAndBurdens() {
           </BoonDiv>
         )}
         {bBNameObject.boonName !== "" && (
-          <div>
+          <ContainerFlex>
             <Input
               name="boon extra"
               value={extraBoonInfo}
@@ -158,7 +158,7 @@ function BoonsAndBurdens() {
               placeholder="extra boon info (optional)"
             />
             <ButtonShadowYellow type="submit">Submit boon</ButtonShadowYellow>
-          </div>
+          </ContainerFlex>
         )}
       </form>
       <form onSubmit={submitBurden} name="burden">
@@ -205,7 +205,7 @@ function BoonsAndBurdens() {
           </BoonDiv>
         )}
         {bBNameObject.burdenName !== "" && (
-          <div>
+          <ContainerFlex>
             <Input
               name="burden extra"
               value={extraBurdenInfo}
@@ -213,10 +213,10 @@ function BoonsAndBurdens() {
               placeholder="extra burden info (optional)"
             />
             <ButtonShadowBlood type="submit">Submit burden</ButtonShadowBlood>
-          </div>
+          </ContainerFlex>
         )}
       </form>
-    </div>
+    </ContainerFlex>
   );
 }
 
