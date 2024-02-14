@@ -14,7 +14,7 @@ function WonScenarios() {
   );
 
   return (
-    <div style={{ margin: "30px 30px" }}>
+    <div style={{ margin: "30px 30px", textAlign: "center" }}>
       <SectionHeader>Won Scenarios:</SectionHeader>
       <ul>
         {notCurrentAndWon.map(

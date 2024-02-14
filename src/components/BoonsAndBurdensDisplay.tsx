@@ -33,22 +33,56 @@ function BoonsAndBurdensDisplay() {
 
   return (
     <ContainerFlex>
-      <SectionHeader>Boons</SectionHeader>
-      <ContainerFlexColumn>
-        {campaign.boonsAndBurdens.boons.map((boon) => (
-          <div key={boon.index} style={{ margin: "15px 15px" }}>
-            {doesHaveImage(boon.image) ? (
-              <ContainerCurrentCard
-                key={boon.index}
-                style={{ width: "240px", position: "relative" }}
-              >
-                <div style={{ position: "relative" }}>
+      <ContainerFlex>
+        <SectionHeader>Boons:</SectionHeader>
+        <ContainerFlexColumn>
+          {campaign.boonsAndBurdens.boons.map((boon) => (
+            <div key={boon.index} style={{ margin: "15px 15px" }}>
+              {doesHaveImage(boon.image) ? (
+                <ContainerCurrentCard
+                  key={boon.index}
+                  style={{ width: "240px", position: "relative" }}
+                >
+                  <div style={{ position: "relative" }}>
+                    <Paragraph>
+                      {boon.name}
+                      <CancelBtn onClick={() => cancelBoon(boon)}>
+                        <CancelImage
+                          alt=""
+                          src={"images/cancel-1.png"}
+                        ></CancelImage>
+                      </CancelBtn>
+                    </Paragraph>
+                    {boon.extraInfo !== "" && (
+                      <Paragraph
+                        style={{
+                          color: "white",
+                          position: "absolute",
+                          top: "60px",
+                          marginLeft: "14px",
+                          marginRight: "5px",
+                          backgroundColor: "rgba(1, 1, 1, 0.3)",
+                          borderRadius: "20px",
+                        }}
+                      >{`extra info: ${boon.extraInfo}`}</Paragraph>
+                    )}
+                    <BorBCard
+                      alt=""
+                      src={`images/bb/${boon.image}.jpg`}
+                    ></BorBCard>
+                  </div>
+                </ContainerCurrentCard>
+              ) : (
+                <ContainerCurrentCard
+                  key={boon.index}
+                  style={{ width: "230px" }}
+                >
                   <Paragraph>
                     {boon.name}
                     <CancelBtn onClick={() => cancelBoon(boon)}>
                       <CancelImage
                         alt=""
-                        src={"images/cancel-1.png"}
+                        src="images/cancel-1.png"
                       ></CancelImage>
                     </CancelBtn>
                   </Paragraph>
@@ -65,41 +99,15 @@ function BoonsAndBurdensDisplay() {
                       }}
                     >{`extra info: ${boon.extraInfo}`}</Paragraph>
                   )}
-                  <BorBCard
-                    alt=""
-                    src={`images/bb/${boon.image}.jpg`}
-                  ></BorBCard>
-                </div>
-              </ContainerCurrentCard>
-            ) : (
-              <ContainerCurrentCard key={boon.index} style={{ width: "230px" }}>
-                <Paragraph>
-                  {boon.name}
-                  <CancelBtn onClick={() => cancelBoon(boon)}>
-                    <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
-                  </CancelBtn>
-                </Paragraph>
-                {boon.extraInfo !== "" && (
-                  <Paragraph
-                    style={{
-                      color: "white",
-                      position: "absolute",
-                      top: "60px",
-                      marginLeft: "14px",
-                      marginRight: "5px",
-                      backgroundColor: "rgba(1, 1, 1, 0.3)",
-                      borderRadius: "20px",
-                    }}
-                  >{`extra info: ${boon.extraInfo}`}</Paragraph>
-                )}
-                <BorBCard alt="" src={`../images/nonffg.jpg`}></BorBCard>
-              </ContainerCurrentCard>
-            )}
-          </div>
-        ))}
-      </ContainerFlexColumn>
+                  <BorBCard alt="" src={`../images/nonffg.jpg`}></BorBCard>
+                </ContainerCurrentCard>
+              )}
+            </div>
+          ))}
+        </ContainerFlexColumn>
+      </ContainerFlex>
       <ContainerFlex>
-        <SectionHeader>Burdens</SectionHeader>
+        <SectionHeader>Burdens:</SectionHeader>
         <ContainerFlexColumn>
           {campaign.boonsAndBurdens.burdens.map((burden) => (
             <div key={burden.index} style={{ margin: "15px 15px" }}>

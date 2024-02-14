@@ -81,6 +81,9 @@ function CampaignScenario() {
         overflow: "hidden",
       }}
     >
+      <SectionHeader style={{ textAlign: "center", marginTop: "50px" }}>
+        Specify Current Campaign Scennario
+      </SectionHeader>
       <div
         style={{
           display: "flex",
@@ -90,14 +93,10 @@ function CampaignScenario() {
       >
         <div
           style={{
-            margin: "50px 20px",
             display: "flex",
             flexFlow: "column",
           }}
         >
-          <SectionHeader style={{ textAlign: "center" }}>
-            Specify Current Campaign Scennario
-          </SectionHeader>
           <form
             name="addscen"
             onSubmit={addScenarioToCurrent}
