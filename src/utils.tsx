@@ -38,3 +38,15 @@ export function doesScenarioHaveImage(sc: string) {
 
 export const modalText =
   "At least one hero with the same name is already prepared. Are you sure you want to proceed?";
+
+export function sortArray(arr) {
+  arr.sort(function (a, b) {
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    return 0;
+  });
+}

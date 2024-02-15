@@ -1,9 +1,8 @@
-import { SectionHeader } from "./atoms/typography";
 import { ButtonShadow } from "./atoms/ButtonShadow";
 import { LotrContext } from "../context";
 import React, { useEffect, useState } from "react";
 
-import { filterHeroes } from "../utils";
+import { filterHeroes, sortArray } from "../utils";
 import { Hero } from "../types";
 import { SelectFfgHero } from "./atoms/SelectFfgHero";
 import { styled } from "styled-components";
@@ -99,6 +98,7 @@ function AllMightyHeroes() {
       { alive: true, current: false },
       campaign.allHeroes
     );
+    sortArray(notCurrentAndAlive);
     setPreparedHero(notCurrentAndAlive[0]);
     localStorage.setItem("campaign", JSON.stringify(campaign));
   }, [campaign]);
