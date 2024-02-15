@@ -52,7 +52,7 @@ const ContainerFlexWholeHeader = styled(ContainerFlex)`
 `;
 
 const BorBShorthand = styled.div`
-  width: 100px;
+  width: 160px;
   position: absolute;
   left: 160px;
   top: 5px;
@@ -131,12 +131,11 @@ function StableHeader() {
           </div>
         </ContainerFlexHeader>
         <BorBShorthand>
-          <ButtonTransparent style={{ color: "grey", marginLeft: "30px" }}>
+          <ButtonTransparent style={{ color: "grey", marginLeft: "40px" }}>
             <SectionHeader
               style={{
                 color: "grey",
                 fontSize: "30px",
-                borderRight: "15px",
               }}
             >
               Boons & Burdens
