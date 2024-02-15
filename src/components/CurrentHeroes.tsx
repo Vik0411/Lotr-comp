@@ -18,7 +18,7 @@ const TopHeader = styled(SectionHeader)`
 
 const ContainerCurrentHeroes = styled(ContainerFlex)`
   display: flex;
-  gap: 15px;
+  gap: 100px;
   margin: 30px 30px;
   flex-direction: row;
 `;
