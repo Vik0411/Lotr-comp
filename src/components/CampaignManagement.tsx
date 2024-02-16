@@ -7,7 +7,6 @@ import {
   ContainerWithWhiteText,
 } from "./atoms/Containers";
 import BoonsAndBurdens from "./BoonsAndBurdens";
-import BoonsAndBurdensDisplay from "./BoonsAndBurdensDisplay";
 import { DynamicLore } from "./DynamicLore";
 import { styled } from "styled-components";
 import WonScenarios from "./WonScenarios";
@@ -16,6 +15,8 @@ import { useContext } from "react";
 import { LotrContext } from "../context";
 import { filterScenarios } from "../utils";
 import { SectionHeader } from "./atoms/typography";
+import BoonsDisplay from "./BoonsDisplay copy";
+import BurdensDisplay from "./BurdensDisplay";
 
 const ContainerHeroManagement = styled(Container)`
   margin: 0 auto;
@@ -53,16 +54,18 @@ function CampaignManagement() {
 
       {/* </ContainerFlex> */}
       {/* </div> */}
+      <SectionHeader style={{ textAlign: "center", marginBottom: "0px" }}>
+        Add Boons & Burdens
+      </SectionHeader>
       <ContainerFlex style={{ margin: "30px 30px" }}>
         <ContainerFlexColumn>
-          <SectionHeader style={{ textAlign: "center" }}>
-            Add Boons & Burdens
-          </SectionHeader>
           <BoonsAndBurdens />
         </ContainerFlexColumn>
       </ContainerFlex>
-      {(campaign.boonsAndBurdens.boons[0] ||
-        campaign.boonsAndBurdens.burdens[0]) && <BoonsAndBurdensDisplay />}
+      <ContainerFlex>
+        {campaign.boonsAndBurdens.boons[0] && <BoonsDisplay />}
+        {campaign.boonsAndBurdens.burdens[0] && <BurdensDisplay />}
+      </ContainerFlex>
       <ContainerWithWhiteText style={{ marginTop: "100px" }}>
         <DynamicLore />
       </ContainerWithWhiteText>

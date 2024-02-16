@@ -6,3 +6,16 @@ body {
   color: "black";
   font-size: 27px;
 }
+
+.swiper {
+  width: 240px;
+  height: 320px;
+  justify-content: center;
+}
+
+.swiper-slide {
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
