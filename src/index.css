@@ -10,7 +10,6 @@ body {
 .swiper {
   width: 240px;
   height: 320px;
-  justify-content: center;
 }
 
 .swiper-slide {

@@ -22,13 +22,14 @@ export const Paragraph = styled.p`
   display: flex;
   align-items: center;
   transition: 0.3s;
-  background-color: rgba(1, 1, 1, 0.3);
+  background-color: rgba(1, 1, 1, 0.5);
   position: absolute;
   border-radius: 25px;
   padding: 15px;
   margin: 0px;
   right: 0px;
-  top: 0px;
+  top: 10px;
+  font-size: 20px;
   z-index: 50;
   color: white;
   opacity: 0;

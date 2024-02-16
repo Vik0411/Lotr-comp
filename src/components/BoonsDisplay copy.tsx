@@ -46,9 +46,7 @@ function BoonsDisplay() {
               <div key={boon.index} style={{ margin: "15px 15px" }}>
                 {doesHaveImage(boon.image) ? (
                   <SwiperSlide key={boon.index}>
-                    <ContainerCurrentCard
-                      style={{ width: "240px", position: "relative" }}
-                    >
+                    <ContainerCurrentCard style={{ width: "240px" }}>
                       <div style={{ position: "relative" }}>
                         <Paragraph>
                           {boon.name}
@@ -64,13 +62,12 @@ function BoonsDisplay() {
                             style={{
                               color: "white",
                               position: "absolute",
-                              top: "60px",
+                              top: "80px",
                               marginLeft: "14px",
                               marginRight: "5px",
-                              backgroundColor: "rgba(1, 1, 1, 0.3)",
                               borderRadius: "20px",
                             }}
-                          >{`extra info: ${boon.extraInfo}`}</Paragraph>
+                          >{`EXTRA INFO: ${boon.extraInfo}`}</Paragraph>
                         )}
                         <BorBCard
                           alt=""

@@ -54,7 +54,9 @@ function CampaignManagement() {
 
       {/* </ContainerFlex> */}
       {/* </div> */}
-      <SectionHeader style={{ textAlign: "center", marginBottom: "0px" }}>
+      <SectionHeader
+        style={{ textAlign: "center", marginBottom: "0px", marginTop: "100px" }}
+      >
         Add Boons & Burdens
       </SectionHeader>
       <ContainerFlex style={{ margin: "30px 30px" }}>

@@ -5,16 +5,12 @@ import { ButtonShadow } from "./atoms/ButtonShadow";
 import { onlyMultiples } from "../data/dataAdjustments";
 import { filterHeroes } from "../utils";
 import { Hero } from "../types";
-import { Paragraph, SectionHeader } from "./atoms/typography";
+import { Paragraph } from "./atoms/typography";
 import { ContainerCurrentCard, ContainerFlex } from "./atoms/Containers";
 import { HeroCard } from "./atoms/HeroCard";
 import { CancelImage } from "./atoms/CancelImage";
 import { CancelBtn } from "./atoms/CancelBtn";
 import ConfirmationModal from "./ConfirmModal";
-
-const TopHeader = styled(SectionHeader)`
-  margin: 30px 30px;
-`;
 
 const ContainerCurrentHeroes = styled(ContainerFlex)`
   display: flex;
@@ -137,7 +133,7 @@ function CurrentHeroes() {
                 </Paragraph>
                 <HeroCard alt="" src={`images/${current.imagesrc}`} />
                 <ButtonBlack onClick={() => killHero(current.code)}>
-                  Kill Hero
+                  Kill
                 </ButtonBlack>
               </div>
             </ContainerCurrentCard>
