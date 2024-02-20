@@ -5,13 +5,13 @@ import StableHeader from "./components/StableHeader";
 
 function App() {
   return (
-    <div>
+    <>
       <StableHeader />
       <Routes>
         <Route path="/" element={<CampaignManagement />} />
         <Route path="/hero" element={<HeroManagement />} />
       </Routes>
-    </div>
+    </>
   );
 }
 

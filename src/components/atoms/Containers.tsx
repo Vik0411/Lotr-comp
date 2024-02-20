@@ -16,6 +16,12 @@ export const Container = styled.div`
   box-sizing: border-box;
 `;
 
+export const ContainerHeroManagement = styled(Container)`
+  font-size: 20px;
+  flex: 1;
+  width: 100%;
+`;
+
 export const ContainerFlex = styled.div`
   display: flex;
   flex-wrap: wrap;

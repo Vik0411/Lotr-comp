@@ -1,14 +1,13 @@
 import CampaignScenario from "./CampaignScenario";
 import CurrentScenarioDisplay from "./CurrentScenarioDisplay";
 import {
-  Container,
   ContainerFlex,
   ContainerFlexColumn,
+  ContainerHeroManagement,
   ContainerWithWhiteText,
 } from "./atoms/Containers";
 import BoonsAndBurdens from "./BoonsAndBurdens";
 import { DynamicLore } from "./DynamicLore";
-import { styled } from "styled-components";
 import WonScenarios from "./WonScenarios";
 import AddCustomScenario from "./AddCustomScenario";
 import { useContext } from "react";
@@ -18,10 +17,6 @@ import { SectionHeader } from "./atoms/typography";
 import BoonsDisplay from "./BoonsDisplay copy";
 import BurdensDisplay from "./BurdensDisplay";
 
-const ContainerHeroManagement = styled(Container)`
-  margin: 0 auto;
-  font-size: 20px;
-`;
 function CampaignManagement() {
   const { campaign } = useContext(LotrContext);
 

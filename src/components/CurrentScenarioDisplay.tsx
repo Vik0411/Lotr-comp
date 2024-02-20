@@ -61,7 +61,7 @@ function CurrentScenarioDisplay() {
   }
 
   return (
-    <div style={{ minHeight: "300px", margin: "30px 30px" }}>
+    <div style={{ margin: "30px 30px" }}>
       {chosenCurrentScenario && (
         <div>
           <SectionHeader style={{ textAlign: "center" }}>
