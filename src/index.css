@@ -1,0 +1,26 @@
+body {
+  margin-top: 50px;
+}
+
+* {
+  color: "black";
+  font-size: 27px;
+}
+
+.swiper {
+  width: 240px;
+  height: 320px;
+}
+
+.swiper-slide {
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
