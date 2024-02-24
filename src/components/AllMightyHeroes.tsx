@@ -102,10 +102,17 @@ function AllMightyHeroes() {
     localStorage.setItem("campaign", JSON.stringify(campaign));
   }, [campaign]);
 
+  const modalText =
+    "At least one hero with the same name is already prepared. Are you sure you want to proceed?";
+
   return (
     <div style={{ position: "relative" }}>
       {cloneModal && (
-        <ConfirmationModal procede={procede} doNotProceed={doNotProceed} />
+        <ConfirmationModal
+          procede={procede}
+          doNotProceed={doNotProceed}
+          modalText={modalText}
+        />
       )}
       <form name="heroprep" onSubmit={prepareHero}>
         <SelectFfgHero

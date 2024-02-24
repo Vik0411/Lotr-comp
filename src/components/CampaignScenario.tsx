@@ -7,6 +7,7 @@ import { filterScenarios } from "../utils";
 import { Scenario } from "../types";
 import { SelectFfgHero } from "./atoms/SelectFfgHero";
 import { styled } from "styled-components";
+import ConfirmationModal from "./ConfirmModal";
 
 export const ButtonShadowGreen = styled(ButtonShadow)`
   opacity: 1;
@@ -18,6 +19,15 @@ export const ButtonShadowGreen = styled(ButtonShadow)`
 
 function CampaignScenario() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
+  const [cloneModal, setCloneModal] = useState(false);
+
+  function procede() {
+    setCloneModal(false);
+  }
+  function doNotProceed() {
+    setCloneModal(false);
+  }
+
   let notCurrentAndNotWon = filterScenarios(
     { won: false, current: false },
     campaign.scenarios
@@ -44,9 +54,7 @@ function CampaignScenario() {
     // confirmation when one scneario is already current
     if (chosenCurrentScenario) {
       if (chosenCurrentScenario !== currentScenario) {
-        alert(
-          "There is already a scenario being played. Let us first battle that through!"
-        );
+        setCloneModal(true);
         return;
       }
     }
@@ -73,6 +81,9 @@ function CampaignScenario() {
     localStorage.setItem("campaign", JSON.stringify(campaign));
   }, [campaign]);
 
+  const modalText =
+    "At least one scenario has been already selected. Let us first battle that through!";
+
   return (
     <div
       style={{
@@ -81,6 +92,13 @@ function CampaignScenario() {
         overflow: "hidden",
       }}
     >
+      {cloneModal && (
+        <ConfirmationModal
+          procede={procede}
+          doNotProceed={doNotProceed}
+          modalText={modalText}
+        />
+      )}
       <SectionHeader style={{ textAlign: "center", marginTop: "50px" }}>
         Specify Current Campaign Scennario
       </SectionHeader>

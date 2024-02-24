@@ -36,9 +36,6 @@ export function doesScenarioHaveImage(sc: string) {
   return scenarioNames.includes(sc);
 }
 
-export const modalText =
-  "At least one hero with the same name is already prepared. Are you sure you want to proceed?";
-
 export function sortArray(arr: Hero[]) {
   arr.sort(function (a, b) {
     if (a.name < b.name) {

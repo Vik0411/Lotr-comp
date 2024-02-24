@@ -110,6 +110,9 @@ function CurrentHeroes() {
     });
   }
 
+  const modalText =
+    "At least one hero with the same name is already dead. Are you sure you want to proceed?";
+
   return (
     <div
       style={{
@@ -118,7 +121,11 @@ function CurrentHeroes() {
       }}
     >
       {cloneModal && (
-        <ConfirmationModal procede={procede} doNotProceed={doNotProceed} />
+        <ConfirmationModal
+          procede={procede}
+          doNotProceed={doNotProceed}
+          modalText={modalText}
+        />
       )}
       <ContainerCurrentHeroes>
         {current.map(
@@ -128,7 +135,7 @@ function CurrentHeroes() {
                 <Paragraph>
                   {current.name}
                   <CancelBtn onClick={() => returnHero(current.code)}>
-                        <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
+                    <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
                   </CancelBtn>
                 </Paragraph>
                 <HeroCard alt="" src={`images/${current.imagesrc}`} />
