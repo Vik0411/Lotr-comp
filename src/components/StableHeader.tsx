@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ButtonTransparent } from "./atoms/ButtonTransparent";
 import { SectionHeader } from "./atoms/typography";
 
@@ -74,6 +74,7 @@ function StableHeader() {
     campaign.allHeroes
   );
 
+  const heroMgnt = useLocation().pathname.includes("hero");
   let chosenCurrentScenario = campaign.scenarios.find(
     (chosen) => chosen.current === true
   );
@@ -148,14 +149,30 @@ function StableHeader() {
             ))}
           </ButtonTransparent>
         </BorBShorthand>
-        <h2>
-          <StyledLink to="/">Campaign management</StyledLink>
-        </h2>
-        <h2>
-          <StyledLink to="/hero" style={{ width: "100px" }}>
-            Hero management
-          </StyledLink>
-        </h2>
+        {heroMgnt ? (
+          <h2>
+            <StyledLink to="/">Campaign management</StyledLink>
+          </h2>
+        ) : (
+          <h2>
+            <StyledLink style={{ color: "#ba55d3" }} to="/">
+              Campaign management
+            </StyledLink>
+          </h2>
+        )}
+        {heroMgnt ? (
+          <h2>
+            <StyledLink to="/hero" style={{ color: "#ba55d3", width: "100px" }}>
+              Hero management
+            </StyledLink>
+          </h2>
+        ) : (
+          <h2>
+            <StyledLink to="/hero" style={{ width: "100px" }}>
+              Hero management
+            </StyledLink>
+          </h2>
+        )}
       </ContainerFlexWholeHeader>
     </Container>
   );
