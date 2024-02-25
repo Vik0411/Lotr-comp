@@ -69,13 +69,13 @@ const BorBShorthand = styled.div`
 
 function StableHeader() {
   const { campaign } = React.useContext(LotrContext);
-  let current: Hero[] = filterHeroes(
+  const current: Hero[] = filterHeroes(
     { alive: true, current: true },
     campaign.allHeroes
   );
 
-  const heroMgnt = useLocation().pathname.includes("hero");
-  let chosenCurrentScenario = campaign.scenarios.find(
+  const inHeroMgnt = useLocation().pathname.includes("hero");
+  const chosenCurrentScenario = campaign.scenarios.find(
     (chosen) => chosen.current === true
   );
 
@@ -149,7 +149,7 @@ function StableHeader() {
             ))}
           </ButtonTransparent>
         </BorBShorthand>
-        {heroMgnt ? (
+        {inHeroMgnt ? (
           <h2>
             <StyledLink to="/">Campaign management</StyledLink>
           </h2>
@@ -160,7 +160,7 @@ function StableHeader() {
             </StyledLink>
           </h2>
         )}
-        {heroMgnt ? (
+        {inHeroMgnt ? (
           <h2>
             <StyledLink to="/hero" style={{ color: "#ba55d3", width: "100px" }}>
               Hero management

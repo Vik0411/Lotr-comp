@@ -14,7 +14,6 @@ import { Boon } from "../types";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
-import "swiper/css/pagination";
 import "../index.css";
 // import required modules
 import { EffectCards } from "swiper/modules";
@@ -25,10 +24,10 @@ function BoonsDisplay() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
 
   function cancelBoon(boon: Boon) {
-    let newBoons = campaign.boonsAndBurdens.boons.filter(
+    const newBoons = campaign.boonsAndBurdens.boons.filter(
       (bn) => bn.index !== boon.index
     );
-    let newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
+    const newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
     setCampaign({ ...campaign, boonsAndBurdens: newBB });
   }
 

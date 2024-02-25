@@ -33,7 +33,7 @@ function CurrentHeroes() {
   const [cloneModal, setCloneModal] = useState(false);
   const [cloneModalAction, setCloneModalAction] = useState(null);
 
-  let current = filterHeroes(
+  const current = filterHeroes(
     { alive: true, current: true },
     campaign.allHeroes
   );
@@ -60,17 +60,17 @@ function CurrentHeroes() {
 
   function killHero(heroCode: string) {
     // confirmation when one "duplicate" is already killed
-    let killedHeroAsObjectOldName = onlyMultiples.find(
+    const killedHeroAsObjectOldName = onlyMultiples.find(
       (hero) => hero.code === heroCode
     );
-    let multiplesWithUnchangedName = onlyMultiples.filter(
+    const multiplesWithUnchangedName = onlyMultiples.filter(
       (hero) => hero.name === killedHeroAsObjectOldName?.name
     );
-    let codes = multiplesWithUnchangedName.map((hero) => hero.code);
-    let multiplesInCurrentState = campaign.allHeroes.filter((hero) =>
+    const codes = multiplesWithUnchangedName.map((hero) => hero.code);
+    const multiplesInCurrentState = campaign.allHeroes.filter((hero) =>
       codes.includes(hero.code)
     );
-    let isOneDuplicateDead = multiplesInCurrentState.find(
+    const isOneDuplicateDead = multiplesInCurrentState.find(
       (hero) => hero.alive === false
     );
 

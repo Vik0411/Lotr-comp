@@ -20,7 +20,7 @@ import BurdensDisplay from "./BurdensDisplay";
 function CampaignManagement() {
   const { campaign } = useContext(LotrContext);
 
-  let notCurrentAndWon = filterScenarios(
+  const notCurrentAndWon = filterScenarios(
     { won: true, current: false },
     campaign.scenarios
   );

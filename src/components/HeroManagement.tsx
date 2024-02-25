@@ -16,7 +16,7 @@ function HeroManagement() {
     campaign.allHeroes
   );
 
-  let fallen = filterHeroes(
+  const fallen = filterHeroes(
     { alive: false, current: false },
     campaign.allHeroes
   );

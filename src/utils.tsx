@@ -3,8 +3,8 @@ import { scenarios } from "./data/scenarios";
 import { Hero, Scenario, changedAttrs, changedAttrsScenario } from "./types";
 
 export function filterHeroes(obj: changedAttrs, allHeroes: Hero[]) {
-  let { alive, current } = obj;
-  let her = allHeroes.filter(
+  const { alive, current } = obj;
+  const her = allHeroes.filter(
     (hero) => hero.alive === alive && hero.current === current
   );
   return her;
@@ -14,8 +14,8 @@ export function filterScenarios(
   obj: changedAttrsScenario,
   scenarios: Scenario[]
 ) {
-  let { won, current } = obj;
-  let scen = scenarios.filter(
+  const { won, current } = obj;
+  const scen = scenarios.filter(
     (scenario) => scenario.won === won && scenario.current === current
   );
   return scen;

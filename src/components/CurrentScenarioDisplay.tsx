@@ -21,7 +21,7 @@ export const ButtonBlack = styled(ButtonShadow)`
 
 function CurrentScenarioDisplay() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
-  let chosenCurrentScenario = campaign.scenarios.find(
+  const chosenCurrentScenario = campaign.scenarios.find(
     (chosen) => chosen.current === true
   );
 

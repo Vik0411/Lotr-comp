@@ -8,7 +8,7 @@ import { Scenario } from "../types";
 function WonScenarios() {
   const { campaign } = React.useContext(LotrContext);
 
-  let notCurrentAndWon = filterScenarios(
+  const notCurrentAndWon = filterScenarios(
     { won: true, current: false },
     campaign.scenarios
   );

@@ -56,7 +56,7 @@ function BoonsAndBurdens() {
   function submitBoon(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    let newBoons = [
+    const newBoons = [
       ...campaign.boonsAndBurdens.boons,
       {
         name: bBNameObject.boonName,
@@ -65,14 +65,13 @@ function BoonsAndBurdens() {
         extraInfo: extraBoonInfo,
       },
     ];
-    let newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
-
+    const newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
     setCampaign({ ...campaign, boonsAndBurdens: newBB });
   }
 
   function submitBurden(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    let newBurdens = [
+    const newBurdens = [
       ...campaign.boonsAndBurdens.burdens,
       {
         name: bBNameObject.burdenName,
@@ -81,10 +80,10 @@ function BoonsAndBurdens() {
         extraInfo: extraBurdenInfo,
       },
     ];
-    let newBB = { ...campaign.boonsAndBurdens, burdens: newBurdens };
+    const newBB = { ...campaign.boonsAndBurdens, burdens: newBurdens };
 
     setCampaign((currentState) => {
-      let camp = currentState;
+      const camp = currentState;
       return { ...camp, boonsAndBurdens: newBB };
     });
   }

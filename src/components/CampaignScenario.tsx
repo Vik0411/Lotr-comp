@@ -28,11 +28,11 @@ function CampaignScenario() {
     setCloneModal(false);
   }
 
-  let notCurrentAndNotWon = filterScenarios(
+  const notCurrentAndNotWon = filterScenarios(
     { won: false, current: false },
     campaign.scenarios
   );
-  let chosenCurrentScenario = campaign.scenarios.find(
+  const chosenCurrentScenario = campaign.scenarios.find(
     (chosen) => chosen.current === true
   );
 
@@ -73,7 +73,7 @@ function CampaignScenario() {
   }
 
   useEffect(() => {
-    let notCurrentAndNotWon = filterScenarios(
+    const notCurrentAndNotWon = filterScenarios(
       { won: false, current: false },
       campaign.scenarios
     );

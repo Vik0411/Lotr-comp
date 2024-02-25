@@ -23,10 +23,10 @@ function BurdensDisplay() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
 
   function cancelBurden(burden: Burden) {
-    let newBurdens = campaign.boonsAndBurdens.burdens.filter(
+    const newBurdens = campaign.boonsAndBurdens.burdens.filter(
       (br) => br.index !== burden.index
     );
-    let newBB = { ...campaign.boonsAndBurdens, burdens: newBurdens };
+    const newBB = { ...campaign.boonsAndBurdens, burdens: newBurdens };
     setCampaign({ ...campaign, boonsAndBurdens: newBB });
   }
 

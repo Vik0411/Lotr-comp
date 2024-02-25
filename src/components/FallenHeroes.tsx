@@ -7,7 +7,7 @@ import { FallenHero } from "./FallenHero";
 function FallenHeroes() {
   const { campaign } = React.useContext(LotrContext);
 
-  let fallen = filterHeroes(
+  const fallen = filterHeroes(
     { alive: false, current: false },
     campaign.allHeroes
   );

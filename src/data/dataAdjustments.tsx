@@ -15,16 +15,16 @@ export const heroesNames = allCards
   .map((typeHero) => typeHero.name);
 
 function removeDuplicates(arr: Hero[]) {
-  let state: { unique: Hero[]; rest: Hero[] } = { unique: [], rest: [] };
+  const state: { unique: Hero[]; rest: Hero[] } = { unique: [], rest: [] };
 
   for (let i = 0; i < arr.length; i++) {
     // eslint-disable-next-line arrow-body-style
-    let dupls1 = state.unique.find((element: Hero) => {
+    const dupls1 = state.unique.find((element: Hero) => {
       // eslint-disable-next-line eqeqeq
       return element.name == arr[i].name;
     });
     // eslint-disable-next-line arrow-body-style
-    let dupls2 = state.rest.find((element: Hero) => {
+    const dupls2 = state.rest.find((element: Hero) => {
       // eslint-disable-next-line eqeqeq
       return element.name == arr[i].name;
     });
@@ -51,10 +51,10 @@ export const onlyUniqueHeroes = removeDuplicates(onlyHeroesForCampaign).unique;
 export const onlyMultiples = removeDuplicates(onlyHeroesForCampaign).rest;
 
 export const changedNameMultiples = onlyMultiples.map((hero) => {
-  let name = hero.name;
-  let sphere = hero.sphere_name;
-  let namewhole = name.concat(" (", sphere, ")");
-  return { ...hero, name: namewhole };
+  const name = hero.name;
+  const sphere = hero.sphere_name;
+  const nameAsWhole = name.concat(" (", sphere, ")");
+  return { ...hero, name: nameAsWhole };
 });
 
 const allHeroesWithChangedName = changedNameMultiples.concat(
@@ -62,9 +62,10 @@ const allHeroesWithChangedName = changedNameMultiples.concat(
 );
 
 const scenariosForCampaign = scenarios.map((scenario, indexing) => {
-  let scens = { ...scenario, index: indexing, current: false, won: false };
+  const scens = { ...scenario, index: indexing, current: false, won: false };
   return scens;
 });
+
 export const defaultState: CampaignContextInterface = {
   campaign: {
     allHeroes: sortArray(allHeroesWithChangedName),

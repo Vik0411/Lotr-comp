@@ -67,8 +67,3 @@ export interface BBContextInterface {
   bBNameObject: BBNameObject;
   setBBNameObject: Dispatch<SetStateAction<BBNameObject>>;
 }
-
-// export const defaultBB: BBContextInterface = {
-//   bBNameObject: { boonName: "", burdenName: "" },
-//   setBBNameObject: () => {},
-// };

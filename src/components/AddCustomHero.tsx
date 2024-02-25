@@ -16,7 +16,7 @@ function AddCustomHero() {
   function submitCustomHero(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    let newHero = {
+    const newHero = {
       ...campaign.allHeroes[0],
       name: `${heroName} (non-FFG custom hero)`,
       code: `${heroName} (non-FFG custom hero) ${Date.now().toString()}`,
@@ -25,8 +25,7 @@ function AddCustomHero() {
       current: false,
       flavor: "",
     };
-    let newHeroes = [...campaign.allHeroes, newHero];
-    console.log(newHeroes);
+    const newHeroes = [...campaign.allHeroes, newHero];
     setCampaign({ ...campaign, allHeroes: newHeroes });
   }
 

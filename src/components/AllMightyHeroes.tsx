@@ -19,7 +19,7 @@ export const ButtonShadowGreen = styled(ButtonShadow)`
 
 function AllMightyHeroes() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
-  let notCurrentAndAlive = filterHeroes(
+  const notCurrentAndAlive = filterHeroes(
     { alive: true, current: false },
     campaign.allHeroes
   );
@@ -60,18 +60,19 @@ function AllMightyHeroes() {
   function prepareHero(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    // before preparing a hero with same name as already prepared, get a confirmation to do so
-    let selectedHeroAsObjectOldName = onlyMultiples.find(
+    // before preparing a hero with same name as already prepared,
+    // get a confirmation to do so
+    const selectedHeroAsObjectOldName = onlyMultiples.find(
       (hero) => hero.code === preparedHero.code
     );
-    let multiplesWithUnchangedName = onlyMultiples.filter(
+    const multiplesWithUnchangedName = onlyMultiples.filter(
       (hero) => hero.name === selectedHeroAsObjectOldName?.name
     );
-    let codes = multiplesWithUnchangedName.map((hero) => hero.code);
-    let multiplesInCurrentState = campaign.allHeroes.filter((hero) =>
+    const codes = multiplesWithUnchangedName.map((hero) => hero.code);
+    const multiplesInCurrentState = campaign.allHeroes.filter((hero) =>
       codes.includes(hero.code)
     );
-    let isOneDuplicatePrepared = multiplesInCurrentState.find(
+    const isOneDuplicatePrepared = multiplesInCurrentState.find(
       (hero) => hero.current === true
     );
 
@@ -94,7 +95,7 @@ function AllMightyHeroes() {
   }
 
   useEffect(() => {
-    let notCurrentAndAlive = filterHeroes(
+    const notCurrentAndAlive = filterHeroes(
       { alive: true, current: false },
       campaign.allHeroes
     );
