@@ -3,6 +3,7 @@ import { LotrContext } from "../context";
 import { Hero } from "../types";
 import { filterHeroes } from "../utils";
 import { FallenHero } from "./FallenHero";
+import AninamtedPage from "./AnimatedPage";
 
 function FallenHeroes() {
   const { campaign } = React.useContext(LotrContext);
@@ -18,7 +19,9 @@ function FallenHeroes() {
     <ul style={{ textAlign: "center" }}>
       {fallen.map(
         (fallenHero: Hero): JSX.Element => (
-          <FallenHero key={fallenHero.code} {...fallenHero} />
+          <AninamtedPage>
+            <FallenHero key={fallenHero.code} {...fallenHero} />
+          </AninamtedPage>
         )
       )}
     </ul>

@@ -11,6 +11,7 @@ import { HeroCard } from "./atoms/HeroCard";
 import { CancelImage } from "./atoms/CancelImage";
 import { CancelBtn } from "./atoms/CancelBtn";
 import ConfirmationModal from "./ConfirmModal";
+import AninamtedPage from "./AnimatedPage";
 
 const ContainerCurrentHeroes = styled(ContainerFlex)`
   display: flex;
@@ -131,18 +132,23 @@ function CurrentHeroes() {
         {current.map(
           (current: Hero): JSX.Element => (
             <ContainerCurrentCard key={current.code} style={{ width: "250px" }}>
-              <div style={{ position: "relative" }}>
-                <Paragraph>
-                  {current.name}
-                  <CancelBtn onClick={() => returnHero(current.code)}>
-                    <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
-                  </CancelBtn>
-                </Paragraph>
-                <HeroCard alt="" src={`images/${current.imagesrc}`} />
-                <ButtonBlack onClick={() => killHero(current.code)}>
-                  Kill
-                </ButtonBlack>
-              </div>
+              <AninamtedPage>
+                <div style={{ position: "relative" }}>
+                  <Paragraph>
+                    {current.name}
+                    <CancelBtn onClick={() => returnHero(current.code)}>
+                      <CancelImage
+                        alt=""
+                        src="images/cancel-1.png"
+                      ></CancelImage>
+                    </CancelBtn>
+                  </Paragraph>
+                  <HeroCard alt="" src={`images/${current.imagesrc}`} />
+                  <ButtonBlack onClick={() => killHero(current.code)}>
+                    Kill
+                  </ButtonBlack>
+                </div>
+              </AninamtedPage>
             </ContainerCurrentCard>
           )
         )}

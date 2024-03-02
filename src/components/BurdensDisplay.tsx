@@ -18,6 +18,7 @@ import "../index.css";
 import { EffectCards } from "swiper/modules";
 // import styles bundle
 import "swiper/css/bundle";
+import AninamtedPage from "./AnimatedPage";
 
 function BurdensDisplay() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
@@ -44,46 +45,17 @@ function BurdensDisplay() {
               <div key={burden.index} style={{ margin: "15px 15px" }}>
                 {doesBurdenHaveImage(burden.image + ".jpg") ? (
                   <SwiperSlide key={burden.index}>
-                    <ContainerCurrentCard style={{ width: "230px" }}>
-                      <Paragraph>
-                        {burden.name}
-                        <CancelBtn onClick={() => cancelBurden(burden)}>
-                          <CancelImage
-                            alt=""
-                            src="images/cancel-1.png"
-                          ></CancelImage>
-                        </CancelBtn>
-                      </Paragraph>
-                      {burden.extraInfo !== "" && (
-                        <Paragraph
-                          style={{
-                            color: "white",
-                            position: "absolute",
-                            top: "60px",
-                            marginLeft: "14px",
-                            marginRight: "5px",
-                            backgroundColor: "rgba(1, 1, 1, 0.3)",
-                            borderRadius: "20px",
-                          }}
-                        >{`extra info: ${burden.extraInfo}`}</Paragraph>
-                      )}
-                      <BorBCard
-                        alt=""
-                        src={`images/bb/burdens/${burden.image}.jpg`}
-                      ></BorBCard>
-                    </ContainerCurrentCard>
-                  </SwiperSlide>
-                ) : (
-                  <SwiperSlide key={burden.index}>
-                    <ContainerCurrentCard style={{ width: "230px" }}>
-                      <Paragraph>
-                        {burden.name}
-                        <CancelBtn onClick={() => cancelBurden(burden)}>
-                          <CancelImage
-                            alt=""
-                            src="images/cancel-1.png"
-                          ></CancelImage>
-                        </CancelBtn>
+                    <AninamtedPage>
+                      <ContainerCurrentCard style={{ width: "230px" }}>
+                        <Paragraph>
+                          {burden.name}
+                          <CancelBtn onClick={() => cancelBurden(burden)}>
+                            <CancelImage
+                              alt=""
+                              src="images/cancel-1.png"
+                            ></CancelImage>
+                          </CancelBtn>
+                        </Paragraph>
                         {burden.extraInfo !== "" && (
                           <Paragraph
                             style={{
@@ -97,9 +69,42 @@ function BurdensDisplay() {
                             }}
                           >{`extra info: ${burden.extraInfo}`}</Paragraph>
                         )}
-                      </Paragraph>
-                      <BorBCard alt="" src="images/burden.jpg"></BorBCard>
-                    </ContainerCurrentCard>
+                        <BorBCard
+                          alt=""
+                          src={`images/bb/burdens/${burden.image}.jpg`}
+                        ></BorBCard>
+                      </ContainerCurrentCard>
+                    </AninamtedPage>
+                  </SwiperSlide>
+                ) : (
+                  <SwiperSlide key={burden.index}>
+                    <AninamtedPage>
+                      <ContainerCurrentCard style={{ width: "230px" }}>
+                        <Paragraph>
+                          {burden.name}
+                          <CancelBtn onClick={() => cancelBurden(burden)}>
+                            <CancelImage
+                              alt=""
+                              src="images/cancel-1.png"
+                            ></CancelImage>
+                          </CancelBtn>
+                          {burden.extraInfo !== "" && (
+                            <Paragraph
+                              style={{
+                                color: "white",
+                                position: "absolute",
+                                top: "60px",
+                                marginLeft: "14px",
+                                marginRight: "5px",
+                                backgroundColor: "rgba(1, 1, 1, 0.3)",
+                                borderRadius: "20px",
+                              }}
+                            >{`extra info: ${burden.extraInfo}`}</Paragraph>
+                          )}
+                        </Paragraph>
+                        <BorBCard alt="" src="images/burden.jpg"></BorBCard>
+                      </ContainerCurrentCard>
+                    </AninamtedPage>
                   </SwiperSlide>
                 )}
               </div>

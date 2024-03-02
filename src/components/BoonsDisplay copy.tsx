@@ -19,6 +19,7 @@ import "../index.css";
 import { EffectCards } from "swiper/modules";
 // import styles bundle
 import "swiper/css/bundle";
+import AninamtedPage from "./AnimatedPage";
 
 function BoonsDisplay() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
@@ -45,14 +46,48 @@ function BoonsDisplay() {
               <div key={boon.index} style={{ margin: "15px 15px" }}>
                 {doesHaveImage(boon.image) ? (
                   <SwiperSlide key={boon.index}>
-                    <ContainerCurrentCard style={{ width: "240px" }}>
-                      <div style={{ position: "relative" }}>
+                    <AninamtedPage>
+                      <ContainerCurrentCard style={{ width: "240px" }}>
+                        <div style={{ position: "relative" }}>
+                          <Paragraph>
+                            {boon.name}
+                            <CancelBtn onClick={() => cancelBoon(boon)}>
+                              <CancelImage
+                                alt=""
+                                src={"images/cancel-1.png"}
+                              ></CancelImage>
+                            </CancelBtn>
+                          </Paragraph>
+                          {boon.extraInfo !== "" && (
+                            <Paragraph
+                              style={{
+                                color: "white",
+                                position: "absolute",
+                                top: "80px",
+                                marginLeft: "14px",
+                                marginRight: "5px",
+                                borderRadius: "20px",
+                              }}
+                            >{`EXTRA INFO: ${boon.extraInfo}`}</Paragraph>
+                          )}
+                          <BorBCard
+                            alt=""
+                            src={`images/bb/${boon.image}.jpg`}
+                          ></BorBCard>
+                        </div>
+                      </ContainerCurrentCard>
+                    </AninamtedPage>
+                  </SwiperSlide>
+                ) : (
+                  <SwiperSlide key={boon.index}>
+                    <AninamtedPage>
+                      <ContainerCurrentCard style={{ width: "230px" }}>
                         <Paragraph>
                           {boon.name}
                           <CancelBtn onClick={() => cancelBoon(boon)}>
                             <CancelImage
                               alt=""
-                              src={"images/cancel-1.png"}
+                              src="images/cancel-1.png"
                             ></CancelImage>
                           </CancelBtn>
                         </Paragraph>
@@ -61,47 +96,20 @@ function BoonsDisplay() {
                             style={{
                               color: "white",
                               position: "absolute",
-                              top: "80px",
+                              top: "60px",
                               marginLeft: "14px",
                               marginRight: "5px",
+                              backgroundColor: "rgba(1, 1, 1, 0.3)",
                               borderRadius: "20px",
                             }}
-                          >{`EXTRA INFO: ${boon.extraInfo}`}</Paragraph>
+                          >{`extra info: ${boon.extraInfo}`}</Paragraph>
                         )}
                         <BorBCard
                           alt=""
-                          src={`images/bb/${boon.image}.jpg`}
+                          src={`../images/nonffg.jpg`}
                         ></BorBCard>
-                      </div>
-                    </ContainerCurrentCard>
-                  </SwiperSlide>
-                ) : (
-                  <SwiperSlide key={boon.index}>
-                    <ContainerCurrentCard style={{ width: "230px" }}>
-                      <Paragraph>
-                        {boon.name}
-                        <CancelBtn onClick={() => cancelBoon(boon)}>
-                          <CancelImage
-                            alt=""
-                            src="images/cancel-1.png"
-                          ></CancelImage>
-                        </CancelBtn>
-                      </Paragraph>
-                      {boon.extraInfo !== "" && (
-                        <Paragraph
-                          style={{
-                            color: "white",
-                            position: "absolute",
-                            top: "60px",
-                            marginLeft: "14px",
-                            marginRight: "5px",
-                            backgroundColor: "rgba(1, 1, 1, 0.3)",
-                            borderRadius: "20px",
-                          }}
-                        >{`extra info: ${boon.extraInfo}`}</Paragraph>
-                      )}
-                      <BorBCard alt="" src={`../images/nonffg.jpg`}></BorBCard>
-                    </ContainerCurrentCard>
+                      </ContainerCurrentCard>
+                    </AninamtedPage>
                   </SwiperSlide>
                 )}
               </div>

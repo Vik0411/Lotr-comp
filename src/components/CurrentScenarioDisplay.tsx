@@ -10,6 +10,7 @@ import { Scenario } from "../types";
 import { CancelBtn } from "./atoms/CancelBtn";
 import { doesScenarioHaveImage } from "../utils";
 import { ButtonShadowYellow } from "./BoonsAndBurdens";
+import AninamtedPage from "./AnimatedPage";
 
 export const ButtonBlack = styled(ButtonShadow)`
   box-shadow: none;
@@ -68,48 +69,50 @@ function CurrentScenarioDisplay() {
             Current Scenario:
           </SectionHeader>
           <ContainerFlex>
-            <ContainerCurrentCard
-              key={chosenCurrentScenario.index}
-              style={{ width: "250px" }}
-            >
-              <Paragraph>
-                {chosenCurrentScenario ? chosenCurrentScenario.name : ""}
-                <CancelBtn
+            <AninamtedPage>
+              <ContainerCurrentCard
+                key={chosenCurrentScenario.index}
+                style={{ width: "250px" }}
+              >
+                <Paragraph>
+                  {chosenCurrentScenario ? chosenCurrentScenario.name : ""}
+                  <CancelBtn
+                    onClick={() => {
+                      if (chosenCurrentScenario) {
+                        returnScenario(chosenCurrentScenario.name);
+                      }
+                    }}
+                  >
+                    <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
+                  </CancelBtn>
+                </Paragraph>
+                {doesScenarioHaveImage(
+                  chosenCurrentScenario.name.toLowerCase()
+                ) ? (
+                  <BorBCard
+                    style={{ borderRadius: "10px" }}
+                    alt=""
+                    src={`images/scenarios/${pic}.webp`}
+                  />
+                ) : (
+                  <BorBCard
+                    style={{ borderRadius: "10px" }}
+                    alt=""
+                    src="images/burden.jpg"
+                  />
+                )}
+                <ButtonShadowYellow
+                  style={{ position: "absolute", bottom: "10px", left: "5px" }}
                   onClick={() => {
                     if (chosenCurrentScenario) {
-                      returnScenario(chosenCurrentScenario.name);
+                      winScenario(chosenCurrentScenario.name);
                     }
                   }}
                 >
-                  <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
-                </CancelBtn>
-              </Paragraph>
-              {doesScenarioHaveImage(
-                chosenCurrentScenario.name.toLowerCase()
-              ) ? (
-                <BorBCard
-                  style={{ borderRadius: "10px" }}
-                  alt=""
-                  src={`images/scenarios/${pic}.webp`}
-                />
-              ) : (
-                <BorBCard
-                  style={{ borderRadius: "10px" }}
-                  alt=""
-                  src="images/burden.jpg"
-                />
-              )}
-              <ButtonShadowYellow
-                style={{ position: "absolute", bottom: "10px", left: "5px" }}
-                onClick={() => {
-                  if (chosenCurrentScenario) {
-                    winScenario(chosenCurrentScenario.name);
-                  }
-                }}
-              >
-                Win
-              </ButtonShadowYellow>
-            </ContainerCurrentCard>
+                  Win
+                </ButtonShadowYellow>
+              </ContainerCurrentCard>
+            </AninamtedPage>
           </ContainerFlex>
         </div>
       )}

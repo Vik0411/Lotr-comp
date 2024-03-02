@@ -4,6 +4,7 @@ import { CancelBtn } from "./atoms/CancelBtn";
 import { CancelImage } from "./atoms/CancelImage";
 import { ListItemWithWhiteText } from "./atoms/ListItemWithWhiteText";
 import { LotrContext } from "../context";
+import AninamtedPage from "./AnimatedPage";
 
 export function WonScenario({ name, index }: Scenario) {
   const { campaign, setCampaign } = React.useContext(LotrContext);
@@ -22,11 +23,13 @@ export function WonScenario({ name, index }: Scenario) {
     });
   }
   return (
-    <ListItemWithWhiteText>
-      {name}
-      <CancelBtn onClick={() => returnScenario(index)}>
-        <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
-      </CancelBtn>
-    </ListItemWithWhiteText>
+    <AninamtedPage>
+      <ListItemWithWhiteText>
+        {name}
+        <CancelBtn onClick={() => returnScenario(index)}>
+          <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
+        </CancelBtn>
+      </ListItemWithWhiteText>
+    </AninamtedPage>
   );
 }
