@@ -26,49 +26,25 @@ function HeroManagement() {
     campaign.allHeroes
   );
   return (
-    <Container style={{ background: "black" }}>
+    <ContainerHeroManagement>
       <AninamtedPage>
-        <ContainerHeroManagement>
-          <SectionHeader
-            style={{
-              textAlign: "center",
-              margin: "50px 30px",
-              marginBottom: "10px",
-            }}
-          >
-            Add to Current Campaign
-          </SectionHeader>
-          <ContainerFlex style={{ margin: "50px 30px" }}>
-            <div style={{ display: "flex", flexFlow: "column" }}>
-              <AllMightyHeroes />
-              <AddCustomHero />
-            </div>
-          </ContainerFlex>
-          <AninamtedPage>
-            {current[0] !== undefined && (
-              <div>
-                <SectionHeader
-                  style={{
-                    textAlign: "center",
-                    margin: "30px 30px",
-                    marginTop: "60px",
-                  }}
-                >
-                  Current heroes:
-                </SectionHeader>
-                <div
-                  style={{
-                    display: "flex",
-                    flexFlow: "column",
-                    marginLeft: "40px",
-                  }}
-                >
-                  <CurrentHeroes />
-                </div>
-              </div>
-            )}
-          </AninamtedPage>
-          {fallen[0] !== undefined && (
+        <SectionHeader
+          style={{
+            textAlign: "center",
+            margin: "50px 30px",
+            marginBottom: "10px",
+          }}
+        >
+          Add to Current Campaign
+        </SectionHeader>
+        <ContainerFlex style={{ margin: "50px 30px" }}>
+          <div style={{ display: "flex", flexFlow: "column" }}>
+            <AllMightyHeroes />
+            <AddCustomHero />
+          </div>
+        </ContainerFlex>
+        <AninamtedPage>
+          {current[0] !== undefined && (
             <div>
               <SectionHeader
                 style={{
@@ -77,14 +53,36 @@ function HeroManagement() {
                   marginTop: "60px",
                 }}
               >
-                Fallen heroes:
+                Current heroes:
               </SectionHeader>
-              <FallenHeroes />
+              <div
+                style={{
+                  display: "flex",
+                  flexFlow: "column",
+                  marginLeft: "40px",
+                }}
+              >
+                <CurrentHeroes />
+              </div>
             </div>
           )}
-        </ContainerHeroManagement>
+        </AninamtedPage>
+        {fallen[0] !== undefined && (
+          <div>
+            <SectionHeader
+              style={{
+                textAlign: "center",
+                margin: "30px 30px",
+                marginTop: "60px",
+              }}
+            >
+              Fallen heroes:
+            </SectionHeader>
+            <FallenHeroes />
+          </div>
+        )}
       </AninamtedPage>
-    </Container>
+    </ContainerHeroManagement>
   );
 }
 
