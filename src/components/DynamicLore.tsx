@@ -12,7 +12,9 @@ export function DynamicLore() {
     campaign.allHeroes
   );
 
-  const currentFlavors = currentHeroes.map((hero) => hero.flavor);
+  const currentFlavors = currentHeroes.map((hero) =>
+    hero.flavor.replaceAll("<cite>", "~").replaceAll("</cite>", " ")
+  );
   const [currIndex, setCurrIndex] = useState<number>(0);
   const [currentFlavor, setCurrentFlavor] = useState(currentFlavors[0]);
   const goal = currentFlavors.length;
