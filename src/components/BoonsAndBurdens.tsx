@@ -67,6 +67,8 @@ function BoonsAndBurdens() {
     ];
     const newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
     setCampaign({ ...campaign, boonsAndBurdens: newBB });
+    setBBNameObject({ ...bBNameObject, boonName: "" });
+    setExtraBoonInfo("");
   }
 
   function submitBurden(e: React.FormEvent<HTMLFormElement>) {
@@ -86,6 +88,8 @@ function BoonsAndBurdens() {
       const camp = currentState;
       return { ...camp, boonsAndBurdens: newBB };
     });
+    setBBNameObject({ ...bBNameObject, burdenName: "" });
+    setExtraBurdenInfo("");
   }
 
   const filteredBoons = boons.filter((boon) =>
