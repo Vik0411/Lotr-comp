@@ -1,4 +1,4 @@
-# LOTR project
+# LOTRcomp project
 
 A campaign manager for Lord of the Rings, the Living Card Game.
 
