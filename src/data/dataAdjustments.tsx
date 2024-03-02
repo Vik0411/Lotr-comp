@@ -3,7 +3,6 @@ import { Campaign, Hero } from "../types";
 import { allCards } from "./dataSet";
 import { onlyHeroesFFG } from "./onlyHeroes";
 import { scenarios } from "./scenarios";
-import { sortArray } from "../utils";
 
 export interface CampaignContextInterface {
   campaign: Campaign;
@@ -68,7 +67,7 @@ const scenariosForCampaign = scenarios.map((scenario, indexing) => {
 
 export const defaultState: CampaignContextInterface = {
   campaign: {
-    allHeroes: sortArray(allHeroesWithChangedName),
+    allHeroes: allHeroesWithChangedName,
     boonsAndBurdens: {
       boons: [],
       burdens: [],
