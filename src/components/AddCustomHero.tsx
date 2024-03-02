@@ -27,6 +27,7 @@ function AddCustomHero() {
     };
     const newHeroes = [...campaign.allHeroes, newHero];
     setCampaign({ ...campaign, allHeroes: newHeroes });
+    setHeroName("");
   }
 
   return (

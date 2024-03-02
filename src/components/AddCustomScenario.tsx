@@ -27,6 +27,7 @@ function AddCustomScenario() {
 
     const newScenarios = [...campaign.scenarios, newScenario];
     setCampaign({ ...campaign, scenarios: newScenarios });
+    setScenarioName("");
   }
 
   return (
