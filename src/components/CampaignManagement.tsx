@@ -1,7 +1,6 @@
 import CampaignScenario from "./CampaignScenario";
 import CurrentScenarioDisplay from "./CurrentScenarioDisplay";
 import {
-  Container,
   ContainerFlex,
   ContainerFlexColumn,
   ContainerHeroManagement,

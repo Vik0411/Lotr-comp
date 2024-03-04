@@ -81,7 +81,6 @@ function StableHeader() {
     (chosen) => chosen.current === true
   );
 
-  console.log("dddddd", current);
   return (
     <Container
       style={{
