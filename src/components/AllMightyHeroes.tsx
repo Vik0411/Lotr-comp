@@ -8,6 +8,7 @@ import { SelectFfgHero } from "./atoms/SelectFfgHero";
 import { styled } from "styled-components";
 import { onlyMultiples } from "../data/dataAdjustments";
 import ConfirmationModal from "./ConfirmModal";
+import { motion } from "framer-motion";
 
 export const ButtonShadowGreen = styled(ButtonShadow)`
   opacity: 1;
@@ -112,7 +113,11 @@ function AllMightyHeroes() {
     "At least one hero with the same name is already prepared. Are you sure you want to proceed?";
 
   return (
-    <div style={{ position: "relative" }}>
+    <motion.div
+      style={{ position: "relative" }}
+      whileHover={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
       {cloneModal && (
         <ConfirmationModal
           procede={procede}
@@ -134,7 +139,7 @@ function AllMightyHeroes() {
         </SelectFfgHero>
         <ButtonShadowGreen type="submit">Prepare</ButtonShadowGreen>
       </form>
-    </div>
+    </motion.div>
   );
 }
 

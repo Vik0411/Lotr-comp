@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import { boons } from "../data/boons";
 import { burdens } from "../data/burdens";
 import { ContainerFlex } from "./atoms/Containers";
+import { motion } from "framer-motion";
 
 export const ButtonShadowYellow = styled(ButtonShadow)`
   opacity: 1;
@@ -110,7 +111,12 @@ function BoonsAndBurdens() {
 
   return (
     <ContainerFlex style={{ position: "relative" }}>
-      <form name="boon" onSubmit={submitBoon}>
+      <motion.form
+        name="boon"
+        onSubmit={submitBoon}
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
         <Input
           name="boon"
           type="text"
@@ -163,8 +169,13 @@ function BoonsAndBurdens() {
             <ButtonShadowYellow type="submit">Submit boon</ButtonShadowYellow>
           </ContainerFlex>
         )}
-      </form>
-      <form onSubmit={submitBurden} name="burden">
+      </motion.form>
+      <motion.form
+        onSubmit={submitBurden}
+        name="burden"
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
         <Input
           type="text"
           value={bBNameObject.burdenName}
@@ -218,7 +229,7 @@ function BoonsAndBurdens() {
             <ButtonShadowBlood type="submit">Submit burden</ButtonShadowBlood>
           </ContainerFlex>
         )}
-      </form>
+      </motion.form>
     </ContainerFlex>
   );
 }

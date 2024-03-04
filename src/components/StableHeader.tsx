@@ -9,6 +9,8 @@ import { Hero } from "../types";
 import { Container, ContainerFlex } from "./atoms/Containers";
 import { styled } from "styled-components";
 import { ListItemHeader } from "./atoms/ListeItemHeader";
+import { AnimatePresence, motion } from "framer-motion";
+import { animations } from "./AnimatedPage";
 
 const StyledLink = styled(Link)`
   color: grey;
@@ -79,98 +81,135 @@ function StableHeader() {
     (chosen) => chosen.current === true
   );
 
+  console.log("dddddd", current);
   return (
     <Container
       style={{
+        // backgroundAttachment: "revert",
         backgroundPosition: "bottom",
         position: "relative",
         backgroundImage: `url("images/background.jpg")`,
         borderBottom: "3px solid #452c63",
       }}
     >
-      {chosenCurrentScenario && (
-        <SectionHeader
-          style={{
-            marginBottom: "0px",
-            color: "#B8B8B8",
-            outlineColor: "purple",
-            textDecorationColor: "#FF00FF",
-            textDecoration: "underline",
-            textAlign: "center",
-          }}
-        >
-          Current Scenario: {chosenCurrentScenario.name}
-        </SectionHeader>
-      )}
-      <ContainerFlexWholeHeader style={{ height: "120px" }}>
-        <ContainerFlexHeader>
-          <div
-            className="heroes"
-            style={{
-              width: "100px",
-            }}
+      <AnimatePresence>
+        {chosenCurrentScenario && (
+          <motion.div
+            exit={{ opacity: 0 }}
+            variants={animations}
+            initial="initial"
+            animate="animate"
+            transition={{ duration: 0.6 }}
           >
-            <ButtonTransparent
-              style={{
-                color: "grey",
-                borderBottom: "10px",
-              }}
-            >
-              <SectionHeader
-                style={{
-                  color: "grey",
-                  borderBottom: "10px",
-                  fontSize: "30px",
-                }}
-              >
-                Current Heroes
-              </SectionHeader>
-              {current.map((hero) => (
-                <ListItemHeader key={hero.code}>{hero.name}</ListItemHeader>
-              ))}
-            </ButtonTransparent>
-          </div>
-        </ContainerFlexHeader>
-        <BorBShorthand>
-          <ButtonTransparent style={{ color: "grey", marginLeft: "40px" }}>
             <SectionHeader
               style={{
-                color: "grey",
-                fontSize: "30px",
+                marginBottom: "0px",
+                color: "#B8B8B8",
+                outlineColor: "purple",
+                textDecorationColor: "#FF00FF",
+                textDecoration: "underline",
+                textAlign: "center",
               }}
             >
-              Boons & Burdens
+              Current Scenario: {chosenCurrentScenario.name}
             </SectionHeader>
-            {campaign.boonsAndBurdens.boons.map((boon) => (
-              <ListItemHeader key={boon.index}>{boon.name}</ListItemHeader>
-            ))}
-            {campaign.boonsAndBurdens.burdens.map((burden) => (
-              <ListItemHeader key={burden.index}>{burden.name}</ListItemHeader>
-            ))}
-          </ButtonTransparent>
-        </BorBShorthand>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <ContainerFlexWholeHeader style={{ height: "120px" }}>
+        {current.length !== 0 && (
+          <ContainerFlexHeader>
+            <AnimatePresence>
+              <motion.div
+                className="heroes"
+                style={{
+                  width: "100px",
+                }}
+                exit={{ opacity: 0 }}
+                initial={{ x: -1000 }}
+                animate={{ x: 0 }}
+              >
+                <ButtonTransparent
+                  style={{
+                    color: "grey",
+                    borderBottom: "10px",
+                  }}
+                >
+                  <SectionHeader
+                    style={{
+                      color: "grey",
+                      borderBottom: "10px",
+                      fontSize: "30px",
+                    }}
+                  >
+                    Current Heroes
+                  </SectionHeader>
+                  {current.map((hero) => (
+                    <ListItemHeader key={hero.code}>{hero.name}</ListItemHeader>
+                  ))}
+                </ButtonTransparent>
+              </motion.div>
+            </AnimatePresence>
+          </ContainerFlexHeader>
+        )}
+        {(campaign.boonsAndBurdens.boons.length !== 0 ||
+          campaign.boonsAndBurdens.burdens.length !== 0) && (
+          <BorBShorthand>
+            <motion.div initial={{ x: 1000 }} animate={{ x: 0 }}>
+              <ButtonTransparent style={{ color: "grey", marginLeft: "40px" }}>
+                <SectionHeader
+                  style={{
+                    color: "grey",
+                    fontSize: "30px",
+                  }}
+                >
+                  Boons & Burdens
+                </SectionHeader>
+                {campaign.boonsAndBurdens.boons.map((boon) => (
+                  <ListItemHeader key={boon.index}>{boon.name}</ListItemHeader>
+                ))}
+                {campaign.boonsAndBurdens.burdens.map((burden) => (
+                  <ListItemHeader key={burden.index}>
+                    {burden.name}
+                  </ListItemHeader>
+                ))}
+              </ButtonTransparent>
+            </motion.div>
+          </BorBShorthand>
+        )}
         {inHeroMgnt ? (
           <h2>
-            <StyledLink to="/">Campaign management</StyledLink>
+            <motion.div whileHover={{ scale: 1.2 }}>
+              <StyledLink to="/">Campaign management</StyledLink>
+            </motion.div>
           </h2>
         ) : (
           <h2>
-            <StyledLink style={{ color: "#ba55d3" }} to="/">
-              Campaign management
-            </StyledLink>
+            <motion.div whileHover={{ scale: 1.2 }}>
+              <StyledLink style={{ color: "#ba55d3" }} to="/">
+                Campaign management
+              </StyledLink>
+            </motion.div>
           </h2>
         )}
         {inHeroMgnt ? (
           <h2>
-            <StyledLink to="/hero" style={{ color: "#ba55d3", width: "100px" }}>
-              Hero management
-            </StyledLink>
+            <motion.div whileHover={{ scale: 1.2 }}>
+              <StyledLink
+                to="/hero"
+                style={{ color: "#ba55d3", width: "100px" }}
+              >
+                Hero management
+              </StyledLink>
+            </motion.div>
           </h2>
         ) : (
           <h2>
-            <StyledLink to="/hero" style={{ width: "100px" }}>
-              Hero management
-            </StyledLink>
+            <motion.div whileHover={{ scale: 1.2 }}>
+              <StyledLink to="/hero" style={{ width: "100px" }}>
+                Hero management
+              </StyledLink>
+            </motion.div>
           </h2>
         )}
       </ContainerFlexWholeHeader>

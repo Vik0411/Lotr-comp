@@ -4,6 +4,7 @@ import { CancelBtn } from "./atoms/CancelBtn";
 import { CancelImage } from "./atoms/CancelImage";
 import { ListItemWithWhiteText } from "./atoms/ListItemWithWhiteText";
 import { LotrContext } from "../context";
+import { motion } from "framer-motion";
 
 export function FallenHero({ name, code }: Hero) {
   const { campaign, setCampaign } = React.useContext(LotrContext);
@@ -23,11 +24,16 @@ export function FallenHero({ name, code }: Hero) {
     });
   }
   return (
-    <ListItemWithWhiteText>
-      {name}
-      <CancelBtn onClick={() => resurrectHero(code)}>
-        <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
-      </CancelBtn>
-    </ListItemWithWhiteText>
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <ListItemWithWhiteText>
+        {name}
+        <CancelBtn onClick={() => resurrectHero(code)}>
+          <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
+        </CancelBtn>
+      </ListItemWithWhiteText>
+    </motion.div>
   );
 }

@@ -8,6 +8,7 @@ import { Scenario } from "../types";
 import { SelectFfgHero } from "./atoms/SelectFfgHero";
 import { styled } from "styled-components";
 import ConfirmationModal from "./ConfirmModal";
+import { motion } from "framer-motion";
 
 export const ButtonShadowGreen = styled(ButtonShadow)`
   opacity: 1;
@@ -102,12 +103,14 @@ function CampaignScenario() {
       <SectionHeader style={{ textAlign: "center", marginTop: "50px" }}>
         Specify Current Campaign Scennario
       </SectionHeader>
-      <div
+      <motion.div
         style={{
           display: "flex",
           flexFlow: "row",
           justifyContent: "center",
         }}
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 300 }}
       >
         <div
           style={{
@@ -134,7 +137,7 @@ function CampaignScenario() {
             <ButtonShadowGreen type="submit">Add Scenario</ButtonShadowGreen>
           </form>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

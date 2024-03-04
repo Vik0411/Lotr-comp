@@ -5,6 +5,7 @@ import { LotrContext } from "../context";
 import React from "react";
 import { ButtonShadowGreen } from "./AllMightyHeroes";
 import { sortArray } from "../utils";
+import { motion } from "framer-motion";
 
 function AddCustomHero() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
@@ -32,7 +33,10 @@ function AddCustomHero() {
   }
 
   return (
-    <div>
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
       <SectionHeader
         style={{ fontSize: "30px", fontWeight: "450", textAlign: "center" }}
       >
@@ -50,7 +54,7 @@ function AddCustomHero() {
           Create
         </ButtonShadowGreen>
       </form>
-    </div>
+    </motion.div>
   );
 }
 

@@ -11,6 +11,7 @@ import { CancelBtn } from "./atoms/CancelBtn";
 import { doesScenarioHaveImage } from "../utils";
 import { ButtonShadowYellow } from "./BoonsAndBurdens";
 import AninamtedPage from "./AnimatedPage";
+import { AnimatePresence } from "framer-motion";
 
 export const ButtonBlack = styled(ButtonShadow)`
   box-shadow: none;
@@ -63,59 +64,68 @@ function CurrentScenarioDisplay() {
 
   return (
     <div style={{ margin: "30px 30px" }}>
-      {chosenCurrentScenario && (
-        <div>
-          <SectionHeader style={{ textAlign: "center" }}>
-            Current Scenario:
-          </SectionHeader>
-          <ContainerFlex>
-            <AninamtedPage>
-              <ContainerCurrentCard
-                key={chosenCurrentScenario.index}
-                style={{ width: "250px" }}
-              >
-                <Paragraph>
-                  {chosenCurrentScenario ? chosenCurrentScenario.name : ""}
-                  <CancelBtn
+      <AnimatePresence>
+        {chosenCurrentScenario && (
+          <div>
+            <SectionHeader style={{ textAlign: "center" }}>
+              Current Scenario:
+            </SectionHeader>
+            <ContainerFlex>
+              <AninamtedPage>
+                <ContainerCurrentCard
+                  key={chosenCurrentScenario.index}
+                  style={{ width: "250px" }}
+                >
+                  <Paragraph>
+                    {chosenCurrentScenario ? chosenCurrentScenario.name : ""}
+                    <CancelBtn
+                      onClick={() => {
+                        if (chosenCurrentScenario) {
+                          returnScenario(chosenCurrentScenario.name);
+                        }
+                      }}
+                    >
+                      <CancelImage
+                        alt=""
+                        src="images/cancel-1.png"
+                      ></CancelImage>
+                    </CancelBtn>
+                  </Paragraph>
+                  {doesScenarioHaveImage(
+                    chosenCurrentScenario.name.toLowerCase()
+                  ) ? (
+                    <BorBCard
+                      style={{ borderRadius: "10px" }}
+                      alt=""
+                      src={`images/scenarios/${pic}.webp`}
+                    />
+                  ) : (
+                    <BorBCard
+                      style={{ borderRadius: "10px" }}
+                      alt=""
+                      src="images/burden.jpg"
+                    />
+                  )}
+                  <ButtonShadowYellow
+                    style={{
+                      position: "absolute",
+                      bottom: "10px",
+                      left: "5px",
+                    }}
                     onClick={() => {
                       if (chosenCurrentScenario) {
-                        returnScenario(chosenCurrentScenario.name);
+                        winScenario(chosenCurrentScenario.name);
                       }
                     }}
                   >
-                    <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
-                  </CancelBtn>
-                </Paragraph>
-                {doesScenarioHaveImage(
-                  chosenCurrentScenario.name.toLowerCase()
-                ) ? (
-                  <BorBCard
-                    style={{ borderRadius: "10px" }}
-                    alt=""
-                    src={`images/scenarios/${pic}.webp`}
-                  />
-                ) : (
-                  <BorBCard
-                    style={{ borderRadius: "10px" }}
-                    alt=""
-                    src="images/burden.jpg"
-                  />
-                )}
-                <ButtonShadowYellow
-                  style={{ position: "absolute", bottom: "10px", left: "5px" }}
-                  onClick={() => {
-                    if (chosenCurrentScenario) {
-                      winScenario(chosenCurrentScenario.name);
-                    }
-                  }}
-                >
-                  Win
-                </ButtonShadowYellow>
-              </ContainerCurrentCard>
-            </AninamtedPage>
-          </ContainerFlex>
-        </div>
-      )}
+                    Win
+                  </ButtonShadowYellow>
+                </ContainerCurrentCard>
+              </AninamtedPage>
+            </ContainerFlex>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

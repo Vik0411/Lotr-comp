@@ -5,6 +5,7 @@ import { CancelImage } from "./CancelImage";
 export const Container = styled.div`
   @import url("https://fonts.cdnfonts.com/css/tolkien");
   display: flex;
+  background-attachment: fixed;
   flex-direction: column;
   font-family: "Tolkien", sans-serif;
   background-image: radial-gradient(transparent, black),

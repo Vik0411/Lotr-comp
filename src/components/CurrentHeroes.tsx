@@ -11,7 +11,8 @@ import { HeroCard } from "./atoms/HeroCard";
 import { CancelImage } from "./atoms/CancelImage";
 import { CancelBtn } from "./atoms/CancelBtn";
 import ConfirmationModal from "./ConfirmModal";
-import AninamtedPage from "./AnimatedPage";
+import { animations } from "./AnimatedPage";
+import { AnimatePresence, motion } from "framer-motion";
 
 const ContainerCurrentHeroes = styled(ContainerFlex)`
   display: flex;
@@ -129,11 +130,21 @@ function CurrentHeroes() {
         />
       )}
       <ContainerCurrentHeroes>
-        {current.map(
-          (current: Hero): JSX.Element => (
-            <ContainerCurrentCard key={current.code} style={{ width: "250px" }}>
-              <AninamtedPage>
-                <div style={{ position: "relative" }}>
+        <AnimatePresence>
+          {current.map(
+            (current: Hero): JSX.Element => (
+              <ContainerCurrentCard
+                key={current.code}
+                style={{ width: "250px" }}
+              >
+                <motion.div
+                  style={{ position: "relative" }}
+                  variants={animations}
+                  initial="initial"
+                  animate="animate"
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
                   <Paragraph>
                     {current.name}
                     <CancelBtn onClick={() => returnHero(current.code)}>
@@ -147,11 +158,11 @@ function CurrentHeroes() {
                   <ButtonBlack onClick={() => killHero(current.code)}>
                     Kill
                   </ButtonBlack>
-                </div>
-              </AninamtedPage>
-            </ContainerCurrentCard>
-          )
-        )}
+                </motion.div>
+              </ContainerCurrentCard>
+            )
+          )}
+        </AnimatePresence>
       </ContainerCurrentHeroes>
     </div>
   );

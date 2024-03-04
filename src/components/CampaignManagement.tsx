@@ -28,55 +28,53 @@ function CampaignManagement() {
   );
 
   return (
-    <Container style={{ background: "black" }}>
+    <ContainerHeroManagement>
       <AninamtedPage>
-        <ContainerHeroManagement>
-          {/* option with row styling here */}
+        {/* option with row styling here */}
+        {/* <div> */}
+        {/* <ContainerFlex> */}
+        <div
+          style={{
+            display: "flex",
+            // flexFlow: "row",
+            flexFlow: "column",
+
+            justifyContent: "space-between",
+          }}
+        >
+          {notCurrentAndWon[0] && <WonScenarios />}
           {/* <div> */}
-          {/* <ContainerFlex> */}
-          <div
-            style={{
-              display: "flex",
-              // flexFlow: "row",
-              flexFlow: "column",
-
-              justifyContent: "space-between",
-            }}
-          >
-            {notCurrentAndWon[0] && <WonScenarios />}
-            {/* <div> */}
-            <CampaignScenario />
-            <AddCustomScenario />
-            {/* </div> */}
-            <CurrentScenarioDisplay />
-          </div>
-
-          {/* </ContainerFlex> */}
+          <CampaignScenario />
+          <AddCustomScenario />
           {/* </div> */}
-          <SectionHeader
-            style={{
-              textAlign: "center",
-              marginBottom: "0px",
-              marginTop: "100px",
-            }}
-          >
-            Add Boons & Burdens
-          </SectionHeader>
-          <ContainerFlex style={{ margin: "30px 30px" }}>
-            <ContainerFlexColumn>
-              <BoonsAndBurdens />
-            </ContainerFlexColumn>
-          </ContainerFlex>
-          <ContainerFlex>
-            {campaign.boonsAndBurdens.boons[0] && <BoonsDisplay />}
-            {campaign.boonsAndBurdens.burdens[0] && <BurdensDisplay />}
-          </ContainerFlex>
-          <ContainerWithWhiteText style={{ marginTop: "100px" }}>
-            <DynamicLore />
-          </ContainerWithWhiteText>
-        </ContainerHeroManagement>
+          <CurrentScenarioDisplay />
+        </div>
+
+        {/* </ContainerFlex> */}
+        {/* </div> */}
+        <SectionHeader
+          style={{
+            textAlign: "center",
+            marginBottom: "0px",
+            marginTop: "100px",
+          }}
+        >
+          Add Boons & Burdens
+        </SectionHeader>
+        <ContainerFlex style={{ margin: "30px 30px" }}>
+          <ContainerFlexColumn>
+            <BoonsAndBurdens />
+          </ContainerFlexColumn>
+        </ContainerFlex>
+        <ContainerFlex>
+          {campaign.boonsAndBurdens.boons[0] && <BoonsDisplay />}
+          {campaign.boonsAndBurdens.burdens[0] && <BurdensDisplay />}
+        </ContainerFlex>
+        <ContainerWithWhiteText style={{ marginTop: "100px" }}>
+          <DynamicLore />
+        </ContainerWithWhiteText>
       </AninamtedPage>
-    </Container>
+    </ContainerHeroManagement>
   );
 }
 

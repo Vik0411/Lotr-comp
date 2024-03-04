@@ -4,6 +4,7 @@ import { SectionHeader } from "./atoms/typography";
 import { LotrContext } from "../context";
 import React from "react";
 import { ButtonShadowGreen } from "./AllMightyHeroes";
+import { motion } from "framer-motion";
 
 function AddCustomScenario() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
@@ -31,10 +32,12 @@ function AddCustomScenario() {
   }
 
   return (
-    <div
+    <motion.div
       style={{
         textAlign: "center",
       }}
+      whileHover={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 300 }}
     >
       <SectionHeader style={{ fontWeight: "450", fontSize: "30px" }}>
         Add Missing Scenario
@@ -51,7 +54,7 @@ function AddCustomScenario() {
           Add
         </ButtonShadowGreen>
       </form>
-    </div>
+    </motion.div>
   );
 }
 
