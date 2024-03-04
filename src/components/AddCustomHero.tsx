@@ -33,16 +33,17 @@ function AddCustomHero() {
   }
 
   return (
-    <motion.div
-      whileHover={{ scale: 1.1 }}
-      transition={{ type: "spring", stiffness: 300 }}
-    >
+    <div>
       <SectionHeader
         style={{ fontSize: "30px", fontWeight: "450", textAlign: "center" }}
       >
         Create Custom Hero
       </SectionHeader>
-      <form onSubmit={submitCustomHero}>
+      <motion.form
+        onSubmit={submitCustomHero}
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
         <Input
           name="custom hero"
           type="text"
@@ -53,8 +54,8 @@ function AddCustomHero() {
         <ButtonShadowGreen value="sumbit" type="submit">
           Create
         </ButtonShadowGreen>
-      </form>
-    </motion.div>
+      </motion.form>
+    </div>
   );
 }
 
