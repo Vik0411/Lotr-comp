@@ -2,7 +2,7 @@ import { ButtonShadow } from "./atoms/ButtonShadow";
 import { LotrContext } from "../context";
 import React, { useEffect, useState } from "react";
 
-import { filterHeroes, sortArray } from "../utils";
+import { filterHeroes } from "../utils";
 import { Hero } from "../types";
 import { SelectFfgHero } from "./atoms/SelectFfgHero";
 import { styled } from "styled-components";
@@ -22,7 +22,7 @@ function AllMightyHeroes() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
   const notCurrentAndAlive = filterHeroes(
     { alive: true, current: false },
-    sortArray(campaign.allHeroes)
+    campaign.allHeroes
   );
 
   const [cloneModal, setCloneModal] = useState(false);
@@ -42,16 +42,14 @@ function AllMightyHeroes() {
   function procede() {
     setCampaign({
       ...campaign,
-      allHeroes: sortArray(
-        campaign.allHeroes.map((hero) => {
-          if (hero.code === cloneModalAction.hero.code) {
-            hero.current = true;
-            return hero;
-          } else {
-            return hero;
-          }
-        })
-      ),
+      allHeroes: campaign.allHeroes.map((hero) => {
+        if (hero.code === cloneModalAction.hero.code) {
+          hero.current = true;
+          return hero;
+        } else {
+          return hero;
+        }
+      }),
     });
     setCloneModal(false);
   }
@@ -100,12 +98,12 @@ function AllMightyHeroes() {
   useEffect(() => {
     const notCurrentAndAlive = filterHeroes(
       { alive: true, current: false },
-      sortArray(campaign.allHeroes)
+      campaign.allHeroes
     );
     setPreparedHero(notCurrentAndAlive[0]);
     localStorage.setItem(
       "campaign",
-      JSON.stringify({ ...campaign, allHeroes: sortArray(campaign.allHeroes) })
+      JSON.stringify({ ...campaign, allHeroes: campaign.allHeroes })
     );
   }, [campaign]);
 

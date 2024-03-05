@@ -17,7 +17,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    color: #ba55d3;
+    color: #5c3366;
   }
 `;
 
@@ -187,7 +187,7 @@ function StableHeader() {
         ) : (
           <h2>
             <motion.div whileHover={{ scale: 1.2 }}>
-              <StyledLink style={{ color: "#ba55d3" }} to="/">
+              <StyledLink style={{ color: "#5c3366" }} to="/">
                 Campaign management
               </StyledLink>
             </motion.div>
@@ -198,7 +198,7 @@ function StableHeader() {
             <motion.div whileHover={{ scale: 1.2 }}>
               <StyledLink
                 to="/hero"
-                style={{ color: "#ba55d3", width: "100px" }}
+                style={{ color: "#5c3366", width: "100px" }}
               >
                 Hero management
               </StyledLink>

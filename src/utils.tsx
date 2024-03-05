@@ -48,3 +48,31 @@ export function sortArray(arr: Hero[]) {
   });
   return arr;
 }
+
+export function adjustMotk(arr) {
+  arr.map((hero) => {
+    if (hero.name.startsWith("(")) {
+      hero.name = hero.name.replace("(MotK)", "");
+      hero.name = hero.name + " (MotK)";
+      return hero;
+    } else {
+      return hero;
+    }
+  });
+  return arr;
+}
+
+export function sortedItems(arr, sign) {
+  arr.sort(function (a, b) {
+    const aBusy = a.name.includes(sign);
+    const bBusy = b.name.includes(sign);
+    if (aBusy && !bBusy) {
+      return 1;
+    }
+    if (!aBusy && bBusy) {
+      return -1;
+    }
+    return a.name.localeCompare(b.name);
+  });
+  return arr;
+}

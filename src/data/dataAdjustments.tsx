@@ -3,6 +3,7 @@ import { Campaign, Hero } from "../types";
 import { allCards } from "./dataSet";
 import { onlyHeroesFFG } from "./onlyHeroes";
 import { scenarios } from "./scenarios";
+import { adjustMotk, sortedItems } from "../utils";
 
 export interface CampaignContextInterface {
   campaign: Campaign;
@@ -60,14 +61,17 @@ const allHeroesWithChangedName = changedNameMultiples.concat(
   removeDuplicates(onlyHeroesForCampaign).unique
 );
 
+const adjustedMotk = adjustMotk(allHeroesWithChangedName);
 const scenariosForCampaign = scenarios.map((scenario, indexing) => {
   const scens = { ...scenario, index: indexing, current: false, won: false };
   return scens;
 });
 
+const sortedHeroes = sortedItems(adjustedMotk, "(MotK)");
+
 export const defaultState: CampaignContextInterface = {
   campaign: {
-    allHeroes: allHeroesWithChangedName,
+    allHeroes: sortedHeroes,
     boonsAndBurdens: {
       boons: [],
       burdens: [],
