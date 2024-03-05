@@ -18,7 +18,7 @@ function FallenHeroes() {
     <ul style={{ textAlign: "center" }}>
       {fallen.map(
         (fallenHero: Hero): JSX.Element => (
-          <FallenHero {...fallenHero} />
+          <FallenHero key={fallenHero.code} {...fallenHero} />
         )
       )}
     </ul>
