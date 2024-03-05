@@ -81,6 +81,8 @@ function StableHeader() {
     (chosen) => chosen.current === true
   );
 
+  const appNamePxs = chosenCurrentScenario ? "120px" : "50px";
+
   return (
     <Container
       style={{
@@ -211,6 +213,24 @@ function StableHeader() {
             </motion.div>
           </h2>
         )}
+
+        <p
+          style={{
+            color: "#D4AF37",
+            position: "absolute",
+            top: appNamePxs,
+            fontSize: "20px",
+            // top: "-5px",
+            opacity: 0.9,
+            // left: "40px",
+            // right: "20px",
+            // border: "3px solid #ba55d3",
+            borderRadius: "10px",
+            marginRight: "400px",
+          }}
+        >
+          tool for The Lord of the Rings, LCG
+        </p>
       </ContainerFlexWholeHeader>
     </Container>
   );

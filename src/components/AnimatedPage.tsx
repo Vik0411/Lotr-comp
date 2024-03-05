@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 
 export const animations = {
-  initial: { opacity: 0.7, x: 100 },
+  initial: { opacity: 0.7 },
   animate: {
     opacity: 1,
-    x: 0,
   },
-  exit: { opacity: 0.7, x: -100 },
+  exit: { opacity: 0.7 },
 };
 
 const AninamtedPage = ({ children }) => {

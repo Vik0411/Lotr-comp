@@ -24,7 +24,9 @@ export function FallenHero({ name, code }: Hero) {
     });
   }
   return (
-    <ListItemWithWhiteText>
+    <ListItemWithWhiteText
+      style={{ textAlign: "center", margin: "10px 400px" }}
+    >
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ type: "spring", stiffness: 300 }}

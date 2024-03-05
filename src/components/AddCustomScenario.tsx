@@ -41,6 +41,7 @@ function AddCustomScenario() {
         Add Missing Scenario
       </SectionHeader>
       <motion.form
+        style={{ margin: "10px 200px" }}
         name="addcscen"
         onSubmit={submitCustomScenario}
         whileHover={{ scale: 1.1 }}

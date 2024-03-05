@@ -23,17 +23,17 @@ export function WonScenario({ name, index }: Scenario) {
     });
   }
   return (
-    <motion.div
-      style={{ margin: "30px 30px", textAlign: "center" }}
-      whileHover={{ scale: 1.1 }}
-      transition={{ type: "spring", stiffness: 300 }}
-    >
-      <ListItemWithWhiteText>
+    <ListItemWithWhiteText style={{ margin: "10px 300px" }}>
+      <motion.div
+        style={{ margin: "30px 30px", textAlign: "center" }}
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
         {name}
         <CancelBtn onClick={() => returnScenario(index)}>
           <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
         </CancelBtn>
-      </ListItemWithWhiteText>
-    </motion.div>
+      </motion.div>
+    </ListItemWithWhiteText>
   );
 }

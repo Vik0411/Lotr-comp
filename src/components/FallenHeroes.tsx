@@ -3,7 +3,6 @@ import { LotrContext } from "../context";
 import { Hero } from "../types";
 import { filterHeroes } from "../utils";
 import { FallenHero } from "./FallenHero";
-import AninamtedPage from "./AnimatedPage";
 
 function FallenHeroes() {
   const { campaign } = React.useContext(LotrContext);
