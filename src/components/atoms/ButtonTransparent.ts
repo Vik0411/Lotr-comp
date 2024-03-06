@@ -11,7 +11,7 @@ export const ButtonTransparent = styled.button`
 
   &:hover ${ListItemHeader} {
     opacity: 1;
-    color: #ba55d3;
+    color: #a36d9d;
     background-color: black;
     border: 10px solid black;
   }
