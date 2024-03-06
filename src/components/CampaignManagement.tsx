@@ -14,7 +14,7 @@ import { useContext } from "react";
 import { LotrContext } from "../context";
 import { filterScenarios } from "../utils";
 import { SectionHeader } from "./atoms/typography";
-import BoonsDisplay from "./BoonsDisplay copy";
+import BoonsDisplay from "./BoonsDisplay";
 import BurdensDisplay from "./BurdensDisplay";
 import AninamtedPage from "./AnimatedPage";
 
