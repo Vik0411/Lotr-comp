@@ -34,10 +34,10 @@ function CampaignScenario() {
     campaign.scenarios
   );
   const chosenCurrentScenario = campaign.scenarios.find(
-    (chosen) => chosen.current === true
+    (scenario) => scenario.current === true
   );
 
-  const [currentScenario, setCurrentScenario] = useState(
+  const [selectedScenario, setSelectedScenario] = useState(
     notCurrentAndNotWon[0]
   );
 
@@ -46,7 +46,7 @@ function CampaignScenario() {
       (scenario) => scenario.name === e.target.value
     );
     if (selectedScenario) {
-      setCurrentScenario(selectedScenario);
+      setSelectedScenario(selectedScenario);
     }
   }
 
@@ -54,7 +54,7 @@ function CampaignScenario() {
     e.preventDefault();
     // confirmation when one scneario is already current
     if (chosenCurrentScenario) {
-      if (chosenCurrentScenario !== currentScenario) {
+      if (chosenCurrentScenario !== selectedScenario) {
         setCloneModal(true);
         return;
       }
@@ -63,7 +63,7 @@ function CampaignScenario() {
     setCampaign({
       ...campaign,
       scenarios: campaign.scenarios.map((scenario: Scenario) => {
-        if (scenario === currentScenario) {
+        if (scenario === selectedScenario) {
           scenario.current = true;
           return scenario;
         } else {
@@ -78,7 +78,7 @@ function CampaignScenario() {
       { won: false, current: false },
       campaign.scenarios
     );
-    setCurrentScenario(notCurrentAndNotWon[0]);
+    setSelectedScenario(notCurrentAndNotWon[0]);
     localStorage.setItem("campaign", JSON.stringify(campaign));
   }, [campaign]);
 
@@ -124,7 +124,7 @@ function CampaignScenario() {
             style={{ textAlign: "center" }}
           >
             <SelectFfgHero
-              value={currentScenario.name}
+              value={selectedScenario.name}
               onChange={handleChange}
               name="scenario"
             >

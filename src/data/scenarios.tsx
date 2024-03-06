@@ -7,7 +7,7 @@ export const scenarios = [
   { name: "Nightmare Escape from Mount Gram", campaign: "Angmar Awakened" },
   { name: "Nightmare Into the Ettenmoors", campaign: "Angmar Awakened" },
   { name: "Nightmare The Treachery of Rhûdaur", campaign: "Angmar Awakened" },
-  { name: "Nightmare The Battle of Carn Dûm", campaign: "Angmar Awakened" },
+  // { name: "Nightmare The Battle of Carn Dûm", campaign: "Angmar Awakened" }, - missing campaign image
   { name: "Nightmare The Dread Realm", campaign: "Angmar Awakened" },
 ];
 
