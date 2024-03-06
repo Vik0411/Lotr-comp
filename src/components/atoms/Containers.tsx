@@ -89,7 +89,7 @@ export const ContainerFlexColumn = styled.div`
 `;
 
 export const ContainerModal = styled.div`
-  box-shadow: 10px 5px 5px #452c63;
+  box-shadow: 10px 5px 5px #5c3366;
   height: 200px;
   background-image: url("images/background.jpg");
   width: 400px;
@@ -98,6 +98,6 @@ export const ContainerModal = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
-  border: 1px solid #ba55d3;
+  border: 1px solid #5c3366;
   border-radius: 10px;
 `;
