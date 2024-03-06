@@ -4,7 +4,6 @@ import { SectionHeader } from "./atoms/typography";
 import { LotrContext } from "../context";
 import React from "react";
 import { ButtonShadowGreen } from "./AllMightyHeroes";
-import { sortArray } from "../utils";
 import { motion } from "framer-motion";
 
 function AddCustomHero() {
@@ -27,7 +26,7 @@ function AddCustomHero() {
       current: false,
       flavor: "",
     };
-    const newHeroes = sortArray([...campaign.allHeroes, newHero]);
+    const newHeroes = [...campaign.allHeroes, newHero];
     setCampaign({ ...campaign, allHeroes: newHeroes });
     setHeroName("");
   }

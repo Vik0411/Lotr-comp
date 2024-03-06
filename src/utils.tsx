@@ -67,12 +67,12 @@ export function adjustMotk(arr) {
 // sort heores with a given string in sign argument
 export function sortedItems(arr, sign) {
   arr.sort(function (a, b) {
-    const aBusy = a.name.includes(sign);
-    const bBusy = b.name.includes(sign);
-    if (aBusy && !bBusy) {
+    const aSign = a.name.includes(sign);
+    const bSign = b.name.includes(sign);
+    if (aSign && !bSign) {
       return 1;
     }
-    if (!aBusy && bBusy) {
+    if (!aSign && bSign) {
       return -1;
     }
     return a.name.localeCompare(b.name);
