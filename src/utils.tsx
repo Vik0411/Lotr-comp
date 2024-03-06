@@ -36,6 +36,7 @@ export function doesScenarioHaveImage(sc: string) {
   return scenarioNames.includes(sc);
 }
 
+// sort array alhpabetically
 export function sortArray(arr: Hero[]) {
   arr.sort(function (a, b) {
     if (a.name < b.name) {
@@ -49,6 +50,7 @@ export function sortArray(arr: Hero[]) {
   return arr;
 }
 
+// adjust data for Motk (Messenger of the King) heroes
 export function adjustMotk(arr) {
   arr.map((hero) => {
     if (hero.name.startsWith("(")) {
@@ -62,6 +64,7 @@ export function adjustMotk(arr) {
   return arr;
 }
 
+// sort heores with a given string in sign argument
 export function sortedItems(arr, sign) {
   arr.sort(function (a, b) {
     const aBusy = a.name.includes(sign);

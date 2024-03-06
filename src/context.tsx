@@ -1,6 +1,7 @@
 import React, { useState, ReactNode, Dispatch, SetStateAction } from "react";
 import { defaultState } from "./data/dataAdjustments";
 import { Campaign } from "./types";
+import { adjustMotk, sortedItems } from "./utils";
 
 export interface CampaignContextInterface {
   campaign: Campaign;
@@ -15,8 +16,14 @@ type LotrProviderProps = {
 function LotrProvider({ children }: LotrProviderProps) {
   const local = localStorage.getItem("campaign");
   function getStorageCampaign() {
-    if (local) return JSON.parse(local);
+    if (local) {
+      const js = JSON.parse(local);
+      const adjM = adjustMotk(js.allHeroes);
+      const sorted = sortedItems(adjM, "(MotK)");
+      return { ...js, AllHeroes: sorted };
+    }
   }
+
   const [campaign, setCampaign] = useState(
     getStorageCampaign() || defaultState.campaign
   );
