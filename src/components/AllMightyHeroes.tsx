@@ -111,11 +111,7 @@ function AllMightyHeroes() {
     "At least one hero with the same name is already prepared. Are you sure you want to proceed?";
 
   return (
-    <motion.div
-      style={{ position: "relative" }}
-      whileHover={{ scale: 1.1 }}
-      transition={{ type: "spring", stiffness: 300 }}
-    >
+    <div style={{ position: "relative" }}>
       {cloneModal && (
         <ConfirmationModal
           procede={procede}
@@ -125,6 +121,9 @@ function AllMightyHeroes() {
       )}
       <form name="heroprep" onSubmit={prepareHero}>
         <SelectFfgHero
+          as={motion.select}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300 }}
           value={preparedHero.code}
           onChange={handleChange}
           name="hero"
@@ -135,9 +134,16 @@ function AllMightyHeroes() {
             </option>
           ))}
         </SelectFfgHero>
-        <ButtonShadowGreen type="submit">Prepare</ButtonShadowGreen>
+        <ButtonShadowGreen
+          as={motion.button}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          type="submit"
+        >
+          Prepare
+        </ButtonShadowGreen>
       </form>
-    </motion.div>
+    </div>
   );
 }
 

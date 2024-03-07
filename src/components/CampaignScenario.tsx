@@ -103,14 +103,12 @@ function CampaignScenario() {
       <SectionHeader style={{ textAlign: "center", marginTop: "50px" }}>
         Specify Current Campaign Scennario
       </SectionHeader>
-      <motion.div
+      <div
         style={{
           display: "flex",
           flexFlow: "row",
           justifyContent: "center",
         }}
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 300 }}
       >
         <div
           style={{
@@ -124,6 +122,9 @@ function CampaignScenario() {
             style={{ textAlign: "center" }}
           >
             <SelectFfgHero
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              as={motion.select}
               value={selectedScenario.name}
               onChange={handleChange}
               name="scenario"
@@ -134,10 +135,17 @@ function CampaignScenario() {
                 </option>
               ))}
             </SelectFfgHero>
-            <ButtonShadowGreen type="submit">Add Scenario</ButtonShadowGreen>
+            <ButtonShadowGreen
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              type="submit"
+            >
+              Add Scenario
+            </ButtonShadowGreen>
           </form>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

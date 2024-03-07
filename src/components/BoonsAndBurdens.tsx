@@ -111,13 +111,12 @@ function BoonsAndBurdens() {
 
   return (
     <ContainerFlex style={{ position: "relative" }}>
-      <motion.form
-        name="boon"
-        onSubmit={submitBoon}
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 300 }}
-      >
+      <form name="boon" onSubmit={submitBoon}>
         <Input
+          as={motion.input}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          style={{ marginLeft: "15px" }}
           name="boon"
           type="text"
           value={bBNameObject.boonName}
@@ -161,22 +160,31 @@ function BoonsAndBurdens() {
         {bBNameObject.boonName !== "" && (
           <ContainerFlex>
             <Input
+              as={motion.input}
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}
               name="boon extra"
               value={extraBoonInfo}
               onChange={handleChangeBoonInfo}
               placeholder="extra boon info (optional)"
             />
-            <ButtonShadowYellow type="submit">Submit boon</ButtonShadowYellow>
+            <ButtonShadowYellow
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              type="submit"
+            >
+              Submit boon
+            </ButtonShadowYellow>
           </ContainerFlex>
         )}
-      </motion.form>
-      <motion.form
-        onSubmit={submitBurden}
-        name="burden"
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 300 }}
-      >
+      </form>
+      <form onSubmit={submitBurden} name="burden">
         <Input
+          as={motion.input}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          style={{ marginLeft: "15px" }}
           type="text"
           value={bBNameObject.burdenName}
           onChange={handleChangeBurden}
@@ -221,15 +229,25 @@ function BoonsAndBurdens() {
         {bBNameObject.burdenName !== "" && (
           <ContainerFlex>
             <Input
+              as={motion.input}
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}
               name="burden extra"
               value={extraBurdenInfo}
               onChange={handleChangeBurdenInfo}
               placeholder="extra burden info (optional)"
             />
-            <ButtonShadowBlood type="submit">Submit burden</ButtonShadowBlood>
+            <ButtonShadowBlood
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              type="submit"
+            >
+              Submit burden
+            </ButtonShadowBlood>
           </ContainerFlex>
         )}
-      </motion.form>
+      </form>
     </ContainerFlex>
   );
 }

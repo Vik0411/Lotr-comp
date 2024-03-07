@@ -34,6 +34,7 @@ function BurdensDisplay() {
   return (
     <ContainerFlex>
       <Swiper
+        style={{ margin: "0px 40px" }}
         effect={"cards"}
         grabCursor={true}
         modules={[EffectCards]}

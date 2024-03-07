@@ -37,7 +37,6 @@ function CampaignManagement() {
             display: "flex",
             // flexFlow: "row",
             flexFlow: "column",
-
             justifyContent: "space-between",
           }}
         >

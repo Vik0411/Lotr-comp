@@ -146,7 +146,12 @@ function StableHeader() {
                     Current Heroes
                   </SectionHeader>
                   {current.map((hero) => (
-                    <ListItemHeader key={hero.code}>{hero.name}</ListItemHeader>
+                    <ListItemHeader
+                      style={{ margin: "0px 0px" }}
+                      key={hero.code}
+                    >
+                      {hero.name}
+                    </ListItemHeader>
                   ))}
                 </ButtonTransparent>
               </motion.div>
@@ -167,10 +172,18 @@ function StableHeader() {
                   Boons & Burdens
                 </SectionHeader>
                 {campaign.boonsAndBurdens.boons.map((boon) => (
-                  <ListItemHeader key={boon.index}>{boon.name}</ListItemHeader>
+                  <ListItemHeader
+                    style={{ margin: "0px 0px" }}
+                    key={boon.index}
+                  >
+                    {boon.name}
+                  </ListItemHeader>
                 ))}
                 {campaign.boonsAndBurdens.burdens.map((burden) => (
-                  <ListItemHeader key={burden.index}>
+                  <ListItemHeader
+                    style={{ margin: "0px 0px" }}
+                    key={burden.index}
+                  >
                     {burden.name}
                   </ListItemHeader>
                 ))}

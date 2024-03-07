@@ -40,24 +40,27 @@ function AddCustomScenario() {
       <SectionHeader style={{ fontWeight: "450", fontSize: "30px" }}>
         Add Missing Scenario
       </SectionHeader>
-      <motion.form
-        style={{ margin: "10px 200px" }}
-        name="addcscen"
-        onSubmit={submitCustomScenario}
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 300 }}
-      >
+      <form name="addcscen" onSubmit={submitCustomScenario}>
         <Input
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          as={motion.input}
           type="text"
           name="custom scenario"
           value={scenarioName}
           onChange={handleChange}
           placeholder="custom scenario name"
         />
-        <ButtonShadowGreen value="sumbit" type="submit">
+        <ButtonShadowGreen
+          as={motion.button}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          value="sumbit"
+          type="submit"
+        >
           Add
         </ButtonShadowGreen>
-      </motion.form>
+      </form>
     </div>
   );
 }

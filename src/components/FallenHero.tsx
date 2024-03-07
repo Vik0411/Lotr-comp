@@ -25,17 +25,15 @@ export function FallenHero({ name, code }: Hero) {
   }
   return (
     <ListItemWithWhiteText
-      style={{ textAlign: "center", margin: "10px 400px" }}
+      as={motion.li}
+      whileHover={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 300 }}
+      style={{ textAlign: "center" }}
     >
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 300 }}
-      >
-        {name}
-        <CancelBtn onClick={() => resurrectHero(code)}>
-          <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
-        </CancelBtn>
-      </motion.div>
+      {name}
+      <CancelBtn onClick={() => resurrectHero(code)}>
+        <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
+      </CancelBtn>
     </ListItemWithWhiteText>
   );
 }

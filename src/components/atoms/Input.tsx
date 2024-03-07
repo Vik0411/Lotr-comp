@@ -5,5 +5,9 @@ export const Input = styled.input`
   background-color: transparent;
   border-radius: 15px;
   font-family: inherit;
-  margin: 0px 30px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin: 10px 10px;
+  }
 `;
