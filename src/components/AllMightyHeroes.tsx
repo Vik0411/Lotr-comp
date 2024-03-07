@@ -111,7 +111,7 @@ function AllMightyHeroes() {
     "At least one hero with the same name is already prepared. Are you sure you want to proceed?";
 
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", textAlign: "center" }}>
       {cloneModal && (
         <ConfirmationModal
           procede={procede}

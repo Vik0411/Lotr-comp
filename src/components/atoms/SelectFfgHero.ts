@@ -8,7 +8,7 @@ export const SelectFfgHero = styled.select`
   margin-right: 30px;
 
   @media (max-width: 768px) {
-    width: 70%;
+    width: 250px;
     font-size: 20px;
   }
 `;

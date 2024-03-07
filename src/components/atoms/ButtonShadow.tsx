@@ -40,9 +40,12 @@ export const ButtonShadow = styled.button`
     transform: translate(2px, 2px);
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 100px) {
     .button-50 {
       padding: 12px 50px;
-    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 17px;
   }
 `;

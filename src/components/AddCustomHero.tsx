@@ -32,9 +32,14 @@ function AddCustomHero() {
   }
 
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <SectionHeader
-        style={{ fontSize: "30px", fontWeight: "450", textAlign: "center" }}
+        style={{
+          fontSize: "25px",
+          fontWeight: "300",
+          textAlign: "center",
+          marginBottom: "0px",
+        }}
       >
         Create Custom Hero
       </SectionHeader>

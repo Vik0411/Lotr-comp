@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { ButtonTransparent } from "./atoms/ButtonTransparent";
-import { SectionHeader } from "./atoms/typography";
+import { AppDescription, SectionHeader } from "./atoms/typography";
 
 import { filterHeroes } from "../utils";
 import React from "react";
@@ -19,6 +19,10 @@ const StyledLink = styled(Link)`
   &:hover {
     color: #5c3366;
   }
+
+  @media (max-width: 1024px) {
+    margin: 0px 20px;
+  }
 `;
 
 const ContainerFlexHeader = styled(ContainerFlex)`
@@ -33,7 +37,7 @@ const ContainerFlexHeader = styled(ContainerFlex)`
   }
 
   @media (max-width: 1470px) {
-    top: 60px;
+    top: 74px;
   }
 `;
 
@@ -49,7 +53,7 @@ const ContainerFlexWholeHeader = styled(ContainerFlex)`
 
   @media (max-width: 768px) {
     justify-content: center;
-    gap: 10px;
+    gap: 0px;
   }
 `;
 
@@ -64,7 +68,7 @@ const BorBShorthand = styled.div`
   }
 
   @media (max-width: 1470px) {
-    top: 60px;
+    top: 74px;
     font-size: 15px;
   }
 `;
@@ -81,7 +85,7 @@ function StableHeader() {
     (chosen) => chosen.current === true
   );
 
-  const appNamePxs = chosenCurrentScenario ? "120px" : "50px";
+  const appNamePxs = chosenCurrentScenario ? "100px" : "50px";
 
   return (
     <Container
@@ -117,7 +121,7 @@ function StableHeader() {
           </motion.div>
         )}
       </AnimatePresence>
-      <ContainerFlexWholeHeader style={{ height: "120px" }}>
+      <ContainerFlexWholeHeader style={{ height: "130px" }}>
         {current.length !== 0 && (
           <ContainerFlexHeader>
             <AnimatePresence>
@@ -227,23 +231,9 @@ function StableHeader() {
           </h2>
         )}
 
-        <p
-          style={{
-            color: "#D4AF37",
-            position: "absolute",
-            top: appNamePxs,
-            fontSize: "20px",
-            // top: "-5px",
-            opacity: 0.9,
-            // left: "40px",
-            // right: "20px",
-            // border: "3px solid #ba55d3",
-            borderRadius: "10px",
-            marginRight: "400px",
-          }}
-        >
+        <AppDescription style={{ top: appNamePxs }}>
           tool for The Lord of the Rings, LCG
-        </p>
+        </AppDescription>
       </ContainerFlexWholeHeader>
     </Container>
   );

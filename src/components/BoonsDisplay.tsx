@@ -33,7 +33,7 @@ function BoonsDisplay() {
   }
 
   return (
-    <ContainerFlex>
+    <ContainerFlex style={{ marginLeft: "40px" }}>
       <Swiper
         effect={"cards"}
         grabCursor={true}

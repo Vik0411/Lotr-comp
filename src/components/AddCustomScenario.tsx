@@ -37,7 +37,9 @@ function AddCustomScenario() {
         textAlign: "center",
       }}
     >
-      <SectionHeader style={{ fontWeight: "450", fontSize: "30px" }}>
+      <SectionHeader
+        style={{ fontWeight: "300", fontSize: "25px", marginBottom: "0px" }}
+      >
         Add Missing Scenario
       </SectionHeader>
       <form name="addcscen" onSubmit={submitCustomScenario}>

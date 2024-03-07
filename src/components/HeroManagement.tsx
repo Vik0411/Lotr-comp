@@ -28,12 +28,12 @@ function HeroManagement() {
           style={{
             textAlign: "center",
             margin: "50px 30px",
-            marginBottom: "10px",
+            marginBottom: "30px",
           }}
         >
           Add to Current Campaign
         </SectionHeader>
-        <ContainerFlex style={{ margin: "50px 30px" }}>
+        <ContainerFlex style={{ margin: "10px 30px" }}>
           <div style={{ display: "flex", flexFlow: "column" }}>
             <AllMightyHeroes />
             <AddCustomHero />
