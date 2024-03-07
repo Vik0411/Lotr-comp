@@ -230,7 +230,6 @@ function StableHeader() {
             </motion.div>
           </h2>
         )}
-
         <AppDescription style={{ top: appNamePxs }}>
           tool for The Lord of the Rings, LCG
         </AppDescription>

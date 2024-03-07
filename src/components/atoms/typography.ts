@@ -51,6 +51,6 @@ export const AppDescription = styled.p`
   }
 
   @media (max-width: 768px) {
-    font-size: 12px;
+    display: none;
   }
 `;
