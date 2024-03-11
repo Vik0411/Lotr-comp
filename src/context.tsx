@@ -13,20 +13,19 @@ type LotrProviderProps = {
   children: ReactNode;
 };
 
-function LotrProvider({ children }: LotrProviderProps) {
+function getCampaign() {
   const local = localStorage.getItem("campaign");
-  function getStorageCampaign() {
-    if (local) {
-      const js = JSON.parse(local);
-      const adjM = adjustMotk(js.allHeroes);
-      const sorted = sortedItems(adjM, "(MotK)");
-      return { ...js, AllHeroes: sorted };
-    }
+  if (local) {
+    const js = JSON.parse(local);
+    const adjM = adjustMotk(js.allHeroes);
+    const sorted = sortedItems(adjM, "(MotK)");
+    return { ...js, AllHeroes: sorted };
   }
+  return defaultState.campaign;
+}
 
-  const [campaign, setCampaign] = useState(
-    getStorageCampaign() || defaultState.campaign
-  );
+function LotrProvider({ children }: LotrProviderProps) {
+  const [campaign, setCampaign] = useState(getCampaign());
 
   return (
     <LotrContext.Provider

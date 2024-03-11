@@ -15,10 +15,10 @@ export function filterScenarios(
   scenarios: Scenario[]
 ) {
   const { won, current } = obj;
-  const scen = scenarios.filter(
+
+  return scenarios.filter(
     (scenario) => scenario.won === won && scenario.current === current
   );
-  return scen;
 }
 
 export function doesHaveImage(borb: string) {
@@ -51,7 +51,7 @@ export function sortArray(arr: Hero[]) {
 }
 
 // adjust data for Motk (Messenger of the King) heroes
-export function adjustMotk(arr) {
+export function adjustMotk(arr: Hero[]) {
   arr.map((hero) => {
     if (hero.name.startsWith("(")) {
       hero.name = hero.name.replace("(MotK)", "");
@@ -65,7 +65,7 @@ export function adjustMotk(arr) {
 }
 
 // sort heores with a given string in sign argument
-export function sortedItems(arr, sign) {
+export function sortedItems(arr: Hero[], sign: string) {
   arr.sort(function (a, b) {
     const aSign = a.name.includes(sign);
     const bSign = b.name.includes(sign);

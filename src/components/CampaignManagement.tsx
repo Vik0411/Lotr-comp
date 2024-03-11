@@ -16,7 +16,7 @@ import { filterScenarios } from "../utils";
 import { SectionHeader } from "./atoms/typography";
 import BoonsDisplay from "./BoonsDisplay";
 import BurdensDisplay from "./BurdensDisplay";
-import AninamtedPage from "./AnimatedPage";
+import AnimatedPage from "./AnimatedPage";
 
 function CampaignManagement() {
   const { campaign } = useContext(LotrContext);
@@ -28,7 +28,7 @@ function CampaignManagement() {
 
   return (
     <ContainerHeroManagement>
-      <AninamtedPage>
+      <AnimatedPage>
         {/* option with row styling here */}
         {/* <div> */}
         {/* <ContainerFlex> */}
@@ -71,7 +71,7 @@ function CampaignManagement() {
         <ContainerWithWhiteText style={{ marginTop: "100px" }}>
           <DynamicLore />
         </ContainerWithWhiteText>
-      </AninamtedPage>
+      </AnimatedPage>
     </ContainerHeroManagement>
   );
 }

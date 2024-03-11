@@ -14,9 +14,7 @@ function AddCustomScenario() {
     setScenarioName(e.target.value);
   }
 
-  function submitCustomScenario(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-
+  function submitCustomScenario() {
     const newScenario = {
       ...campaign.scenarios[0],
       name: `${scenarioName} (custom addition)`,
@@ -40,9 +38,9 @@ function AddCustomScenario() {
       <SectionHeader
         style={{ fontWeight: "300", fontSize: "25px", marginBottom: "0px" }}
       >
-        Add Missing Scenario
+        Create new Scenario
       </SectionHeader>
-      <form name="addcscen" onSubmit={submitCustomScenario}>
+      <div>
         <Input
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 300 }}
@@ -54,15 +52,14 @@ function AddCustomScenario() {
           placeholder="custom scenario name"
         />
         <ButtonShadowGreen
+          onClick={submitCustomScenario}
           as={motion.button}
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 300 }}
-          value="sumbit"
-          type="submit"
         >
-          Add
+          Add Scenario
         </ButtonShadowGreen>
-      </form>
+      </div>
     </div>
   );
 }

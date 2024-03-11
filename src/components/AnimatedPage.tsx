@@ -8,7 +8,7 @@ export const animations = {
   exit: { opacity: 0.7 },
 };
 
-const AninamtedPage = ({ children }) => {
+const AnimatedPage = ({ children }) => {
   return (
     <motion.div
       variants={animations}
@@ -22,4 +22,4 @@ const AninamtedPage = ({ children }) => {
   );
 };
 
-export default AninamtedPage;
+export default AnimatedPage;

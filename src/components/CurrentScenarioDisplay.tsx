@@ -24,12 +24,12 @@ export const ButtonBlack = styled(ButtonShadow)`
 function CurrentScenarioDisplay() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
   const chosenCurrentScenario = campaign.scenarios.find(
-    (chosen) => chosen.current === true
+    (chosen) => chosen.current
   );
 
-  let pic: string;
+  let picture: string;
   if (chosenCurrentScenario) {
-    pic = chosenCurrentScenario.name.replaceAll(" ", "-");
+    picture = chosenCurrentScenario.name.replaceAll(" ", "-");
   }
 
   function winScenario(scenarioIndex: string) {
@@ -37,9 +37,11 @@ function CurrentScenarioDisplay() {
       ...campaign,
       scenarios: campaign.scenarios.map((scenario: Scenario) => {
         if (scenario.name === scenarioIndex) {
-          scenario.won = true;
-          scenario.current = false;
-          return scenario;
+          return {
+            ...scenario,
+            won: true,
+            current: false,
+          };
         } else {
           return scenario;
         }
@@ -52,15 +54,20 @@ function CurrentScenarioDisplay() {
       ...campaign,
       scenarios: campaign.scenarios.map((scenario: Scenario) => {
         if (scenario.name === scenarioIndex) {
-          scenario.won = false;
-          scenario.current = false;
-          return scenario;
+          return { ...scenario, won: false, current: false };
         } else {
           return scenario;
         }
       }),
     });
   }
+
+  const doesCurrentScenarioHaveImage = React.useMemo(() => {
+    return (
+      chosenCurrentScenario &&
+      doesScenarioHaveImage(chosenCurrentScenario.name.toLowerCase())
+    );
+  }, [chosenCurrentScenario]);
 
   return (
     <div style={{ margin: "30px 30px" }}>
@@ -91,13 +98,11 @@ function CurrentScenarioDisplay() {
                       ></CancelImage>
                     </CancelBtn>
                   </Paragraph>
-                  {doesScenarioHaveImage(
-                    chosenCurrentScenario.name.toLowerCase()
-                  ) ? (
+                  {doesCurrentScenarioHaveImage ? (
                     <BorBCard
                       style={{ borderRadius: "10px" }}
                       alt=""
-                      src={`images/scenarios/${pic}.webp`}
+                      src={`images/scenarios/${picture}.webp`}
                     />
                   ) : (
                     <BorBCard
