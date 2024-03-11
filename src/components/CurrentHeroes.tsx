@@ -40,7 +40,7 @@ function CurrentHeroes() {
     campaign.allHeroes
   );
 
-  function procede() {
+  function proceed() {
     setCampaign({
       ...campaign,
       allHeroes: campaign.allHeroes.map((hero) => {
@@ -124,7 +124,7 @@ function CurrentHeroes() {
     >
       {cloneModal && (
         <ConfirmationModal
-          procede={procede}
+          proceed={proceed}
           doNotProceed={doNotProceed}
           modalText={modalText}
         />

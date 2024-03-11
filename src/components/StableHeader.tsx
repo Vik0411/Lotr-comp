@@ -82,15 +82,19 @@ function StableHeader() {
 
   const inHeroMgnt = useLocation().pathname.includes("hero");
   const chosenCurrentScenario = campaign.scenarios.find(
-    (chosen) => chosen.current === true
+    (chosen) => chosen.current
   );
 
   const appNamePxs = chosenCurrentScenario ? "100px" : "50px";
 
+  const hasCampaignBoons = campaign.boonsAndBurdens.boons.length !== 0;
+  const hasCampaignBurdens = campaign.boonsAndBurdens.burdens.length !== 0;
+  const hasCampaignBoonsAndBurdens = hasCampaignBoons || hasCampaignBurdens;
+
   return (
     <Container
       style={{
-        // backgroundAttachment: "revert",
+        backgroundAttachment: "revert",
         backgroundPosition: "bottom",
         position: "relative",
         backgroundImage: `url("images/background.jpg")`,
@@ -162,8 +166,7 @@ function StableHeader() {
             </AnimatePresence>
           </ContainerFlexHeader>
         )}
-        {(campaign.boonsAndBurdens.boons.length !== 0 ||
-          campaign.boonsAndBurdens.burdens.length !== 0) && (
+        {hasCampaignBoonsAndBurdens && (
           <BorBShorthand>
             <motion.div initial={{ x: 1000 }} animate={{ x: 0 }}>
               <ButtonTransparent style={{ color: "grey", marginLeft: "40px" }}>

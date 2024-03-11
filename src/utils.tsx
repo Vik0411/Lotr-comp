@@ -1,6 +1,12 @@
 import { burdens } from "./data/burdens";
 import { scenarios } from "./data/scenarios";
-import { Hero, Scenario, changedAttrs, changedAttrsScenario } from "./types";
+import {
+  Campaign,
+  Hero,
+  Scenario,
+  changedAttrs,
+  changedAttrsScenario,
+} from "./types";
 
 export function filterHeroes(obj: changedAttrs, allHeroes: Hero[]) {
   const { alive, current } = obj;
@@ -78,4 +84,12 @@ export function sortedItems(arr: Hero[], sign: string) {
     return a.name.localeCompare(b.name);
   });
   return arr;
+}
+
+export function saveCampaign(campaign: Campaign) {
+  localStorage.setItem("campaign", JSON.stringify(campaign));
+}
+
+export function retrieveCampaign() {
+  return localStorage.getItem("campaign");
 }

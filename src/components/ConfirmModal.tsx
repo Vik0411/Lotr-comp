@@ -1,7 +1,7 @@
 import { ButtonShadow } from "./atoms/ButtonShadow";
 import { ContainerModal } from "./atoms/Containers";
 
-function ConfirmationModal({ procede, doNotProceed, modalText }) {
+function ConfirmationModal({ proceed, doNotProceed, modalText }) {
   return (
     <ContainerModal>
       <p
@@ -23,7 +23,7 @@ function ConfirmationModal({ procede, doNotProceed, modalText }) {
         {modalText.includes("scenario") ? (
           <ButtonShadow
             style={{ opacity: 1, height: "10px" }}
-            onClick={() => procede()}
+            onClick={() => proceed()}
           >
             Ok
           </ButtonShadow>
@@ -32,7 +32,7 @@ function ConfirmationModal({ procede, doNotProceed, modalText }) {
             {" "}
             <ButtonShadow
               style={{ opacity: 1, height: "10px" }}
-              onClick={() => procede()}
+              onClick={() => proceed()}
             >
               Yes
             </ButtonShadow>

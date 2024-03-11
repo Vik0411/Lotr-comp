@@ -2,7 +2,7 @@ import { ButtonShadow } from "./atoms/ButtonShadow";
 import { LotrContext } from "../context";
 import React, { useEffect, useState } from "react";
 
-import { filterHeroes } from "../utils";
+import { filterHeroes, saveCampaign } from "../utils";
 import { Hero } from "../types";
 import { SelectFfgHero } from "./atoms/SelectFfgHero";
 import { styled } from "styled-components";
@@ -39,7 +39,7 @@ function AllMightyHeroes() {
     }
   }
 
-  function procede() {
+  function proceed() {
     setCampaign({
       ...campaign,
       allHeroes: campaign.allHeroes.map((hero) => {
@@ -101,10 +101,7 @@ function AllMightyHeroes() {
       campaign.allHeroes
     );
     setPreparedHero(notCurrentAndAlive[0]);
-    localStorage.setItem(
-      "campaign",
-      JSON.stringify({ ...campaign, allHeroes: campaign.allHeroes })
-    );
+    saveCampaign({ ...campaign, allHeroes: campaign.allHeroes });
   }, [campaign]);
 
   const modalText =
@@ -114,7 +111,7 @@ function AllMightyHeroes() {
     <div style={{ position: "relative", textAlign: "center" }}>
       {cloneModal && (
         <ConfirmationModal
-          procede={procede}
+          proceed={proceed}
           doNotProceed={doNotProceed}
           modalText={modalText}
         />
