@@ -25,7 +25,7 @@ function BurdensDisplay() {
 
   function cancelBurden(burden: Burden) {
     const newBurdens = campaign.boonsAndBurdens.burdens.filter(
-      (br) => br.index !== burden.index
+      (br) => br.id !== burden.id
     );
     const newBB = { ...campaign.boonsAndBurdens, burdens: newBurdens };
     setCampaign({ ...campaign, boonsAndBurdens: newBB });
@@ -43,9 +43,9 @@ function BurdensDisplay() {
         <ContainerFlex style={{ marginLeft: "20px" }}>
           <ContainerFlexColumn>
             {campaign.boonsAndBurdens.burdens.map((burden) => (
-              <div key={burden.index} style={{ margin: "15px 15px" }}>
+              <div key={burden.id} style={{ margin: "15px 15px" }}>
                 {doesBurdenHaveImage(burden.image + ".jpg") ? (
-                  <SwiperSlide key={burden.index}>
+                  <SwiperSlide key={burden.id}>
                     <AninamtedPage>
                       <ContainerCurrentCard style={{ width: "230px" }}>
                         <Paragraph>
@@ -78,7 +78,7 @@ function BurdensDisplay() {
                     </AninamtedPage>
                   </SwiperSlide>
                 ) : (
-                  <SwiperSlide key={burden.index}>
+                  <SwiperSlide key={burden.id}>
                     <AninamtedPage>
                       <ContainerCurrentCard style={{ width: "230px" }}>
                         <Paragraph>

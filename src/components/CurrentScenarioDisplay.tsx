@@ -32,11 +32,11 @@ function CurrentScenarioDisplay() {
     picture = chosenCurrentScenario.name.replaceAll(" ", "-");
   }
 
-  function winScenario(scenarioIndex: string) {
+  function winScenario(scenarioId: string) {
     setCampaign({
       ...campaign,
       scenarios: campaign.scenarios.map((scenario: Scenario) => {
-        if (scenario.name === scenarioIndex) {
+        if (scenario.name === scenarioId) {
           return {
             ...scenario,
             won: true,
@@ -49,11 +49,11 @@ function CurrentScenarioDisplay() {
     });
   }
 
-  function returnScenario(scenarioIndex: string) {
+  function returnScenario(scenarioId: string) {
     setCampaign({
       ...campaign,
       scenarios: campaign.scenarios.map((scenario: Scenario) => {
-        if (scenario.name === scenarioIndex) {
+        if (scenario.name === scenarioId) {
           return { ...scenario, won: false, current: false };
         } else {
           return scenario;
@@ -80,7 +80,7 @@ function CurrentScenarioDisplay() {
             <ContainerFlex>
               <AninamtedPage>
                 <ContainerCurrentCard
-                  key={chosenCurrentScenario.index}
+                  key={chosenCurrentScenario.id}
                   style={{ width: "250px" }}
                 >
                   <Paragraph>

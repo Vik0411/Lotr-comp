@@ -26,7 +26,7 @@ function BoonsDisplay() {
 
   function cancelBoon(boon: Boon) {
     const newBoons = campaign.boonsAndBurdens.boons.filter(
-      (bn) => bn.index !== boon.index
+      (bn) => bn.id !== boon.id
     );
     const newBB = { ...campaign.boonsAndBurdens, boons: newBoons };
     setCampaign({ ...campaign, boonsAndBurdens: newBB });
@@ -43,9 +43,9 @@ function BoonsDisplay() {
         <ContainerFlex style={{ marginLeft: "20px" }}>
           <ContainerFlexColumn>
             {campaign.boonsAndBurdens.boons.map((boon) => (
-              <div key={boon.index} style={{ margin: "15px 15px" }}>
+              <div key={boon.id} style={{ margin: "15px 15px" }}>
                 {doesHaveImage(boon.image) ? (
-                  <SwiperSlide key={boon.index}>
+                  <SwiperSlide key={boon.id}>
                     <AninamtedPage>
                       <ContainerCurrentCard style={{ width: "240px" }}>
                         <div style={{ position: "relative" }}>
@@ -79,7 +79,7 @@ function BoonsDisplay() {
                     </AninamtedPage>
                   </SwiperSlide>
                 ) : (
-                  <SwiperSlide key={boon.index}>
+                  <SwiperSlide key={boon.id}>
                     <AninamtedPage>
                       <ContainerCurrentCard style={{ width: "230px" }}>
                         <Paragraph>

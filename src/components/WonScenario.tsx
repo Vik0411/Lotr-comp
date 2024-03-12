@@ -6,14 +6,14 @@ import { ListItemWithWhiteText } from "./atoms/ListItemWithWhiteText";
 import { LotrContext } from "../context";
 import { motion } from "framer-motion";
 
-export function WonScenario({ name, index }: Scenario) {
+export function WonScenario({ name, id }: Scenario) {
   const { campaign, setCampaign } = React.useContext(LotrContext);
 
-  function returnScenario(scenarioIndex) {
+  function returnScenario(scenarioId: string) {
     setCampaign({
       ...campaign,
       scenarios: campaign.scenarios.map((scenario) => {
-        if (scenario.index === scenarioIndex) {
+        if (scenario.id === scenarioId) {
           scenario.won = false;
           return scenario;
         } else {
@@ -30,7 +30,7 @@ export function WonScenario({ name, index }: Scenario) {
       transition={{ type: "spring", stiffness: 300 }}
     >
       {name}
-      <CancelBtn onClick={() => returnScenario(index)}>
+      <CancelBtn onClick={() => returnScenario(id)}>
         <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
       </CancelBtn>
     </ListItemWithWhiteText>

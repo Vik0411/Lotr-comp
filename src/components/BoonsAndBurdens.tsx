@@ -8,6 +8,7 @@ import { boons } from "../data/boons";
 import { burdens } from "../data/burdens";
 import { ContainerFlex } from "./atoms/Containers";
 import { motion } from "framer-motion";
+import { v4 as uuidv4 } from "uuid";
 
 export const ButtonShadowYellow = styled(ButtonShadow)`
   opacity: 1;
@@ -61,7 +62,7 @@ function BoonsAndBurdens() {
       ...campaign.boonsAndBurdens.boons,
       {
         name: bBNameObject.boonName,
-        index: campaign.boonsAndBurdens.boons.length + 1,
+        id: Date.now().toString(),
         image: bBNameObject.boonName.replaceAll(" ", "-"),
         extraInfo: extraBoonInfo,
       },
@@ -78,7 +79,7 @@ function BoonsAndBurdens() {
       ...campaign.boonsAndBurdens.burdens,
       {
         name: bBNameObject.burdenName,
-        index: campaign.boonsAndBurdens.burdens.length + 1,
+        id: Date.now().toString(),
         image: bBNameObject.burdenName.replaceAll(" ", "-"),
         extraInfo: extraBurdenInfo,
       },
@@ -126,7 +127,7 @@ function BoonsAndBurdens() {
         />
         {showDataList && (
           <BoonDiv>
-            {filteredBoonsFormatted.map((boon, index) => (
+            {filteredBoonsFormatted.map((boon) => (
               <button
                 style={{
                   backgroundColor: "transparent",
@@ -134,7 +135,7 @@ function BoonsAndBurdens() {
                   height: "90px",
                   cursor: "pointer",
                 }}
-                key={index}
+                key={uuidv4()}
                 onClick={() => {
                   setBBNameObject({ ...bBNameObject, boonName: boon });
                   setShowDataList(false);
@@ -193,7 +194,7 @@ function BoonsAndBurdens() {
         />
         {showDataListBurden && (
           <BoonDiv>
-            {filteredBurdensFormatted.map((burden, index) => (
+            {filteredBurdensFormatted.map((burden) => (
               <button
                 style={{
                   backgroundColor: "transparent",
@@ -201,7 +202,7 @@ function BoonsAndBurdens() {
                   height: "90px",
                   cursor: "pointer",
                 }}
-                key={index}
+                key={uuidv4()}
                 onClick={() => {
                   setBBNameObject({ ...bBNameObject, burdenName: burden });
                   setShowDataListBurden(false);

@@ -3,7 +3,7 @@ import { ButtonShadow } from "./atoms/ButtonShadow";
 import { LotrContext } from "../context";
 import React, { useEffect, useState } from "react";
 
-import { filterScenarios } from "../utils";
+import { filterScenarios, saveCampaign } from "../utils";
 import { Scenario } from "../types";
 import { SelectFfgHero } from "./atoms/SelectFfgHero";
 import { styled } from "styled-components";
@@ -22,7 +22,7 @@ function CampaignScenario() {
   const { campaign, setCampaign } = React.useContext(LotrContext);
   const [cloneModal, setCloneModal] = useState(false);
 
-  function procede() {
+  function proceed() {
     setCloneModal(false);
   }
   function doNotProceed() {
@@ -33,8 +33,9 @@ function CampaignScenario() {
     { won: false, current: false },
     campaign.scenarios
   );
+
   const chosenCurrentScenario = campaign.scenarios.find(
-    (scenario) => scenario.current === true
+    (scenario) => scenario.current
   );
 
   const [selectedScenario, setSelectedScenario] = useState(
@@ -50,8 +51,7 @@ function CampaignScenario() {
     }
   }
 
-  function addScenarioToCurrent(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+  function addScenarioToCurrent() {
     // confirmation when one scneario is already current
     if (chosenCurrentScenario) {
       if (chosenCurrentScenario !== selectedScenario) {
@@ -64,8 +64,10 @@ function CampaignScenario() {
       ...campaign,
       scenarios: campaign.scenarios.map((scenario: Scenario) => {
         if (scenario === selectedScenario) {
-          scenario.current = true;
-          return scenario;
+          return {
+            ...scenario,
+            current: true,
+          };
         } else {
           return scenario;
         }
@@ -79,7 +81,7 @@ function CampaignScenario() {
       campaign.scenarios
     );
     setSelectedScenario(notCurrentAndNotWon[0]);
-    localStorage.setItem("campaign", JSON.stringify(campaign));
+    saveCampaign(campaign);
   }, [campaign]);
 
   const modalText =
@@ -95,7 +97,7 @@ function CampaignScenario() {
     >
       {cloneModal && (
         <ConfirmationModal
-          procede={procede}
+          proceed={proceed}
           doNotProceed={doNotProceed}
           modalText={modalText}
         />
@@ -116,11 +118,7 @@ function CampaignScenario() {
             flexFlow: "column",
           }}
         >
-          <form
-            name="addscen"
-            onSubmit={addScenarioToCurrent}
-            style={{ textAlign: "center" }}
-          >
+          <div style={{ textAlign: "center" }}>
             <SelectFfgHero
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -130,20 +128,20 @@ function CampaignScenario() {
               name="scenario"
             >
               {notCurrentAndNotWon.map((notCurrent) => (
-                <option key={notCurrent.index} value={notCurrent.name}>
+                <option key={notCurrent.id} value={notCurrent.name}>
                   {notCurrent.name}
                 </option>
               ))}
             </SelectFfgHero>
             <ButtonShadowGreen
+              onClick={addScenarioToCurrent}
               as={motion.button}
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}
-              type="submit"
             >
               Add Scenario
             </ButtonShadowGreen>
-          </form>
+          </div>
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@ function AddCustomScenario() {
     const newScenario = {
       ...campaign.scenarios[0],
       name: `${scenarioName} (custom addition)`,
-      index: Number(Date.now().toFixed()),
+      id: Date.now().toString(),
       won: false,
       current: false,
       campaign: "",

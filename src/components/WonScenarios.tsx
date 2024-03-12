@@ -19,7 +19,7 @@ function WonScenarios() {
       <ul>
         {notCurrentAndWon.map(
           (wonScenario: Scenario): JSX.Element => (
-            <WonScenario key={wonScenario.index} {...wonScenario}></WonScenario>
+            <WonScenario key={wonScenario.id} {...wonScenario}></WonScenario>
           )
         )}
       </ul>

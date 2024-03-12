@@ -4,6 +4,7 @@ import { allCards } from "./dataSet";
 import { onlyHeroesFFG } from "./onlyHeroes";
 import { scenarios } from "./scenarios";
 import { adjustMotk, sortedItems } from "../utils";
+import { v4 as uuidv4 } from "uuid";
 
 export interface CampaignContextInterface {
   campaign: Campaign;
@@ -62,9 +63,13 @@ const allHeroesWithChangedName = changedNameMultiples.concat(
 );
 
 const adjustedMotk = adjustMotk(allHeroesWithChangedName);
-const scenariosForCampaign = scenarios.map((scenario, indexing) => {
-  const scens = { ...scenario, index: indexing, current: false, won: false };
-  return scens;
+const scenariosForCampaign = scenarios.map((scenario) => {
+  return {
+    ...scenario,
+    id: uuidv4(),
+    current: false,
+    won: false,
+  };
 });
 
 const sortedHeroes = sortedItems(adjustedMotk, "(MotK)");

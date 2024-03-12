@@ -2,14 +2,14 @@ import { Dispatch, SetStateAction } from "react";
 
 export type Boon = {
   name: string;
-  index: number;
+  id: string;
   image: string;
   extraInfo: string;
 };
 
 export type Scenario = {
   name: string;
-  index: number;
+  id: string;
   current: boolean;
   won: boolean;
   campaign: string;
@@ -17,7 +17,7 @@ export type Scenario = {
 
 export type Burden = {
   name: string;
-  index: number;
+  id: string;
   image: string;
   extraInfo: string;
 };
