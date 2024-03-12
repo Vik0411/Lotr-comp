@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { AppDescription } from "./atoms/typography";
 
 import { filterHeroes } from "../utils";
-import React from "react";
+import React, { useCallback } from "react";
 import { LotrContext } from "../context";
 import { Hero } from "../types";
 import { Container, ContainerFlex } from "./atoms/Containers";
@@ -52,7 +52,11 @@ function StableHeader() {
   const chosenCurrentScenario = campaign.scenarios.find(
     (chosen) => chosen.current
   );
-  const boons = campaign.boonsAndBurdens.boons;
+
+  const getBoons = useCallback(() => {
+    return campaign.boonsAndBurdens.boons;
+  }, [campaign.boonsAndBurdens.boons]);
+
   const burdens = campaign.boonsAndBurdens.burdens;
 
   const appNamePxs = chosenCurrentScenario ? "100px" : "50px";
@@ -79,7 +83,7 @@ function StableHeader() {
       <ContainerFlexWholeHeader style={{ height: "130px" }}>
         {current.length !== 0 && <HeroesShorthand current={current} />}
         {hasCampaignBoonsAndBurdens && (
-          <BBShorthand boons={boons} burdens={burdens} />
+          <BBShorthand getBoons={getBoons} burdens={burdens} />
         )}
         <h2>
           <motion.div whileHover={{ scale: 1.2 }}>

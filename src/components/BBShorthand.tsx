@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ButtonTransparent } from "./atoms/ButtonTransparent";
 import { ListItemHeader } from "./atoms/ListeItemHeader";
 import styled from "styled-components";
-import { Boon, Burden, Campaign } from "../types";
+import { Boon, Burden } from "../types";
 
 const BorBShorthand = styled.div`
   width: 160px;
@@ -22,7 +22,7 @@ const BorBShorthand = styled.div`
   }
 `;
 
-function BBShorthand({ boons, burdens }) {
+function BBShorthand({ getBoons, burdens }) {
   return (
     <BorBShorthand>
       <motion.div initial={{ x: 1000 }} animate={{ x: 0 }}>
@@ -35,7 +35,7 @@ function BBShorthand({ boons, burdens }) {
           >
             Boons & Burdens
           </SectionHeader>
-          {boons.map((boon: Boon) => (
+          {getBoons().map((boon: Boon) => (
             <ListItemHeader style={{ margin: "0px 0px" }} key={boon.id}>
               {boon.name}
             </ListItemHeader>
