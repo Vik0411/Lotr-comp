@@ -103,7 +103,7 @@ function CampaignScenario() {
         />
       )}
       <SectionHeader style={{ textAlign: "center", marginTop: "50px" }}>
-        Specify Current Campaign Scennario
+        Specify Current Campaign Scenario
       </SectionHeader>
       <div
         style={{
