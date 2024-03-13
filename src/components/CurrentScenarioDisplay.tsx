@@ -83,7 +83,7 @@ function CurrentScenarioDisplay() {
                   key={chosenCurrentScenario.id}
                   style={{ width: "250px" }}
                 >
-                  <Paragraph>
+                  <Paragraph style={{ marginLeft: "25px", right: "-25px" }}>
                     {chosenCurrentScenario ? chosenCurrentScenario.name : ""}
                     <CancelBtn
                       onClick={() => {
@@ -100,7 +100,10 @@ function CurrentScenarioDisplay() {
                   </Paragraph>
                   {doesCurrentScenarioHaveImage ? (
                     <BorBCard
-                      style={{ borderRadius: "10px" }}
+                      style={{
+                        borderRadius: "10px",
+                        marginLeft: "25px",
+                      }}
                       alt=""
                       src={`images/scenarios/${picture}.webp`}
                     />
@@ -115,7 +118,7 @@ function CurrentScenarioDisplay() {
                     style={{
                       position: "absolute",
                       bottom: "10px",
-                      left: "5px",
+                      left: "25px",
                     }}
                     onClick={() => {
                       if (chosenCurrentScenario) {
