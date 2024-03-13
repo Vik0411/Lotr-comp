@@ -112,7 +112,7 @@ function BoonsAndBurdens() {
 
   return (
     <ContainerFlex style={{ position: "relative" }}>
-      <form name="boon" onSubmit={submitBoon}>
+      <form name="boon" onSubmit={submitBoon} autoComplete="off">
         <Input
           as={motion.input}
           whileHover={{ scale: 1.1 }}
@@ -180,7 +180,7 @@ function BoonsAndBurdens() {
           </ContainerFlex>
         )}
       </form>
-      <form onSubmit={submitBurden} name="burden">
+      <form onSubmit={submitBurden} name="burden" autoComplete="off">
         <Input
           as={motion.input}
           whileHover={{ scale: 1.1 }}

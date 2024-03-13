@@ -119,7 +119,6 @@ function CurrentHeroes() {
     <div
       style={{
         minHeight: "400px",
-        position: "relative",
       }}
     >
       {cloneModal && (
@@ -133,17 +132,16 @@ function CurrentHeroes() {
         <AnimatePresence>
           {current.map(
             (current: Hero): JSX.Element => (
-              <ContainerCurrentCard
-                key={current.code}
-                style={{ width: "250px" }}
+              <motion.div
+                variants={animations}
+                initial="initial"
+                animate="animate"
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6 }}
               >
-                <motion.div
-                  style={{ position: "relative" }}
-                  variants={animations}
-                  initial="initial"
-                  animate="animate"
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.6 }}
+                <ContainerCurrentCard
+                  key={current.code}
+                  style={{ width: "270px" }}
                 >
                   <Paragraph>
                     {current.name}
@@ -158,8 +156,8 @@ function CurrentHeroes() {
                   <ButtonBlack onClick={() => killHero(current.code)}>
                     Kill
                   </ButtonBlack>
-                </motion.div>
-              </ContainerCurrentCard>
+                </ContainerCurrentCard>
+              </motion.div>
             )
           )}
         </AnimatePresence>

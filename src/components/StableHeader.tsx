@@ -59,7 +59,7 @@ function StableHeader() {
 
   const burdens = campaign.boonsAndBurdens.burdens;
 
-  const appNamePxs = chosenCurrentScenario ? "100px" : "50px";
+  const appNamePxs = chosenCurrentScenario ? "120px" : "50px";
   const colorsHeroMngt = isHeroMngt ? "#5c3366" : "grey";
   const colorsCampMngt = isHeroMngt ? "grey" : "#5c3366";
 

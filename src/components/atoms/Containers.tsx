@@ -43,7 +43,6 @@ export const ContainerBBDisplay = styled.div`
 export const ContainerCurrentCard = styled.div`
   position: relative;
   display: block;
-  overflow: hidden;
   transition: all 0.3s;
 
   @media (max-width: 1024px) {
