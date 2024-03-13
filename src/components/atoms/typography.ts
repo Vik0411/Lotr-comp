@@ -38,10 +38,9 @@ export const Paragraph = styled.p`
 `;
 
 export const AppDescription = styled.p`
-  color: #d4af37;
+  color: grey;
   position: absolute;
   font-size: 20px;
-  opacity: 0.9;
   border-radius: 10px;
   margin-right: 400px;
 
