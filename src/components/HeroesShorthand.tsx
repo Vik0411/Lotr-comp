@@ -5,7 +5,6 @@ import { ButtonTransparent } from "./atoms/ButtonTransparent";
 import { ListItemHeader } from "./atoms/ListeItemHeader";
 import styled from "styled-components";
 import { ContainerFlex } from "./atoms/Containers";
-import { Hero } from "../types";
 
 const ContainerFlexHeader = styled(ContainerFlex)`
   width: 200px;
