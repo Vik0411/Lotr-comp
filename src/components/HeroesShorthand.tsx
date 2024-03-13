@@ -22,7 +22,7 @@ const ContainerFlexHeader = styled(ContainerFlex)`
     top: 74px;
   }
 `;
-function HeroesShorthand({ current }: Hero[]) {
+function HeroesShorthand({ current }) {
   return (
     <ContainerFlexHeader>
       <AnimatePresence>
