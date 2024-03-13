@@ -1,13 +1,13 @@
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
+  devServer: { historyApiFallback: true },
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
     "plugin:react-perf/recommended",
   ],
-
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
   plugins: ["react-refresh"]["react-perf"],
