@@ -1,7 +1,6 @@
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
-  devServer: { historyApiFallback: true },
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
