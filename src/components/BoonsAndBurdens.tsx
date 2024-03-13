@@ -132,7 +132,7 @@ function BoonsAndBurdens() {
                 style={{
                   backgroundColor: "transparent",
                   border: "0",
-                  height: "90px",
+                  height: "130px",
                   cursor: "pointer",
                 }}
                 key={uuidv4()}

@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const BoonDiv = styled.div`
   display: flex;
-  height: 100px;
+  margin-left: 30px;
+  height: 150px;
   padding: 10px;
   overflow: auto;
   flex-flow: column;

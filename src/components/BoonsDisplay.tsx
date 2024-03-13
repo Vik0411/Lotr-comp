@@ -33,48 +33,50 @@ function BoonsDisplay() {
   }
 
   return (
-    <ContainerFlex style={{ marginLeft: "40px" }}>
+    <ContainerFlex>
       <Swiper
+        style={{ margin: "0px 40px" }}
         effect={"cards"}
         grabCursor={true}
         modules={[EffectCards]}
         className="mySwiper"
       >
-        <ContainerFlex style={{ marginLeft: "20px" }}>
+        <ContainerFlex style={{ margin: "0px 20px" }}>
           <ContainerFlexColumn>
             {campaign.boonsAndBurdens.boons.map((boon) => (
               <div key={boon.id} style={{ margin: "15px 15px" }}>
                 {doesHaveImage(boon.image) ? (
                   <SwiperSlide key={boon.id}>
                     <AninamtedPage>
-                      <ContainerCurrentCard style={{ width: "240px" }}>
-                        <div style={{ position: "relative" }}>
-                          <Paragraph>
-                            {boon.name}
-                            <CancelBtn onClick={() => cancelBoon(boon)}>
-                              <CancelImage
-                                alt=""
-                                src={"images/cancel-1.png"}
-                              ></CancelImage>
-                            </CancelBtn>
-                          </Paragraph>
-                          {boon.extraInfo !== "" && (
-                            <Paragraph
-                              style={{
-                                color: "white",
-                                position: "absolute",
-                                top: "80px",
-                                marginLeft: "14px",
-                                marginRight: "5px",
-                                borderRadius: "20px",
-                              }}
-                            >{`EXTRA INFO: ${boon.extraInfo}`}</Paragraph>
-                          )}
-                          <BorBCard
-                            alt=""
-                            src={`images/bb/${boon.image}.jpg`}
-                          ></BorBCard>
-                        </div>
+                      <ContainerCurrentCard style={{ width: "230px" }}>
+                        <Paragraph style={{ marginLeft: "25px" }}>
+                          {boon.name}
+                          <CancelBtn onClick={() => cancelBoon(boon)}>
+                            <CancelImage
+                              style={{ marginRight: "-25px" }}
+                              alt=""
+                              src={"images/cancel-1.png"}
+                            ></CancelImage>
+                          </CancelBtn>
+                        </Paragraph>
+                        {boon.extraInfo !== "" && (
+                          <Paragraph
+                            style={{
+                              color: "white",
+                              position: "absolute",
+                              top: "60px",
+                              marginLeft: "39px",
+                              marginRight: "5px",
+                              backgroundColor: "rgba(1, 1, 1, 0.3)",
+                              borderRadius: "20px",
+                            }}
+                          >{`EXTRA INFO: ${boon.extraInfo}`}</Paragraph>
+                        )}
+                        <BorBCard
+                          style={{ marginLeft: "25px" }}
+                          alt=""
+                          src={`images/bb/${boon.image}.jpg`}
+                        ></BorBCard>
                       </ContainerCurrentCard>
                     </AninamtedPage>
                   </SwiperSlide>
@@ -82,10 +84,11 @@ function BoonsDisplay() {
                   <SwiperSlide key={boon.id}>
                     <AninamtedPage>
                       <ContainerCurrentCard style={{ width: "230px" }}>
-                        <Paragraph>
+                        <Paragraph style={{ marginLeft: "25px" }}>
                           {boon.name}
                           <CancelBtn onClick={() => cancelBoon(boon)}>
                             <CancelImage
+                              style={{ marginRight: "-25" }}
                               alt=""
                               src="images/cancel-1.png"
                             ></CancelImage>
@@ -97,7 +100,7 @@ function BoonsDisplay() {
                               color: "white",
                               position: "absolute",
                               top: "60px",
-                              marginLeft: "14px",
+                              marginLeft: "39px",
                               marginRight: "5px",
                               backgroundColor: "rgba(1, 1, 1, 0.3)",
                               borderRadius: "20px",
@@ -105,6 +108,7 @@ function BoonsDisplay() {
                           >{`extra info: ${boon.extraInfo}`}</Paragraph>
                         )}
                         <BorBCard
+                          style={{ marginLeft: "25px" }}
                           alt=""
                           src={`../images/nonffg.jpg`}
                         ></BorBCard>

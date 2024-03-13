@@ -40,7 +40,7 @@ function BurdensDisplay() {
         modules={[EffectCards]}
         className="mySwiper"
       >
-        <ContainerFlex style={{ marginLeft: "20px" }}>
+        <ContainerFlex style={{ margin: "0px 20px" }}>
           <ContainerFlexColumn>
             {campaign.boonsAndBurdens.burdens.map((burden) => (
               <div key={burden.id} style={{ margin: "15px 15px" }}>
@@ -48,10 +48,11 @@ function BurdensDisplay() {
                   <SwiperSlide key={burden.id}>
                     <AninamtedPage>
                       <ContainerCurrentCard style={{ width: "230px" }}>
-                        <Paragraph>
+                        <Paragraph style={{ marginLeft: "25px" }}>
                           {burden.name}
                           <CancelBtn onClick={() => cancelBurden(burden)}>
                             <CancelImage
+                              style={{ marginRight: "-25px" }}
                               alt=""
                               src="images/cancel-1.png"
                             ></CancelImage>
@@ -63,7 +64,7 @@ function BurdensDisplay() {
                               color: "white",
                               position: "absolute",
                               top: "60px",
-                              marginLeft: "14px",
+                              marginLeft: "39px",
                               marginRight: "5px",
                               backgroundColor: "rgba(1, 1, 1, 0.3)",
                               borderRadius: "20px",
@@ -71,6 +72,7 @@ function BurdensDisplay() {
                           >{`extra info: ${burden.extraInfo}`}</Paragraph>
                         )}
                         <BorBCard
+                          style={{ marginLeft: "25px" }}
                           alt=""
                           src={`images/bb/burdens/${burden.image}.jpg`}
                         ></BorBCard>
@@ -81,10 +83,11 @@ function BurdensDisplay() {
                   <SwiperSlide key={burden.id}>
                     <AninamtedPage>
                       <ContainerCurrentCard style={{ width: "230px" }}>
-                        <Paragraph>
+                        <Paragraph style={{ marginLeft: "25px" }}>
                           {burden.name}
                           <CancelBtn onClick={() => cancelBurden(burden)}>
                             <CancelImage
+                              style={{ marginRight: "-25px" }}
                               alt=""
                               src="images/cancel-1.png"
                             ></CancelImage>
@@ -95,7 +98,7 @@ function BurdensDisplay() {
                                 color: "white",
                                 position: "absolute",
                                 top: "60px",
-                                marginLeft: "14px",
+                                marginLeft: "39px",
                                 marginRight: "5px",
                                 backgroundColor: "rgba(1, 1, 1, 0.3)",
                                 borderRadius: "20px",
@@ -103,7 +106,11 @@ function BurdensDisplay() {
                             >{`extra info: ${burden.extraInfo}`}</Paragraph>
                           )}
                         </Paragraph>
-                        <BorBCard alt="" src="images/burden.jpg"></BorBCard>
+                        <BorBCard
+                          style={{ marginLeft: "25px" }}
+                          alt=""
+                          src="images/burden.jpg"
+                        ></BorBCard>
                       </ContainerCurrentCard>
                     </AninamtedPage>
                   </SwiperSlide>
