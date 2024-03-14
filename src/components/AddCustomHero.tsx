@@ -53,6 +53,7 @@ function AddCustomHero() {
           value={heroName}
           onChange={handleChange}
           placeholder="hero name"
+          autoComplete="off"
         />
         <ButtonShadowGreen
           whileHover={{ scale: 1.1 }}

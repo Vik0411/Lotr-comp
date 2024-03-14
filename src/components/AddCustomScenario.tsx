@@ -50,6 +50,7 @@ function AddCustomScenario() {
           value={scenarioName}
           onChange={handleChange}
           placeholder="custom scenario name"
+          autoComplete="off"
         />
         <ButtonShadowGreen
           onClick={submitCustomScenario}
