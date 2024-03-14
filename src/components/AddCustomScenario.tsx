@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Input } from "./atoms/Input";
+import { TransparentInput } from "./atoms/TransparentInput";
 import { SectionHeader } from "./atoms/typography";
 import { LotrContext } from "../context";
 import React from "react";
@@ -41,7 +41,7 @@ function AddCustomScenario() {
         Create new Scenario
       </SectionHeader>
       <div>
-        <Input
+        <TransparentInput
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 300 }}
           as={motion.input}

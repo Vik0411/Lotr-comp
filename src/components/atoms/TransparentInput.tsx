@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-//make name more specific
-export const Input = styled.input`
+export const TransparentInput = styled.input`
   color: white;
   background-color: transparent;
   border-radius: 15px;

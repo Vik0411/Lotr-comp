@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Input } from "./atoms/Input";
+import { TransparentInput } from "./atoms/TransparentInput";
 import { SectionHeader } from "./atoms/typography";
 import { LotrContext } from "../context";
 import React from "react";
@@ -44,7 +44,7 @@ function AddCustomHero() {
         Create Custom Hero
       </SectionHeader>
       <form onSubmit={submitCustomHero}>
-        <Input
+        <TransparentInput
           as={motion.input}
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 300 }}

@@ -1,5 +1,5 @@
 import { ButtonShadow } from "./atoms/ButtonShadow";
-import { Input } from "./atoms/Input";
+import { TransparentInput } from "./atoms/TransparentInput";
 import { BoonDiv } from "./atoms/BoonDiv";
 import { styled } from "styled-components";
 import { LotrContext } from "../context";
@@ -113,7 +113,7 @@ function BoonsAndBurdens() {
   return (
     <ContainerFlex style={{ position: "relative" }}>
       <form name="boon" onSubmit={submitBoon} autoComplete="off">
-        <Input
+        <TransparentInput
           as={motion.input}
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 300 }}
@@ -160,7 +160,7 @@ function BoonsAndBurdens() {
         )}
         {bBNameObject.boonName !== "" && (
           <ContainerFlex>
-            <Input
+            <TransparentInput
               as={motion.input}
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -181,7 +181,7 @@ function BoonsAndBurdens() {
         )}
       </form>
       <form onSubmit={submitBurden} name="burden" autoComplete="off">
-        <Input
+        <TransparentInput
           as={motion.input}
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 300 }}
@@ -229,7 +229,7 @@ function BoonsAndBurdens() {
         )}
         {bBNameObject.burdenName !== "" && (
           <ContainerFlex>
-            <Input
+            <TransparentInput
               as={motion.input}
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}
