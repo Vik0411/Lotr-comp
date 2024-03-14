@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-//rename component
-export const SelectFfgHero = styled.select`
+export const BlackSelect = styled.select`
   color: white;
   background-color: black;
   border-radius: 12px;

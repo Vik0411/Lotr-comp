@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 
 import { filterScenarios, saveCampaign } from "../utils";
 import { Scenario } from "../types";
-import { SelectFfgHero } from "./atoms/SelectFfgHero";
+import { BlackSelect } from "./atoms/BlackSelect";
 import { styled } from "styled-components";
 import ConfirmationModal from "./ConfirmModal";
 import { motion } from "framer-motion";
@@ -119,7 +119,7 @@ function CampaignScenario() {
           }}
         >
           <div style={{ textAlign: "center" }}>
-            <SelectFfgHero
+            <BlackSelect
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}
               as={motion.select}
@@ -132,7 +132,7 @@ function CampaignScenario() {
                   {notCurrent.name}
                 </option>
               ))}
-            </SelectFfgHero>
+            </BlackSelect>
             <ButtonShadowGreen
               onClick={addScenarioToCurrent}
               as={motion.button}

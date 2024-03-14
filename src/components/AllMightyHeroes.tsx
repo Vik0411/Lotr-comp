@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 
 import { filterHeroes, saveCampaign } from "../utils";
 import { Hero } from "../types";
-import { SelectFfgHero } from "./atoms/SelectFfgHero";
+import { BlackSelect } from "./atoms/BlackSelect";
 import { styled } from "styled-components";
 import { onlyMultiples } from "../data/dataAdjustments";
 import ConfirmationModal from "./ConfirmModal";
@@ -117,7 +117,7 @@ function AllMightyHeroes() {
         />
       )}
       <form name="heroprep" onSubmit={prepareHero}>
-        <SelectFfgHero
+        <BlackSelect
           as={motion.select}
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 300 }}
@@ -130,7 +130,7 @@ function AllMightyHeroes() {
               {notCurrent.name}
             </option>
           ))}
-        </SelectFfgHero>
+        </BlackSelect>
         <ButtonShadowGreen
           as={motion.button}
           whileHover={{ scale: 1.1 }}
