@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-//rename component
 export const SmallerCard = styled.img`
   height: auto;
   width: 180px;
