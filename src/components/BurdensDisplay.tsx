@@ -44,77 +44,48 @@ function BurdensDisplay() {
           <ContainerFlexColumn>
             {campaign.boonsAndBurdens.burdens.map((burden) => (
               <div key={burden.id} style={{ margin: "15px 15px" }}>
-                {doesBurdenHaveImage(burden.image + ".jpg") ? (
-                  <SwiperSlide key={burden.id}>
-                    <AninamtedPage>
-                      <ContainerCurrentCard style={{ width: "230px" }}>
-                        <Paragraph style={{ marginLeft: "25px" }}>
-                          {burden.name}
-                          <CancelBtn onClick={() => cancelBurden(burden)}>
-                            <CancelImage
-                              style={{ marginRight: "-25px" }}
-                              alt=""
-                              src="images/cancel-1.png"
-                            ></CancelImage>
-                          </CancelBtn>
-                        </Paragraph>
-                        {burden.extraInfo !== "" && (
-                          <Paragraph
-                            style={{
-                              color: "white",
-                              position: "absolute",
-                              top: "60px",
-                              marginLeft: "39px",
-                              marginRight: "5px",
-                              backgroundColor: "rgba(1, 1, 1, 0.3)",
-                              borderRadius: "20px",
-                            }}
-                          >{`extra info: ${burden.extraInfo}`}</Paragraph>
-                        )}
+                <SwiperSlide key={burden.id}>
+                  <AninamtedPage>
+                    <ContainerCurrentCard style={{ width: "230px" }}>
+                      <Paragraph style={{ marginLeft: "25px" }}>
+                        {burden.name}
+                        <CancelBtn onClick={() => cancelBurden(burden)}>
+                          <CancelImage
+                            style={{ marginRight: "-25px" }}
+                            alt=""
+                            src="images/cancel-1.png"
+                          ></CancelImage>
+                        </CancelBtn>
+                      </Paragraph>
+                      {burden.extraInfo !== "" && (
+                        <Paragraph
+                          style={{
+                            color: "white",
+                            position: "absolute",
+                            top: "80px",
+                            marginLeft: "39px",
+                            marginRight: "5px",
+                            backgroundColor: "rgba(1, 1, 1, 0.3)",
+                            borderRadius: "20px",
+                          }}
+                        >{`extra info: ${burden.extraInfo}`}</Paragraph>
+                      )}
+                      {doesBurdenHaveImage(burden.image + ".jpg") ? (
                         <BorBCard
-                          style={{ marginLeft: "25px" }}
+                          style={{ marginLeft: "35px" }}
                           alt=""
                           src={`images/bb/burdens/${burden.image}.jpg`}
                         ></BorBCard>
-                      </ContainerCurrentCard>
-                    </AninamtedPage>
-                  </SwiperSlide>
-                ) : (
-                  <SwiperSlide key={burden.id}>
-                    <AninamtedPage>
-                      <ContainerCurrentCard style={{ width: "230px" }}>
-                        <Paragraph style={{ marginLeft: "25px" }}>
-                          {burden.name}
-                          <CancelBtn onClick={() => cancelBurden(burden)}>
-                            <CancelImage
-                              style={{ marginRight: "-25px" }}
-                              alt=""
-                              src="images/cancel-1.png"
-                            ></CancelImage>
-                          </CancelBtn>
-                          {burden.extraInfo !== "" && (
-                            <Paragraph
-                              style={{
-                                color: "white",
-                                position: "absolute",
-                                top: "60px",
-                                marginLeft: "39px",
-                                marginRight: "5px",
-                                backgroundColor: "rgba(1, 1, 1, 0.3)",
-                                borderRadius: "20px",
-                              }}
-                            >{`extra info: ${burden.extraInfo}`}</Paragraph>
-                          )}
-                        </Paragraph>
+                      ) : (
                         <BorBCard
-                          style={{ marginLeft: "25px" }}
+                          style={{ marginLeft: "35px" }}
                           alt=""
                           src="images/burden.jpg"
                         ></BorBCard>
-                      </ContainerCurrentCard>
-                    </AninamtedPage>
-                  </SwiperSlide>
-                )}
+                      )}
+                    </ContainerCurrentCard>
+                  </AninamtedPage>
+                </SwiperSlide>
               </div>
             ))}
           </ContainerFlexColumn>
