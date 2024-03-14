@@ -1,4 +1,4 @@
-import { Paragraph } from "./atoms/typography";
+import { ShadowedParagraph } from "./atoms/typography";
 import { LotrContext } from "../context";
 import React from "react";
 import { CancelImage } from "./atoms/CancelImage";
@@ -48,7 +48,7 @@ function BoonsDisplay() {
                 <SwiperSlide key={boon.id}>
                   <AninamtedPage>
                     <ContainerCurrentCard style={{ width: "230px" }}>
-                      <Paragraph style={{ marginLeft: "25px" }}>
+                      <ShadowedParagraph style={{ marginLeft: "25px" }}>
                         {boon.name}
                         <CancelBtn onClick={() => cancelBoon(boon)}>
                           <CancelImage
@@ -57,9 +57,9 @@ function BoonsDisplay() {
                             src={"images/cancel-1.png"}
                           ></CancelImage>
                         </CancelBtn>
-                      </Paragraph>
+                      </ShadowedParagraph>
                       {boon.extraInfo !== "" && (
-                        <Paragraph
+                        <ShadowedParagraph
                           style={{
                             color: "white",
                             position: "absolute",
@@ -69,7 +69,7 @@ function BoonsDisplay() {
                             backgroundColor: "rgba(1, 1, 1, 0.3)",
                             borderRadius: "20px",
                           }}
-                        >{`EXTRA INFO: ${boon.extraInfo}`}</Paragraph>
+                        >{`EXTRA INFO: ${boon.extraInfo}`}</ShadowedParagraph>
                       )}
                       {doesBoonHaveImage(boon.image + ".jpg") ? (
                         <SmallerCard

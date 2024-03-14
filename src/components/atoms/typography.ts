@@ -19,8 +19,7 @@ export const SectionHeader = styled.h2`
   }
 `;
 
-//rename component to more specific
-export const Paragraph = styled.p`
+export const ShadowedParagraph = styled.p`
   display: flex;
   align-items: center;
   transition: 0.3s;

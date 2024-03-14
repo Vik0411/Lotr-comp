@@ -5,7 +5,7 @@ import { ButtonShadow } from "./atoms/ButtonShadow";
 import { onlyMultiples } from "../data/dataAdjustments";
 import { filterHeroes } from "../utils";
 import { Hero } from "../types";
-import { Paragraph } from "./atoms/typography";
+import { ShadowedParagraph } from "./atoms/typography";
 import { ContainerCurrentCard, ContainerFlex } from "./atoms/Containers";
 import { HeroCard } from "./atoms/HeroCard";
 import { CancelImage } from "./atoms/CancelImage";
@@ -144,7 +144,7 @@ function CurrentHeroes() {
                   key={current.code}
                   style={{ width: "270px" }}
                 >
-                  <Paragraph style={{ marginLeft: "15px" }}>
+                  <ShadowedParagraph style={{ marginLeft: "15px" }}>
                     {current.name}
                     <CancelBtn onClick={() => returnHero(current.code)}>
                       <CancelImage
@@ -153,7 +153,7 @@ function CurrentHeroes() {
                         src="images/cancel-1.png"
                       ></CancelImage>
                     </CancelBtn>
-                  </Paragraph>
+                  </ShadowedParagraph>
                   <HeroCard
                     alt=""
                     src={`images/${current.imagesrc}`}

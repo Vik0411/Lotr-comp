@@ -2,7 +2,7 @@ import { LotrContext } from "../context";
 import React from "react";
 import styled from "styled-components";
 import { ButtonShadow } from "./atoms/ButtonShadow";
-import { Paragraph, SectionHeader } from "./atoms/typography";
+import { ShadowedParagraph, SectionHeader } from "./atoms/typography";
 import { ContainerCurrentCard, ContainerFlex } from "./atoms/Containers";
 import { CancelImage } from "./atoms/CancelImage";
 import { SmallerCard } from "./atoms/SmallerCard";
@@ -83,7 +83,9 @@ function CurrentScenarioDisplay() {
                   key={chosenCurrentScenario.id}
                   style={{ width: "250px" }}
                 >
-                  <Paragraph style={{ marginLeft: "35px", right: "-35px" }}>
+                  <ShadowedParagraph
+                    style={{ marginLeft: "35px", right: "-35px" }}
+                  >
                     {chosenCurrentScenario ? chosenCurrentScenario.name : ""}
                     <CancelBtn
                       onClick={() => {
@@ -97,7 +99,7 @@ function CurrentScenarioDisplay() {
                         src="images/cancel-1.png"
                       ></CancelImage>
                     </CancelBtn>
-                  </Paragraph>
+                  </ShadowedParagraph>
                   {doesCurrentScenarioHaveImage ? (
                     <SmallerCard
                       style={{

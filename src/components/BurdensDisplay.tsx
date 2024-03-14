@@ -1,4 +1,4 @@
-import { Paragraph } from "./atoms/typography";
+import { ShadowedParagraph } from "./atoms/typography";
 import { LotrContext } from "../context";
 import React from "react";
 import { CancelImage } from "./atoms/CancelImage";
@@ -49,7 +49,7 @@ function BurdensDisplay() {
                     <ContainerCurrentCard
                       style={{ width: "230px", overflow: "visible" }}
                     >
-                      <Paragraph style={{ marginLeft: "25px" }}>
+                      <ShadowedParagraph style={{ marginLeft: "25px" }}>
                         {burden.name}
                         <CancelBtn onClick={() => cancelBurden(burden)}>
                           <CancelImage
@@ -60,9 +60,9 @@ function BurdensDisplay() {
                             src="images/cancel-1.png"
                           ></CancelImage>
                         </CancelBtn>
-                      </Paragraph>
+                      </ShadowedParagraph>
                       {burden.extraInfo !== "" && (
-                        <Paragraph
+                        <ShadowedParagraph
                           style={{
                             color: "white",
                             position: "absolute",
@@ -72,7 +72,7 @@ function BurdensDisplay() {
                             backgroundColor: "rgba(1, 1, 1, 0.3)",
                             borderRadius: "20px",
                           }}
-                        >{`EXTRA INFO: ${burden.extraInfo}`}</Paragraph>
+                        >{`EXTRA INFO: ${burden.extraInfo}`}</ShadowedParagraph>
                       )}
                       {doesBurdenHaveImage(burden.image + ".jpg") ? (
                         <SmallerCard
