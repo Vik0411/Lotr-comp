@@ -24,7 +24,7 @@ const ContainerCurrentHeroes = styled(ContainerFlex)`
 export const ButtonBlack = styled(ButtonShadow)`
   box-shadow: none;
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
   left: 5px;
   transition: all 0.15s;
 `;
@@ -143,11 +143,11 @@ function CurrentHeroes() {
                   key={current.code}
                   style={{ width: "270px" }}
                 >
-                  <Paragraph style={{ marginLeft: "10px" }}>
+                  <Paragraph style={{ marginLeft: "30px" }}>
                     {current.name}
                     <CancelBtn onClick={() => returnHero(current.code)}>
                       <CancelImage
-                        style={{ marginRight: "-10px" }}
+                        style={{ marginRight: "-30px" }}
                         alt=""
                         src="images/cancel-1.png"
                       ></CancelImage>
@@ -156,11 +156,11 @@ function CurrentHeroes() {
                   <HeroCard
                     alt=""
                     src={`images/${current.imagesrc}`}
-                    style={{ marginLeft: "10px" }}
+                    style={{ marginLeft: "30px" }}
                   />
                   <ButtonBlack
                     onClick={() => killHero(current.code)}
-                    style={{ marginLeft: "10px" }}
+                    style={{ marginLeft: "30px" }}
                   >
                     Kill
                   </ButtonBlack>
