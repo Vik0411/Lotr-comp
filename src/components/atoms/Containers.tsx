@@ -29,12 +29,14 @@ export const ContainerFlex = styled.div`
   justify-content: center;
 `;
 
+//used only for an alternative view - maybe remove at some point
 export const ContainerFallenHeroes = styled.div`
   column-width: 230px;
   min-height: 230px;
   margin: 65px 50px;
 `;
 
+//the same as above
 export const ContainerBBDisplay = styled.div`
   column-width: 200px;
   margin: 20px 20px;
@@ -42,7 +44,6 @@ export const ContainerBBDisplay = styled.div`
 
 export const ContainerCurrentCard = styled.div`
   position: relative;
-  display: block;
   transition: all 0.3s;
 
   @media (max-width: 1024px) {
