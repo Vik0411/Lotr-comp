@@ -144,11 +144,11 @@ function CurrentHeroes() {
                   key={current.code}
                   style={{ width: "270px" }}
                 >
-                  <Paragraph style={{ marginLeft: "30px" }}>
+                  <Paragraph style={{ marginLeft: "15px" }}>
                     {current.name}
                     <CancelBtn onClick={() => returnHero(current.code)}>
                       <CancelImage
-                        style={{ marginRight: "-30px" }}
+                        style={{ marginRight: "-15px" }}
                         alt=""
                         src="images/cancel-1.png"
                       ></CancelImage>
@@ -157,11 +157,11 @@ function CurrentHeroes() {
                   <HeroCard
                     alt=""
                     src={`images/${current.imagesrc}`}
-                    style={{ marginLeft: "30px" }}
+                    style={{ marginLeft: "15px" }}
                   />
                   <ButtonBlack
                     onClick={() => killHero(current.code)}
-                    style={{ marginLeft: "30px" }}
+                    style={{ marginLeft: "15px" }}
                   >
                     Kill
                   </ButtonBlack>
