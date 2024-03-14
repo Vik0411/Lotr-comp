@@ -46,12 +46,16 @@ function BurdensDisplay() {
               <div key={burden.id} style={{ margin: "15px 15px" }}>
                 <SwiperSlide key={burden.id}>
                   <AninamtedPage>
-                    <ContainerCurrentCard style={{ width: "230px" }}>
+                    <ContainerCurrentCard
+                      style={{ width: "230px", overflow: "visible" }}
+                    >
                       <Paragraph style={{ marginLeft: "25px" }}>
                         {burden.name}
                         <CancelBtn onClick={() => cancelBurden(burden)}>
                           <CancelImage
-                            style={{ marginRight: "-25px" }}
+                            style={{
+                              marginRight: "-28px",
+                            }}
                             alt=""
                             src="images/cancel-1.png"
                           ></CancelImage>
@@ -68,7 +72,7 @@ function BurdensDisplay() {
                             backgroundColor: "rgba(1, 1, 1, 0.3)",
                             borderRadius: "20px",
                           }}
-                        >{`extra info: ${burden.extraInfo}`}</Paragraph>
+                        >{`EXTRA INFO: ${burden.extraInfo}`}</Paragraph>
                       )}
                       {doesBurdenHaveImage(burden.image + ".jpg") ? (
                         <BorBCard

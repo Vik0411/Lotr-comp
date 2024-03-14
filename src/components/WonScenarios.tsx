@@ -14,9 +14,11 @@ function WonScenarios() {
   );
 
   return (
-    <div style={{ margin: "30px 30px", textAlign: "center" }}>
-      <SectionHeader>Won Scenarios:</SectionHeader>
-      <ul style={{ paddingLeft: "20px" }}>
+    <div style={{ margin: "10px 30px", textAlign: "center" }}>
+      <SectionHeader style={{ marginBottom: "0px" }}>
+        Won Scenarios:
+      </SectionHeader>
+      <ul style={{ paddingLeft: "20px", marginTop: "10px" }}>
         {notCurrentAndWon.map(
           (wonScenario: Scenario): JSX.Element => (
             <WonScenario key={wonScenario.id} {...wonScenario}></WonScenario>

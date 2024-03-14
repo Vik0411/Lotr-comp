@@ -47,13 +47,12 @@ function BoonsDisplay() {
               <div key={boon.id} style={{ margin: "15px 15px" }}>
                 <SwiperSlide key={boon.id}>
                   <AninamtedPage>
-                    <ContainerCurrentCard>
+                    <ContainerCurrentCard style={{ width: "230px" }}>
                       <Paragraph style={{ marginLeft: "25px" }}>
                         {boon.name}
                         <CancelBtn onClick={() => cancelBoon(boon)}>
                           <CancelImage
-                            // possibly still tune this margin
-                            style={{ marginRight: "-15px" }}
+                            style={{ marginRight: "-28px" }}
                             alt=""
                             src={"images/cancel-1.png"}
                           ></CancelImage>
