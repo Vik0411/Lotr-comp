@@ -24,7 +24,7 @@ const ContainerCurrentHeroes = styled(ContainerFlex)`
 export const ButtonBlack = styled(ButtonShadow)`
   box-shadow: none;
   position: absolute;
-  bottom: 30px;
+  bottom: 10px;
   left: 5px;
   transition: all 0.15s;
 `;

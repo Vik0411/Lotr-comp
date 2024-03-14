@@ -109,7 +109,7 @@ function CurrentScenarioDisplay() {
                     />
                   ) : (
                     <BorBCard
-                      style={{ borderRadius: "10px" }}
+                      style={{ borderRadius: "10px", marginLeft: "35px" }}
                       alt=""
                       src="images/burden.jpg"
                     />
