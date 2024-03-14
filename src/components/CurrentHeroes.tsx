@@ -133,6 +133,7 @@ function CurrentHeroes() {
           {current.map(
             (current: Hero): JSX.Element => (
               <motion.div
+                key={current.code}
                 variants={animations}
                 initial="initial"
                 animate="animate"
