@@ -12,7 +12,7 @@ export const ListItemWithWhiteText = styled.li`
   }
 
   @media (max-width: 768px) {
-    font-size: 20px;
-    margin: 5px 10px;
+    font-size: 15px;
+    margin: 0px 0px;
   }
 `;

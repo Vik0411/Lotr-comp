@@ -23,6 +23,10 @@ const StyledLink = styled(Link)`
   @media (max-width: 1024px) {
     margin: 0px 20px;
   }
+
+  @media (min-width: 1500px) {
+    font-size: 40px;
+  }
 `;
 
 const ContainerFlexWholeHeader = styled(ContainerFlex)`
@@ -59,7 +63,7 @@ function StableHeader() {
 
   const burdens = campaign.boonsAndBurdens.burdens;
 
-  const appNamePxs = chosenCurrentScenario ? "120px" : "50px";
+  const appNamePxs = chosenCurrentScenario ? "175px" : "100px";
   const colorsHeroMngt = isHeroMngt ? "#5c3366" : "grey";
   const colorsCampMngt = isHeroMngt ? "grey" : "#5c3366";
 
@@ -96,13 +100,16 @@ function StableHeader() {
           <motion.div whileHover={{ scale: 1.2 }}>
             <StyledLink
               to="/hero"
-              style={{ color: colorsHeroMngt, width: "100px" }}
+              style={{
+                color: colorsHeroMngt,
+                width: "100px",
+              }}
             >
               Hero management
             </StyledLink>
           </motion.div>
         </h2>
-        <AppDescription style={{ top: appNamePxs }}>
+        <AppDescription style={{ top: appNamePxs, textAlign: "center" }}>
           tool for The Lord of the Rings, LCG
         </AppDescription>
       </ContainerFlexWholeHeader>

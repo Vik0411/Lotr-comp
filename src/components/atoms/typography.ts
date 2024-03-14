@@ -19,6 +19,7 @@ export const SectionHeader = styled.h2`
   }
 `;
 
+//rename component to more specific
 export const Paragraph = styled.p`
   display: flex;
   align-items: center;
@@ -42,7 +43,6 @@ export const AppDescription = styled.p`
   position: absolute;
   font-size: 20px;
   border-radius: 10px;
-  margin-right: 400px;
 
   @media (max-width: 1200px) {
     margin-right: 0px;

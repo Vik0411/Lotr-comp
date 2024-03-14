@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+//rename component
 export const SelectFfgHero = styled.select`
   color: white;
   background-color: black;
@@ -10,5 +11,7 @@ export const SelectFfgHero = styled.select`
   @media (max-width: 768px) {
     width: 250px;
     font-size: 20px;
+    margin-right: 0px;
+    text-align: center;
   }
 `;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+//rename component
 export const BorBCard = styled.img`
   height: auto;
   width: 180px;
