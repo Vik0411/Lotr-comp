@@ -100,8 +100,9 @@ export const ContainerModal = styled.div`
   border: 1px solid #5c3366;
   border-radius: 10px;
 
-  @media (max-width) {
-    height: 100px;
-    widht: 200px;
+  @media (max-width: 768px) {
+    height: 130px;
+    width: 300px;
+    font-size: 15px;
   }
 `;

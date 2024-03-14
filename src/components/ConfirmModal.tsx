@@ -9,6 +9,7 @@ function ConfirmationModal({ proceed, doNotProceed, modalText }) {
           color: "white",
           opacity: "1",
           margin: "40px 20px",
+          fontSize: "inherit",
         }}
       >
         {modalText}
