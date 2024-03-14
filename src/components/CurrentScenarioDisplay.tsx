@@ -5,7 +5,7 @@ import { ButtonShadow } from "./atoms/ButtonShadow";
 import { Paragraph, SectionHeader } from "./atoms/typography";
 import { ContainerCurrentCard, ContainerFlex } from "./atoms/Containers";
 import { CancelImage } from "./atoms/CancelImage";
-import { BorBCard } from "./atoms/BorBCard";
+import { SmallerCard } from "./atoms/SmallerCard";
 import { Scenario } from "../types";
 import { CancelBtn } from "./atoms/CancelBtn";
 import { doesScenarioHaveImage } from "../utils";
@@ -99,7 +99,7 @@ function CurrentScenarioDisplay() {
                     </CancelBtn>
                   </Paragraph>
                   {doesCurrentScenarioHaveImage ? (
-                    <BorBCard
+                    <SmallerCard
                       style={{
                         borderRadius: "10px",
                         marginLeft: "35px",
@@ -108,7 +108,7 @@ function CurrentScenarioDisplay() {
                       src={`images/scenarios/${picture}.webp`}
                     />
                   ) : (
-                    <BorBCard
+                    <SmallerCard
                       style={{ borderRadius: "10px", marginLeft: "35px" }}
                       alt=""
                       src="images/burden.jpg"

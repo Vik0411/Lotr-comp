@@ -3,7 +3,7 @@ import { LotrContext } from "../context";
 import React from "react";
 import { CancelImage } from "./atoms/CancelImage";
 import { doesBurdenHaveImage } from "../utils";
-import { BorBCard } from "./atoms/BorBCard";
+import { SmallerCard } from "./atoms/SmallerCard";
 import {
   ContainerCurrentCard,
   ContainerFlex,
@@ -75,17 +75,17 @@ function BurdensDisplay() {
                         >{`EXTRA INFO: ${burden.extraInfo}`}</Paragraph>
                       )}
                       {doesBurdenHaveImage(burden.image + ".jpg") ? (
-                        <BorBCard
+                        <SmallerCard
                           style={{ marginLeft: "35px" }}
                           alt=""
                           src={`images/bb/burdens/${burden.image}.jpg`}
-                        ></BorBCard>
+                        ></SmallerCard>
                       ) : (
-                        <BorBCard
+                        <SmallerCard
                           style={{ marginLeft: "35px" }}
                           alt=""
                           src="images/burden.jpg"
-                        ></BorBCard>
+                        ></SmallerCard>
                       )}
                     </ContainerCurrentCard>
                   </AninamtedPage>

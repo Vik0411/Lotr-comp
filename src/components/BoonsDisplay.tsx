@@ -3,7 +3,7 @@ import { LotrContext } from "../context";
 import React from "react";
 import { CancelImage } from "./atoms/CancelImage";
 import { doesBoonHaveImage } from "../utils";
-import { BorBCard } from "./atoms/BorBCard";
+import { SmallerCard } from "./atoms/SmallerCard";
 import {
   ContainerCurrentCard,
   ContainerFlex,
@@ -72,17 +72,17 @@ function BoonsDisplay() {
                         >{`EXTRA INFO: ${boon.extraInfo}`}</Paragraph>
                       )}
                       {doesBoonHaveImage(boon.image + ".jpg") ? (
-                        <BorBCard
+                        <SmallerCard
                           style={{ marginLeft: "35px" }}
                           alt=""
                           src={`images/bb/${boon.image}.jpg`}
-                        ></BorBCard>
+                        ></SmallerCard>
                       ) : (
-                        <BorBCard
+                        <SmallerCard
                           style={{ marginLeft: "35px" }}
                           alt=""
                           src="images/burden.jpg"
-                        ></BorBCard>
+                        ></SmallerCard>
                       )}
                     </ContainerCurrentCard>
                   </AninamtedPage>
