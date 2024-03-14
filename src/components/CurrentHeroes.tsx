@@ -16,7 +16,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const ContainerCurrentHeroes = styled(ContainerFlex)`
   display: flex;
-  gap: 100px;
+  gap: 35px;
   margin: 30px 30px;
   flex-direction: row;
 `;
