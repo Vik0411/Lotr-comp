@@ -16,15 +16,13 @@ function WonScenarios() {
   return (
     <div style={{ margin: "30px 30px", textAlign: "center" }}>
       <SectionHeader>Won Scenarios:</SectionHeader>
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
-        <ul>
-          {notCurrentAndWon.map(
-            (wonScenario: Scenario): JSX.Element => (
-              <WonScenario key={wonScenario.id} {...wonScenario}></WonScenario>
-            )
-          )}
-        </ul>
-      </div>
+      <ul style={{ paddingLeft: "20px" }}>
+        {notCurrentAndWon.map(
+          (wonScenario: Scenario): JSX.Element => (
+            <WonScenario key={wonScenario.id} {...wonScenario}></WonScenario>
+          )
+        )}
+      </ul>
     </div>
   );
 }

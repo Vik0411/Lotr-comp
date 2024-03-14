@@ -30,7 +30,10 @@ export function WonScenario({ name, id }: Scenario) {
       transition={{ type: "spring", stiffness: 300 }}
     >
       {name}
-      <CancelBtn onClick={() => returnScenario(id)}>
+      <CancelBtn
+        style={{ padding: "0px 0px" }}
+        onClick={() => returnScenario(id)}
+      >
         <CancelImage alt="" src="images/cancel-1.png"></CancelImage>
       </CancelBtn>
     </ListItemWithWhiteText>
