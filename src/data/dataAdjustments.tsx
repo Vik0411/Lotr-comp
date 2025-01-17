@@ -3,7 +3,7 @@ import { Campaign, Hero } from "../types";
 import { allCards } from "./dataSet";
 import { onlyHeroesFFG } from "./onlyHeroes";
 // import { scenarios } from "./scenarios";
-import { adjustMotk } from "../utils";
+// import { adjustMotk } from "../utils";
 import { default1} from "./default"
 
 export interface CampaignContextInterface {
@@ -58,11 +58,11 @@ export const changedNameMultiples = onlyMultiples.map((hero) => {
   return { ...hero, name: nameAsWhole };
 });
 
-const allHeroesWithChangedName = changedNameMultiples.concat(
-  removeDuplicates(onlyHeroesForCampaign).unique
-);
+// const allHeroesWithChangedName = changedNameMultiples.concat(
+//   removeDuplicates(onlyHeroesForCampaign).unique
+// );
 
-const adjustedMotk = adjustMotk(allHeroesWithChangedName);
+// const adjustedMotk = adjustMotk(allHeroesWithChangedName);
 // const scenariosForCampaign = scenarios.map((scenario, indexing) => {
 //   const scens = { ...scenario, index: indexing, current: false, won: false };
 //   return scens;
@@ -74,13 +74,13 @@ export const defaultState: CampaignContextInterface = {
   campaign: {
     allHeroes: default1.allHeroes,
     boonsAndBurdens: {
-              // @ts-ignore
-      boons: default1.boonsAndBurdens.boons,
-              // @ts-ignore
-      burdens: default1.boonsAndBurdens.burdens,
+            // @ts-ignore-error
+            boons: default1.boonsAndBurdens.boons,
+            // @ts-ignore-error
+            burdens: default1.boonsAndBurdens.burdens,
     },
-            // @ts-ignore
-    scenarios: default1.scenarios,
+            // @ts-ignore-error
+            scenarios: default1.scenarios,
   },
   setCampaign: () => {},
 };
