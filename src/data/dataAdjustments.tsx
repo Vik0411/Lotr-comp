@@ -4,6 +4,7 @@ import { allCards } from "./dataSet";
 import { onlyHeroesFFG } from "./onlyHeroes";
 import { scenarios } from "./scenarios";
 import { adjustMotk, sortedItems } from "../utils";
+import { default1} from "./default"
 
 export interface CampaignContextInterface {
   campaign: Campaign;
@@ -71,12 +72,12 @@ const sortedHeroes = sortedItems(adjustedMotk, "(MotK)");
 
 export const defaultState: CampaignContextInterface = {
   campaign: {
-    allHeroes: sortedHeroes,
+    allHeroes: default1.allHeroes,
     boonsAndBurdens: {
-      boons: [],
-      burdens: [],
+      boons: default1.boonsAndBurdens.boons,
+      burdens: default1.boonsAndBurdens.burdens,
     },
-    scenarios: scenariosForCampaign,
+    scenarios: default1.scenarios,
   },
   setCampaign: () => {},
 };
