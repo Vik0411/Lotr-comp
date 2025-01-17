@@ -2,8 +2,8 @@ import { SetStateAction, Dispatch } from "react";
 import { Campaign, Hero } from "../types";
 import { allCards } from "./dataSet";
 import { onlyHeroesFFG } from "./onlyHeroes";
-import { scenarios } from "./scenarios";
-import { adjustMotk, sortedItems } from "../utils";
+// import { scenarios } from "./scenarios";
+import { adjustMotk } from "../utils";
 import { default1} from "./default"
 
 export interface CampaignContextInterface {
@@ -63,20 +63,23 @@ const allHeroesWithChangedName = changedNameMultiples.concat(
 );
 
 const adjustedMotk = adjustMotk(allHeroesWithChangedName);
-const scenariosForCampaign = scenarios.map((scenario, indexing) => {
-  const scens = { ...scenario, index: indexing, current: false, won: false };
-  return scens;
-});
+// const scenariosForCampaign = scenarios.map((scenario, indexing) => {
+//   const scens = { ...scenario, index: indexing, current: false, won: false };
+//   return scens;
+// });
 
-const sortedHeroes = sortedItems(adjustedMotk, "(MotK)");
+// const sortedHeroes = sortedItems(adjustedMotk, "(MotK)");
 
 export const defaultState: CampaignContextInterface = {
   campaign: {
     allHeroes: default1.allHeroes,
     boonsAndBurdens: {
+              // @ts-ignore
       boons: default1.boonsAndBurdens.boons,
+              // @ts-ignore
       burdens: default1.boonsAndBurdens.burdens,
     },
+            // @ts-ignore
     scenarios: default1.scenarios,
   },
   setCampaign: () => {},
