@@ -6,8 +6,10 @@ import FallenHeroes from "./FallenHeroes";
 import { SectionHeader } from "./atoms/typography";
 import { LotrContext } from "../context";
 import { useContext } from "react";
-import { filterHeroes } from "../utils";
+import { filterHeroes, generateStoryWithHeroAndHeritage } from "../utils";
 import AninamtedPage from "./AnimatedPage";
+import StoryDisplay from "./StoryDisplay";
+import { eriador } from "../data/eriador";
 
 function HeroManagement() {
   const { campaign } = useContext(LotrContext);
@@ -16,11 +18,16 @@ function HeroManagement() {
     { alive: true, current: true },
     campaign.allHeroes
   );
+  const currentNames = current.map(h => h.name) 
+
 
   const fallen = filterHeroes(
     { alive: false, current: false },
     campaign.allHeroes
   );
+
+const wastesOfEria = generateStoryWithHeroAndHeritage(eriador, currentNames.map(n => n.replace(/\([^)]*\)/g, '')));
+
   return (
     <ContainerHeroManagement>
       <AninamtedPage>
@@ -75,6 +82,7 @@ function HeroManagement() {
               Fallen heroes:
             </SectionHeader>
             <FallenHeroes />
+            <StoryDisplay story={wastesOfEria}/>
           </div>
         )}
       </AninamtedPage>

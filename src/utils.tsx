@@ -79,3 +79,13 @@ export function sortedItems(arr, sign) {
   });
   return arr;
 }
+
+
+export function generateStoryWithHeroAndHeritage(storyTemplate: string, heroes: string[]) {
+  const randomHero = heroes[Math.floor(Math.random() * heroes.length)];
+
+  const filledStory = storyTemplate
+  .replace(/\b[oO]ne of the heroes\b/g, randomHero) // Matches "one of the heroes" and "One of the heroes"
+
+  return filledStory;
+}
