@@ -85,7 +85,11 @@ export function generateStoryWithHeroAndHeritage(storyTemplate: string, heroes: 
   const randomHero = heroes[Math.floor(Math.random() * heroes.length)];
 
   const filledStory = storyTemplate
-  .replace(/\b[oO]ne of the heroes\b/g, randomHero) // Matches "one of the heroes" and "One of the heroes"
+  .replace(/\b[oO]ne of the heroes \b/g, randomHero) // Matches "one of the heroes" and "One of the heroes"
+  .replace('another of their company ', randomHero)
+  .replace(/\b(the )?heroes\b/gi, `${heroes[0]}and company`)
+
+ 
 
   return filledStory;
 }
