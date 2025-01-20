@@ -32,8 +32,7 @@ Amarthiúl’s shoulder. “Whether it be at sunset tonight or a
 fortnight from now, we will not stop pursuing them until we
 have rescued Iârion. They must have some need of him alive,
 for we have seen no sign that harm has befallen him.”
-“Indeed, although that thought worries me equally,” another of
-their company said. “Amarthiúl, what do you know of Iârion?
+“Indeed, although that thought worries me equally,” another of their company said. “Amarthiúl, what do you know of Iârion?
 What reason would Thaurdir have to take him captive? Surely
 Aragorn, Chieftain of the Dúnedain, would have been a
 greater prize.”
