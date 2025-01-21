@@ -82,11 +82,10 @@ export function sortedItems(arr, sign) {
 
 
 export function generateStoryWithHeroAndHeritage(storyTemplate: string, heroes: string[]) {
-  const randomHero = heroes[Math.floor(Math.random() * heroes.length)];
 
   const filledStory = storyTemplate
-  .replace(/\b[oO]ne of the heroes\b/g, randomHero) // Matches "one of the heroes" and "One of the heroes"
-  .replace(/another of their company/gi, randomHero) // Case-insensitive global replacement
+  .replace(/\b[oO]ne of the heroes\b/g, heroes[Math.floor(Math.random() * heroes.length)]) // Matches "one of the heroes" and "One of the heroes"
+  .replace(/another of their company/gi, heroes[Math.floor(Math.random() * heroes.length)]) // Case-insensitive global replacement
   .replace(/\b(the )?heroes\b/gi, `${heroes[0]} and company`)
 
   return filledStory;
